@@ -1,0 +1,184 @@
+\hypertarget{types_8h}{}\doxysection{src/util/types/types.h File Reference}
+\label{types_8h}\index{src/util/types/types.h@{src/util/types/types.h}}
+
+
+Provides dynamic typing functionality and useful functions.  
+
+
+\doxysubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structitem}{item}}
+\begin{DoxyCompactList}\small\item\em Groups data with its actual type. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structtypes__methods}{types\+\_\+methods}}
+\begin{DoxyCompactList}\small\item\em Encapsulates functions into the types namespace. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{types_8h_a5f051eaa796886555205c751e6d530f4}\label{types_8h_a5f051eaa796886555205c751e6d530f4}} 
+typedef void $\ast$ \mbox{\hyperlink{types_8h_a5f051eaa796886555205c751e6d530f4}{Data}}
+\begin{DoxyCompactList}\small\item\em Useful shortcut to void pointer. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{types_8h_ad8acde1ec6ea7d87e774f6108f3f751e}\label{types_8h_ad8acde1ec6ea7d87e774f6108f3f751e}} 
+typedef enum \mbox{\hyperlink{types_8h_a7aead736a07eaf25623ad7bfa1f0ee2d}{type}} \mbox{\hyperlink{types_8h_ad8acde1ec6ea7d87e774f6108f3f751e}{Type}}
+\begin{DoxyCompactList}\small\item\em Used to infer actual type of the stored data. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{types_8h_a9007ca88cf4d3425bfc53b599de25066}\label{types_8h_a9007ca88cf4d3425bfc53b599de25066}} 
+typedef struct \mbox{\hyperlink{structitem}{item}} \mbox{\hyperlink{types_8h_a9007ca88cf4d3425bfc53b599de25066}{Item}}
+\begin{DoxyCompactList}\small\item\em Groups data with its actual type. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{types_8h_a7aead736a07eaf25623ad7bfa1f0ee2d}{type}} \{ \newline
+\mbox{\hyperlink{types_8h_a7aead736a07eaf25623ad7bfa1f0ee2dafd5a5f51ce25953f3db2c7e93eb7864a}{INT}}
+, \mbox{\hyperlink{types_8h_a7aead736a07eaf25623ad7bfa1f0ee2da9cf4a0866224b0bb4a7a895da27c9c4c}{FLOAT}}
+, \mbox{\hyperlink{types_8h_a7aead736a07eaf25623ad7bfa1f0ee2da33465d1d419b1074fb259ef444609e92}{DOUBLE}}
+, \mbox{\hyperlink{types_8h_a7aead736a07eaf25623ad7bfa1f0ee2da4618cf21306b3c647741afa7ebefcab8}{CHAR}}
+, \newline
+\mbox{\hyperlink{types_8h_a7aead736a07eaf25623ad7bfa1f0ee2daee847e634a4297b274316de8a8ca9921}{STRING}}
+ \}
+\begin{DoxyCompactList}\small\item\em Used to infer actual type of the stored data. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{types_8h_a9007ca88cf4d3425bfc53b599de25066}{Item}} \mbox{\hyperlink{types_8h_af7dc940d0d54493282f8c280a0e7fead}{Int}} (int val)
+\begin{DoxyCompactList}\small\item\em Creates an item from an int. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{types_8h_a9007ca88cf4d3425bfc53b599de25066}{Item}} \mbox{\hyperlink{types_8h_a569364a7bb482156ef3dddc27e557b97}{Float}} (float val)
+\begin{DoxyCompactList}\small\item\em Creates an item from a float. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{types_8h_a9007ca88cf4d3425bfc53b599de25066}{Item}} \mbox{\hyperlink{types_8h_a17a9c372ff31bac3b66d3e45477f8f35}{Double}} (double val)
+\begin{DoxyCompactList}\small\item\em Creates an item from a double. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{types_8h_a9007ca88cf4d3425bfc53b599de25066}{Item}} \mbox{\hyperlink{types_8h_a92a48e7471b32986b00cfbe0d73668a6}{Char}} (char val)
+\begin{DoxyCompactList}\small\item\em Creates an item from a char. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{types_8h_a9007ca88cf4d3425bfc53b599de25066}{Item}} \mbox{\hyperlink{types_8h_a6aa4b4f8971348b9f3aa82c8af359fdf}{String}} (char val\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em Creates an item from a string. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Provides dynamic typing functionality and useful functions. 
+
+
+
+\doxysubsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{types_8h_a7aead736a07eaf25623ad7bfa1f0ee2d}\label{types_8h_a7aead736a07eaf25623ad7bfa1f0ee2d}} 
+\index{types.h@{types.h}!type@{type}}
+\index{type@{type}!types.h@{types.h}}
+\doxysubsubsection{\texorpdfstring{type}{type}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{types_8h_a7aead736a07eaf25623ad7bfa1f0ee2d}{type}}}
+
+
+
+Used to infer actual type of the stored data. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{INT@{INT}!types.h@{types.h}}\index{types.h@{types.h}!INT@{INT}}}\mbox{\Hypertarget{types_8h_a7aead736a07eaf25623ad7bfa1f0ee2dafd5a5f51ce25953f3db2c7e93eb7864a}\label{types_8h_a7aead736a07eaf25623ad7bfa1f0ee2dafd5a5f51ce25953f3db2c7e93eb7864a}} 
+INT&int \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FLOAT@{FLOAT}!types.h@{types.h}}\index{types.h@{types.h}!FLOAT@{FLOAT}}}\mbox{\Hypertarget{types_8h_a7aead736a07eaf25623ad7bfa1f0ee2da9cf4a0866224b0bb4a7a895da27c9c4c}\label{types_8h_a7aead736a07eaf25623ad7bfa1f0ee2da9cf4a0866224b0bb4a7a895da27c9c4c}} 
+FLOAT&float \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DOUBLE@{DOUBLE}!types.h@{types.h}}\index{types.h@{types.h}!DOUBLE@{DOUBLE}}}\mbox{\Hypertarget{types_8h_a7aead736a07eaf25623ad7bfa1f0ee2da33465d1d419b1074fb259ef444609e92}\label{types_8h_a7aead736a07eaf25623ad7bfa1f0ee2da33465d1d419b1074fb259ef444609e92}} 
+DOUBLE&double \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{CHAR@{CHAR}!types.h@{types.h}}\index{types.h@{types.h}!CHAR@{CHAR}}}\mbox{\Hypertarget{types_8h_a7aead736a07eaf25623ad7bfa1f0ee2da4618cf21306b3c647741afa7ebefcab8}\label{types_8h_a7aead736a07eaf25623ad7bfa1f0ee2da4618cf21306b3c647741afa7ebefcab8}} 
+CHAR&char \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{STRING@{STRING}!types.h@{types.h}}\index{types.h@{types.h}!STRING@{STRING}}}\mbox{\Hypertarget{types_8h_a7aead736a07eaf25623ad7bfa1f0ee2daee847e634a4297b274316de8a8ca9921}\label{types_8h_a7aead736a07eaf25623ad7bfa1f0ee2daee847e634a4297b274316de8a8ca9921}} 
+STRING&char $\ast$ \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{types_8h_a92a48e7471b32986b00cfbe0d73668a6}\label{types_8h_a92a48e7471b32986b00cfbe0d73668a6}} 
+\index{types.h@{types.h}!Char@{Char}}
+\index{Char@{Char}!types.h@{types.h}}
+\doxysubsubsection{\texorpdfstring{Char()}{Char()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{types_8h_a9007ca88cf4d3425bfc53b599de25066}{Item}} Char (\begin{DoxyParamCaption}\item[{char}]{val }\end{DoxyParamCaption})}
+
+
+
+Creates an item from a char. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em val} & Char to be wrapped \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Char item 
+\end{DoxyReturn}
+\mbox{\Hypertarget{types_8h_a17a9c372ff31bac3b66d3e45477f8f35}\label{types_8h_a17a9c372ff31bac3b66d3e45477f8f35}} 
+\index{types.h@{types.h}!Double@{Double}}
+\index{Double@{Double}!types.h@{types.h}}
+\doxysubsubsection{\texorpdfstring{Double()}{Double()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{types_8h_a9007ca88cf4d3425bfc53b599de25066}{Item}} Double (\begin{DoxyParamCaption}\item[{double}]{val }\end{DoxyParamCaption})}
+
+
+
+Creates an item from a double. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em val} & Double to be wrapped \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Double item 
+\end{DoxyReturn}
+\mbox{\Hypertarget{types_8h_a569364a7bb482156ef3dddc27e557b97}\label{types_8h_a569364a7bb482156ef3dddc27e557b97}} 
+\index{types.h@{types.h}!Float@{Float}}
+\index{Float@{Float}!types.h@{types.h}}
+\doxysubsubsection{\texorpdfstring{Float()}{Float()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{types_8h_a9007ca88cf4d3425bfc53b599de25066}{Item}} Float (\begin{DoxyParamCaption}\item[{float}]{val }\end{DoxyParamCaption})}
+
+
+
+Creates an item from a float. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em val} & Float to be wrapped \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Float item 
+\end{DoxyReturn}
+\mbox{\Hypertarget{types_8h_af7dc940d0d54493282f8c280a0e7fead}\label{types_8h_af7dc940d0d54493282f8c280a0e7fead}} 
+\index{types.h@{types.h}!Int@{Int}}
+\index{Int@{Int}!types.h@{types.h}}
+\doxysubsubsection{\texorpdfstring{Int()}{Int()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{types_8h_a9007ca88cf4d3425bfc53b599de25066}{Item}} Int (\begin{DoxyParamCaption}\item[{int}]{val }\end{DoxyParamCaption})}
+
+
+
+Creates an item from an int. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em val} & Integer to be wrapped \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Int item 
+\end{DoxyReturn}
+\mbox{\Hypertarget{types_8h_a6aa4b4f8971348b9f3aa82c8af359fdf}\label{types_8h_a6aa4b4f8971348b9f3aa82c8af359fdf}} 
+\index{types.h@{types.h}!String@{String}}
+\index{String@{String}!types.h@{types.h}}
+\doxysubsubsection{\texorpdfstring{String()}{String()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{types_8h_a9007ca88cf4d3425bfc53b599de25066}{Item}} String (\begin{DoxyParamCaption}\item[{char}]{val\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Creates an item from a string. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em val} & String to be wrapped \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+String item 
+\end{DoxyReturn}

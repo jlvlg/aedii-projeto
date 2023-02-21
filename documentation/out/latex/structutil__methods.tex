@@ -1,0 +1,104 @@
+\hypertarget{structutil__methods}{}\doxysection{util\+\_\+methods Struct Reference}
+\label{structutil__methods}\index{util\_methods@{util\_methods}}
+
+
+Encapsulates functions into the util namespace.  
+
+
+
+
+{\ttfamily \#include $<$util.\+h$>$}
+
+\doxysubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+void $\ast$($\ast$ \mbox{\hyperlink{structutil__methods_a7605dd953a40a6003738b7a84ade81d6}{safe\+\_\+malloc}} )(size\+\_\+t size)
+\begin{DoxyCompactList}\small\item\em Tries to allocate memory and exits the program with error code 1 in case of failure to do so. \end{DoxyCompactList}\item 
+char $\ast$($\ast$ \mbox{\hyperlink{structutil__methods_a34dd95342078d651564799ccbb8aea6d}{string\+\_\+malloc}} )(char string\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em Allocates enough space in memory for a string. \end{DoxyCompactList}\item 
+char $\ast$($\ast$ \mbox{\hyperlink{structutil__methods_a7dc09bdde78db8fc2c79b3487c49c37d}{init\+\_\+string}} )(char string\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em Allocates memory and copy the contents of a string into it. \end{DoxyCompactList}\item 
+int($\ast$ \mbox{\hyperlink{structutil__methods_a31c52676e1b068d7b01ad999c382c3f2}{lowercmp}} )(char str1\mbox{[}$\,$\mbox{]}, char str2\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em Compares two strings in lowercase. \end{DoxyCompactList}\item 
+int($\ast$ \mbox{\hyperlink{structutil__methods_a7746033dd472d8e303d7bc56866310e2}{max}} )(int a, int b)
+\begin{DoxyCompactList}\small\item\em Max between two numbers. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Encapsulates functions into the util namespace. 
+
+\doxysubsection{Field Documentation}
+\mbox{\Hypertarget{structutil__methods_a7dc09bdde78db8fc2c79b3487c49c37d}\label{structutil__methods_a7dc09bdde78db8fc2c79b3487c49c37d}} 
+\index{util\_methods@{util\_methods}!init\_string@{init\_string}}
+\index{init\_string@{init\_string}!util\_methods@{util\_methods}}
+\doxysubsubsection{\texorpdfstring{init\_string}{init\_string}}
+{\footnotesize\ttfamily char$\ast$($\ast$ init\+\_\+string) (char string\mbox{[}$\,$\mbox{]})}
+
+
+
+Allocates memory and copy the contents of a string into it. 
+
+\begin{DoxyReturn}{Returns}
+The copied string 
+\end{DoxyReturn}
+\mbox{\Hypertarget{structutil__methods_a31c52676e1b068d7b01ad999c382c3f2}\label{structutil__methods_a31c52676e1b068d7b01ad999c382c3f2}} 
+\index{util\_methods@{util\_methods}!lowercmp@{lowercmp}}
+\index{lowercmp@{lowercmp}!util\_methods@{util\_methods}}
+\doxysubsubsection{\texorpdfstring{lowercmp}{lowercmp}}
+{\footnotesize\ttfamily int($\ast$ lowercmp) (char str1\mbox{[}$\,$\mbox{]}, char str2\mbox{[}$\,$\mbox{]})}
+
+
+
+Compares two strings in lowercase. 
+
+\begin{DoxyReturn}{Returns}
+0 if str1 == str2 ~\newline
+$>$0 if str1 $>$ str2 ~\newline
+$<$0 if str1 $<$ str2 
+\end{DoxyReturn}
+\mbox{\Hypertarget{structutil__methods_a7746033dd472d8e303d7bc56866310e2}\label{structutil__methods_a7746033dd472d8e303d7bc56866310e2}} 
+\index{util\_methods@{util\_methods}!max@{max}}
+\index{max@{max}!util\_methods@{util\_methods}}
+\doxysubsubsection{\texorpdfstring{max}{max}}
+{\footnotesize\ttfamily int($\ast$ max) (int a, int b)}
+
+
+
+Max between two numbers. 
+
+\begin{DoxyReturn}{Returns}
+Greatest number 
+\end{DoxyReturn}
+\mbox{\Hypertarget{structutil__methods_a7605dd953a40a6003738b7a84ade81d6}\label{structutil__methods_a7605dd953a40a6003738b7a84ade81d6}} 
+\index{util\_methods@{util\_methods}!safe\_malloc@{safe\_malloc}}
+\index{safe\_malloc@{safe\_malloc}!util\_methods@{util\_methods}}
+\doxysubsubsection{\texorpdfstring{safe\_malloc}{safe\_malloc}}
+{\footnotesize\ttfamily void$\ast$($\ast$ safe\+\_\+malloc) (size\+\_\+t size)}
+
+
+
+Tries to allocate memory and exits the program with error code 1 in case of failure to do so. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em size} & Size in bits \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{structutil__methods_a34dd95342078d651564799ccbb8aea6d}\label{structutil__methods_a34dd95342078d651564799ccbb8aea6d}} 
+\index{util\_methods@{util\_methods}!string\_malloc@{string\_malloc}}
+\index{string\_malloc@{string\_malloc}!util\_methods@{util\_methods}}
+\doxysubsubsection{\texorpdfstring{string\_malloc}{string\_malloc}}
+{\footnotesize\ttfamily char$\ast$($\ast$ string\+\_\+malloc) (char string\mbox{[}$\,$\mbox{]})}
+
+
+
+Allocates enough space in memory for a string. 
+
+\begin{DoxyReturn}{Returns}
+Pointer to allocated memory 
+\end{DoxyReturn}
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/util/\mbox{\hyperlink{util_8h}{util.\+h}}\end{DoxyCompactItemize}

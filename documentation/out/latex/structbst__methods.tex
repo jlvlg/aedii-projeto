@@ -1,0 +1,111 @@
+\hypertarget{structbst__methods}{}\doxysection{bst\+\_\+methods Struct Reference}
+\label{structbst__methods}\index{bst\_methods@{bst\_methods}}
+
+
+Encapsulates functions into the bst namespace.  
+
+
+
+
+{\ttfamily \#include $<$bst.\+h$>$}
+
+\doxysubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{bst_8h_a17a8f6ed0a2d4b8ceb4e2181ba0e9901}{BST}}($\ast$ \mbox{\hyperlink{structbst__methods_aeae9f751b5dda7d77057102592fa9098}{create}} )(\mbox{\hyperlink{types_8h_a9007ca88cf4d3425bfc53b599de25066}{Item}} \mbox{\hyperlink{structitem}{item}})
+\begin{DoxyCompactList}\small\item\em Creates a new node containing an Item. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{bst_8h_a17a8f6ed0a2d4b8ceb4e2181ba0e9901}{BST}}($\ast$ \mbox{\hyperlink{structbst__methods_a3ddd1fea33a44c018596317a76a27c18}{insert}} )(\mbox{\hyperlink{bst_8h_a17a8f6ed0a2d4b8ceb4e2181ba0e9901}{BST}} root, \mbox{\hyperlink{bst_8h_a17a8f6ed0a2d4b8ceb4e2181ba0e9901}{BST}} leaf)
+\begin{DoxyCompactList}\small\item\em Inserts a node into a tree. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{bst_8h_a17a8f6ed0a2d4b8ceb4e2181ba0e9901}{BST}}($\ast$ \mbox{\hyperlink{structbst__methods_af409a9660c83ee9196458165af713b43}{remove}} )(\mbox{\hyperlink{bst_8h_a17a8f6ed0a2d4b8ceb4e2181ba0e9901}{BST}} root, \mbox{\hyperlink{types_8h_a9007ca88cf4d3425bfc53b599de25066}{Item}} \mbox{\hyperlink{structitem}{item}})
+\begin{DoxyCompactList}\small\item\em Searches a tree for a node containing an item and removes it. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{bst_8h_a17a8f6ed0a2d4b8ceb4e2181ba0e9901}{BST}}($\ast$ \mbox{\hyperlink{structbst__methods_a6afbe1c6bed13fdfb61b4d8bbe832d5c}{trim}} )(\mbox{\hyperlink{bst_8h_a17a8f6ed0a2d4b8ceb4e2181ba0e9901}{BST}} root, \mbox{\hyperlink{bst_8h_a17a8f6ed0a2d4b8ceb4e2181ba0e9901}{BST}} branch)
+\begin{DoxyCompactList}\small\item\em Removes an entire branch from a tree. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Encapsulates functions into the bst namespace. 
+
+\doxysubsection{Field Documentation}
+\mbox{\Hypertarget{structbst__methods_aeae9f751b5dda7d77057102592fa9098}\label{structbst__methods_aeae9f751b5dda7d77057102592fa9098}} 
+\index{bst\_methods@{bst\_methods}!create@{create}}
+\index{create@{create}!bst\_methods@{bst\_methods}}
+\doxysubsubsection{\texorpdfstring{create}{create}}
+{\footnotesize\ttfamily \mbox{\hyperlink{bst_8h_a17a8f6ed0a2d4b8ceb4e2181ba0e9901}{BST}}($\ast$ create) (\mbox{\hyperlink{types_8h_a9007ca88cf4d3425bfc53b599de25066}{Item}} \mbox{\hyperlink{structitem}{item}})}
+
+
+
+Creates a new node containing an Item. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em item} & Item to be sowed \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Node containing item 
+\end{DoxyReturn}
+\mbox{\Hypertarget{structbst__methods_a3ddd1fea33a44c018596317a76a27c18}\label{structbst__methods_a3ddd1fea33a44c018596317a76a27c18}} 
+\index{bst\_methods@{bst\_methods}!insert@{insert}}
+\index{insert@{insert}!bst\_methods@{bst\_methods}}
+\doxysubsubsection{\texorpdfstring{insert}{insert}}
+{\footnotesize\ttfamily \mbox{\hyperlink{bst_8h_a17a8f6ed0a2d4b8ceb4e2181ba0e9901}{BST}}($\ast$ insert) (\mbox{\hyperlink{bst_8h_a17a8f6ed0a2d4b8ceb4e2181ba0e9901}{BST}} root, \mbox{\hyperlink{bst_8h_a17a8f6ed0a2d4b8ceb4e2181ba0e9901}{BST}} leaf)}
+
+
+
+Inserts a node into a tree. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em root} & Tree to be inserted into \\
+\hline
+{\em leaf} & Node to be inserted \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Updated tree 
+\end{DoxyReturn}
+\mbox{\Hypertarget{structbst__methods_af409a9660c83ee9196458165af713b43}\label{structbst__methods_af409a9660c83ee9196458165af713b43}} 
+\index{bst\_methods@{bst\_methods}!remove@{remove}}
+\index{remove@{remove}!bst\_methods@{bst\_methods}}
+\doxysubsubsection{\texorpdfstring{remove}{remove}}
+{\footnotesize\ttfamily \mbox{\hyperlink{bst_8h_a17a8f6ed0a2d4b8ceb4e2181ba0e9901}{BST}}($\ast$ remove) (\mbox{\hyperlink{bst_8h_a17a8f6ed0a2d4b8ceb4e2181ba0e9901}{BST}} root, \mbox{\hyperlink{types_8h_a9007ca88cf4d3425bfc53b599de25066}{Item}} \mbox{\hyperlink{structitem}{item}})}
+
+
+
+Searches a tree for a node containing an item and removes it. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em root} & Tree to be removed from \\
+\hline
+{\em item} & Item to be removed \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Updated tree 
+\end{DoxyReturn}
+\mbox{\Hypertarget{structbst__methods_a6afbe1c6bed13fdfb61b4d8bbe832d5c}\label{structbst__methods_a6afbe1c6bed13fdfb61b4d8bbe832d5c}} 
+\index{bst\_methods@{bst\_methods}!trim@{trim}}
+\index{trim@{trim}!bst\_methods@{bst\_methods}}
+\doxysubsubsection{\texorpdfstring{trim}{trim}}
+{\footnotesize\ttfamily \mbox{\hyperlink{bst_8h_a17a8f6ed0a2d4b8ceb4e2181ba0e9901}{BST}}($\ast$ trim) (\mbox{\hyperlink{bst_8h_a17a8f6ed0a2d4b8ceb4e2181ba0e9901}{BST}} root, \mbox{\hyperlink{bst_8h_a17a8f6ed0a2d4b8ceb4e2181ba0e9901}{BST}} branch)}
+
+
+
+Removes an entire branch from a tree. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em root} & Root of the tree \\
+\hline
+{\em branch} & Branch to be removed \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+NULL pointer 
+\end{DoxyReturn}
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/trees/bst/\mbox{\hyperlink{bst_8h}{bst.\+h}}\end{DoxyCompactItemize}
