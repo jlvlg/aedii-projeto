@@ -88,6 +88,26 @@ struct tree_methods {
     /// @param node Node to be measured
     /// @return Number of children
     int (*children)(Tree node);
+
+    /// @brief Rotates the tree structure to the left
+    /// @param p Node to be rotated
+    /// @return Updated tree
+    Tree (*simple_rotation_left)(Tree p);
+
+    /// @brief Rotates the tree structure to the right
+    /// @param p Node to be rotated
+    /// @return Updated tree
+    Tree (*simple_rotation_right)(Tree p);
+
+    /// @brief Rotates the right child to the right and then the node to the left
+    /// @param p Node to be rotated
+    /// @return Updated tree
+    Tree (*double_rotation_left)(Tree p);
+
+    /// @brief Rotates the left child to the left and then the node to the right
+    /// @param p Node to be rotated
+    /// @return Updated tree
+    Tree (*double_rotation_right)(Tree p);
 };
 
 extern const struct tree_methods tree;
