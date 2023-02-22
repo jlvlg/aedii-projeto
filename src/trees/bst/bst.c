@@ -1,6 +1,6 @@
 #include <stdlib.h>
-#include "types.h"
 #include "util.h"
+#include "types.h"
 #include "tree.h"
 #include "bst.h"
 
@@ -28,9 +28,6 @@ static BST remove(BST root, Item item) {
     if (root == NULL)
         return NULL;
     switch (types.cmp(item, root->item)) {
-        case -1:
-            root->l = remove(root->l, item);
-            break;
         case 0: 
             switch (tree.children(root)) {
                 case 0:
@@ -45,6 +42,9 @@ static BST remove(BST root, Item item) {
                     root->item = types.copy(tree.max(root->l)->item);
                     root->l = remove(root->l, root->item);
             } break;
+        case -1:
+            root->l = remove(root->l, item);
+            break;
         case 1:
             root->r = remove(root->r, item);
     }

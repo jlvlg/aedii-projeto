@@ -98,6 +98,30 @@ static int height(Tree root) {
     return util.max(height(root->l), height(root->r)) + 1;
 }
 
+static Tree simple_rotation_left(Tree p) {
+    Tree u = p->r;
+    p->r = u->l;
+    u->l = p;
+    return u;
+}
+
+static Tree simple_rotation_right(Tree p) {
+    Tree u = p->l;
+    p->l = u->r;
+    u->r = p;
+    return u;
+}
+
+static Tree double_rotation_left(Tree p) {
+    p->r = simple_rotation_right(p->r);
+    return simple_rotation_left(p);
+}
+
+static Tree double_rotation_right(Tree p) {
+    p->l = simple_rotation_left(p->l);
+    return simple_rotation_right(p);
+}
+
 const struct tree_methods tree = {
     .print = print,
     .preorder = preorder,
@@ -108,5 +132,9 @@ const struct tree_methods tree = {
     .max = max,
     .min = min,
     .search = search,
-    .height = height
+    .height = height,
+    .simple_rotation_left = simple_rotation_left,
+    .simple_rotation_right = simple_rotation_right,
+    .double_rotation_left = double_rotation_left,
+    .double_rotation_right = double_rotation_right
 };
