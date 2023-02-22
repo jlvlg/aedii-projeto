@@ -4,6 +4,10 @@
 #include "tree.h"
 #include "avl.h"
 
+static AVL as_avl(Tree root) {
+    return root;
+}
+
 static AVL rotate(AVL root) {
     Tree tree_root = root;
     if (root->bf > 0) {
@@ -16,17 +20,17 @@ static AVL rotate(AVL root) {
             root = tree.double_rotation_left(tree_root);
         }
     } else {
-        if (((AVL) tree_root->l)->bf > 0) {
+        if (as_avl(tree_root->l)->bf > 0) {
             root = tree.double_rotation_right(tree_root);
         } else {
             root = tree.simple_rotation_right(tree_root);
-            ((AVL) ((Tree) root)->r)->bf = root->bf == 0 ? 1 : 0;
+            as_avl(tree.as_tree(root)->r)->bf = root->bf == 0 ? 1 : 0;
             root->bf = root->bf == 0 ? -1 : 0;
             return root;
         }
     }
-    ((AVL) ((Tree) root)->l)->bf = root->bf == 1 ? -1 : 0;
-    ((AVL) ((Tree) root)->r)->bf = root->bf == -1 ? 1 : 0;
+    as_avl(tree.as_tree(root)->l)->bf = root->bf == 1 ? -1 : 0;
+    as_avl(tree.as_tree(root)->r)->bf = root->bf == -1 ? 1 : 0;
     root->bf = 0;
     return root;
 }

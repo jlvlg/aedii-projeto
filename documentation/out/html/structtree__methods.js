@@ -1,5 +1,6 @@
 var structtree__methods =
 [
+    [ "as_tree", "structtree__methods.html#a51630df5dbeae8421c118b8f8cbad928", null ],
     [ "children", "structtree__methods.html#aead5ecfff1ddfcac1bed06bfefed16f0", null ],
     [ "double_rotation_left", "structtree__methods.html#a8a6ae00fbe6700af625b9fde456df376", null ],
     [ "double_rotation_right", "structtree__methods.html#a9b730d66b15e066927bf388012fad797", null ],

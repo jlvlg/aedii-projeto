@@ -18,6 +18,11 @@ typedef Node* Tree;
 
 /// Encapsulates functions into the tree namespace
 struct tree_methods {
+    /// @brief Type casts to tree
+    /// @param root Any struct that inherits from tree
+    /// @return Type casted pointer
+    Tree (*as_tree)(Tree root);
+
     /// @brief Deletes a node and its contents
     /// @param leaf Node to be deleted
     /// @return NULL pointer
