@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['kill_93',['kill',['../structtree__methods.html#a1b053ec0d75584d9489af982356393a3',1,'tree_methods']]]
+  ['height_90',['height',['../structtree__methods.html#a474ecb06c0df11e47b22ac44b1ceecc7',1,'tree_methods']]]
 ];

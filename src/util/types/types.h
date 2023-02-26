@@ -35,35 +35,33 @@ struct types_methods {
     /// @brief Duplicates an item
     /// @param Item item to be duplicated
     Item (*copy)(Item item);
+
+    /// @brief Creates an item from an int
+    /// @param val Integer to be wrapped
+    /// @return Int item
+    Item (*Int)(int val);
+
+    /// @brief Creates an item from a float
+    /// @param val Float to be wrapped
+    /// @return Float item
+    Item (*Float)(float val);
+
+    /// @brief Creates an item from a double
+    /// @param val Double to be wrapped
+    /// @return Double item
+    Item (*Double)(double val);
+
+    /// @brief Creates an item from a char
+    /// @param val Char to be wrapped
+    /// @return Char item
+    Item (*Char)(char val);
+
+    /// @brief Creates an item from a string
+    /// @param val String to be wrapped
+    /// @return String item
+    Item (*String)(char val[]);
 };
 
 extern const struct types_methods types;
-
-// Public functions
-
-/// @brief Creates an item from an int
-/// @param val Integer to be wrapped
-/// @return Int item
-Item Int(int val);
-
-/// @brief Creates an item from a float
-/// @param val Float to be wrapped
-/// @return Float item
-Item Float(float val);
-
-/// @brief Creates an item from a double
-/// @param val Double to be wrapped
-/// @return Double item
-Item Double(double val);
-
-/// @brief Creates an item from a char
-/// @param val Char to be wrapped
-/// @return Char item
-Item Char(char val);
-
-/// @brief Creates an item from a string
-/// @param val String to be wrapped
-/// @return String item
-Item String(char val[]);
 
 #endif

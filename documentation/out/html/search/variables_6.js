@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['max_95',['max',['../structtree__methods.html#a3ebda689c714ce7d5572795fc9aef845',1,'tree_methods::max()'],['../structutil__methods.html#a7746033dd472d8e303d7bc56866310e2',1,'util_methods::max()']]],
-  ['min_96',['min',['../structtree__methods.html#acfa1b68337b78a6d4663499d89afeda6',1,'tree_methods']]]
+  ['kill_96',['kill',['../structtree__methods.html#a1b053ec0d75584d9489af982356393a3',1,'tree_methods']]]
 ];

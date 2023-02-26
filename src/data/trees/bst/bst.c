@@ -16,10 +16,15 @@ static BST insert(BST root, BST leaf) {
         return root;
     if (root == NULL) 
         return leaf;
-    if (types.cmp(leaf->item, root->item) > 0) {
-        root->r = insert(root->r, leaf);
-    } else {
-        root->l = insert(root->l, leaf);
+
+    int cmp = types.cmp(leaf->item, root->item);
+    
+    switch (cmp) {
+        case -1:
+            root->l = insert(root->l, leaf);
+            break;
+        case 1:
+            root->r = insert(root->r, leaf);
     }
     return root;
 }
@@ -33,9 +38,9 @@ static BST remove(BST root, Item item) {
                 case 0:
                     return tree.kill(root);
                 case 1: {
-                    BST temp = root->l != NULL ? root->l : root->r;
+                    BST child = root->l != NULL ? root->l : root->r;
                     tree.kill(root);
-                    return temp;
+                    return child;
                 }
                 case 2:
                     types.destroy(root->item);

@@ -48,13 +48,14 @@ static Item tostring(Item item) {
 }
 
 static int cmp(Item item1, Item item2) {
-    if (item1.type == STRING || item2.type == STRING)
-        return util.lowercmp(tostring(item1).data, tostring(item2).data);
-    if (*(int*) item1.data > *(int*) item2.data) 
-        return 1;
-    if (*(int*) item1.data < *(int*) item2.data)
-        return -1;
-    return 0;
+    if (item1.type == INT && item2.type == INT) {
+        if (*(int*) item1.data > *(int*) item2.data) 
+            return 1;
+        if (*(int*) item1.data < *(int*) item2.data)
+            return -1;
+        return 0;
+    }
+    return util.lowercmp(tostring(item1).data, tostring(item2).data);
 }
 
 static void destroy(Item item) {
@@ -79,5 +80,10 @@ static Item copy(Item item) {
 const struct types_methods types = {
     .cmp = cmp,
     .destroy = destroy,
-    .copy = copy
+    .copy = copy,
+    .Int = Int,
+    .Float = Float,
+    .Double = Double,
+    .Char = Char,
+    .String = String
 };

@@ -1,9 +1,11 @@
 var structtree__methods =
 [
+    [ "as_tree", "structtree__methods.html#a51630df5dbeae8421c118b8f8cbad928", null ],
     [ "children", "structtree__methods.html#aead5ecfff1ddfcac1bed06bfefed16f0", null ],
     [ "double_rotation_left", "structtree__methods.html#a8a6ae00fbe6700af625b9fde456df376", null ],
     [ "double_rotation_right", "structtree__methods.html#a9b730d66b15e066927bf388012fad797", null ],
     [ "height", "structtree__methods.html#a474ecb06c0df11e47b22ac44b1ceecc7", null ],
+    [ "initialize", "structtree__methods.html#a7a2576333e32b257b8601c5bb3c23a08", null ],
     [ "inorder", "structtree__methods.html#aafe8b6f0f07907fbf57f63ce0934ab26", null ],
     [ "kill", "structtree__methods.html#a1b053ec0d75584d9489af982356393a3", null ],
     [ "max", "structtree__methods.html#a3ebda689c714ce7d5572795fc9aef845", null ],
