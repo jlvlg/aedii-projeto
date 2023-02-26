@@ -8,6 +8,10 @@ static Tree as_tree(Tree root) {
     return root;
 }
 
+static Tree initialize() {
+    return NULL;
+}
+
 static void preorder(Tree root, void function(Tree)) {
     if (root != NULL) {
         function(root);
@@ -128,6 +132,7 @@ static Tree double_rotation_right(Tree p) {
 
 const struct tree_methods tree = {
     .as_tree = as_tree,
+    .initialize = initialize,
     .print = print,
     .preorder = preorder,
     .inorder = inorder,

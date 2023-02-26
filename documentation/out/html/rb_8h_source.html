@@ -104,11 +104,11 @@ $(document).ready(function(){initNavTree('rb_8h_source.html',''); initResizable(
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="keyword">struct </span>rb_methods {</div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <a class="code" href="rb_8h.html#a864415da29b5d5e2aefe2a6cc10aaa70">RB</a> (*create)(<a class="code" href="structitem.html">Item</a> <a class="code" href="structitem.html">item</a>);</div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <a class="code" href="rb_8h.html#a864415da29b5d5e2aefe2a6cc10aaa70">RB</a> (*insert)(<a class="code" href="structrb__node.html">RB</a> root, <a class="code" href="structrb__node.html">RB</a> leaf, <span class="keywordtype">int</span>* changes);</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    void (*insert)(<a class="code" href="structrb__node.html">RB</a> *root, <a class="code" href="structrb__node.html">RB</a> leaf);</div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <a class="code" href="rb_8h.html#a864415da29b5d5e2aefe2a6cc10aaa70">RB</a> (*remove)(<a class="code" href="structrb__node.html">RB</a> root, <a class="code" href="structitem.html">Item</a> <a class="code" href="structitem.html">item</a>, <span class="keywordtype">int</span>* changes);</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    void (*remove)(<a class="code" href="structrb__node.html">RB</a> *root, <a class="code" href="structitem.html">Item</a> <a class="code" href="structitem.html">item</a>);</div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <a class="code" href="rb_8h.html#a864415da29b5d5e2aefe2a6cc10aaa70">RB</a> (*trim)(<a class="code" href="structrb__node.html">RB</a> root, <a class="code" href="structrb__node.html">RB</a> branch);</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    void (*trim)(<a class="code" href="structrb__node.html">RB</a> *root, <a class="code" href="structrb__node.html">RB</a> branch);</div>
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;};</div>
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="keyword">extern</span> <span class="keyword">const</span> <span class="keyword">struct </span>rb_methods rb;</div>

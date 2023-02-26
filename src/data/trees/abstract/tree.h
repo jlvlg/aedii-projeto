@@ -23,6 +23,10 @@ struct tree_methods {
     /// @return Type casted pointer
     Tree (*as_tree)(Tree root);
 
+    /// @brief Initializes a tree
+    /// @return NULL pointer
+    Tree (*initialize)(void);
+
     /// @brief Deletes a node and its contents
     /// @param leaf Node to be deleted
     /// @return NULL pointer

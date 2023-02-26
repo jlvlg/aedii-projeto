@@ -17,13 +17,41 @@ int($\ast$ \mbox{\hyperlink{structtypes__methods_a6ba32381d231edc10cd825499e1ce3
 void($\ast$ \mbox{\hyperlink{structtypes__methods_aebc8751f66f9b995093f569893e5cc4b}{destroy}} )(\mbox{\hyperlink{types_8h_a9007ca88cf4d3425bfc53b599de25066}{Item}} \mbox{\hyperlink{structitem}{item}})
 \begin{DoxyCompactList}\small\item\em Frees up the allocated memory. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{types_8h_a9007ca88cf4d3425bfc53b599de25066}{Item}}($\ast$ \mbox{\hyperlink{structtypes__methods_a17e3e4a455f66d2854af29b3998e4de0}{copy}} )(\mbox{\hyperlink{types_8h_a9007ca88cf4d3425bfc53b599de25066}{Item}} \mbox{\hyperlink{structitem}{item}})
-\begin{DoxyCompactList}\small\item\em Duplicates an item. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Duplicates an item. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{types_8h_a9007ca88cf4d3425bfc53b599de25066}{Item}}($\ast$ \mbox{\hyperlink{structtypes__methods_a21cbc6c29df580882ddc25815b118fa5}{Int}} )(int val)
+\begin{DoxyCompactList}\small\item\em Creates an item from an int. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{types_8h_a9007ca88cf4d3425bfc53b599de25066}{Item}}($\ast$ \mbox{\hyperlink{structtypes__methods_a6f5a7c9ea43581a3ece056b957b2c06f}{Float}} )(float val)
+\begin{DoxyCompactList}\small\item\em Creates an item from a float. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{types_8h_a9007ca88cf4d3425bfc53b599de25066}{Item}}($\ast$ \mbox{\hyperlink{structtypes__methods_a0feee2e239941e7fd8f3a348d076346c}{Double}} )(double val)
+\begin{DoxyCompactList}\small\item\em Creates an item from a double. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{types_8h_a9007ca88cf4d3425bfc53b599de25066}{Item}}($\ast$ \mbox{\hyperlink{structtypes__methods_a8e92b7c127910016591985b4dd047621}{Char}} )(char val)
+\begin{DoxyCompactList}\small\item\em Creates an item from a char. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{types_8h_a9007ca88cf4d3425bfc53b599de25066}{Item}}($\ast$ \mbox{\hyperlink{structtypes__methods_a6312c12b5a74af8a40804a5420f2e517}{String}} )(char val\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em Creates an item from a string. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
 Encapsulates functions into the types namespace. 
 
 \doxysubsection{Field Documentation}
+\mbox{\Hypertarget{structtypes__methods_a8e92b7c127910016591985b4dd047621}\label{structtypes__methods_a8e92b7c127910016591985b4dd047621}} 
+\index{types\_methods@{types\_methods}!Char@{Char}}
+\index{Char@{Char}!types\_methods@{types\_methods}}
+\doxysubsubsection{\texorpdfstring{Char}{Char}}
+{\footnotesize\ttfamily \mbox{\hyperlink{types_8h_a9007ca88cf4d3425bfc53b599de25066}{Item}}($\ast$ Char) (char val)}
+
+
+
+Creates an item from a char. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em val} & Char to be wrapped \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Char item 
+\end{DoxyReturn}
 \mbox{\Hypertarget{structtypes__methods_a6ba32381d231edc10cd825499e1ce3fe}\label{structtypes__methods_a6ba32381d231edc10cd825499e1ce3fe}} 
 \index{types\_methods@{types\_methods}!cmp@{cmp}}
 \index{cmp@{cmp}!types\_methods@{types\_methods}}
@@ -69,6 +97,78 @@ Frees up the allocated memory.
 {\em Item} & to be destroyed \\
 \hline
 \end{DoxyParams}
+\mbox{\Hypertarget{structtypes__methods_a0feee2e239941e7fd8f3a348d076346c}\label{structtypes__methods_a0feee2e239941e7fd8f3a348d076346c}} 
+\index{types\_methods@{types\_methods}!Double@{Double}}
+\index{Double@{Double}!types\_methods@{types\_methods}}
+\doxysubsubsection{\texorpdfstring{Double}{Double}}
+{\footnotesize\ttfamily \mbox{\hyperlink{types_8h_a9007ca88cf4d3425bfc53b599de25066}{Item}}($\ast$ Double) (double val)}
+
+
+
+Creates an item from a double. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em val} & Double to be wrapped \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Double item 
+\end{DoxyReturn}
+\mbox{\Hypertarget{structtypes__methods_a6f5a7c9ea43581a3ece056b957b2c06f}\label{structtypes__methods_a6f5a7c9ea43581a3ece056b957b2c06f}} 
+\index{types\_methods@{types\_methods}!Float@{Float}}
+\index{Float@{Float}!types\_methods@{types\_methods}}
+\doxysubsubsection{\texorpdfstring{Float}{Float}}
+{\footnotesize\ttfamily \mbox{\hyperlink{types_8h_a9007ca88cf4d3425bfc53b599de25066}{Item}}($\ast$ Float) (float val)}
+
+
+
+Creates an item from a float. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em val} & Float to be wrapped \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Float item 
+\end{DoxyReturn}
+\mbox{\Hypertarget{structtypes__methods_a21cbc6c29df580882ddc25815b118fa5}\label{structtypes__methods_a21cbc6c29df580882ddc25815b118fa5}} 
+\index{types\_methods@{types\_methods}!Int@{Int}}
+\index{Int@{Int}!types\_methods@{types\_methods}}
+\doxysubsubsection{\texorpdfstring{Int}{Int}}
+{\footnotesize\ttfamily \mbox{\hyperlink{types_8h_a9007ca88cf4d3425bfc53b599de25066}{Item}}($\ast$ Int) (int val)}
+
+
+
+Creates an item from an int. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em val} & Integer to be wrapped \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Int item 
+\end{DoxyReturn}
+\mbox{\Hypertarget{structtypes__methods_a6312c12b5a74af8a40804a5420f2e517}\label{structtypes__methods_a6312c12b5a74af8a40804a5420f2e517}} 
+\index{types\_methods@{types\_methods}!String@{String}}
+\index{String@{String}!types\_methods@{types\_methods}}
+\doxysubsubsection{\texorpdfstring{String}{String}}
+{\footnotesize\ttfamily \mbox{\hyperlink{types_8h_a9007ca88cf4d3425bfc53b599de25066}{Item}}($\ast$ String) (char val\mbox{[}$\,$\mbox{]})}
+
+
+
+Creates an item from a string. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em val} & String to be wrapped \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+String item 
+\end{DoxyReturn}
 
 
 The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}

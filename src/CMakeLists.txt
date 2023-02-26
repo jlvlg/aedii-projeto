@@ -1,2 +1,2 @@
-add_subdirectory(trees)
+add_subdirectory(data)
 add_subdirectory(util)
