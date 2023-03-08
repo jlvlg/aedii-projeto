@@ -1,0 +1,43 @@
+\hypertarget{json__types_8h}{}\doxysection{src/libs/external/json-\/c/json\+\_\+types.h File Reference}
+\label{json__types_8h}\index{src/libs/external/json-\/c/json\_types.h@{src/libs/external/json-\/c/json\_types.h}}
+
+
+Basic types used in a few places in json-\/c, but you should include \char`\"{}json\+\_\+object.\+h\char`\"{} instead.  
+
+
+\doxysubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structjson__object__iter}{json\+\_\+object\+\_\+iter}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{json__types_8h_af27907ced0f5a43409ad96430fe0f914}\label{json__types_8h_af27907ced0f5a43409ad96430fe0f914}} 
+typedef struct json\+\_\+object \mbox{\hyperlink{json__types_8h_af27907ced0f5a43409ad96430fe0f914}{json\+\_\+object}}
+\begin{DoxyCompactList}\small\item\em The core type for all type of JSON objects handled by json-\/c. \end{DoxyCompactList}\item 
+typedef void() \mbox{\hyperlink{json__types_8h_a57e58c272b899b7034c3b5137935117f}{json\+\_\+object\+\_\+delete\+\_\+fn}}(struct \mbox{\hyperlink{json__types_8h_af27907ced0f5a43409ad96430fe0f914}{json\+\_\+object}} $\ast$jso, void $\ast$userdata)
+\item 
+typedef int() \mbox{\hyperlink{json__types_8h_ad689953451ffa828830d349f4cd72563}{json\+\_\+object\+\_\+to\+\_\+json\+\_\+string\+\_\+fn}}(struct \mbox{\hyperlink{json__types_8h_af27907ced0f5a43409ad96430fe0f914}{json\+\_\+object}} $\ast$jso, struct printbuf $\ast$pb, int level, int flags)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Basic types used in a few places in json-\/c, but you should include \char`\"{}json\+\_\+object.\+h\char`\"{} instead. 
+
+
+
+\doxysubsection{Typedef Documentation}
+\mbox{\Hypertarget{json__types_8h_a57e58c272b899b7034c3b5137935117f}\label{json__types_8h_a57e58c272b899b7034c3b5137935117f}} 
+\index{json\_types.h@{json\_types.h}!json\_object\_delete\_fn@{json\_object\_delete\_fn}}
+\index{json\_object\_delete\_fn@{json\_object\_delete\_fn}!json\_types.h@{json\_types.h}}
+\doxysubsubsection{\texorpdfstring{json\_object\_delete\_fn}{json\_object\_delete\_fn}}
+{\footnotesize\ttfamily typedef void() json\+\_\+object\+\_\+delete\+\_\+fn(struct \mbox{\hyperlink{json__types_8h_af27907ced0f5a43409ad96430fe0f914}{json\+\_\+object}} $\ast$jso, void $\ast$userdata)}
+
+Type of custom user delete functions. See json\+\_\+object\+\_\+set\+\_\+serializer. \mbox{\Hypertarget{json__types_8h_ad689953451ffa828830d349f4cd72563}\label{json__types_8h_ad689953451ffa828830d349f4cd72563}} 
+\index{json\_types.h@{json\_types.h}!json\_object\_to\_json\_string\_fn@{json\_object\_to\_json\_string\_fn}}
+\index{json\_object\_to\_json\_string\_fn@{json\_object\_to\_json\_string\_fn}!json\_types.h@{json\_types.h}}
+\doxysubsubsection{\texorpdfstring{json\_object\_to\_json\_string\_fn}{json\_object\_to\_json\_string\_fn}}
+{\footnotesize\ttfamily typedef int() json\+\_\+object\+\_\+to\+\_\+json\+\_\+string\+\_\+fn(struct \mbox{\hyperlink{json__types_8h_af27907ced0f5a43409ad96430fe0f914}{json\+\_\+object}} $\ast$jso, struct printbuf $\ast$pb, int level, int flags)}
+
+Type of a custom serialization function. See json\+\_\+object\+\_\+set\+\_\+serializer. 

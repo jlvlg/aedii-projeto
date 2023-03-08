@@ -14,8 +14,8 @@ Encapsulates functions into the tree namespace.
 \item 
 \mbox{\hyperlink{tree_8h_a2b5312470152fabd805e7df398bb410f}{Tree}}($\ast$ \mbox{\hyperlink{structtree__methods_a51630df5dbeae8421c118b8f8cbad928}{as\+\_\+tree}} )(\mbox{\hyperlink{tree_8h_a2b5312470152fabd805e7df398bb410f}{Tree}} root)
 \begin{DoxyCompactList}\small\item\em Type casts to tree. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{tree_8h_a2b5312470152fabd805e7df398bb410f}{Tree}}($\ast$ \mbox{\hyperlink{structtree__methods_a7a2576333e32b257b8601c5bb3c23a08}{initialize}} )(void)
-\begin{DoxyCompactList}\small\item\em Initializes a tree. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{tree_8h_a2b5312470152fabd805e7df398bb410f}{Tree}}($\ast$ \mbox{\hyperlink{structtree__methods_ad559c0ce81f5f1329761c6d48832038a}{init}} )(\mbox{\hyperlink{tree_8h_a2b5312470152fabd805e7df398bb410f}{Tree}} leaf, \mbox{\hyperlink{types_8h_a9007ca88cf4d3425bfc53b599de25066}{Item}} \mbox{\hyperlink{structitem}{item}})
+\begin{DoxyCompactList}\small\item\em Initializes an already allocated memory space. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{tree_8h_a2b5312470152fabd805e7df398bb410f}{Tree}}($\ast$ \mbox{\hyperlink{structtree__methods_a1b053ec0d75584d9489af982356393a3}{kill}} )(\mbox{\hyperlink{tree_8h_a2b5312470152fabd805e7df398bb410f}{Tree}} leaf)
 \begin{DoxyCompactList}\small\item\em Deletes a node and its contents. \end{DoxyCompactList}\item 
 void($\ast$ \mbox{\hyperlink{structtree__methods_aadb5139c0b3be035122310448e14e728}{print}} )(\mbox{\hyperlink{tree_8h_a2b5312470152fabd805e7df398bb410f}{Tree}} root)
@@ -30,6 +30,10 @@ void($\ast$ \mbox{\hyperlink{structtree__methods_a7ea72a8d43d1f62acb0328563abfaa
 \begin{DoxyCompactList}\small\item\em Searchs a tree for a node containing an \mbox{\hyperlink{types_8h_a9007ca88cf4d3425bfc53b599de25066}{Item}}. \end{DoxyCompactList}\item 
 int($\ast$ \mbox{\hyperlink{structtree__methods_a474ecb06c0df11e47b22ac44b1ceecc7}{height}} )(\mbox{\hyperlink{tree_8h_a2b5312470152fabd805e7df398bb410f}{Tree}} root)
 \begin{DoxyCompactList}\small\item\em Calculates a tree\textquotesingle{}s height. \end{DoxyCompactList}\item 
+int($\ast$ \mbox{\hyperlink{structtree__methods_a6764fffc7c37eda590b2c44f2587e676}{count}} )(\mbox{\hyperlink{tree_8h_a2b5312470152fabd805e7df398bb410f}{Tree}} root)
+\begin{DoxyCompactList}\small\item\em Calculates number of elements in tree. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{tree_8h_a2b5312470152fabd805e7df398bb410f}{Tree}} $\ast$($\ast$ \mbox{\hyperlink{structtree__methods_a99e3f0e34ba664c8bb9d3c8c72c0718e}{to\+\_\+array}} )(\mbox{\hyperlink{tree_8h_a2b5312470152fabd805e7df398bb410f}{Tree}} branch, int $\ast$out\+\_\+count)
+\begin{DoxyCompactList}\small\item\em Converts a branch into an ordered array. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{tree_8h_a2b5312470152fabd805e7df398bb410f}{Tree}}($\ast$ \mbox{\hyperlink{structtree__methods_a3ebda689c714ce7d5572795fc9aef845}{max}} )(\mbox{\hyperlink{tree_8h_a2b5312470152fabd805e7df398bb410f}{Tree}} root)
 \begin{DoxyCompactList}\small\item\em Searches tree for its greatest value node. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{tree_8h_a2b5312470152fabd805e7df398bb410f}{Tree}}($\ast$ \mbox{\hyperlink{structtree__methods_acfa1b68337b78a6d4663499d89afeda6}{min}} )(\mbox{\hyperlink{tree_8h_a2b5312470152fabd805e7df398bb410f}{Tree}} root)
@@ -86,6 +90,21 @@ Returns number of children.
 \begin{DoxyReturn}{Returns}
 Number of children 
 \end{DoxyReturn}
+\mbox{\Hypertarget{structtree__methods_a6764fffc7c37eda590b2c44f2587e676}\label{structtree__methods_a6764fffc7c37eda590b2c44f2587e676}} 
+\index{tree\_methods@{tree\_methods}!count@{count}}
+\index{count@{count}!tree\_methods@{tree\_methods}}
+\doxysubsubsection{\texorpdfstring{count}{count}}
+{\footnotesize\ttfamily int($\ast$ count) (\mbox{\hyperlink{tree_8h_a2b5312470152fabd805e7df398bb410f}{Tree}} root)}
+
+
+
+Calculates number of elements in tree. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em root} & Tree to be measured \\
+\hline
+\end{DoxyParams}
 \mbox{\Hypertarget{structtree__methods_a8a6ae00fbe6700af625b9fde456df376}\label{structtree__methods_a8a6ae00fbe6700af625b9fde456df376}} 
 \index{tree\_methods@{tree\_methods}!double\_rotation\_left@{double\_rotation\_left}}
 \index{double\_rotation\_left@{double\_rotation\_left}!tree\_methods@{tree\_methods}}
@@ -137,18 +156,25 @@ Calculates a tree\textquotesingle{}s height.
 {\em root} & Tree to be measured \\
 \hline
 \end{DoxyParams}
-\mbox{\Hypertarget{structtree__methods_a7a2576333e32b257b8601c5bb3c23a08}\label{structtree__methods_a7a2576333e32b257b8601c5bb3c23a08}} 
-\index{tree\_methods@{tree\_methods}!initialize@{initialize}}
-\index{initialize@{initialize}!tree\_methods@{tree\_methods}}
-\doxysubsubsection{\texorpdfstring{initialize}{initialize}}
-{\footnotesize\ttfamily \mbox{\hyperlink{tree_8h_a2b5312470152fabd805e7df398bb410f}{Tree}}($\ast$ initialize) (void)}
+\mbox{\Hypertarget{structtree__methods_ad559c0ce81f5f1329761c6d48832038a}\label{structtree__methods_ad559c0ce81f5f1329761c6d48832038a}} 
+\index{tree\_methods@{tree\_methods}!init@{init}}
+\index{init@{init}!tree\_methods@{tree\_methods}}
+\doxysubsubsection{\texorpdfstring{init}{init}}
+{\footnotesize\ttfamily \mbox{\hyperlink{tree_8h_a2b5312470152fabd805e7df398bb410f}{Tree}}($\ast$ init) (\mbox{\hyperlink{tree_8h_a2b5312470152fabd805e7df398bb410f}{Tree}} leaf, \mbox{\hyperlink{types_8h_a9007ca88cf4d3425bfc53b599de25066}{Item}} \mbox{\hyperlink{structitem}{item}})}
 
 
 
-Initializes a tree. 
+Initializes an already allocated memory space. 
 
+
+\begin{DoxyParams}{Parameters}
+{\em leaf} & Pointer to allocated memory \\
+\hline
+{\em item} & Item to be sowed \\
+\hline
+\end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-NULL pointer 
+Node containing item 
 \end{DoxyReturn}
 \mbox{\Hypertarget{structtree__methods_aafe8b6f0f07907fbf57f63ce0934ab26}\label{structtree__methods_aafe8b6f0f07907fbf57f63ce0934ab26}} 
 \index{tree\_methods@{tree\_methods}!inorder@{inorder}}
@@ -351,8 +377,28 @@ Rotates the tree structure to the right.
 \begin{DoxyReturn}{Returns}
 Updated tree 
 \end{DoxyReturn}
+\mbox{\Hypertarget{structtree__methods_a99e3f0e34ba664c8bb9d3c8c72c0718e}\label{structtree__methods_a99e3f0e34ba664c8bb9d3c8c72c0718e}} 
+\index{tree\_methods@{tree\_methods}!to\_array@{to\_array}}
+\index{to\_array@{to\_array}!tree\_methods@{tree\_methods}}
+\doxysubsubsection{\texorpdfstring{to\_array}{to\_array}}
+{\footnotesize\ttfamily \mbox{\hyperlink{tree_8h_a2b5312470152fabd805e7df398bb410f}{Tree}}$\ast$($\ast$ to\+\_\+array) (\mbox{\hyperlink{tree_8h_a2b5312470152fabd805e7df398bb410f}{Tree}} branch, int $\ast$out\+\_\+count)}
+
+
+
+Converts a branch into an ordered array. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em branch} & Branch to be converted \\
+\hline
+{\em out\+\_\+count} & Output pointer with number of elements in array \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Array of pointers 
+\end{DoxyReturn}
 
 
 The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
-src/trees/abstract/\mbox{\hyperlink{tree_8h}{tree.\+h}}\end{DoxyCompactItemize}
+src/libs/data/trees/abstract/\mbox{\hyperlink{tree_8h}{tree.\+h}}\end{DoxyCompactItemize}

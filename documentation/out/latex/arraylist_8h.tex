@@ -1,0 +1,57 @@
+\hypertarget{arraylist_8h}{}\doxysection{src/libs/external/json-\/c/arraylist.h File Reference}
+\label{arraylist_8h}\index{src/libs/external/json-\/c/arraylist.h@{src/libs/external/json-\/c/arraylist.h}}
+
+
+Internal methods for working with json\+\_\+type\+\_\+array objects. Although this is exposed by the \mbox{\hyperlink{json__object_8h_a23d20e3f886c1638a7116be66b7b5ec2}{json\+\_\+object\+\_\+get\+\_\+array()}} method, it is not recommended for direct use.  
+
+
+{\ttfamily \#include $<$stddef.\+h$>$}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+struct array\+\_\+list $\ast$ \mbox{\hyperlink{arraylist_8h_a0d4bfac055dfd98e17296142abf4d894}{array\+\_\+list\+\_\+new}} (array\+\_\+list\+\_\+free\+\_\+fn $\ast$free\+\_\+fn)
+\item 
+struct array\+\_\+list $\ast$ \mbox{\hyperlink{arraylist_8h_ae3e43dc68f5d1815f3aaa36916602e45}{array\+\_\+list\+\_\+new2}} (array\+\_\+list\+\_\+free\+\_\+fn $\ast$free\+\_\+fn, int initial\+\_\+size)
+\item 
+int \mbox{\hyperlink{arraylist_8h_aff21b2a00573f8f0085b81ce1de1a850}{array\+\_\+list\+\_\+shrink}} (struct array\+\_\+list $\ast$arr, size\+\_\+t empty\+\_\+slots)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Internal methods for working with json\+\_\+type\+\_\+array objects. Although this is exposed by the \mbox{\hyperlink{json__object_8h_a23d20e3f886c1638a7116be66b7b5ec2}{json\+\_\+object\+\_\+get\+\_\+array()}} method, it is not recommended for direct use. 
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{arraylist_8h_a0d4bfac055dfd98e17296142abf4d894}\label{arraylist_8h_a0d4bfac055dfd98e17296142abf4d894}} 
+\index{arraylist.h@{arraylist.h}!array\_list\_new@{array\_list\_new}}
+\index{array\_list\_new@{array\_list\_new}!arraylist.h@{arraylist.h}}
+\doxysubsubsection{\texorpdfstring{array\_list\_new()}{array\_list\_new()}}
+{\footnotesize\ttfamily struct array\+\_\+list$\ast$ array\+\_\+list\+\_\+new (\begin{DoxyParamCaption}\item[{array\+\_\+list\+\_\+free\+\_\+fn $\ast$}]{free\+\_\+fn }\end{DoxyParamCaption})}
+
+Allocate an array\+\_\+list of the default size (32). \begin{DoxyRefDesc}{Deprecated}
+\item[\mbox{\hyperlink{deprecated__deprecated000001}{Deprecated}}]Use \mbox{\hyperlink{arraylist_8h_ae3e43dc68f5d1815f3aaa36916602e45}{array\+\_\+list\+\_\+new2()}} instead. \end{DoxyRefDesc}
+\mbox{\Hypertarget{arraylist_8h_ae3e43dc68f5d1815f3aaa36916602e45}\label{arraylist_8h_ae3e43dc68f5d1815f3aaa36916602e45}} 
+\index{arraylist.h@{arraylist.h}!array\_list\_new2@{array\_list\_new2}}
+\index{array\_list\_new2@{array\_list\_new2}!arraylist.h@{arraylist.h}}
+\doxysubsubsection{\texorpdfstring{array\_list\_new2()}{array\_list\_new2()}}
+{\footnotesize\ttfamily struct array\+\_\+list$\ast$ array\+\_\+list\+\_\+new2 (\begin{DoxyParamCaption}\item[{array\+\_\+list\+\_\+free\+\_\+fn $\ast$}]{free\+\_\+fn,  }\item[{int}]{initial\+\_\+size }\end{DoxyParamCaption})}
+
+Allocate an array\+\_\+list of the desired size.
+
+If possible, the size should be chosen to closely match the actual number of elements expected to be used. If the exact size is unknown, there are tradeoffs to be made\+:
+\begin{DoxyItemize}
+\item too small -\/ the array\+\_\+list code will need to call realloc() more often (which might incur an additional memory copy).
+\item too large -\/ will waste memory, but that can be mitigated by calling \mbox{\hyperlink{arraylist_8h_aff21b2a00573f8f0085b81ce1de1a850}{array\+\_\+list\+\_\+shrink()}} once the final size is known.
+\end{DoxyItemize}
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{arraylist_8h_aff21b2a00573f8f0085b81ce1de1a850}{array\+\_\+list\+\_\+shrink}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{arraylist_8h_aff21b2a00573f8f0085b81ce1de1a850}\label{arraylist_8h_aff21b2a00573f8f0085b81ce1de1a850}} 
+\index{arraylist.h@{arraylist.h}!array\_list\_shrink@{array\_list\_shrink}}
+\index{array\_list\_shrink@{array\_list\_shrink}!arraylist.h@{arraylist.h}}
+\doxysubsubsection{\texorpdfstring{array\_list\_shrink()}{array\_list\_shrink()}}
+{\footnotesize\ttfamily int array\+\_\+list\+\_\+shrink (\begin{DoxyParamCaption}\item[{struct array\+\_\+list $\ast$}]{arr,  }\item[{size\+\_\+t}]{empty\+\_\+slots }\end{DoxyParamCaption})}
+
+Shrink the array list to just enough to fit the number of elements in it, plus empty\+\_\+slots. 

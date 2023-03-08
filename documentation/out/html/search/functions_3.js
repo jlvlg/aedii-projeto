@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['int_81',['Int',['../types_8h.html#af7dc940d0d54493282f8c280a0e7fead',1,'types.c']]]
+  ['printbuf_5fmemset_448',['printbuf_memset',['../printbuf_8h.html#a93a27f4f8a092c58666724de23ae804d',1,'printbuf.c']]]
 ];

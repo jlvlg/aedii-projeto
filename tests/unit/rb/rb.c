@@ -36,7 +36,7 @@ void print_node(RB node) {
 
 void print(RB root) {
     tree.preorder(root, print_node);
-    printf("\n");
+    printf("\n\n");
 }
 
 int main(int argc, char *argv[]) {

@@ -1,8 +1,6 @@
 var searchData=
 [
-  ['rb_42',['RB',['../rb_8h.html#a864415da29b5d5e2aefe2a6cc10aaa70',1,'rb.h']]],
-  ['rb_2eh_43',['rb.h',['../rb_8h.html',1,'']]],
-  ['rb_5fnode_44',['rb_node',['../structrb__node.html',1,'']]],
-  ['rb_5fnode_45',['RB_Node',['../rb_8h.html#ae8f46e698664aa6fefb054601184339a',1,'rb.h']]],
-  ['remove_46',['remove',['../structbst__methods.html#af409a9660c83ee9196458165af713b43',1,'bst_methods']]]
+  ['math_5fcompat_2eh_234',['math_compat.h',['../math__compat_8h.html',1,'']]],
+  ['max_235',['max',['../structtree__methods.html#a3ebda689c714ce7d5572795fc9aef845',1,'tree_methods::max()'],['../structutil__methods.html#a7746033dd472d8e303d7bc56866310e2',1,'util_methods::max()']]],
+  ['min_236',['min',['../structtree__methods.html#acfa1b68337b78a6d4663499d89afeda6',1,'tree_methods']]]
 ];
