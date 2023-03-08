@@ -16,6 +16,7 @@ typedef struct avl_node {
 /// Pointer to an AVL_Node
 typedef AVL_Node* AVL;
 
+/// Encapsulates functions into the avl namespace
 struct avl_methods {
     /// @brief Initializes an already allocated memory space
     /// @param leaf Pointer to allocated memory 

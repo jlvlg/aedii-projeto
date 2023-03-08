@@ -1,0 +1,404 @@
+\hypertarget{structtree__methods}{}\doxysection{tree\+\_\+methods Struct Reference}
+\label{structtree__methods}\index{tree\_methods@{tree\_methods}}
+
+
+Encapsulates functions into the tree namespace.  
+
+
+
+
+{\ttfamily \#include $<$tree.\+h$>$}
+
+\doxysubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{tree_8h_a2b5312470152fabd805e7df398bb410f}{Tree}}($\ast$ \mbox{\hyperlink{structtree__methods_a51630df5dbeae8421c118b8f8cbad928}{as\+\_\+tree}} )(\mbox{\hyperlink{tree_8h_a2b5312470152fabd805e7df398bb410f}{Tree}} root)
+\begin{DoxyCompactList}\small\item\em Type casts to tree. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{tree_8h_a2b5312470152fabd805e7df398bb410f}{Tree}}($\ast$ \mbox{\hyperlink{structtree__methods_ad559c0ce81f5f1329761c6d48832038a}{init}} )(\mbox{\hyperlink{tree_8h_a2b5312470152fabd805e7df398bb410f}{Tree}} leaf, \mbox{\hyperlink{types_8h_a9007ca88cf4d3425bfc53b599de25066}{Item}} \mbox{\hyperlink{structitem}{item}})
+\begin{DoxyCompactList}\small\item\em Initializes an already allocated memory space. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{tree_8h_a2b5312470152fabd805e7df398bb410f}{Tree}}($\ast$ \mbox{\hyperlink{structtree__methods_a1b053ec0d75584d9489af982356393a3}{kill}} )(\mbox{\hyperlink{tree_8h_a2b5312470152fabd805e7df398bb410f}{Tree}} leaf)
+\begin{DoxyCompactList}\small\item\em Deletes a node and its contents. \end{DoxyCompactList}\item 
+void($\ast$ \mbox{\hyperlink{structtree__methods_aadb5139c0b3be035122310448e14e728}{print}} )(\mbox{\hyperlink{tree_8h_a2b5312470152fabd805e7df398bb410f}{Tree}} root)
+\begin{DoxyCompactList}\small\item\em Prints all values of a tree. \end{DoxyCompactList}\item 
+void($\ast$ \mbox{\hyperlink{structtree__methods_a4346599c8f2ac2daa38dd9159c763aba}{preorder}} )(\mbox{\hyperlink{tree_8h_a2b5312470152fabd805e7df398bb410f}{Tree}} root, void function(\mbox{\hyperlink{tree_8h_a2b5312470152fabd805e7df398bb410f}{Tree}}))
+\begin{DoxyCompactList}\small\item\em Transverses the tree and calls a function as it goes. \end{DoxyCompactList}\item 
+void($\ast$ \mbox{\hyperlink{structtree__methods_aafe8b6f0f07907fbf57f63ce0934ab26}{inorder}} )(\mbox{\hyperlink{tree_8h_a2b5312470152fabd805e7df398bb410f}{Tree}} root, void function(\mbox{\hyperlink{tree_8h_a2b5312470152fabd805e7df398bb410f}{Tree}}))
+\begin{DoxyCompactList}\small\item\em Transverses the tree and calls a function as it goes. \end{DoxyCompactList}\item 
+void($\ast$ \mbox{\hyperlink{structtree__methods_a7ea72a8d43d1f62acb0328563abfaa6f}{postorder}} )(\mbox{\hyperlink{tree_8h_a2b5312470152fabd805e7df398bb410f}{Tree}} root, void function(\mbox{\hyperlink{tree_8h_a2b5312470152fabd805e7df398bb410f}{Tree}}))
+\begin{DoxyCompactList}\small\item\em Transverses the tree and calls a function as it goes. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{tree_8h_a2b5312470152fabd805e7df398bb410f}{Tree}}($\ast$ \mbox{\hyperlink{structtree__methods_aa330b29b1aeb57b56f153855acc26a1f}{search}} )(\mbox{\hyperlink{tree_8h_a2b5312470152fabd805e7df398bb410f}{Tree}} root, \mbox{\hyperlink{types_8h_a9007ca88cf4d3425bfc53b599de25066}{Item}} \mbox{\hyperlink{structitem}{item}})
+\begin{DoxyCompactList}\small\item\em Searchs a tree for a node containing an \mbox{\hyperlink{types_8h_a9007ca88cf4d3425bfc53b599de25066}{Item}}. \end{DoxyCompactList}\item 
+int($\ast$ \mbox{\hyperlink{structtree__methods_a474ecb06c0df11e47b22ac44b1ceecc7}{height}} )(\mbox{\hyperlink{tree_8h_a2b5312470152fabd805e7df398bb410f}{Tree}} root)
+\begin{DoxyCompactList}\small\item\em Calculates a tree\textquotesingle{}s height. \end{DoxyCompactList}\item 
+int($\ast$ \mbox{\hyperlink{structtree__methods_a6764fffc7c37eda590b2c44f2587e676}{count}} )(\mbox{\hyperlink{tree_8h_a2b5312470152fabd805e7df398bb410f}{Tree}} root)
+\begin{DoxyCompactList}\small\item\em Calculates number of elements in tree. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{tree_8h_a2b5312470152fabd805e7df398bb410f}{Tree}} $\ast$($\ast$ \mbox{\hyperlink{structtree__methods_a99e3f0e34ba664c8bb9d3c8c72c0718e}{to\+\_\+array}} )(\mbox{\hyperlink{tree_8h_a2b5312470152fabd805e7df398bb410f}{Tree}} branch, int $\ast$out\+\_\+count)
+\begin{DoxyCompactList}\small\item\em Converts a branch into an ordered array. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{tree_8h_a2b5312470152fabd805e7df398bb410f}{Tree}}($\ast$ \mbox{\hyperlink{structtree__methods_a3ebda689c714ce7d5572795fc9aef845}{max}} )(\mbox{\hyperlink{tree_8h_a2b5312470152fabd805e7df398bb410f}{Tree}} root)
+\begin{DoxyCompactList}\small\item\em Searches tree for its greatest value node. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{tree_8h_a2b5312470152fabd805e7df398bb410f}{Tree}}($\ast$ \mbox{\hyperlink{structtree__methods_acfa1b68337b78a6d4663499d89afeda6}{min}} )(\mbox{\hyperlink{tree_8h_a2b5312470152fabd805e7df398bb410f}{Tree}} root)
+\begin{DoxyCompactList}\small\item\em Searches tree for its lowest value node. \end{DoxyCompactList}\item 
+int($\ast$ \mbox{\hyperlink{structtree__methods_aead5ecfff1ddfcac1bed06bfefed16f0}{children}} )(\mbox{\hyperlink{tree_8h_a2b5312470152fabd805e7df398bb410f}{Tree}} \mbox{\hyperlink{structnode}{node}})
+\begin{DoxyCompactList}\small\item\em Returns number of children. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{tree_8h_a2b5312470152fabd805e7df398bb410f}{Tree}}($\ast$ \mbox{\hyperlink{structtree__methods_a71d0b345f37caf8b3a4bdb840266c0b0}{simple\+\_\+rotation\+\_\+left}} )(\mbox{\hyperlink{tree_8h_a2b5312470152fabd805e7df398bb410f}{Tree}} p)
+\begin{DoxyCompactList}\small\item\em Rotates the tree structure to the left. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{tree_8h_a2b5312470152fabd805e7df398bb410f}{Tree}}($\ast$ \mbox{\hyperlink{structtree__methods_afa4627619caf335e1516f94f7091021c}{simple\+\_\+rotation\+\_\+right}} )(\mbox{\hyperlink{tree_8h_a2b5312470152fabd805e7df398bb410f}{Tree}} p)
+\begin{DoxyCompactList}\small\item\em Rotates the tree structure to the right. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{tree_8h_a2b5312470152fabd805e7df398bb410f}{Tree}}($\ast$ \mbox{\hyperlink{structtree__methods_a8a6ae00fbe6700af625b9fde456df376}{double\+\_\+rotation\+\_\+left}} )(\mbox{\hyperlink{tree_8h_a2b5312470152fabd805e7df398bb410f}{Tree}} p)
+\begin{DoxyCompactList}\small\item\em Rotates the right child to the right and then the node to the left. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{tree_8h_a2b5312470152fabd805e7df398bb410f}{Tree}}($\ast$ \mbox{\hyperlink{structtree__methods_a9b730d66b15e066927bf388012fad797}{double\+\_\+rotation\+\_\+right}} )(\mbox{\hyperlink{tree_8h_a2b5312470152fabd805e7df398bb410f}{Tree}} p)
+\begin{DoxyCompactList}\small\item\em Rotates the left child to the left and then the node to the right. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Encapsulates functions into the tree namespace. 
+
+\doxysubsection{Field Documentation}
+\mbox{\Hypertarget{structtree__methods_a51630df5dbeae8421c118b8f8cbad928}\label{structtree__methods_a51630df5dbeae8421c118b8f8cbad928}} 
+\index{tree\_methods@{tree\_methods}!as\_tree@{as\_tree}}
+\index{as\_tree@{as\_tree}!tree\_methods@{tree\_methods}}
+\doxysubsubsection{\texorpdfstring{as\_tree}{as\_tree}}
+{\footnotesize\ttfamily \mbox{\hyperlink{tree_8h_a2b5312470152fabd805e7df398bb410f}{Tree}}($\ast$ as\+\_\+tree) (\mbox{\hyperlink{tree_8h_a2b5312470152fabd805e7df398bb410f}{Tree}} root)}
+
+
+
+Type casts to tree. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em root} & Any struct that inherits from tree \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Type casted pointer 
+\end{DoxyReturn}
+\mbox{\Hypertarget{structtree__methods_aead5ecfff1ddfcac1bed06bfefed16f0}\label{structtree__methods_aead5ecfff1ddfcac1bed06bfefed16f0}} 
+\index{tree\_methods@{tree\_methods}!children@{children}}
+\index{children@{children}!tree\_methods@{tree\_methods}}
+\doxysubsubsection{\texorpdfstring{children}{children}}
+{\footnotesize\ttfamily int($\ast$ children) (\mbox{\hyperlink{tree_8h_a2b5312470152fabd805e7df398bb410f}{Tree}} \mbox{\hyperlink{structnode}{node}})}
+
+
+
+Returns number of children. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em node} & Node to be measured \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Number of children 
+\end{DoxyReturn}
+\mbox{\Hypertarget{structtree__methods_a6764fffc7c37eda590b2c44f2587e676}\label{structtree__methods_a6764fffc7c37eda590b2c44f2587e676}} 
+\index{tree\_methods@{tree\_methods}!count@{count}}
+\index{count@{count}!tree\_methods@{tree\_methods}}
+\doxysubsubsection{\texorpdfstring{count}{count}}
+{\footnotesize\ttfamily int($\ast$ count) (\mbox{\hyperlink{tree_8h_a2b5312470152fabd805e7df398bb410f}{Tree}} root)}
+
+
+
+Calculates number of elements in tree. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em root} & Tree to be measured \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{structtree__methods_a8a6ae00fbe6700af625b9fde456df376}\label{structtree__methods_a8a6ae00fbe6700af625b9fde456df376}} 
+\index{tree\_methods@{tree\_methods}!double\_rotation\_left@{double\_rotation\_left}}
+\index{double\_rotation\_left@{double\_rotation\_left}!tree\_methods@{tree\_methods}}
+\doxysubsubsection{\texorpdfstring{double\_rotation\_left}{double\_rotation\_left}}
+{\footnotesize\ttfamily \mbox{\hyperlink{tree_8h_a2b5312470152fabd805e7df398bb410f}{Tree}}($\ast$ double\+\_\+rotation\+\_\+left) (\mbox{\hyperlink{tree_8h_a2b5312470152fabd805e7df398bb410f}{Tree}} p)}
+
+
+
+Rotates the right child to the right and then the node to the left. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p} & Node to be rotated \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Updated tree 
+\end{DoxyReturn}
+\mbox{\Hypertarget{structtree__methods_a9b730d66b15e066927bf388012fad797}\label{structtree__methods_a9b730d66b15e066927bf388012fad797}} 
+\index{tree\_methods@{tree\_methods}!double\_rotation\_right@{double\_rotation\_right}}
+\index{double\_rotation\_right@{double\_rotation\_right}!tree\_methods@{tree\_methods}}
+\doxysubsubsection{\texorpdfstring{double\_rotation\_right}{double\_rotation\_right}}
+{\footnotesize\ttfamily \mbox{\hyperlink{tree_8h_a2b5312470152fabd805e7df398bb410f}{Tree}}($\ast$ double\+\_\+rotation\+\_\+right) (\mbox{\hyperlink{tree_8h_a2b5312470152fabd805e7df398bb410f}{Tree}} p)}
+
+
+
+Rotates the left child to the left and then the node to the right. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p} & Node to be rotated \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Updated tree 
+\end{DoxyReturn}
+\mbox{\Hypertarget{structtree__methods_a474ecb06c0df11e47b22ac44b1ceecc7}\label{structtree__methods_a474ecb06c0df11e47b22ac44b1ceecc7}} 
+\index{tree\_methods@{tree\_methods}!height@{height}}
+\index{height@{height}!tree\_methods@{tree\_methods}}
+\doxysubsubsection{\texorpdfstring{height}{height}}
+{\footnotesize\ttfamily int($\ast$ height) (\mbox{\hyperlink{tree_8h_a2b5312470152fabd805e7df398bb410f}{Tree}} root)}
+
+
+
+Calculates a tree\textquotesingle{}s height. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em root} & Tree to be measured \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{structtree__methods_ad559c0ce81f5f1329761c6d48832038a}\label{structtree__methods_ad559c0ce81f5f1329761c6d48832038a}} 
+\index{tree\_methods@{tree\_methods}!init@{init}}
+\index{init@{init}!tree\_methods@{tree\_methods}}
+\doxysubsubsection{\texorpdfstring{init}{init}}
+{\footnotesize\ttfamily \mbox{\hyperlink{tree_8h_a2b5312470152fabd805e7df398bb410f}{Tree}}($\ast$ init) (\mbox{\hyperlink{tree_8h_a2b5312470152fabd805e7df398bb410f}{Tree}} leaf, \mbox{\hyperlink{types_8h_a9007ca88cf4d3425bfc53b599de25066}{Item}} \mbox{\hyperlink{structitem}{item}})}
+
+
+
+Initializes an already allocated memory space. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em leaf} & Pointer to allocated memory \\
+\hline
+{\em item} & Item to be sowed \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Node containing item 
+\end{DoxyReturn}
+\mbox{\Hypertarget{structtree__methods_aafe8b6f0f07907fbf57f63ce0934ab26}\label{structtree__methods_aafe8b6f0f07907fbf57f63ce0934ab26}} 
+\index{tree\_methods@{tree\_methods}!inorder@{inorder}}
+\index{inorder@{inorder}!tree\_methods@{tree\_methods}}
+\doxysubsubsection{\texorpdfstring{inorder}{inorder}}
+{\footnotesize\ttfamily void($\ast$ inorder) (\mbox{\hyperlink{tree_8h_a2b5312470152fabd805e7df398bb410f}{Tree}} root, void function(\mbox{\hyperlink{tree_8h_a2b5312470152fabd805e7df398bb410f}{Tree}}))}
+
+
+
+Transverses the tree and calls a function as it goes. 
+
+Order of execution\+:
+\begin{DoxyEnumerate}
+\item Tries to access left node if possible
+\item When no longer possible, calls function on current node
+\item Tries to access right node if possible
+\item When no longer possible, resumes from previous node
+\end{DoxyEnumerate}
+
+May be used to obtain the values of a tree in order in O(n) 
+\begin{DoxyParams}{Parameters}
+{\em root} & Tree to be transversed \\
+\hline
+{\em function} & A function that takes a \mbox{\hyperlink{tree_8h_a2b5312470152fabd805e7df398bb410f}{tree}} as a parameter and returns void \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{structtree__methods_a1b053ec0d75584d9489af982356393a3}\label{structtree__methods_a1b053ec0d75584d9489af982356393a3}} 
+\index{tree\_methods@{tree\_methods}!kill@{kill}}
+\index{kill@{kill}!tree\_methods@{tree\_methods}}
+\doxysubsubsection{\texorpdfstring{kill}{kill}}
+{\footnotesize\ttfamily \mbox{\hyperlink{tree_8h_a2b5312470152fabd805e7df398bb410f}{Tree}}($\ast$ kill) (\mbox{\hyperlink{tree_8h_a2b5312470152fabd805e7df398bb410f}{Tree}} leaf)}
+
+
+
+Deletes a node and its contents. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em leaf} & Node to be deleted \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+NULL pointer 
+\end{DoxyReturn}
+\mbox{\Hypertarget{structtree__methods_a3ebda689c714ce7d5572795fc9aef845}\label{structtree__methods_a3ebda689c714ce7d5572795fc9aef845}} 
+\index{tree\_methods@{tree\_methods}!max@{max}}
+\index{max@{max}!tree\_methods@{tree\_methods}}
+\doxysubsubsection{\texorpdfstring{max}{max}}
+{\footnotesize\ttfamily \mbox{\hyperlink{tree_8h_a2b5312470152fabd805e7df398bb410f}{Tree}}($\ast$ max) (\mbox{\hyperlink{tree_8h_a2b5312470152fabd805e7df398bb410f}{Tree}} root)}
+
+
+
+Searches tree for its greatest value node. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em root} & Tree to be searched \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Node containing the tree\textquotesingle{}s greatest value 
+\end{DoxyReturn}
+\mbox{\Hypertarget{structtree__methods_acfa1b68337b78a6d4663499d89afeda6}\label{structtree__methods_acfa1b68337b78a6d4663499d89afeda6}} 
+\index{tree\_methods@{tree\_methods}!min@{min}}
+\index{min@{min}!tree\_methods@{tree\_methods}}
+\doxysubsubsection{\texorpdfstring{min}{min}}
+{\footnotesize\ttfamily \mbox{\hyperlink{tree_8h_a2b5312470152fabd805e7df398bb410f}{Tree}}($\ast$ min) (\mbox{\hyperlink{tree_8h_a2b5312470152fabd805e7df398bb410f}{Tree}} root)}
+
+
+
+Searches tree for its lowest value node. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em root} & Tree to be searched \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Node containing the tree\textquotesingle{}s lowest value 
+\end{DoxyReturn}
+\mbox{\Hypertarget{structtree__methods_a7ea72a8d43d1f62acb0328563abfaa6f}\label{structtree__methods_a7ea72a8d43d1f62acb0328563abfaa6f}} 
+\index{tree\_methods@{tree\_methods}!postorder@{postorder}}
+\index{postorder@{postorder}!tree\_methods@{tree\_methods}}
+\doxysubsubsection{\texorpdfstring{postorder}{postorder}}
+{\footnotesize\ttfamily void($\ast$ postorder) (\mbox{\hyperlink{tree_8h_a2b5312470152fabd805e7df398bb410f}{Tree}} root, void function(\mbox{\hyperlink{tree_8h_a2b5312470152fabd805e7df398bb410f}{Tree}}))}
+
+
+
+Transverses the tree and calls a function as it goes. 
+
+Order of execution\+:
+\begin{DoxyEnumerate}
+\item Tries to access left node if possible
+\item When no longer possible, tries to access right node
+\item When no longer possible, calls function on current node
+\item Resumes from previous node
+\end{DoxyEnumerate}
+
+May be used if you need to access a node\textquotesingle{}s children values before the node\textquotesingle{}s own 
+\begin{DoxyParams}{Parameters}
+{\em root} & Tree to be transversed \\
+\hline
+{\em function} & A function that takes a \mbox{\hyperlink{tree_8h_a2b5312470152fabd805e7df398bb410f}{tree}} as a parameter and returns void \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{structtree__methods_a4346599c8f2ac2daa38dd9159c763aba}\label{structtree__methods_a4346599c8f2ac2daa38dd9159c763aba}} 
+\index{tree\_methods@{tree\_methods}!preorder@{preorder}}
+\index{preorder@{preorder}!tree\_methods@{tree\_methods}}
+\doxysubsubsection{\texorpdfstring{preorder}{preorder}}
+{\footnotesize\ttfamily void($\ast$ preorder) (\mbox{\hyperlink{tree_8h_a2b5312470152fabd805e7df398bb410f}{Tree}} root, void function(\mbox{\hyperlink{tree_8h_a2b5312470152fabd805e7df398bb410f}{Tree}}))}
+
+
+
+Transverses the tree and calls a function as it goes. 
+
+Order of execution\+:
+\begin{DoxyEnumerate}
+\item Calls function on current node
+\item Tries to access left node if possible
+\item When no longer possible, resumes from previous node
+\item Tries to access right node if possible
+\item When no longer possible, resumes from previous node
+\end{DoxyEnumerate}
+
+May be used to recreate a tree if needed 
+\begin{DoxyParams}{Parameters}
+{\em root} & Tree to be transversed \\
+\hline
+{\em function} & A function that takes a \mbox{\hyperlink{tree_8h_a2b5312470152fabd805e7df398bb410f}{tree}} as a parameter and returns void \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{structtree__methods_aadb5139c0b3be035122310448e14e728}\label{structtree__methods_aadb5139c0b3be035122310448e14e728}} 
+\index{tree\_methods@{tree\_methods}!print@{print}}
+\index{print@{print}!tree\_methods@{tree\_methods}}
+\doxysubsubsection{\texorpdfstring{print}{print}}
+{\footnotesize\ttfamily void($\ast$ print) (\mbox{\hyperlink{tree_8h_a2b5312470152fabd805e7df398bb410f}{Tree}} root)}
+
+
+
+Prints all values of a tree. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em root} & Tree to be printed \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{structtree__methods_aa330b29b1aeb57b56f153855acc26a1f}\label{structtree__methods_aa330b29b1aeb57b56f153855acc26a1f}} 
+\index{tree\_methods@{tree\_methods}!search@{search}}
+\index{search@{search}!tree\_methods@{tree\_methods}}
+\doxysubsubsection{\texorpdfstring{search}{search}}
+{\footnotesize\ttfamily \mbox{\hyperlink{tree_8h_a2b5312470152fabd805e7df398bb410f}{Tree}}($\ast$ search) (\mbox{\hyperlink{tree_8h_a2b5312470152fabd805e7df398bb410f}{Tree}} root, \mbox{\hyperlink{types_8h_a9007ca88cf4d3425bfc53b599de25066}{Item}} \mbox{\hyperlink{structitem}{item}})}
+
+
+
+Searchs a tree for a node containing an \mbox{\hyperlink{types_8h_a9007ca88cf4d3425bfc53b599de25066}{Item}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em root} & Tree to be searched in \\
+\hline
+{\em item} & Item to be searched for \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Tree node containing item 
+\end{DoxyReturn}
+\mbox{\Hypertarget{structtree__methods_a71d0b345f37caf8b3a4bdb840266c0b0}\label{structtree__methods_a71d0b345f37caf8b3a4bdb840266c0b0}} 
+\index{tree\_methods@{tree\_methods}!simple\_rotation\_left@{simple\_rotation\_left}}
+\index{simple\_rotation\_left@{simple\_rotation\_left}!tree\_methods@{tree\_methods}}
+\doxysubsubsection{\texorpdfstring{simple\_rotation\_left}{simple\_rotation\_left}}
+{\footnotesize\ttfamily \mbox{\hyperlink{tree_8h_a2b5312470152fabd805e7df398bb410f}{Tree}}($\ast$ simple\+\_\+rotation\+\_\+left) (\mbox{\hyperlink{tree_8h_a2b5312470152fabd805e7df398bb410f}{Tree}} p)}
+
+
+
+Rotates the tree structure to the left. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p} & Node to be rotated \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Updated tree 
+\end{DoxyReturn}
+\mbox{\Hypertarget{structtree__methods_afa4627619caf335e1516f94f7091021c}\label{structtree__methods_afa4627619caf335e1516f94f7091021c}} 
+\index{tree\_methods@{tree\_methods}!simple\_rotation\_right@{simple\_rotation\_right}}
+\index{simple\_rotation\_right@{simple\_rotation\_right}!tree\_methods@{tree\_methods}}
+\doxysubsubsection{\texorpdfstring{simple\_rotation\_right}{simple\_rotation\_right}}
+{\footnotesize\ttfamily \mbox{\hyperlink{tree_8h_a2b5312470152fabd805e7df398bb410f}{Tree}}($\ast$ simple\+\_\+rotation\+\_\+right) (\mbox{\hyperlink{tree_8h_a2b5312470152fabd805e7df398bb410f}{Tree}} p)}
+
+
+
+Rotates the tree structure to the right. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p} & Node to be rotated \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Updated tree 
+\end{DoxyReturn}
+\mbox{\Hypertarget{structtree__methods_a99e3f0e34ba664c8bb9d3c8c72c0718e}\label{structtree__methods_a99e3f0e34ba664c8bb9d3c8c72c0718e}} 
+\index{tree\_methods@{tree\_methods}!to\_array@{to\_array}}
+\index{to\_array@{to\_array}!tree\_methods@{tree\_methods}}
+\doxysubsubsection{\texorpdfstring{to\_array}{to\_array}}
+{\footnotesize\ttfamily \mbox{\hyperlink{tree_8h_a2b5312470152fabd805e7df398bb410f}{Tree}}$\ast$($\ast$ to\+\_\+array) (\mbox{\hyperlink{tree_8h_a2b5312470152fabd805e7df398bb410f}{Tree}} branch, int $\ast$out\+\_\+count)}
+
+
+
+Converts a branch into an ordered array. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em branch} & Branch to be converted \\
+\hline
+{\em out\+\_\+count} & Output pointer with number of elements in array \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Array of pointers 
+\end{DoxyReturn}
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/libs/data/trees/abstract/\mbox{\hyperlink{tree_8h}{tree.\+h}}\end{DoxyCompactItemize}

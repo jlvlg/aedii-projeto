@@ -1,0 +1,134 @@
+\hypertarget{structavl__methods}{}\doxysection{avl\+\_\+methods Struct Reference}
+\label{structavl__methods}\index{avl\_methods@{avl\_methods}}
+
+
+Encapsulates functions into the avl namespace.  
+
+
+
+
+{\ttfamily \#include $<$avl.\+h$>$}
+
+\doxysubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{avl_8h_aa1ed71e1b533f052ed90612cad5a4891}{AVL}}($\ast$ \mbox{\hyperlink{structavl__methods_a362025031b51d4deafb637cb34a7f900}{init}} )(\mbox{\hyperlink{avl_8h_aa1ed71e1b533f052ed90612cad5a4891}{AVL}} leaf, \mbox{\hyperlink{types_8h_a9007ca88cf4d3425bfc53b599de25066}{Item}} \mbox{\hyperlink{structitem}{item}})
+\begin{DoxyCompactList}\small\item\em Initializes an already allocated memory space. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{avl_8h_aa1ed71e1b533f052ed90612cad5a4891}{AVL}}($\ast$ \mbox{\hyperlink{structavl__methods_a6e79aa0f2aa745a9a7c794e9f625e0f3}{create}} )(\mbox{\hyperlink{types_8h_a9007ca88cf4d3425bfc53b599de25066}{Item}} \mbox{\hyperlink{structitem}{item}})
+\begin{DoxyCompactList}\small\item\em Allocates memory and initializes. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{avl_8h_aa1ed71e1b533f052ed90612cad5a4891}{AVL}}($\ast$ \mbox{\hyperlink{structavl__methods_ae2cc0dbb44f1c0f76c14d1e703e6d20e}{insert}} )(\mbox{\hyperlink{avl_8h_aa1ed71e1b533f052ed90612cad5a4891}{AVL}} root, \mbox{\hyperlink{avl_8h_aa1ed71e1b533f052ed90612cad5a4891}{AVL}} leaf, int $\ast$changes)
+\begin{DoxyCompactList}\small\item\em Inserts a node into a tree. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{avl_8h_aa1ed71e1b533f052ed90612cad5a4891}{AVL}}($\ast$ \mbox{\hyperlink{structavl__methods_a935daa014eb9bf4693c0308a7c70627d}{remove}} )(\mbox{\hyperlink{avl_8h_aa1ed71e1b533f052ed90612cad5a4891}{AVL}} root, \mbox{\hyperlink{types_8h_a9007ca88cf4d3425bfc53b599de25066}{Item}} \mbox{\hyperlink{structitem}{item}}, int $\ast$changes)
+\begin{DoxyCompactList}\small\item\em Searches a tree for a node containing an item and removes it. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{avl_8h_aa1ed71e1b533f052ed90612cad5a4891}{AVL}}($\ast$ \mbox{\hyperlink{structavl__methods_a71d5b791148af95aee1f104eae7c7f76}{trim}} )(\mbox{\hyperlink{avl_8h_aa1ed71e1b533f052ed90612cad5a4891}{AVL}} root, \mbox{\hyperlink{avl_8h_aa1ed71e1b533f052ed90612cad5a4891}{AVL}} branch)
+\begin{DoxyCompactList}\small\item\em Removes an entire branch from a tree. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Encapsulates functions into the avl namespace. 
+
+\doxysubsection{Field Documentation}
+\mbox{\Hypertarget{structavl__methods_a6e79aa0f2aa745a9a7c794e9f625e0f3}\label{structavl__methods_a6e79aa0f2aa745a9a7c794e9f625e0f3}} 
+\index{avl\_methods@{avl\_methods}!create@{create}}
+\index{create@{create}!avl\_methods@{avl\_methods}}
+\doxysubsubsection{\texorpdfstring{create}{create}}
+{\footnotesize\ttfamily \mbox{\hyperlink{avl_8h_aa1ed71e1b533f052ed90612cad5a4891}{AVL}}($\ast$ create) (\mbox{\hyperlink{types_8h_a9007ca88cf4d3425bfc53b599de25066}{Item}} \mbox{\hyperlink{structitem}{item}})}
+
+
+
+Allocates memory and initializes. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em item} & Item to be wrapped \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{structavl__methods_a362025031b51d4deafb637cb34a7f900}\label{structavl__methods_a362025031b51d4deafb637cb34a7f900}} 
+\index{avl\_methods@{avl\_methods}!init@{init}}
+\index{init@{init}!avl\_methods@{avl\_methods}}
+\doxysubsubsection{\texorpdfstring{init}{init}}
+{\footnotesize\ttfamily \mbox{\hyperlink{avl_8h_aa1ed71e1b533f052ed90612cad5a4891}{AVL}}($\ast$ init) (\mbox{\hyperlink{avl_8h_aa1ed71e1b533f052ed90612cad5a4891}{AVL}} leaf, \mbox{\hyperlink{types_8h_a9007ca88cf4d3425bfc53b599de25066}{Item}} \mbox{\hyperlink{structitem}{item}})}
+
+
+
+Initializes an already allocated memory space. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em leaf} & Pointer to allocated memory \\
+\hline
+{\em item} & Item to be sowed \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Node containing item 
+\end{DoxyReturn}
+\mbox{\Hypertarget{structavl__methods_ae2cc0dbb44f1c0f76c14d1e703e6d20e}\label{structavl__methods_ae2cc0dbb44f1c0f76c14d1e703e6d20e}} 
+\index{avl\_methods@{avl\_methods}!insert@{insert}}
+\index{insert@{insert}!avl\_methods@{avl\_methods}}
+\doxysubsubsection{\texorpdfstring{insert}{insert}}
+{\footnotesize\ttfamily \mbox{\hyperlink{avl_8h_aa1ed71e1b533f052ed90612cad5a4891}{AVL}}($\ast$ insert) (\mbox{\hyperlink{avl_8h_aa1ed71e1b533f052ed90612cad5a4891}{AVL}} root, \mbox{\hyperlink{avl_8h_aa1ed71e1b533f052ed90612cad5a4891}{AVL}} leaf, int $\ast$changes)}
+
+
+
+Inserts a node into a tree. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em root} & Tree to be inserted into \\
+\hline
+{\em leaf} & Node to be inserted \\
+\hline
+{\em changes} & Tracks changes in the tree\textquotesingle{}s height \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Updated tree 
+\end{DoxyReturn}
+\mbox{\Hypertarget{structavl__methods_a935daa014eb9bf4693c0308a7c70627d}\label{structavl__methods_a935daa014eb9bf4693c0308a7c70627d}} 
+\index{avl\_methods@{avl\_methods}!remove@{remove}}
+\index{remove@{remove}!avl\_methods@{avl\_methods}}
+\doxysubsubsection{\texorpdfstring{remove}{remove}}
+{\footnotesize\ttfamily \mbox{\hyperlink{avl_8h_aa1ed71e1b533f052ed90612cad5a4891}{AVL}}($\ast$ remove) (\mbox{\hyperlink{avl_8h_aa1ed71e1b533f052ed90612cad5a4891}{AVL}} root, \mbox{\hyperlink{types_8h_a9007ca88cf4d3425bfc53b599de25066}{Item}} \mbox{\hyperlink{structitem}{item}}, int $\ast$changes)}
+
+
+
+Searches a tree for a node containing an item and removes it. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em root} & Tree to be removed from \\
+\hline
+{\em item} & Item to be removed \\
+\hline
+{\em changes} & Tracks changes in the tree\textquotesingle{}s height \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Updated tree 
+\end{DoxyReturn}
+\mbox{\Hypertarget{structavl__methods_a71d5b791148af95aee1f104eae7c7f76}\label{structavl__methods_a71d5b791148af95aee1f104eae7c7f76}} 
+\index{avl\_methods@{avl\_methods}!trim@{trim}}
+\index{trim@{trim}!avl\_methods@{avl\_methods}}
+\doxysubsubsection{\texorpdfstring{trim}{trim}}
+{\footnotesize\ttfamily \mbox{\hyperlink{avl_8h_aa1ed71e1b533f052ed90612cad5a4891}{AVL}}($\ast$ trim) (\mbox{\hyperlink{avl_8h_aa1ed71e1b533f052ed90612cad5a4891}{AVL}} root, \mbox{\hyperlink{avl_8h_aa1ed71e1b533f052ed90612cad5a4891}{AVL}} branch)}
+
+
+
+Removes an entire branch from a tree. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em root} & Root of the tree \\
+\hline
+{\em branch} & Branch to be removed \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+NULL pointer 
+\end{DoxyReturn}
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/libs/data/trees/avl/\mbox{\hyperlink{avl_8h}{avl.\+h}}\end{DoxyCompactItemize}

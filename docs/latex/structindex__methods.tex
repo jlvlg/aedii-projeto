@@ -1,0 +1,197 @@
+\hypertarget{structindex__methods}{}\doxysection{index\+\_\+methods Struct Reference}
+\label{structindex__methods}\index{index\_methods@{index\_methods}}
+
+
+Encapsulates functions into the idx namespace.  
+
+
+
+
+{\ttfamily \#include $<$index.\+h$>$}
+
+\doxysubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+int($\ast$ \mbox{\hyperlink{structindex__methods_aef1ab61918dbab82ea29939fff7a1765}{save\+\_\+bst}} )(\mbox{\hyperlink{struct_b_s_t___index}{BST\+\_\+\+Index}} root, char $\ast$filename)
+\begin{DoxyCompactList}\small\item\em Saves a \mbox{\hyperlink{struct_b_s_t___index}{BST\+\_\+\+Index}} tree into a JSON file. \end{DoxyCompactList}\item 
+int($\ast$ \mbox{\hyperlink{structindex__methods_adbc80b52588cd3bfb2c8058b4a633ac9}{save\+\_\+avl}} )(\mbox{\hyperlink{struct_a_v_l___index}{AVL\+\_\+\+Index}} root, char $\ast$filename)
+\begin{DoxyCompactList}\small\item\em Saves an \mbox{\hyperlink{struct_a_v_l___index}{AVL\+\_\+\+Index}} tree into a JSON file. \end{DoxyCompactList}\item 
+int($\ast$ \mbox{\hyperlink{structindex__methods_ab907631059402e4852f66b4f3feff131}{save\+\_\+rb}} )(\mbox{\hyperlink{struct_r_b___index}{RB\+\_\+\+Index}} root, char $\ast$filename)
+\begin{DoxyCompactList}\small\item\em Saves a \mbox{\hyperlink{struct_r_b___index}{RB\+\_\+\+Index}} tree into a JSON file. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_b_s_t___index}{BST\+\_\+\+Index}}($\ast$ \mbox{\hyperlink{structindex__methods_a9c243068b7d1452e1f313fa4f8813d02}{retrieve\+\_\+bst}} )(char $\ast$filename)
+\begin{DoxyCompactList}\small\item\em Loads a \mbox{\hyperlink{struct_b_s_t___index}{BST\+\_\+\+Index}} tree from a JSON file. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_a_v_l___index}{AVL\+\_\+\+Index}}($\ast$ \mbox{\hyperlink{structindex__methods_a59cb00c6f573e3bfdebbed22a8842e78}{retrieve\+\_\+avl}} )(char $\ast$filename)
+\begin{DoxyCompactList}\small\item\em Loads an \mbox{\hyperlink{struct_a_v_l___index}{AVL\+\_\+\+Index}} tree from a JSON file. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_r_b___index}{RB\+\_\+\+Index}}($\ast$ \mbox{\hyperlink{structindex__methods_aa32094115fbe9f67cae535ec6c7017a6}{retrieve\+\_\+rb}} )(char $\ast$filename)
+\begin{DoxyCompactList}\small\item\em Loads a \mbox{\hyperlink{struct_r_b___index}{RB\+\_\+\+Index}} tree from a JSON file. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_junk}{Junk}}($\ast$ \mbox{\hyperlink{structindex__methods_a6e8f36d859f540f217a6af7b7cca4252}{dump}} )(\mbox{\hyperlink{struct_junk}{Junk}} start, int size, int pos)
+\begin{DoxyCompactList}\small\item\em Marks a section of the data file as rewritable junk. \end{DoxyCompactList}\item 
+int($\ast$ \mbox{\hyperlink{structindex__methods_ab863c701f1de9b527014cfb8dca60349}{recycle}} )(\mbox{\hyperlink{struct_junk}{Junk}} $\ast$start, int size)
+\begin{DoxyCompactList}\small\item\em Retrieves the best fit position from the junk data list, updating it in the proccess. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Encapsulates functions into the idx namespace. 
+
+\doxysubsection{Field Documentation}
+\mbox{\Hypertarget{structindex__methods_a6e8f36d859f540f217a6af7b7cca4252}\label{structindex__methods_a6e8f36d859f540f217a6af7b7cca4252}} 
+\index{index\_methods@{index\_methods}!dump@{dump}}
+\index{dump@{dump}!index\_methods@{index\_methods}}
+\doxysubsubsection{\texorpdfstring{dump}{dump}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_junk}{Junk}}($\ast$ dump) (\mbox{\hyperlink{struct_junk}{Junk}} start, int size, int pos)}
+
+
+
+Marks a section of the data file as rewritable junk. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em start} & Previous junk data list \\
+\hline
+{\em size} & Section size in bytes \\
+\hline
+{\em pos} & Section start in bytes \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Updated junk data list 
+\end{DoxyReturn}
+\mbox{\Hypertarget{structindex__methods_ab863c701f1de9b527014cfb8dca60349}\label{structindex__methods_ab863c701f1de9b527014cfb8dca60349}} 
+\index{index\_methods@{index\_methods}!recycle@{recycle}}
+\index{recycle@{recycle}!index\_methods@{index\_methods}}
+\doxysubsubsection{\texorpdfstring{recycle}{recycle}}
+{\footnotesize\ttfamily int($\ast$ recycle) (\mbox{\hyperlink{struct_junk}{Junk}} $\ast$start, int size)}
+
+
+
+Retrieves the best fit position from the junk data list, updating it in the proccess. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em start} & Pointer to junk data list \\
+\hline
+{\em size} & Size to be inserted into data file \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Position of the section in bytes 
+\end{DoxyReturn}
+\mbox{\Hypertarget{structindex__methods_a59cb00c6f573e3bfdebbed22a8842e78}\label{structindex__methods_a59cb00c6f573e3bfdebbed22a8842e78}} 
+\index{index\_methods@{index\_methods}!retrieve\_avl@{retrieve\_avl}}
+\index{retrieve\_avl@{retrieve\_avl}!index\_methods@{index\_methods}}
+\doxysubsubsection{\texorpdfstring{retrieve\_avl}{retrieve\_avl}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_a_v_l___index}{AVL\+\_\+\+Index}}($\ast$ retrieve\+\_\+avl) (char $\ast$filename)}
+
+
+
+Loads an \mbox{\hyperlink{struct_a_v_l___index}{AVL\+\_\+\+Index}} tree from a JSON file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & File name \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Loaded tree 
+\end{DoxyReturn}
+\mbox{\Hypertarget{structindex__methods_a9c243068b7d1452e1f313fa4f8813d02}\label{structindex__methods_a9c243068b7d1452e1f313fa4f8813d02}} 
+\index{index\_methods@{index\_methods}!retrieve\_bst@{retrieve\_bst}}
+\index{retrieve\_bst@{retrieve\_bst}!index\_methods@{index\_methods}}
+\doxysubsubsection{\texorpdfstring{retrieve\_bst}{retrieve\_bst}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_b_s_t___index}{BST\+\_\+\+Index}}($\ast$ retrieve\+\_\+bst) (char $\ast$filename)}
+
+
+
+Loads a \mbox{\hyperlink{struct_b_s_t___index}{BST\+\_\+\+Index}} tree from a JSON file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & File name \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Loaded tree 
+\end{DoxyReturn}
+\mbox{\Hypertarget{structindex__methods_aa32094115fbe9f67cae535ec6c7017a6}\label{structindex__methods_aa32094115fbe9f67cae535ec6c7017a6}} 
+\index{index\_methods@{index\_methods}!retrieve\_rb@{retrieve\_rb}}
+\index{retrieve\_rb@{retrieve\_rb}!index\_methods@{index\_methods}}
+\doxysubsubsection{\texorpdfstring{retrieve\_rb}{retrieve\_rb}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_r_b___index}{RB\+\_\+\+Index}}($\ast$ retrieve\+\_\+rb) (char $\ast$filename)}
+
+
+
+Loads a \mbox{\hyperlink{struct_r_b___index}{RB\+\_\+\+Index}} tree from a JSON file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & File name \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Loaded tree 
+\end{DoxyReturn}
+\mbox{\Hypertarget{structindex__methods_adbc80b52588cd3bfb2c8058b4a633ac9}\label{structindex__methods_adbc80b52588cd3bfb2c8058b4a633ac9}} 
+\index{index\_methods@{index\_methods}!save\_avl@{save\_avl}}
+\index{save\_avl@{save\_avl}!index\_methods@{index\_methods}}
+\doxysubsubsection{\texorpdfstring{save\_avl}{save\_avl}}
+{\footnotesize\ttfamily int($\ast$ save\+\_\+avl) (\mbox{\hyperlink{struct_a_v_l___index}{AVL\+\_\+\+Index}} root, char $\ast$filename)}
+
+
+
+Saves an \mbox{\hyperlink{struct_a_v_l___index}{AVL\+\_\+\+Index}} tree into a JSON file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em root} & Tree root \\
+\hline
+{\em filename} & File name \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+-\/1 if failure 
+\end{DoxyReturn}
+\mbox{\Hypertarget{structindex__methods_aef1ab61918dbab82ea29939fff7a1765}\label{structindex__methods_aef1ab61918dbab82ea29939fff7a1765}} 
+\index{index\_methods@{index\_methods}!save\_bst@{save\_bst}}
+\index{save\_bst@{save\_bst}!index\_methods@{index\_methods}}
+\doxysubsubsection{\texorpdfstring{save\_bst}{save\_bst}}
+{\footnotesize\ttfamily int($\ast$ save\+\_\+bst) (\mbox{\hyperlink{struct_b_s_t___index}{BST\+\_\+\+Index}} root, char $\ast$filename)}
+
+
+
+Saves a \mbox{\hyperlink{struct_b_s_t___index}{BST\+\_\+\+Index}} tree into a JSON file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em root} & Tree root \\
+\hline
+{\em filename} & File name \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+-\/1 if failure 
+\end{DoxyReturn}
+\mbox{\Hypertarget{structindex__methods_ab907631059402e4852f66b4f3feff131}\label{structindex__methods_ab907631059402e4852f66b4f3feff131}} 
+\index{index\_methods@{index\_methods}!save\_rb@{save\_rb}}
+\index{save\_rb@{save\_rb}!index\_methods@{index\_methods}}
+\doxysubsubsection{\texorpdfstring{save\_rb}{save\_rb}}
+{\footnotesize\ttfamily int($\ast$ save\+\_\+rb) (\mbox{\hyperlink{struct_r_b___index}{RB\+\_\+\+Index}} root, char $\ast$filename)}
+
+
+
+Saves a \mbox{\hyperlink{struct_r_b___index}{RB\+\_\+\+Index}} tree into a JSON file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em root} & Tree root \\
+\hline
+{\em filename} & File name \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+-\/1 if failure 
+\end{DoxyReturn}
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/libs/data/index/\mbox{\hyperlink{index_8h}{index.\+h}}\end{DoxyCompactItemize}

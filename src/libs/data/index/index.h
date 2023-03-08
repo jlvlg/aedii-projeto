@@ -5,32 +5,44 @@
 #include "avl.h"
 #include "rb.h"
 
+/// @file
+/// @brief File indexing methods
+
+/// BST indexing tree
 struct BST_Index {
     BST_Node node;
     int pos;
 };
 
+/// AVL indexing tree
 struct AVL_Index {
     AVL_Node node;
     int pos;
 };
 
+/// RB indexing tree
 struct RB_Index {
     RB_Node node;
     int pos;
 };
 
+/// Used to mark sections of the data file as deleted or writable
 typedef struct Junk {
     int size;
     int pos;
     struct Junk *next;
 } JunkNode;
 
+/// Pointer to struct BST_Index
 typedef struct BST_Index* BST_Index;
+/// Pointer to struct AVL_Index
 typedef struct AVL_Index* AVL_Index;
+/// Pointer to struct RB_Index
 typedef struct RB_Index* RB_Index;
+/// Pointer to JunkNode
 typedef JunkNode* Junk;
 
+/// Encapsulates functions into the idx namespace
 struct index_methods {
     /// @brief Saves a BST_Index tree into a JSON file
     /// @param root Tree root

@@ -17,6 +17,7 @@ typedef struct rb_node {
 /// Pointer to an RB_Node
 typedef RB_Node* RB;
 
+/// Encapsulates functions into the rb namespace
 struct rb_methods {
     /// @brief Initializes an already allocated memory space
     /// @param leaf Pointer to allocated memory 
