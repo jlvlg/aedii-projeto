@@ -99,6 +99,9 @@ Data Fields</h2></td></tr>
 <tr class="memitem:a7605dd953a40a6003738b7a84ade81d6"><td class="memItemLeft" align="right" valign="top">void *(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structutil__methods.html#a7605dd953a40a6003738b7a84ade81d6">safe_malloc</a> )(size_t size)</td></tr>
 <tr class="memdesc:a7605dd953a40a6003738b7a84ade81d6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tries to allocate memory and exits the program with error code 1 in case of failure to do so.  <a href="structutil__methods.html#a7605dd953a40a6003738b7a84ade81d6">More...</a><br /></td></tr>
 <tr class="separator:a7605dd953a40a6003738b7a84ade81d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa880e67dc2148a512c3e1c119f3c8694"><td class="memItemLeft" align="right" valign="top">void *(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structutil__methods.html#aa880e67dc2148a512c3e1c119f3c8694">safe_realloc</a> )(void *ptr, size_t size)</td></tr>
+<tr class="memdesc:aa880e67dc2148a512c3e1c119f3c8694"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tries to reallocate memory and exits the program with error code 1 in case of failure to do so.  <a href="structutil__methods.html#aa880e67dc2148a512c3e1c119f3c8694">More...</a><br /></td></tr>
+<tr class="separator:aa880e67dc2148a512c3e1c119f3c8694"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a34dd95342078d651564799ccbb8aea6d"><td class="memItemLeft" align="right" valign="top">char *(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structutil__methods.html#a34dd95342078d651564799ccbb8aea6d">string_malloc</a> )(char string[])</td></tr>
 <tr class="memdesc:a34dd95342078d651564799ccbb8aea6d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allocates enough space in memory for a string.  <a href="structutil__methods.html#a34dd95342078d651564799ccbb8aea6d">More...</a><br /></td></tr>
 <tr class="separator:a34dd95342078d651564799ccbb8aea6d"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -190,6 +193,29 @@ Data Fields</h2></td></tr>
 
 </div>
 </div>
+<a id="aa880e67dc2148a512c3e1c119f3c8694"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa880e67dc2148a512c3e1c119f3c8694">&#9670;&nbsp;</a></span>safe_realloc</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void*(* safe_realloc) (void *ptr, size_t size)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Tries to reallocate memory and exits the program with error code 1 in case of failure to do so. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ptr</td><td>Previous pointer </td></tr>
+    <tr><td class="paramname">size</td><td>New pointer size </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="a34dd95342078d651564799ccbb8aea6d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a34dd95342078d651564799ccbb8aea6d">&#9670;&nbsp;</a></span>string_malloc</h2>
 
@@ -208,7 +234,7 @@ Data Fields</h2></td></tr>
 </div>
 </div>
 <hr/>The documentation for this struct was generated from the following file:<ul>
-<li>src/util/<a class="el" href="util_8h_source.html">util.h</a></li>
+<li>src/libs/util/<a class="el" href="util_8h_source.html">util.h</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

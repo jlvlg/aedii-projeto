@@ -1,0 +1,102 @@
+\hypertarget{json__visit_8h}{}\doxysection{src/libs/external/json-\/c/json\+\_\+visit.h File Reference}
+\label{json__visit_8h}\index{src/libs/external/json-\/c/json\_visit.h@{src/libs/external/json-\/c/json\_visit.h}}
+
+
+Methods for walking a tree of objects.  
+
+
+{\ttfamily \#include \char`\"{}json\+\_\+object.\+h\char`\"{}}\newline
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{json__visit_8h_ac5be4a96b99b724833943003715dfc1c}{JSON\+\_\+\+C\+\_\+\+VISIT\+\_\+\+SECOND}}~0x02
+\item 
+\#define \mbox{\hyperlink{json__visit_8h_a98b35e1ba1d52d41799dccbfd2c170a1}{JSON\+\_\+\+C\+\_\+\+VISIT\+\_\+\+RETURN\+\_\+\+CONTINUE}}~0
+\item 
+\#define \mbox{\hyperlink{json__visit_8h_adc7ca60a79c4ae870d9463e41527c2a1}{JSON\+\_\+\+C\+\_\+\+VISIT\+\_\+\+RETURN\+\_\+\+SKIP}}~7547
+\item 
+\#define \mbox{\hyperlink{json__visit_8h_a327a21f1f1c6f84e7a13fbaaf4a51b13}{JSON\+\_\+\+C\+\_\+\+VISIT\+\_\+\+RETURN\+\_\+\+POP}}~767
+\item 
+\#define \mbox{\hyperlink{json__visit_8h_a5956f41bed48f90a127f9b37fad7ea97}{JSON\+\_\+\+C\+\_\+\+VISIT\+\_\+\+RETURN\+\_\+\+STOP}}~7867
+\item 
+\#define \mbox{\hyperlink{json__visit_8h_abfacb0713b81c897a8ce5f37ff6ffb9c}{JSON\+\_\+\+C\+\_\+\+VISIT\+\_\+\+RETURN\+\_\+\+ERROR}}~-\/1
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+JSON\+\_\+\+EXPORT int \mbox{\hyperlink{json__visit_8h_a0f585e56a5d417381cdf6c28538dbb20}{json\+\_\+c\+\_\+visit}} (\mbox{\hyperlink{json__types_8h_af27907ced0f5a43409ad96430fe0f914}{json\+\_\+object}} $\ast$jso, int future\+\_\+flags, json\+\_\+c\+\_\+visit\+\_\+userfunc $\ast$userfunc, void $\ast$userarg)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Methods for walking a tree of objects. 
+
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{json__visit_8h_a98b35e1ba1d52d41799dccbfd2c170a1}\label{json__visit_8h_a98b35e1ba1d52d41799dccbfd2c170a1}} 
+\index{json\_visit.h@{json\_visit.h}!JSON\_C\_VISIT\_RETURN\_CONTINUE@{JSON\_C\_VISIT\_RETURN\_CONTINUE}}
+\index{JSON\_C\_VISIT\_RETURN\_CONTINUE@{JSON\_C\_VISIT\_RETURN\_CONTINUE}!json\_visit.h@{json\_visit.h}}
+\doxysubsubsection{\texorpdfstring{JSON\_C\_VISIT\_RETURN\_CONTINUE}{JSON\_C\_VISIT\_RETURN\_CONTINUE}}
+{\footnotesize\ttfamily \#define JSON\+\_\+\+C\+\_\+\+VISIT\+\_\+\+RETURN\+\_\+\+CONTINUE~0}
+
+This json\+\_\+c\+\_\+visit\+\_\+userfunc return value indicates that iteration should proceed normally. \mbox{\Hypertarget{json__visit_8h_abfacb0713b81c897a8ce5f37ff6ffb9c}\label{json__visit_8h_abfacb0713b81c897a8ce5f37ff6ffb9c}} 
+\index{json\_visit.h@{json\_visit.h}!JSON\_C\_VISIT\_RETURN\_ERROR@{JSON\_C\_VISIT\_RETURN\_ERROR}}
+\index{JSON\_C\_VISIT\_RETURN\_ERROR@{JSON\_C\_VISIT\_RETURN\_ERROR}!json\_visit.h@{json\_visit.h}}
+\doxysubsubsection{\texorpdfstring{JSON\_C\_VISIT\_RETURN\_ERROR}{JSON\_C\_VISIT\_RETURN\_ERROR}}
+{\footnotesize\ttfamily \#define JSON\+\_\+\+C\+\_\+\+VISIT\+\_\+\+RETURN\+\_\+\+ERROR~-\/1}
+
+This json\+\_\+c\+\_\+visit\+\_\+userfunc return value indicates that iteration should stop immediately, and cause json\+\_\+c\+\_\+visit to return an error. \mbox{\Hypertarget{json__visit_8h_a327a21f1f1c6f84e7a13fbaaf4a51b13}\label{json__visit_8h_a327a21f1f1c6f84e7a13fbaaf4a51b13}} 
+\index{json\_visit.h@{json\_visit.h}!JSON\_C\_VISIT\_RETURN\_POP@{JSON\_C\_VISIT\_RETURN\_POP}}
+\index{JSON\_C\_VISIT\_RETURN\_POP@{JSON\_C\_VISIT\_RETURN\_POP}!json\_visit.h@{json\_visit.h}}
+\doxysubsubsection{\texorpdfstring{JSON\_C\_VISIT\_RETURN\_POP}{JSON\_C\_VISIT\_RETURN\_POP}}
+{\footnotesize\ttfamily \#define JSON\+\_\+\+C\+\_\+\+VISIT\+\_\+\+RETURN\+\_\+\+POP~767}
+
+This json\+\_\+c\+\_\+visit\+\_\+userfunc return value indicates that iteration of the fields/elements of the {\bfseries{containing}} object should stop and continue \char`\"{}popped up\char`\"{} a level of the object hierarchy. For example, returning this when handling arg will result in arg3 and any other fields being skipped. The next call to userfunc will be the JSON\+\_\+\+C\+\_\+\+VISIT\+\_\+\+SECOND call on \char`\"{}foo\char`\"{}, followed by a userfunc call on \char`\"{}bar\char`\"{}. 
+\begin{DoxyPre}
+\{
+  "{}foo"{}: \{
+    "{}arg1"{}: 1,
+    "{}arg2"{}: 2,
+    "{}arg3"{}: 3,
+    ...
+  \},
+  "{}bar"{}: \{
+    ...
+  \}
+\}
+\end{DoxyPre}
+ \mbox{\Hypertarget{json__visit_8h_adc7ca60a79c4ae870d9463e41527c2a1}\label{json__visit_8h_adc7ca60a79c4ae870d9463e41527c2a1}} 
+\index{json\_visit.h@{json\_visit.h}!JSON\_C\_VISIT\_RETURN\_SKIP@{JSON\_C\_VISIT\_RETURN\_SKIP}}
+\index{JSON\_C\_VISIT\_RETURN\_SKIP@{JSON\_C\_VISIT\_RETURN\_SKIP}!json\_visit.h@{json\_visit.h}}
+\doxysubsubsection{\texorpdfstring{JSON\_C\_VISIT\_RETURN\_SKIP}{JSON\_C\_VISIT\_RETURN\_SKIP}}
+{\footnotesize\ttfamily \#define JSON\+\_\+\+C\+\_\+\+VISIT\+\_\+\+RETURN\+\_\+\+SKIP~7547}
+
+This json\+\_\+c\+\_\+visit\+\_\+userfunc return value indicates that iteration over the members of the current object should be skipped. If the current object isn\textquotesingle{}t a container (array or object), this is no different than JSON\+\_\+\+C\+\_\+\+VISIT\+\_\+\+RETURN\+\_\+\+CONTINUE. \mbox{\Hypertarget{json__visit_8h_a5956f41bed48f90a127f9b37fad7ea97}\label{json__visit_8h_a5956f41bed48f90a127f9b37fad7ea97}} 
+\index{json\_visit.h@{json\_visit.h}!JSON\_C\_VISIT\_RETURN\_STOP@{JSON\_C\_VISIT\_RETURN\_STOP}}
+\index{JSON\_C\_VISIT\_RETURN\_STOP@{JSON\_C\_VISIT\_RETURN\_STOP}!json\_visit.h@{json\_visit.h}}
+\doxysubsubsection{\texorpdfstring{JSON\_C\_VISIT\_RETURN\_STOP}{JSON\_C\_VISIT\_RETURN\_STOP}}
+{\footnotesize\ttfamily \#define JSON\+\_\+\+C\+\_\+\+VISIT\+\_\+\+RETURN\+\_\+\+STOP~7867}
+
+This json\+\_\+c\+\_\+visit\+\_\+userfunc return value indicates that iteration should stop immediately, and cause json\+\_\+c\+\_\+visit to return success. \mbox{\Hypertarget{json__visit_8h_ac5be4a96b99b724833943003715dfc1c}\label{json__visit_8h_ac5be4a96b99b724833943003715dfc1c}} 
+\index{json\_visit.h@{json\_visit.h}!JSON\_C\_VISIT\_SECOND@{JSON\_C\_VISIT\_SECOND}}
+\index{JSON\_C\_VISIT\_SECOND@{JSON\_C\_VISIT\_SECOND}!json\_visit.h@{json\_visit.h}}
+\doxysubsubsection{\texorpdfstring{JSON\_C\_VISIT\_SECOND}{JSON\_C\_VISIT\_SECOND}}
+{\footnotesize\ttfamily \#define JSON\+\_\+\+C\+\_\+\+VISIT\+\_\+\+SECOND~0x02}
+
+Passed to json\+\_\+c\+\_\+visit\+\_\+userfunc as one of the flags values to indicate that this is the second time a container (array or object) is being called, after all of it\textquotesingle{}s members have been iterated over. 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{json__visit_8h_a0f585e56a5d417381cdf6c28538dbb20}\label{json__visit_8h_a0f585e56a5d417381cdf6c28538dbb20}} 
+\index{json\_visit.h@{json\_visit.h}!json\_c\_visit@{json\_c\_visit}}
+\index{json\_c\_visit@{json\_c\_visit}!json\_visit.h@{json\_visit.h}}
+\doxysubsubsection{\texorpdfstring{json\_c\_visit()}{json\_c\_visit()}}
+{\footnotesize\ttfamily JSON\+\_\+\+EXPORT int json\+\_\+c\+\_\+visit (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{json__types_8h_af27907ced0f5a43409ad96430fe0f914}{json\+\_\+object}} $\ast$}]{jso,  }\item[{int}]{future\+\_\+flags,  }\item[{json\+\_\+c\+\_\+visit\+\_\+userfunc $\ast$}]{userfunc,  }\item[{void $\ast$}]{userarg }\end{DoxyParamCaption})}
+
+Visit each object in the JSON hierarchy starting at jso. For each object, userfunc is called, passing the object and userarg. If the object has a parent (i.\+e. anything other than jso itself) its parent will be passed as parent\+\_\+jso, and either jso\+\_\+key or jso\+\_\+index will be set, depending on whether the parent is an object or an array.
+
+Nodes will be visited depth first, but containers (arrays and objects) will be visited twice, the second time with JSON\+\_\+\+C\+\_\+\+VISIT\+\_\+\+SECOND set in flags.
+
+userfunc must return one of the defined return values, to indicate whether and how to continue visiting nodes, or one of various ways to stop.
+
+Returns 0 if nodes were visited successfully, even if some were intentionally skipped due to what userfunc returned. Returns $<$0 if an error occurred during iteration, including if userfunc returned JSON\+\_\+\+C\+\_\+\+VISIT\+\_\+\+RETURN\+\_\+\+ERROR. 

@@ -7,5 +7,6 @@ var structtypes__methods =
     [ "Double", "structtypes__methods.html#a0feee2e239941e7fd8f3a348d076346c", null ],
     [ "Float", "structtypes__methods.html#a6f5a7c9ea43581a3ece056b957b2c06f", null ],
     [ "Int", "structtypes__methods.html#a21cbc6c29df580882ddc25815b118fa5", null ],
-    [ "String", "structtypes__methods.html#a6312c12b5a74af8a40804a5420f2e517", null ]
+    [ "String", "structtypes__methods.html#a6312c12b5a74af8a40804a5420f2e517", null ],
+    [ "tostring", "structtypes__methods.html#a1e246860dd67f0c7e191a4f72ea53eaa", null ]
 ];

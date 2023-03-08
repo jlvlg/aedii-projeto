@@ -1,0 +1,100 @@
+\hypertarget{structlh__table}{}\doxysection{lh\+\_\+table Struct Reference}
+\label{structlh__table}\index{lh\_table@{lh\_table}}
+
+
+{\ttfamily \#include $<$linkhash.\+h$>$}
+
+\doxysubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{structlh__table_a439227feff9d7f55384e8780cfc2eb82}{size}}
+\item 
+int \mbox{\hyperlink{structlh__table_ad43c3812e6d13e0518d9f8b8f463ffcf}{count}}
+\item 
+struct \mbox{\hyperlink{structlh__entry}{lh\+\_\+entry}} $\ast$ \mbox{\hyperlink{structlh__table_a08719f5e13dbfce1d5c951cd47ced7e2}{head}}
+\item 
+struct \mbox{\hyperlink{structlh__entry}{lh\+\_\+entry}} $\ast$ \mbox{\hyperlink{structlh__table_a0144d938d7e47406fe76ebe51ad5f857}{tail}}
+\item 
+struct \mbox{\hyperlink{structlh__entry}{lh\+\_\+entry}} $\ast$ \mbox{\hyperlink{structlh__table_a37ce3fea914f225f4b96d7108fa522d5}{table}}
+\item 
+\mbox{\hyperlink{linkhash_8h_a481b0bb1ab1d6a83713d9c27aa9f07d2}{lh\+\_\+entry\+\_\+free\+\_\+fn}} $\ast$ \mbox{\hyperlink{structlh__table_ae0c28d5a0cfcaacaf9d5ad8b8914ea4a}{free\+\_\+fn}}
+\item 
+\mbox{\hyperlink{linkhash_8h_a91d16eb45069d235a198d2184a77d0ae}{lh\+\_\+hash\+\_\+fn}} $\ast$ \mbox{\hyperlink{structlh__table_a02a1517165a75c5eb133579af63f1c17}{hash\+\_\+fn}}
+\item 
+\mbox{\hyperlink{linkhash_8h_af74a0690267598a0ed6f0a9b66674573}{lh\+\_\+equal\+\_\+fn}} $\ast$ \mbox{\hyperlink{structlh__table_a49a6bf3fdae31c2791221c5f0f3c8df5}{equal\+\_\+fn}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The hash table structure. Outside of linkhash.\+c, treat this as opaque. 
+
+\doxysubsection{Field Documentation}
+\mbox{\Hypertarget{structlh__table_ad43c3812e6d13e0518d9f8b8f463ffcf}\label{structlh__table_ad43c3812e6d13e0518d9f8b8f463ffcf}} 
+\index{lh\_table@{lh\_table}!count@{count}}
+\index{count@{count}!lh\_table@{lh\_table}}
+\doxysubsubsection{\texorpdfstring{count}{count}}
+{\footnotesize\ttfamily int count}
+
+Numbers of entries. \begin{DoxyRefDesc}{Deprecated}
+\item[\mbox{\hyperlink{deprecated__deprecated000017}{Deprecated}}]Use \mbox{\hyperlink{linkhash_8h_ac9ba631c91fe80fb905f04c7cd526f2b}{lh\+\_\+table\+\_\+length()}} instead. \end{DoxyRefDesc}
+\mbox{\Hypertarget{structlh__table_a49a6bf3fdae31c2791221c5f0f3c8df5}\label{structlh__table_a49a6bf3fdae31c2791221c5f0f3c8df5}} 
+\index{lh\_table@{lh\_table}!equal\_fn@{equal\_fn}}
+\index{equal\_fn@{equal\_fn}!lh\_table@{lh\_table}}
+\doxysubsubsection{\texorpdfstring{equal\_fn}{equal\_fn}}
+{\footnotesize\ttfamily \mbox{\hyperlink{linkhash_8h_af74a0690267598a0ed6f0a9b66674573}{lh\+\_\+equal\+\_\+fn}}$\ast$ equal\+\_\+fn}
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[\mbox{\hyperlink{deprecated__deprecated000023}{Deprecated}}]do not use outside of linkhash.\+c \end{DoxyRefDesc}
+\mbox{\Hypertarget{structlh__table_ae0c28d5a0cfcaacaf9d5ad8b8914ea4a}\label{structlh__table_ae0c28d5a0cfcaacaf9d5ad8b8914ea4a}} 
+\index{lh\_table@{lh\_table}!free\_fn@{free\_fn}}
+\index{free\_fn@{free\_fn}!lh\_table@{lh\_table}}
+\doxysubsubsection{\texorpdfstring{free\_fn}{free\_fn}}
+{\footnotesize\ttfamily \mbox{\hyperlink{linkhash_8h_a481b0bb1ab1d6a83713d9c27aa9f07d2}{lh\+\_\+entry\+\_\+free\+\_\+fn}}$\ast$ free\+\_\+fn}
+
+A pointer to the function responsible for freeing an entry. \begin{DoxyRefDesc}{Deprecated}
+\item[\mbox{\hyperlink{deprecated__deprecated000021}{Deprecated}}]do not use outside of linkhash.\+c \end{DoxyRefDesc}
+\mbox{\Hypertarget{structlh__table_a02a1517165a75c5eb133579af63f1c17}\label{structlh__table_a02a1517165a75c5eb133579af63f1c17}} 
+\index{lh\_table@{lh\_table}!hash\_fn@{hash\_fn}}
+\index{hash\_fn@{hash\_fn}!lh\_table@{lh\_table}}
+\doxysubsubsection{\texorpdfstring{hash\_fn}{hash\_fn}}
+{\footnotesize\ttfamily \mbox{\hyperlink{linkhash_8h_a91d16eb45069d235a198d2184a77d0ae}{lh\+\_\+hash\+\_\+fn}}$\ast$ hash\+\_\+fn}
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[\mbox{\hyperlink{deprecated__deprecated000022}{Deprecated}}]do not use outside of linkhash.\+c \end{DoxyRefDesc}
+\mbox{\Hypertarget{structlh__table_a08719f5e13dbfce1d5c951cd47ced7e2}\label{structlh__table_a08719f5e13dbfce1d5c951cd47ced7e2}} 
+\index{lh\_table@{lh\_table}!head@{head}}
+\index{head@{head}!lh\_table@{lh\_table}}
+\doxysubsubsection{\texorpdfstring{head}{head}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{structlh__entry}{lh\+\_\+entry}}$\ast$ head}
+
+The first entry. \begin{DoxyRefDesc}{Deprecated}
+\item[\mbox{\hyperlink{deprecated__deprecated000018}{Deprecated}}]Use \mbox{\hyperlink{linkhash_8h_a9359c3263c3cdd71a50128a52a5266b5}{lh\+\_\+table\+\_\+head()}} instead. \end{DoxyRefDesc}
+\mbox{\Hypertarget{structlh__table_a439227feff9d7f55384e8780cfc2eb82}\label{structlh__table_a439227feff9d7f55384e8780cfc2eb82}} 
+\index{lh\_table@{lh\_table}!size@{size}}
+\index{size@{size}!lh\_table@{lh\_table}}
+\doxysubsubsection{\texorpdfstring{size}{size}}
+{\footnotesize\ttfamily int size}
+
+Size of our hash. \begin{DoxyRefDesc}{Deprecated}
+\item[\mbox{\hyperlink{deprecated__deprecated000016}{Deprecated}}]do not use outside of linkhash.\+c \end{DoxyRefDesc}
+\mbox{\Hypertarget{structlh__table_a37ce3fea914f225f4b96d7108fa522d5}\label{structlh__table_a37ce3fea914f225f4b96d7108fa522d5}} 
+\index{lh\_table@{lh\_table}!table@{table}}
+\index{table@{table}!lh\_table@{lh\_table}}
+\doxysubsubsection{\texorpdfstring{table}{table}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{structlh__entry}{lh\+\_\+entry}}$\ast$ table}
+
+Internal storage of the actual table of entries. \begin{DoxyRefDesc}{Deprecated}
+\item[\mbox{\hyperlink{deprecated__deprecated000020}{Deprecated}}]do not use outside of linkhash.\+c \end{DoxyRefDesc}
+\mbox{\Hypertarget{structlh__table_a0144d938d7e47406fe76ebe51ad5f857}\label{structlh__table_a0144d938d7e47406fe76ebe51ad5f857}} 
+\index{lh\_table@{lh\_table}!tail@{tail}}
+\index{tail@{tail}!lh\_table@{lh\_table}}
+\doxysubsubsection{\texorpdfstring{tail}{tail}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{structlh__entry}{lh\+\_\+entry}}$\ast$ tail}
+
+The last entry. \begin{DoxyRefDesc}{Deprecated}
+\item[\mbox{\hyperlink{deprecated__deprecated000019}{Deprecated}}]Do not use, may be removed in a future release. \end{DoxyRefDesc}
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/libs/external/json-\/c/\mbox{\hyperlink{linkhash_8h}{linkhash.\+h}}\end{DoxyCompactItemize}

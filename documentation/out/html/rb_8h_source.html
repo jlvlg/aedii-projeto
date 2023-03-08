@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Database: src/trees/rb/rb.h Source File</title>
+<title>Database: src/libs/data/trees/rb/rb.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -102,21 +102,23 @@ $(document).ready(function(){initNavTree('rb_8h_source.html',''); initResizable(
 <div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="rb_8h.html#a864415da29b5d5e2aefe2a6cc10aaa70">   18</a></span>&#160;<span class="keyword">typedef</span> <a class="code" href="structrb__node.html">RB_Node</a>* <a class="code" href="rb_8h.html#a864415da29b5d5e2aefe2a6cc10aaa70">RB</a>;</div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="keyword">struct </span>rb_methods {</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <a class="code" href="rb_8h.html#a864415da29b5d5e2aefe2a6cc10aaa70">RB</a> (*create)(<a class="code" href="structitem.html">Item</a> <a class="code" href="structitem.html">item</a>);</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    void (*insert)(<a class="code" href="structrb__node.html">RB</a> *root, <a class="code" href="structrb__node.html">RB</a> leaf);</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    void (*remove)(<a class="code" href="structrb__node.html">RB</a> *root, <a class="code" href="structitem.html">Item</a> <a class="code" href="structitem.html">item</a>);</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    void (*trim)(<a class="code" href="structrb__node.html">RB</a> *root, <a class="code" href="structrb__node.html">RB</a> branch);</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;};</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="keyword">extern</span> <span class="keyword">const</span> <span class="keyword">struct </span>rb_methods rb;</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160; </div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <a class="code" href="rb_8h.html#a864415da29b5d5e2aefe2a6cc10aaa70">RB</a> (*init)(<a class="code" href="structrb__node.html">RB</a> leaf, <a class="code" href="structitem.html">Item</a> <a class="code" href="structitem.html">item</a>);</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <a class="code" href="rb_8h.html#a864415da29b5d5e2aefe2a6cc10aaa70">RB</a> (*create)(<a class="code" href="structitem.html">Item</a> <a class="code" href="structitem.html">item</a>);</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    void (*insert)(<a class="code" href="structrb__node.html">RB</a> *root, <a class="code" href="structrb__node.html">RB</a> leaf);</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    void (*remove)(<a class="code" href="structrb__node.html">RB</a> *root, <a class="code" href="structitem.html">Item</a> <a class="code" href="structitem.html">item</a>);</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <a class="code" href="rb_8h.html#a864415da29b5d5e2aefe2a6cc10aaa70">RB</a> (*trim)(<a class="code" href="structrb__node.html">RB</a> *root, <a class="code" href="structrb__node.html">RB</a> branch);</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;};</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="keyword">extern</span> <span class="keyword">const</span> <span class="keyword">struct </span>rb_methods rb;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160; </div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="ttc" id="arb_8h_html_a864415da29b5d5e2aefe2a6cc10aaa70"><div class="ttname"><a href="rb_8h.html#a864415da29b5d5e2aefe2a6cc10aaa70">RB</a></div><div class="ttdeci">RB_Node * RB</div><div class="ttdoc">Pointer to an RB_Node.</div><div class="ttdef"><b>Definition:</b> rb.h:18</div></div>
 <div class="ttc" id="arb_8h_html_ae8f46e698664aa6fefb054601184339a"><div class="ttname"><a href="rb_8h.html#ae8f46e698664aa6fefb054601184339a">RB_Node</a></div><div class="ttdeci">struct rb_node RB_Node</div><div class="ttdoc">Red-black implementation of the abstract tree.</div></div>
-<div class="ttc" id="astructitem_html"><div class="ttname"><a href="structitem.html">item</a></div><div class="ttdoc">Groups data with its actual type.</div><div class="ttdef"><b>Definition:</b> types.h:20</div></div>
+<div class="ttc" id="astructitem_html"><div class="ttname"><a href="structitem.html">item</a></div><div class="ttdoc">Groups data with its actual type.</div><div class="ttdef"><b>Definition:</b> types.h:17</div></div>
 <div class="ttc" id="astructnode_html"><div class="ttname"><a href="structnode.html">node</a></div><div class="ttdoc">Abstract tree node, prefer usage of inherited structs.</div><div class="ttdef"><b>Definition:</b> tree.h:11</div></div>
 <div class="ttc" id="astructrb__node_html"><div class="ttname"><a href="structrb__node.html">rb_node</a></div><div class="ttdoc">Red-black implementation of the abstract tree.</div><div class="ttdef"><b>Definition:</b> rb.h:11</div></div>
 <div class="ttc" id="atree_8h_html"><div class="ttname"><a href="tree_8h.html">tree.h</a></div><div class="ttdoc">Abstract tree implementation.</div></div>
@@ -126,7 +128,7 @@ $(document).ready(function(){initNavTree('rb_8h_source.html',''); initResizable(
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_aa6d17e8b0473bc0229633600aa317a6.html">trees</a></li><li class="navelem"><a class="el" href="dir_d9ee6f1e82919625d3dfa2da9f6843c0.html">rb</a></li><li class="navelem"><a class="el" href="rb_8h.html">rb.h</a></li>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_87a455bccb09a92130c26a11a880c98a.html">libs</a></li><li class="navelem"><a class="el" href="dir_fa2cd06d00c11c7837bd45f5dbb77463.html">data</a></li><li class="navelem"><a class="el" href="dir_ed45eb30351f112bc2b91649a9e5cf75.html">trees</a></li><li class="navelem"><a class="el" href="dir_819fbf1578b369510240fd02619ea03c.html">rb</a></li><li class="navelem"><a class="el" href="rb_8h.html">rb.h</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
   </ul>
 </div>

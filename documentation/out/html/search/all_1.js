@@ -1,7 +1,12 @@
 var searchData=
 [
-  ['bst_5',['BST',['../bst_8h.html#a17a8f6ed0a2d4b8ceb4e2181ba0e9901',1,'bst.h']]],
-  ['bst_2eh_6',['bst.h',['../bst_8h.html',1,'']]],
-  ['bst_5fmethods_7',['bst_methods',['../structbst__methods.html',1,'']]],
-  ['bst_5fnode_8',['BST_Node',['../bst_8h.html#a4d8a6d1f3c8e84b70ff8b442939aae3d',1,'bst.h']]]
+  ['array_5flist_5fnew_3',['array_list_new',['../arraylist_8h.html#a0d4bfac055dfd98e17296142abf4d894',1,'arraylist.c']]],
+  ['array_5flist_5fnew2_4',['array_list_new2',['../arraylist_8h.html#ae3e43dc68f5d1815f3aaa36916602e45',1,'arraylist.c']]],
+  ['array_5flist_5fshrink_5',['array_list_shrink',['../arraylist_8h.html#aff21b2a00573f8f0085b81ce1de1a850',1,'arraylist.c']]],
+  ['arraylist_2eh_6',['arraylist.h',['../arraylist_8h.html',1,'']]],
+  ['as_5ftree_7',['as_tree',['../structtree__methods.html#a51630df5dbeae8421c118b8f8cbad928',1,'tree_methods']]],
+  ['avl_8',['AVL',['../avl_8h.html#aa1ed71e1b533f052ed90612cad5a4891',1,'avl.h']]],
+  ['avl_2eh_9',['avl.h',['../avl_8h.html',1,'']]],
+  ['avl_5fnode_10',['avl_node',['../structavl__node.html',1,'']]],
+  ['avl_5fnode_11',['AVL_Node',['../avl_8h.html#aeb680dbfcfb43a3279e64aaaeee88d18',1,'avl.h']]]
 ];

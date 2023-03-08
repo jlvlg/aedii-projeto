@@ -1,0 +1,70 @@
+Benchmark tests for json-\/c\hypertarget{md_src_libs_external_json_c_bench__r_e_a_d_m_e_bench_autotoc_md0}{}\doxysubsection{General strategy\+:}\label{md_src_libs_external_json_c_bench__r_e_a_d_m_e_bench_autotoc_md0}
+
+\begin{DoxyItemize}
+\item Identify \char`\"{}after\char`\"{} commit hash
+\begin{DoxyItemize}
+\item Use provided directory
+\item Use provided commit hash
+\item Local changes in current working directory
+\item \$\{cur\+\_\+branch\}
+\end{DoxyItemize}
+\item Identify \char`\"{}before\char`\"{} commit hash, in order of preference
+\begin{DoxyItemize}
+\item Use provided directory
+\item Use provided commit hash
+\item Use origin/\$\{cur\+\_\+branch\}, if different from \$\{after\+\_\+commit\}
+\item Use previous release
+\end{DoxyItemize}
+\item If not using existing dir, clone to src-\/\$\{after\+\_\+commit\}
+\begin{DoxyItemize}
+\item or, checkout appropriate commit in existing src-\/\$\{after\+\_\+commit\}
+\end{DoxyItemize}
+\item Create build \& install dirs for \$\{after\+\_\+commit\}
+\item Build \& install \$\{after\+\_\+commit\}
+\item Compile benchmark programs against install-\/\$\{after\+\_\+commit\}
+\item If not using existing dir, clone to src-\/\$\{before\+\_\+commit\}
+\begin{DoxyItemize}
+\item or, checkout appropriate commit in existing src-\/\$\{before\+\_\+commit\}
+\end{DoxyItemize}
+\item Create build \& install dirs for \$\{before\+\_\+commit\}
+\item Build \& install \$\{before\+\_\+commit\}
+\item Compile benchmark programs against install-\/\$\{before\+\_\+commit\}
+\item Run benchmark in each location
+\item Compare results
+\end{DoxyItemize}\hypertarget{md_src_libs_external_json_c_bench__r_e_a_d_m_e_bench_autotoc_md1}{}\doxysubsection{heaptrack memory profiler}\label{md_src_libs_external_json_c_bench__r_e_a_d_m_e_bench_autotoc_md1}
+\href{https://milianw.de/blog/heaptrack-a-heap-memory-profiler-for-linux.html}{\texttt{ https\+://milianw.\+de/blog/heaptrack-\/a-\/heap-\/memory-\/profiler-\/for-\/linux.\+html}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{yum install libdwarf-\/devel elfutils boost-\/devel libunwind-\/devel}
+\DoxyCodeLine{}
+\DoxyCodeLine{git clone git://anongit.kde.org/heaptrack}
+\DoxyCodeLine{cd heaptrack}
+\DoxyCodeLine{mkdir build}
+\DoxyCodeLine{cd build}
+\DoxyCodeLine{cmake -\/DCMAKE\_BUILD\_TYPE=RelWithDebInfo \(\backslash\)}
+\DoxyCodeLine{    -\/DCMAKE\_INSTALL\_PREFIX=\$HOME/heaptrack-\/install ..}
+\DoxyCodeLine{make install}
+
+\end{DoxyCode}
+\hypertarget{md_src_libs_external_json_c_bench__r_e_a_d_m_e_bench_autotoc_md2}{}\doxysubsection{Issues}\label{md_src_libs_external_json_c_bench__r_e_a_d_m_e_bench_autotoc_md2}
+
+\begin{DoxyItemize}
+\item jc-\/bench.\+sh is incomplete.
+\item valgrind massif misreports \char`\"{}extra-\/heap\char`\"{} bytes?
+
+\char`\"{}json\+\_\+parse -\/n canada.\+json\char`\"{} shows 38640 KB maxrss.
+
+Using valgrind --tool=massif, a large amount of memory is listed as wasted \char`\"{}extra-\/heap\char`\"{} bytes. ($\sim$5.6MB)
+
+\`{}\`{}\`{} valgrind --tool=massif --massif-\/out-\/file=massif.\+out ./json\+\_\+parse -\/n $\sim$/canada.json ms\+\_\+print massif.\+out \`{}\`{}\`{}
+\end{DoxyItemize}
+
+\begin{DoxyVerb}Using heaptrack, and analyzing the histogram, only shows ~2.6MB
+```
+heaptrack ./json_parse -n canada.json
+heaptrack --analyze heaptrack*gz -H histogram.out
+awk ' { s=$1; count=$2; ru=(int((s+ 15) / 16)) * 16; wasted = ((ru-s)*count); print s, count, ru-s, wasted; total=total+wasted} END { print "Total: ", total }' histogram.out
+```
+\end{DoxyVerb}
+ With the (unreleased) arraylist trimming changes, maxrss reported by getrusage() goes down, but massif claims {\itshape more} total usage, and a HUGE extra-\/heap amount (50\% of total). 

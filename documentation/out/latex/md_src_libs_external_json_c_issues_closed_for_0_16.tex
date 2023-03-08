@@ -1,0 +1,113 @@
+This list was created with\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{PREV=2020-\/07-\/23}
+\DoxyCodeLine{NOW=2022-\/04-\/13}
+\DoxyCodeLine{curl "{}https://api.github.com/search/issues?q=repo\%3Ajson-\/c\%2Fjson-\/c+closed\%3A>\$\{PREV\}+created\%3A<\$\{NOW\}\&sort=created\&order=asc\&per\_page=100\&page=1"{} > issues1.out}
+\DoxyCodeLine{jq -\/r '.items[] | "{}["{} + .title + "{}]("{} + .url + "{})"{} | tostring' issues?.out > issues.md}
+\DoxyCodeLine{sed -\/e's,\string^\(\backslash\)[ *\(\backslash\)(.*\(\backslash\))\(\backslash\)](https://api.github.com/.*/\(\backslash\)([0-\/9].*\(\backslash\))),* [Issue \#\(\backslash\)2](https://github.com/json-\/c/json-\/c/issues/\(\backslash\)2) -\/ \(\backslash\)1,' -\/i issues.md}
+\DoxyCodeLine{cat issues.md >> issues\_closed\_for\_0.16.md}
+
+\end{DoxyCode}
+
+
+
+\begin{DoxyItemize}
+\item \href{https://github.com/json-c/json-c/issues/464}{\texttt{ Issue \#464}} -\/ Speed up parsing and object creation
+\item \href{https://github.com/json-c/json-c/issues/540}{\texttt{ Issue \#540}} -\/ request\+: json\+\_\+init\+\_\+library
+\item \href{https://github.com/json-c/json-c/issues/631}{\texttt{ Issue \#631}} -\/ New 0.\+14 release requests
+\item \href{https://github.com/json-c/json-c/issues/647}{\texttt{ Issue \#647}} -\/ \char`\"{}cmake -\/\+DCMAKE\+\_\+\+BUILD\+\_\+\+TYPE=\+Release\char`\"{} fails with error\+: \textquotesingle{}cint64\textquotesingle{} may be used uninitialized
+\item \href{https://github.com/json-c/json-c/issues/648}{\texttt{ Issue \#648}} -\/ Fix \char`\"{}may be used uninitialized\char`\"{} Release build failure
+\item \href{https://github.com/json-c/json-c/issues/649}{\texttt{ Issue \#649}} -\/ json-\/c tag 0.\+15 tarball contains a file doc/\+Doxyfile and generated doxygen files in doc/html
+\item \href{https://github.com/json-c/json-c/issues/650}{\texttt{ Issue \#650}} -\/ README\+: fix spelling errors
+\item \href{https://github.com/json-c/json-c/issues/651}{\texttt{ Issue \#651}} -\/ Getrandom
+\item \href{https://github.com/json-c/json-c/issues/652}{\texttt{ Issue \#652}} -\/ Waste memory
+\item \href{https://github.com/json-c/json-c/issues/653}{\texttt{ Issue \#653}} -\/ Make the documentation build reproducibly
+\item \href{https://github.com/json-c/json-c/issues/654}{\texttt{ Issue \#654}} -\/ A stack-\/buffer-\/overflow in json\+\_\+parse.\+c\+:89\+:44
+\item \href{https://github.com/json-c/json-c/issues/655}{\texttt{ Issue \#655}} -\/ json\+\_\+parse\+: Fix read past end of buffer
+\item \href{https://github.com/json-c/json-c/issues/656}{\texttt{ Issue \#656}} -\/ Fixed warnings
+\item \href{https://github.com/json-c/json-c/issues/657}{\texttt{ Issue \#657}} -\/ Use GRND\+\_\+\+NONBLOCK with getrandom.
+\item \href{https://github.com/json-c/json-c/issues/658}{\texttt{ Issue \#658}} -\/ \mbox{\hyperlink{json__object_8h_ac003fb99db7ecd674bb16d983d2f92ee}{json\+\_\+object\+\_\+get\+\_\+boolean()}} returns wrong result for objects and arrays
+\item \href{https://github.com/json-c/json-c/issues/659}{\texttt{ Issue \#659}} -\/ fix \mbox{\hyperlink{json__object_8h_ac003fb99db7ecd674bb16d983d2f92ee}{json\+\_\+object\+\_\+get\+\_\+boolean()}} to behave like documented
+\item \href{https://github.com/json-c/json-c/issues/660}{\texttt{ Issue \#660}} -\/ Validate size arguments in arraylist functions.
+\item \href{https://github.com/json-c/json-c/issues/661}{\texttt{ Issue \#661}} -\/ Cleanup of some code parts
+\item \href{https://github.com/json-c/json-c/issues/662}{\texttt{ Issue \#662}} -\/ Prevent signed overflow in get\+\_\+time\+\_\+seed
+\item \href{https://github.com/json-c/json-c/issues/663}{\texttt{ Issue \#663}} -\/ Properly format errnos in {\itshape json\+\_\+c\+\_\+strerror}
+\item {\itshape \href{https://github.com/json-c/json-c/issues/664}{\texttt{ Issue \#664}} -\/ Limit strings at INT\+\_\+\+MAX length}
+\item {\itshape \href{https://github.com/json-c/json-c/issues/665}{\texttt{ Issue \#665}} -\/ Handle more allocation failures in json\+\_\+tokener$\ast$ functions}
+\item {\itshape \href{https://github.com/json-c/json-c/issues/666}{\texttt{ Issue \#666}} -\/ test1 json\+\_\+object\+\_\+new\+\_\+array\+\_\+ext test is failing}
+\item {\itshape \href{https://github.com/json-c/json-c/issues/667}{\texttt{ Issue \#667}} -\/ Fixed test1 regression.}
+\item {\itshape \href{https://github.com/json-c/json-c/issues/670}{\texttt{ Issue \#670}} -\/ Created Stone-\/\+Paper-\/\+Scissor Game by C language}
+\item {\itshape \href{https://github.com/json-c/json-c/issues/672}{\texttt{ Issue \#672}} -\/ Calling exit() after failure to generate random seed}
+\item {\itshape \href{https://github.com/json-c/json-c/issues/673}{\texttt{ Issue \#673}} -\/ switchcasemenuproject}
+\item {\itshape \href{https://github.com/json-c/json-c/issues/674}{\texttt{ Issue \#674}} -\/ random\+\_\+seed\+: on error, continue to next method}
+\item {\itshape \href{https://github.com/json-c/json-c/issues/682}{\texttt{ Issue \#682}} -\/ libjson-\/c-\/dev vs libjson-\/c3}
+\item {\itshape \href{https://github.com/json-c/json-c/issues/683}{\texttt{ Issue \#683}} -\/ \mbox{[}Question\mbox{]} Is it possible to clear a ptr of json\+\_\+object?}
+\item {\itshape \href{https://github.com/json-c/json-c/issues/684}{\texttt{ Issue \#684}} -\/ json\+\_\+tokener\+\_\+parse\+\_\+verbose failed with core dump}
+\item {\itshape \href{https://github.com/json-c/json-c/issues/685}{\texttt{ Issue \#685}} -\/ json\+\_\+tokener\+\_\+parse memory leak?}
+\item {\itshape \href{https://github.com/json-c/json-c/issues/689}{\texttt{ Issue \#689}} -\/ fix compilation with clang}
+\item {\itshape \href{https://github.com/json-c/json-c/issues/690}{\texttt{ Issue \#690}} -\/ \char`\"{}1,\char`\"{} produces an object with int 1; \char`\"{}1\char`\"{} produces a null object}
+\item {\itshape \href{https://github.com/json-c/json-c/issues/691}{\texttt{ Issue \#691}} -\/ failed tests}
+\item {\itshape \href{https://github.com/json-c/json-c/issues/692}{\texttt{ Issue \#692}} -\/ patch to add arc4random}
+\item {\itshape \href{https://github.com/json-c/json-c/issues/693}{\texttt{ Issue \#693}} -\/ Optional parameter for packing as array}
+\item {\itshape \href{https://github.com/json-c/json-c/issues/694}{\texttt{ Issue \#694}} -\/ fix invalid unsigned arithmetic.}
+\item {\itshape \href{https://github.com/json-c/json-c/issues/695}{\texttt{ Issue \#695}} -\/ /tmp/json-\/c/random\+\_\+seed.c\+:327\+:6\+: error}
+\item {\itshape \href{https://github.com/json-c/json-c/issues/696}{\texttt{ Issue \#696}} -\/ To avoid target exe file export JSON functions.}
+\item {\itshape \href{https://github.com/json-c/json-c/issues/697}{\texttt{ Issue \#697}} -\/ \mbox{\hyperlink{json__object_8h_a9ee29ca8d79896e15007131527f6002e}{json\+\_\+object\+\_\+get\+\_\+string()}} return value truncated when assigning it to a pointer type in Win32 App}
+\item {\itshape \href{https://github.com/json-c/json-c/issues/698}{\texttt{ Issue \#698}} -\/ Feature request\+: set allocator}
+\item {\itshape \href{https://github.com/json-c/json-c/issues/699}{\texttt{ Issue \#699}} -\/ Linking to libjson-\/c Issue}
+\item {\itshape \href{https://github.com/json-c/json-c/issues/700}{\texttt{ Issue \#700}} -\/ Fix unused variable for Win32 build in random\+\_\+seed.\+c}
+\item {\itshape \href{https://github.com/json-c/json-c/issues/701}{\texttt{ Issue \#701}} -\/ \mbox{[}RFC\mbox{]} json\+\_\+pointer\+: allow the feature to be disabled}
+\item {\itshape \href{https://github.com/json-c/json-c/issues/703}{\texttt{ Issue \#703}} -\/ Fix vasprintf fallback}
+\item {\itshape \href{https://github.com/json-c/json-c/issues/706}{\texttt{ Issue \#706}} -\/ Check {\bfseries{STDC\+\_\+\+VERSION}} is defined before checking its value}
+\item {\itshape \href{https://github.com/json-c/json-c/issues/707}{\texttt{ Issue \#707}} -\/ How to build json-\/c-\/0.\+15 for arm arch}
+\item {\itshape \href{https://github.com/json-c/json-c/issues/708}{\texttt{ Issue \#708}} -\/ direct access to elements}
+\item {\itshape \href{https://github.com/json-c/json-c/issues/709}{\texttt{ Issue \#709}} -\/ Include guards not namespaced / build errors for \mbox{\hyperlink{debug_8h}{debug.\+h}} with open\+NDS}
+\item {\itshape \href{https://github.com/json-c/json-c/issues/710}{\texttt{ Issue \#710}} -\/ \textquotesingle{}file system sandbox blocked mmap()\textquotesingle{} error on i\+OS}
+\item {\itshape \href{https://github.com/json-c/json-c/issues/711}{\texttt{ Issue \#711}} -\/ creating a json object}
+\item {\itshape \href{https://github.com/json-c/json-c/issues/712}{\texttt{ Issue \#712}} -\/ building json-\/c using cmake for ESP32}
+\item {\itshape \href{https://github.com/json-c/json-c/issues/713}{\texttt{ Issue \#713}} -\/ When value converted to char$\ast$ can not compare it with another value}
+\item {\itshape \href{https://github.com/json-c/json-c/issues/714}{\texttt{ Issue \#714}} -\/ Add After\+Case\+Label to .clang-\/format}
+\item {\itshape \href{https://github.com/json-c/json-c/issues/716}{\texttt{ Issue \#716}} -\/ Fixed cmake command}
+\item {\itshape \href{https://github.com/json-c/json-c/issues/717}{\texttt{ Issue \#717}} -\/ Cmake is able delete all files by \char`\"{}clean\char`\"{} target}
+\item {\itshape \href{https://github.com/json-c/json-c/issues/718}{\texttt{ Issue \#718}} -\/ CMake create uninstall target if unix generator is used}
+\item {\itshape \href{https://github.com/json-c/json-c/issues/719}{\texttt{ Issue \#719}} -\/ Parsing multiple JSON strings}
+\item {\itshape \href{https://github.com/json-c/json-c/issues/722}{\texttt{ Issue \#722}} -\/ Fix use-\/after-\/free in \mbox{\hyperlink{json__tokener_8h_a6a1583ddd434e13515d6232de813462e}{json\+\_\+tokener\+\_\+new\+\_\+ex()}}}
+\item {\itshape \href{https://github.com/json-c/json-c/issues/723}{\texttt{ Issue \#723}} -\/ if set \+\_\+\+\_\+stdcall (/\+Gz)}
+\item {\itshape \href{https://github.com/json-c/json-c/issues/724}{\texttt{ Issue \#724}} -\/ \#723}
+\item {\itshape \href{https://github.com/json-c/json-c/issues/725}{\texttt{ Issue \#725}} -\/ \mbox{\hyperlink{json__util_8h_a03119ec0a71af4eee95318e9b2aaf05b}{json\+\_\+object\+\_\+from\+\_\+file()}} execution segment error}
+\item {\itshape \href{https://github.com/json-c/json-c/issues/726}{\texttt{ Issue \#726}} -\/ fix cmake version for tests}
+\item {\itshape \href{https://github.com/json-c/json-c/issues/727}{\texttt{ Issue \#727}} -\/ Really use prefix JSON\+\_\+\+C\+\_\+\+OBJECT\+\_\+\+ADD}
+\item \href{https://github.com/json-c/json-c/issues/728}{\texttt{ Issue \#728}} -\/ DRAFT PROPOSAL -\/ Add option JSON\+\_\+\+C\+\_\+\+OBJECT\+\_\+\+ADD\+\_\+\+IF\+\_\+\+NOT\+\_\+\+NULL
+\item \href{https://github.com/json-c/json-c/issues/729}{\texttt{ Issue \#729}} -\/ $\ast$ don\textquotesingle{}t assume includedir
+\item \href{https://github.com/json-c/json-c/issues/731}{\texttt{ Issue \#731}} -\/ Json-\/c Error
+\item \href{https://github.com/json-c/json-c/issues/732}{\texttt{ Issue \#732}} -\/ Fix/static include dirs
+\item \href{https://github.com/json-c/json-c/issues/734}{\texttt{ Issue \#734}} -\/ Newer appveyor config for VS2022 etc...
+\item \href{https://github.com/json-c/json-c/issues/735}{\texttt{ Issue \#735}} -\/ Add policy\+\_\+max to minimum required cmake version
+\item \href{https://github.com/json-c/json-c/issues/736}{\texttt{ Issue \#736}} -\/ json\+\_\+object.\+c\+:308\+: json\+\_\+object\+\_\+put\+: Assertion `jso-\/$>$\+\_\+ref\+\_\+count $>$ 0' failed
+\item \href{https://github.com/json-c/json-c/issues/737}{\texttt{ Issue \#737}} -\/ Fix typo in README
+\item \href{https://github.com/json-c/json-c/issues/738}{\texttt{ Issue \#738}} -\/ General question -\/ Is there an SLA for handling newly detected security issues?
+\item \href{https://github.com/json-c/json-c/issues/739}{\texttt{ Issue \#739}} -\/ json\+\_\+escape\+\_\+str()\+: avoid harmless unsigned integer overflow
+\item \href{https://github.com/json-c/json-c/issues/741}{\texttt{ Issue \#741}} -\/ \mbox{\hyperlink{json__util_8h_a762aaf3df0a9c7b6919cdc1035348012}{json\+\_\+type\+\_\+to\+\_\+name()}}\+: use correct printf() formatter
+\item \href{https://github.com/json-c/json-c/issues/742}{\texttt{ Issue \#742}} -\/ json\+\_\+object\+\_\+copy\+\_\+serializer\+\_\+data()\+: add assertion
+\item \href{https://github.com/json-c/json-c/issues/743}{\texttt{ Issue \#743}} -\/ Cmd adb root
+\item \href{https://github.com/json-c/json-c/issues/744}{\texttt{ Issue \#744}} -\/ Close file on error path.
+\item \href{https://github.com/json-c/json-c/issues/745}{\texttt{ Issue \#745}} -\/ vasprintf()\+: avoid out of memory accesses
+\item \href{https://github.com/json-c/json-c/issues/746}{\texttt{ Issue \#746}} -\/ Fix typos in code comments and Change\+Log
+\item \href{https://github.com/json-c/json-c/issues/747}{\texttt{ Issue \#747}} -\/ json\+\_\+object\+\_\+put\+: Assertion `jso-\/$>$\+\_\+ref\+\_\+count $>$ 0' failed
+\item \href{https://github.com/json-c/json-c/issues/748}{\texttt{ Issue \#748}} -\/ \mbox{\hyperlink{printbuf_8h_a61f6bc0b1ca5787f0faca6799d61a0bb}{sprintbuf()}}\+: test for all vsnprintf error values
+\item \href{https://github.com/json-c/json-c/issues/749}{\texttt{ Issue \#749}} -\/ \mbox{\hyperlink{printbuf_8h_a61f6bc0b1ca5787f0faca6799d61a0bb}{sprintbuf()}}\+: handle printbuf\+\_\+memappend errors
+\item \href{https://github.com/json-c/json-c/issues/750}{\texttt{ Issue \#750}} -\/ \mbox{\hyperlink{printbuf_8h_a93a27f4f8a092c58666724de23ae804d}{printbuf\+\_\+memset()}}\+: set gaps to zero
+\item \href{https://github.com/json-c/json-c/issues/751}{\texttt{ Issue \#751}} -\/ printbuf\+: do not allow invalid arguments
+\item \href{https://github.com/json-c/json-c/issues/752}{\texttt{ Issue \#752}} -\/ Fix typos
+\item \href{https://github.com/json-c/json-c/issues/753}{\texttt{ Issue \#753}} -\/ CTest failed in MSVC build
+\item \href{https://github.com/json-c/json-c/issues/754}{\texttt{ Issue \#754}} -\/ Minor improvements to documentation
+\item \href{https://github.com/json-c/json-c/issues/755}{\texttt{ Issue \#755}} -\/ Fix error messages
+\item \href{https://github.com/json-c/json-c/issues/758}{\texttt{ Issue \#758}} -\/ Preserve context if out of memory
+\item \href{https://github.com/json-c/json-c/issues/760}{\texttt{ Issue \#760}} -\/ Code style\+: removed unneeded double-\/quotes
+\item \href{https://github.com/json-c/json-c/issues/761}{\texttt{ Issue \#761}} -\/ Last commit merged to master breaks compilation
+\item \href{https://github.com/json-c/json-c/issues/762}{\texttt{ Issue \#762}} -\/ how to merge two jsons by json-\/c
+\item \href{https://github.com/json-c/json-c/issues/763}{\texttt{ Issue \#763}} -\/ Question\+: sort\+\_\+fn arguments
+\item \href{https://github.com/json-c/json-c/issues/764}{\texttt{ Issue \#764}} -\/ Make test fail on test case test\+\_\+util\+\_\+file 
+\end{DoxyItemize}

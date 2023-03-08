@@ -1,0 +1,67 @@
+\hypertarget{printbuf_8h}{}\doxysection{src/libs/external/json-\/c/printbuf.h File Reference}
+\label{printbuf_8h}\index{src/libs/external/json-\/c/printbuf.h@{src/libs/external/json-\/c/printbuf.h}}
+
+
+Internal string buffer handling. Unless you\textquotesingle{}re writing a json\+\_\+object\+\_\+to\+\_\+json\+\_\+string\+\_\+fn implementation for use with \mbox{\hyperlink{json__object_8h_a889345512a214b8f78f6a73561523c7c}{json\+\_\+object\+\_\+set\+\_\+serializer()}} direct use of this is not recommended.  
+
+
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{printbuf_8h_ab009973c5e15aae191e610cd70752603}{\+\_\+printbuf\+\_\+check\+\_\+literal}}(mystr)~(\char`\"{}\char`\"{} mystr)
+\item 
+\#define \mbox{\hyperlink{printbuf_8h_a2f30492682f5fbc59a8749b428e0e4ba}{printbuf\+\_\+strappend}}(pb,  str)~ printbuf\+\_\+memappend((pb), \mbox{\hyperlink{printbuf_8h_ab009973c5e15aae191e610cd70752603}{\+\_\+printbuf\+\_\+check\+\_\+literal}}(str), sizeof(str) -\/ 1)
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+JSON\+\_\+\+EXPORT int \mbox{\hyperlink{printbuf_8h_a93a27f4f8a092c58666724de23ae804d}{printbuf\+\_\+memset}} (struct printbuf $\ast$pb, int offset, int charvalue, int len)
+\item 
+JSON\+\_\+\+EXPORT int \mbox{\hyperlink{printbuf_8h_a61f6bc0b1ca5787f0faca6799d61a0bb}{sprintbuf}} (struct printbuf $\ast$p, const char $\ast$msg,...)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Internal string buffer handling. Unless you\textquotesingle{}re writing a json\+\_\+object\+\_\+to\+\_\+json\+\_\+string\+\_\+fn implementation for use with \mbox{\hyperlink{json__object_8h_a889345512a214b8f78f6a73561523c7c}{json\+\_\+object\+\_\+set\+\_\+serializer()}} direct use of this is not recommended. 
+
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{printbuf_8h_ab009973c5e15aae191e610cd70752603}\label{printbuf_8h_ab009973c5e15aae191e610cd70752603}} 
+\index{printbuf.h@{printbuf.h}!\_printbuf\_check\_literal@{\_printbuf\_check\_literal}}
+\index{\_printbuf\_check\_literal@{\_printbuf\_check\_literal}!printbuf.h@{printbuf.h}}
+\doxysubsubsection{\texorpdfstring{\_printbuf\_check\_literal}{\_printbuf\_check\_literal}}
+{\footnotesize\ttfamily \#define \+\_\+printbuf\+\_\+check\+\_\+literal(\begin{DoxyParamCaption}\item[{}]{mystr }\end{DoxyParamCaption})~(\char`\"{}\char`\"{} mystr)}
+
+Results in a compile error if the argument is not a string literal. \mbox{\Hypertarget{printbuf_8h_a2f30492682f5fbc59a8749b428e0e4ba}\label{printbuf_8h_a2f30492682f5fbc59a8749b428e0e4ba}} 
+\index{printbuf.h@{printbuf.h}!printbuf\_strappend@{printbuf\_strappend}}
+\index{printbuf\_strappend@{printbuf\_strappend}!printbuf.h@{printbuf.h}}
+\doxysubsubsection{\texorpdfstring{printbuf\_strappend}{printbuf\_strappend}}
+{\footnotesize\ttfamily \#define printbuf\+\_\+strappend(\begin{DoxyParamCaption}\item[{}]{pb,  }\item[{}]{str }\end{DoxyParamCaption})~ printbuf\+\_\+memappend((pb), \mbox{\hyperlink{printbuf_8h_ab009973c5e15aae191e610cd70752603}{\+\_\+printbuf\+\_\+check\+\_\+literal}}(str), sizeof(str) -\/ 1)}
+
+This is an optimization wrapper around printbuf\+\_\+memappend() that is useful for appending string literals. Since the size of string constants is known at compile time, using this macro can avoid a costly strlen() call. This is especially helpful when a constant string must be appended many times. If you got here because of a compilation error caused by passing something other than a string literal, use printbuf\+\_\+memappend\+\_\+fast() in conjunction with strlen().
+
+See also\+: printbuf\+\_\+memappend\+\_\+fast() printbuf\+\_\+memappend() \mbox{\hyperlink{printbuf_8h_a61f6bc0b1ca5787f0faca6799d61a0bb}{sprintbuf()}} 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{printbuf_8h_a93a27f4f8a092c58666724de23ae804d}\label{printbuf_8h_a93a27f4f8a092c58666724de23ae804d}} 
+\index{printbuf.h@{printbuf.h}!printbuf\_memset@{printbuf\_memset}}
+\index{printbuf\_memset@{printbuf\_memset}!printbuf.h@{printbuf.h}}
+\doxysubsubsection{\texorpdfstring{printbuf\_memset()}{printbuf\_memset()}}
+{\footnotesize\ttfamily JSON\+\_\+\+EXPORT int printbuf\+\_\+memset (\begin{DoxyParamCaption}\item[{struct printbuf $\ast$}]{pb,  }\item[{int}]{offset,  }\item[{int}]{charvalue,  }\item[{int}]{len }\end{DoxyParamCaption})}
+
+Set len bytes of the buffer to charvalue, starting at offset offset. Similar to calling memset(x, charvalue, len);
+
+The memory allocated for the buffer is extended as necessary.
+
+If offset is -\/1, this starts at the end of the current data in the buffer. \mbox{\Hypertarget{printbuf_8h_a61f6bc0b1ca5787f0faca6799d61a0bb}\label{printbuf_8h_a61f6bc0b1ca5787f0faca6799d61a0bb}} 
+\index{printbuf.h@{printbuf.h}!sprintbuf@{sprintbuf}}
+\index{sprintbuf@{sprintbuf}!printbuf.h@{printbuf.h}}
+\doxysubsubsection{\texorpdfstring{sprintbuf()}{sprintbuf()}}
+{\footnotesize\ttfamily JSON\+\_\+\+EXPORT int sprintbuf (\begin{DoxyParamCaption}\item[{struct printbuf $\ast$}]{p,  }\item[{const char $\ast$}]{msg,  }\item[{}]{... }\end{DoxyParamCaption})}
+
+Formatted print to printbuf.
+
+This function is the most expensive of the available functions for appending string data to a printbuf and should be used only where convenience is more important than speed. Avoid using this function in high performance code or tight loops; in these scenarios, consider using snprintf() with a static buffer in conjunction with one of the printbuf\+\_\+$\ast$append() functions.
+
+See also\+: printbuf\+\_\+memappend\+\_\+fast() printbuf\+\_\+memappend() \mbox{\hyperlink{printbuf_8h_a2f30492682f5fbc59a8749b428e0e4ba}{printbuf\+\_\+strappend()}} 

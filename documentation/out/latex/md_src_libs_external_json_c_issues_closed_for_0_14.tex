@@ -1,0 +1,209 @@
+This list was created with\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{curl https://api.github.com/search/issues?q="{}repo\%3Ajson-\/c\%2Fjson-\/c+closed\%3A>2017-\/12-\/07+created\%3A<2020-\/04-\/17\&sort=created\&order=asc\&per\_page=400\&page=1"{} > issues1.out}
+\DoxyCodeLine{curl https://api.github.com/search/issues?q="{}repo\%3Ajson-\/c\%2Fjson-\/c+closed\%3A>2017-\/12-\/07+created\%3A<2020-\/04-\/17\&sort=created\&order=asc\&per\_page=400\&page=2"{} > issues2.out}
+\DoxyCodeLine{curl https://api.github.com/search/issues?q="{}repo\%3Ajson-\/c\%2Fjson-\/c+closed\%3A>2017-\/12-\/07+created\%3A<2020-\/04-\/17\&sort=created\&order=asc\&per\_page=400\&page=3"{} > issues3.out}
+\DoxyCodeLine{jq -\/r '.items[] | "{}["{} + .title + "{}]("{} + .url + "{})"{} | tostring' issues?.out > issues.md}
+\DoxyCodeLine{sed -\/e's,\string^\(\backslash\)[ *\(\backslash\)(.*\(\backslash\))\(\backslash\)](https://api.github.com/.*/\(\backslash\)([0-\/9].*\(\backslash\))),[Issue \#\(\backslash\)2](https://github.com/json-\/c/json-\/c/issues/\(\backslash\)2) -\/ \(\backslash\)1,' -\/i issues.md}
+\DoxyCodeLine{\#... manual editing ...}
+
+\end{DoxyCode}
+
+
+\DoxyHorRuler{0}
+
+
+Issues and Pull Requests closed for the 0.\+14 release (since commit d582d3a(2017-\/12-\/07) to a911439(2020-\/04-\/17))
+
+
+\begin{DoxyItemize}
+\item \href{https://github.com/json-c/json-c/issues/122}{\texttt{ Issue \#122}} -\/ Add utf-\/8 validation when parsing strings. \textbackslash{}
+\item \href{https://github.com/json-c/json-c/issues/139}{\texttt{ Issue \#139}} -\/ json\+\_\+object\+\_\+from\+\_\+file cannot accept max\+\_\+depth \textbackslash{}
+\item \href{https://github.com/json-c/json-c/issues/143}{\texttt{ Issue \#143}} -\/ RFE / enhancement for full 64-\/bit signed/unsigned support \textbackslash{}
+\item \href{https://github.com/json-c/json-c/issues/147}{\texttt{ Issue \#147}} -\/ Please introduce soname bump if API changed \textbackslash{}
+\item \href{https://github.com/json-c/json-c/issues/166}{\texttt{ Issue \#166}} -\/ Need a way to specify nesting depth when opening JSON file \textbackslash{}
+\item \href{https://github.com/json-c/json-c/issues/226}{\texttt{ Issue \#226}} -\/ There is no \mbox{\hyperlink{json__object_8h_a29e23b5be729c679960242b3b81bcde0}{json\+\_\+object\+\_\+new\+\_\+null()}} \textbackslash{}
+\item \href{https://github.com/json-c/json-c/issues/314}{\texttt{ Issue \#314}} -\/ new release ? \textbackslash{}
+\item \href{https://github.com/json-c/json-c/issues/326}{\texttt{ Issue \#326}} -\/ Please extend api json\+\_\+object\+\_\+get\+\_\+uint64 \textbackslash{}
+\item \href{https://github.com/json-c/json-c/issues/334}{\texttt{ Issue \#334}} -\/ Switch json-\/c builds to use CMake \textbackslash{}
+\item \href{https://github.com/json-c/json-c/issues/386}{\texttt{ Issue \#386}} -\/ Makefile\+: Add ACLOCAL\+\_\+\+AMFLAGS \textbackslash{}
+\item \href{https://github.com/json-c/json-c/issues/387}{\texttt{ Issue \#387}} -\/ doc\+: Use other doxygen feature to specify mainpage \textbackslash{}
+\item \href{https://github.com/json-c/json-c/issues/388}{\texttt{ Issue \#388}} -\/ json\+\_\+object\+: Add size\+\_\+t json\+\_\+object\+\_\+sizeof() \textbackslash{}
+\item \href{https://github.com/json-c/json-c/issues/389}{\texttt{ Issue \#389}} -\/ json\+\_\+object\+: Avoid double free (and thus a segfault) when ref\+\_\+count gets $<$ 0 \textbackslash{}
+\item \href{https://github.com/json-c/json-c/issues/390}{\texttt{ Issue \#390}} -\/ json\+\_\+object\+: Add const size\+\_\+t json\+\_\+c\+\_\+object\+\_\+sizeof() \textbackslash{}
+\item \href{https://github.com/json-c/json-c/issues/391}{\texttt{ Issue \#391}} -\/ Fix non-\/\+GNUC define for JSON\+\_\+\+C\+\_\+\+CONST\+\_\+\+FUNCTION \textbackslash{}
+\item \href{https://github.com/json-c/json-c/issues/392}{\texttt{ Issue \#392}} -\/ json\+\_\+object\+: Avoid invalid free (and thus a segfault) when ref\+\_\+count gets $<$ 0 \textbackslash{}
+\item \href{https://github.com/json-c/json-c/issues/393}{\texttt{ Issue \#393}} -\/ json\+\_\+object\+\_\+private\+: Use unsigned 32-\/bit integer type for refcount \textbackslash{}
+\item \href{https://github.com/json-c/json-c/issues/394}{\texttt{ Issue \#394}} -\/ Problem serializing double \textbackslash{}
+\item \href{https://github.com/json-c/json-c/issues/395}{\texttt{ Issue \#395}} -\/ Key gets modified if it contains \char`\"{}\textbackslash{}\char`\"{} \textbackslash{}
+\item \href{https://github.com/json-c/json-c/issues/396}{\texttt{ Issue \#396}} -\/ Build failure with no threads u\+Clibc toolchain \textbackslash{}
+\item \href{https://github.com/json-c/json-c/issues/397}{\texttt{ Issue \#397}} -\/ update json object with key. \textbackslash{}
+\item \href{https://github.com/json-c/json-c/issues/398}{\texttt{ Issue \#398}} -\/ Build failed. \textbackslash{}
+\item \href{https://github.com/json-c/json-c/issues/399}{\texttt{ Issue \#399}} -\/ Avoid uninitialized variable warnings \textbackslash{}
+\item \href{https://github.com/json-c/json-c/issues/400}{\texttt{ Issue \#400}} -\/ How to generate static lib (.a) \textbackslash{}
+\item \href{https://github.com/json-c/json-c/issues/401}{\texttt{ Issue \#401}} -\/ Warnings with Valgrind \textbackslash{}
+\item \href{https://github.com/json-c/json-c/issues/402}{\texttt{ Issue \#402}} -\/ Add fuzzers from OSS-\/\+Fuzz \textbackslash{}
+\item \href{https://github.com/json-c/json-c/issues/403}{\texttt{ Issue \#403}} -\/ Segmentation fault when double quotes is used \textbackslash{}
+\item \href{https://github.com/json-c/json-c/issues/404}{\texttt{ Issue \#404}} -\/ valgrind\+: memory leak \textbackslash{}
+\item \href{https://github.com/json-c/json-c/issues/405}{\texttt{ Issue \#405}} -\/ Missing API to determine an object is empty \textbackslash{}
+\item \href{https://github.com/json-c/json-c/issues/406}{\texttt{ Issue \#406}} -\/ Undefine NDEBUG for tests \textbackslash{}
+\item \href{https://github.com/json-c/json-c/issues/407}{\texttt{ Issue \#407}} -\/ json\+\_\+tokener\+\_\+parse is crash \textbackslash{}
+\item \href{https://github.com/json-c/json-c/issues/408}{\texttt{ Issue \#408}} -\/ bug in array\+\_\+list\+\_\+del\+\_\+idx when array\+\_\+list\+\_\+length()==1 \textbackslash{}
+\item \href{https://github.com/json-c/json-c/issues/410}{\texttt{ Issue \#410}} -\/ Fixed typos \textbackslash{}
+\item \href{https://github.com/json-c/json-c/issues/411}{\texttt{ Issue \#411}} -\/ Crash-\/ signal SIGSEGV, Segmentation fault. ../sysdeps/x86\+\_\+64/strlen.S\+: No such file or directory. \textbackslash{}
+\item \href{https://github.com/json-c/json-c/issues/412}{\texttt{ Issue \#412}} -\/ json\+\_\+type changes during inter process communication. \textbackslash{}
+\item \href{https://github.com/json-c/json-c/issues/413}{\texttt{ Issue \#413}} -\/ how to read object of type {\ttfamily json\+\_\+object $\ast$} in c++ \textbackslash{}
+\item \href{https://github.com/json-c/json-c/issues/414}{\texttt{ Issue \#414}} -\/ \mbox{[}Question\mbox{]} How JSON-\/c stores the serialized data in memory? \textbackslash{}
+\item \href{https://github.com/json-c/json-c/issues/415}{\texttt{ Issue \#415}} -\/ Resolve windows name conflict \textbackslash{}
+\item \href{https://github.com/json-c/json-c/issues/416}{\texttt{ Issue \#416}} -\/ segmentation fault in json\+\_\+tokener\+\_\+parse \textbackslash{}
+\item \href{https://github.com/json-c/json-c/issues/417}{\texttt{ Issue \#417}} -\/ json\+\_\+tokener\+\_\+parse json\+\_\+object\+\_\+object\+\_\+get\+\_\+ex with string value which is json string \textbackslash{}
+\item \href{https://github.com/json-c/json-c/issues/418}{\texttt{ Issue \#418}} -\/ json\+\_\+object\+\_\+from\+\_\+$\ast$ return value documented incorrectly \textbackslash{}
+\item \href{https://github.com/json-c/json-c/issues/419}{\texttt{ Issue \#419}} -\/ Suggestion\+: document (and define) that \mbox{\hyperlink{json__object_8h_afabf61f932cd64a4122ca8092452eed5}{json\+\_\+object\+\_\+put()}} accepts NULL pointer to object \textbackslash{}
+\item \href{https://github.com/json-c/json-c/issues/420}{\texttt{ Issue \#420}} -\/ arraylist\+: Fixed names of parameters for callback function \textbackslash{}
+\item \href{https://github.com/json-c/json-c/issues/421}{\texttt{ Issue \#421}} -\/ install \mbox{\hyperlink{json__object__iterator_8h}{json\+\_\+object\+\_\+iterator.\+h}} header file \textbackslash{}
+\item \href{https://github.com/json-c/json-c/issues/422}{\texttt{ Issue \#422}} -\/ \mbox{\hyperlink{json__object_8h_a94a70cff6a14398b581b7b10b0792c5b}{json\+\_\+object\+\_\+get\+\_\+double()}} does not set errno when there is no valid conversion \textbackslash{}
+\item \href{https://github.com/json-c/json-c/issues/423}{\texttt{ Issue \#423}} -\/ memory leak \textbackslash{}
+\item \href{https://github.com/json-c/json-c/issues/424}{\texttt{ Issue \#424}} -\/ Parse string contains \char`\"{}\textbackslash{}\char`\"{} or \char`\"{}/\char`\"{} errors \textbackslash{}
+\item \href{https://github.com/json-c/json-c/issues/425}{\texttt{ Issue \#425}} -\/ what this is? \textbackslash{}
+\item \href{https://github.com/json-c/json-c/issues/426}{\texttt{ Issue \#426}} -\/ \+\_\+\+\_\+deprecated not supported on clang. \textbackslash{}
+\item \href{https://github.com/json-c/json-c/issues/427}{\texttt{ Issue \#427}} -\/ CMake\+: builds involving this target will not be correct \textbackslash{}
+\item \href{https://github.com/json-c/json-c/issues/430}{\texttt{ Issue \#430}} -\/ \mbox{\hyperlink{json__object_8h_ac6605fdafca20bd5d33c84f4f80a3bda}{json\+\_\+object\+\_\+object\+\_\+del()}} and Segmentation fault \textbackslash{}
+\item \href{https://github.com/json-c/json-c/issues/431}{\texttt{ Issue \#431}} -\/ cmake\+: Bump required version \textbackslash{}
+\item \href{https://github.com/json-c/json-c/issues/432}{\texttt{ Issue \#432}} -\/ The real CMake support. \textbackslash{}
+\item \href{https://github.com/json-c/json-c/issues/433}{\texttt{ Issue \#433}} -\/ The real CMake support. \textbackslash{}
+\item \href{https://github.com/json-c/json-c/issues/434}{\texttt{ Issue \#434}} -\/ The real CMake support \textbackslash{}
+\item \href{https://github.com/json-c/json-c/issues/435}{\texttt{ Issue \#435}} -\/ \mbox{\hyperlink{json__object_8h_ac6605fdafca20bd5d33c84f4f80a3bda}{json\+\_\+object\+\_\+object\+\_\+del()}} segmentation fault \textbackslash{}
+\item \href{https://github.com/json-c/json-c/issues/436}{\texttt{ Issue \#436}} -\/ Improve pkgconfig setting \textbackslash{}
+\item \href{https://github.com/json-c/json-c/issues/437}{\texttt{ Issue \#437}} -\/ Bad link in README.\+md \textbackslash{}
+\item \href{https://github.com/json-c/json-c/issues/438}{\texttt{ Issue \#438}} -\/ Bad link in README.\+html \textbackslash{}
+\item \href{https://github.com/json-c/json-c/issues/439}{\texttt{ Issue \#439}} -\/ reserved identifier violation \textbackslash{}
+\item \href{https://github.com/json-c/json-c/issues/440}{\texttt{ Issue \#440}} -\/ Use of angle brackets around file names for include statements \textbackslash{}
+\item \href{https://github.com/json-c/json-c/issues/441}{\texttt{ Issue \#441}} -\/ fix c flag loss during cmake building \textbackslash{}
+\item \href{https://github.com/json-c/json-c/issues/442}{\texttt{ Issue \#442}} -\/ error in configure file \textbackslash{}
+\item \href{https://github.com/json-c/json-c/issues/443}{\texttt{ Issue \#443}} -\/ remove pretty spaces when using pretty tabs \textbackslash{}
+\item \href{https://github.com/json-c/json-c/issues/444}{\texttt{ Issue \#444}} -\/ Document refcount of json\+\_\+tokener\+\_\+parse\+\_\+ex return \textbackslash{}
+\item \href{https://github.com/json-c/json-c/issues/445}{\texttt{ Issue \#445}} -\/ Add missing \char`\"{}make check\char`\"{} target to cmake config \textbackslash{}
+\item \href{https://github.com/json-c/json-c/issues/446}{\texttt{ Issue \#446}} -\/ Forward slashes get escaped \textbackslash{}
+\item \href{https://github.com/json-c/json-c/issues/448}{\texttt{ Issue \#448}} -\/ Buffer overflow in json-\/c \textbackslash{}
+\item \href{https://github.com/json-c/json-c/issues/449}{\texttt{ Issue \#449}} -\/ Need of json\+\_\+type\+\_\+int64 returned by \mbox{\hyperlink{json__object_8h_af256a3a7910e271a2b9735e5044c3827}{json\+\_\+object\+\_\+get\+\_\+type()}} \textbackslash{}
+\item \href{https://github.com/json-c/json-c/issues/450}{\texttt{ Issue \#450}} -\/ Allow use json-\/c cmake as subproject \textbackslash{}
+\item \href{https://github.com/json-c/json-c/issues/452}{\texttt{ Issue \#452}} -\/ Update README.\+md \textbackslash{}
+\item \href{https://github.com/json-c/json-c/issues/453}{\texttt{ Issue \#453}} -\/ Fixed misalignment in JSON string due to space after ~\newline
+ being printed... \textbackslash{}
+\item \href{https://github.com/json-c/json-c/issues/454}{\texttt{ Issue \#454}} -\/ json\+\_\+object\+\_\+private\+: save 8 bytes in struct json\+\_\+object in 64-\/bit arc… \textbackslash{}
+\item \href{https://github.com/json-c/json-c/issues/455}{\texttt{ Issue \#455}} -\/ index.\+html\+:fix dead link \textbackslash{}
+\item \href{https://github.com/json-c/json-c/issues/456}{\texttt{ Issue \#456}} -\/ STYLE.\+txt\+:remove executable permissions \textbackslash{}
+\item \href{https://github.com/json-c/json-c/issues/457}{\texttt{ Issue \#457}} -\/ .gitignore\+:add build directory \textbackslash{}
+\item \href{https://github.com/json-c/json-c/issues/458}{\texttt{ Issue \#458}} -\/ README.\+md\+:fix dead \char`\"{}file.\+html\char`\"{} link \textbackslash{}
+\item \href{https://github.com/json-c/json-c/issues/459}{\texttt{ Issue \#459}} -\/ README.\+html\+:fix link to Doxygen docs, remove WIN32 link \textbackslash{}
+\item \href{https://github.com/json-c/json-c/issues/460}{\texttt{ Issue \#460}} -\/ No docs for \mbox{\hyperlink{json__object_8h_a778a1aa34a508d08daac3bdb83e24b52}{json\+\_\+object\+\_\+new\+\_\+string\+\_\+len()}} \textbackslash{}
+\item \href{https://github.com/json-c/json-c/issues/461}{\texttt{ Issue \#461}} -\/ json\+\_\+object.\+c\+:set errno in \mbox{\hyperlink{json__object_8h_a94a70cff6a14398b581b7b10b0792c5b}{json\+\_\+object\+\_\+get\+\_\+double()}} \textbackslash{}
+\item \href{https://github.com/json-c/json-c/issues/462}{\texttt{ Issue \#462}} -\/ \mbox{\hyperlink{json__object_8h}{json\+\_\+object.\+h}}\+:document \mbox{\hyperlink{json__object_8h_a778a1aa34a508d08daac3bdb83e24b52}{json\+\_\+object\+\_\+new\+\_\+string\+\_\+len()}} \textbackslash{}
+\item \href{https://github.com/json-c/json-c/issues/463}{\texttt{ Issue \#463}} -\/ please check newlocale api first argument valuse. \textbackslash{}
+\item \href{https://github.com/json-c/json-c/issues/465}{\texttt{ Issue \#465}} -\/ CMake\+Lists.\+txt doesn\textquotesingle{}t contain \mbox{\hyperlink{json__object__iterator_8h}{json\+\_\+object\+\_\+iterator.\+h}} which \mbox{\hyperlink{json_8h}{json.\+h}} includes \textbackslash{}
+\item \href{https://github.com/json-c/json-c/issues/466}{\texttt{ Issue \#466}} -\/ configure\+:3610\+: error\+: C compiler cannot create executables \textbackslash{}
+\item \href{https://github.com/json-c/json-c/issues/467}{\texttt{ Issue \#467}} -\/ Fix compiler warnings \textbackslash{}
+\item \href{https://github.com/json-c/json-c/issues/468}{\texttt{ Issue \#468}} -\/ Fix compiler warnings \textbackslash{}
+\item \href{https://github.com/json-c/json-c/issues/469}{\texttt{ Issue \#469}} -\/ Build under alpine with pecl install \& docker-\/php-\/ext-\/enable? \textbackslash{}
+\item \href{https://github.com/json-c/json-c/issues/470}{\texttt{ Issue \#470}} -\/ cfuhash\+\_\+foreach\+\_\+remove doesn\textquotesingle{}t upate cfuhash\+\_\+num\+\_\+entries \textbackslash{}
+\item \href{https://github.com/json-c/json-c/issues/472}{\texttt{ Issue \#472}} -\/ Segmentation fault in json\+\_\+object\+\_\+iter\+\_\+begin \textbackslash{}
+\item \href{https://github.com/json-c/json-c/issues/473}{\texttt{ Issue \#473}} -\/ Convert Change\+Log to valid UTF-\/8 encoding. \textbackslash{}
+\item \href{https://github.com/json-c/json-c/issues/474}{\texttt{ Issue \#474}} -\/ Installation directories empty with CMake in pkg-\/config. \textbackslash{}
+\item \href{https://github.com/json-c/json-c/issues/475}{\texttt{ Issue \#475}} -\/ improvement proposal for json\+\_\+object\+\_\+object\+\_\+foreach \textbackslash{}
+\item \href{https://github.com/json-c/json-c/issues/477}{\texttt{ Issue \#477}} -\/ Hang/\+Crash with large strings \textbackslash{}
+\item \href{https://github.com/json-c/json-c/issues/478}{\texttt{ Issue \#478}} -\/ json\+\_\+object\+\_\+get\+\_\+string\+\_\+len returns 0 when value is number \textbackslash{}
+\item \href{https://github.com/json-c/json-c/issues/479}{\texttt{ Issue \#479}} -\/ I want to use it in i\+OS or Android but I can\textquotesingle{}t compile \textbackslash{}
+\item \href{https://github.com/json-c/json-c/issues/480}{\texttt{ Issue \#480}} -\/ json-\/c-\/0.\+12.\+1 failed making from source code \textbackslash{}
+\item \href{https://github.com/json-c/json-c/issues/481}{\texttt{ Issue \#481}} -\/ error while loading shared libraries\+: libjson-\/c.\+so.\+4 \textbackslash{}
+\item \href{https://github.com/json-c/json-c/issues/482}{\texttt{ Issue \#482}} -\/ Error \char`\"{}double free or corruption\char`\"{} after free() \textbackslash{}
+\item \href{https://github.com/json-c/json-c/issues/483}{\texttt{ Issue \#483}} -\/ compatible with rarely-\/used Chinese characters in GBK charset \textbackslash{}
+\item \href{https://github.com/json-c/json-c/issues/485}{\texttt{ Issue \#485}} -\/ Install CMake module files \textbackslash{}
+\item \href{https://github.com/json-c/json-c/issues/486}{\texttt{ Issue \#486}} -\/ In the case of negative double value, it is formatted without including \char`\"{}.\+0\char`\"{} \textbackslash{}
+\item \href{https://github.com/json-c/json-c/issues/488}{\texttt{ Issue \#488}} -\/ Some APIs are not exported when built as shared lib on Win32 \textbackslash{}
+\item \href{https://github.com/json-c/json-c/issues/489}{\texttt{ Issue \#489}} -\/ Don\textquotesingle{}t use -\/Werror by default \textbackslash{}
+\item \href{https://github.com/json-c/json-c/issues/490}{\texttt{ Issue \#490}} -\/ do not compile with -\/Werror by default \textbackslash{}
+\item \href{https://github.com/json-c/json-c/issues/491}{\texttt{ Issue \#491}} -\/ build\+: add option --disable-\/werror to configure \textbackslash{}
+\item \href{https://github.com/json-c/json-c/issues/492}{\texttt{ Issue \#492}} -\/ lack some quick usage in readme \textbackslash{}
+\item \href{https://github.com/json-c/json-c/issues/494}{\texttt{ Issue \#494}} -\/ Code generator? \textbackslash{}
+\item \href{https://github.com/json-c/json-c/issues/495}{\texttt{ Issue \#495}} -\/ README.\+md\+:fix 2 typos \textbackslash{}
+\item \href{https://github.com/json-c/json-c/issues/496}{\texttt{ Issue \#496}} -\/ \mbox{\hyperlink{json__pointer_8h}{json\+\_\+pointer.\+h}}\+:suggest minor grammar improvement for pointer doc \textbackslash{}
+\item \href{https://github.com/json-c/json-c/issues/497}{\texttt{ Issue \#497}} -\/ add common header for all tests \textbackslash{}
+\item \href{https://github.com/json-c/json-c/issues/498}{\texttt{ Issue \#498}} -\/ double\+\_\+serializer\+\_\+test fails (with valgrind) \textbackslash{}
+\item \href{https://github.com/json-c/json-c/issues/499}{\texttt{ Issue \#499}} -\/ .travis.\+yml\+:test on more recent clang and gcc versions \textbackslash{}
+\item \href{https://github.com/json-c/json-c/issues/500}{\texttt{ Issue \#500}} -\/ test/\+Makefile.\+am\+:add missing deps for test1 and test2 \textbackslash{}
+\item \href{https://github.com/json-c/json-c/issues/501}{\texttt{ Issue \#501}} -\/ undefine NDEBUG for tests \textbackslash{}
+\item \href{https://github.com/json-c/json-c/issues/502}{\texttt{ Issue \#502}} -\/ configure error \textbackslash{}
+\item \href{https://github.com/json-c/json-c/issues/503}{\texttt{ Issue \#503}} -\/ json-\/c retuns OK when Invalid json string is passed \textbackslash{}
+\item \href{https://github.com/json-c/json-c/issues/504}{\texttt{ Issue \#504}} -\/ json\+\_\+object\+\_\+put coredump \textbackslash{}
+\item \href{https://github.com/json-c/json-c/issues/505}{\texttt{ Issue \#505}} -\/ Add vcpkg installation instructions \textbackslash{}
+\item \href{https://github.com/json-c/json-c/issues/506}{\texttt{ Issue \#506}} -\/ Cannot parse more than one object \textbackslash{}
+\item \href{https://github.com/json-c/json-c/issues/509}{\texttt{ Issue \#509}} -\/ Sometimes a double value is not serialized \textbackslash{}
+\item \href{https://github.com/json-c/json-c/issues/510}{\texttt{ Issue \#510}} -\/ Bump so-\/name and improve CMake \textbackslash{}
+\item \href{https://github.com/json-c/json-c/issues/511}{\texttt{ Issue \#511}} -\/ Reduce lines for better optimization \textbackslash{}
+\item \href{https://github.com/json-c/json-c/issues/512}{\texttt{ Issue \#512}} -\/ Properly append to CMAKE\+\_\+\+C\+\_\+\+FLAGS string \textbackslash{}
+\item \href{https://github.com/json-c/json-c/issues/513}{\texttt{ Issue \#513}} -\/ What does {\ttfamily userdata} means?And what is the case we can use it? \textbackslash{}
+\item \href{https://github.com/json-c/json-c/issues/514}{\texttt{ Issue \#514}} -\/ Json c 0.\+13 \textbackslash{}
+\item \href{https://github.com/json-c/json-c/issues/515}{\texttt{ Issue \#515}} -\/ Mies suomesta fixes segfaults and logic errors \textbackslash{}
+\item \href{https://github.com/json-c/json-c/issues/516}{\texttt{ Issue \#516}} -\/ Lja slight mods \textbackslash{}
+\item \href{https://github.com/json-c/json-c/issues/518}{\texttt{ Issue \#518}} -\/ Escape character \char`\"{}\textbackslash{}\textbackslash{}003\textbackslash{}\char`\"{}, get unexpected value \textbackslash{}
+\item \href{https://github.com/json-c/json-c/issues/519}{\texttt{ Issue \#519}} -\/ Add test case obj token \textbackslash{}
+\item \href{https://github.com/json-c/json-c/issues/520}{\texttt{ Issue \#520}} -\/ Adding type uint64 \textbackslash{}
+\item \href{https://github.com/json-c/json-c/issues/521}{\texttt{ Issue \#521}} -\/ build cmake windows 10 \textbackslash{}
+\item \href{https://github.com/json-c/json-c/issues/522}{\texttt{ Issue \#522}} -\/ update json\+\_\+visit testcase \textbackslash{}
+\item \href{https://github.com/json-c/json-c/issues/523}{\texttt{ Issue \#523}} -\/ update tsetcase for tokener\+\_\+c \textbackslash{}
+\item \href{https://github.com/json-c/json-c/issues/524}{\texttt{ Issue \#524}} -\/ Increase coverage \textbackslash{}
+\item \href{https://github.com/json-c/json-c/issues/525}{\texttt{ Issue \#525}} -\/ update pointer test case \textbackslash{}
+\item \href{https://github.com/json-c/json-c/issues/526}{\texttt{ Issue \#526}} -\/ Increased the test coverage of printbuf.\+c 82\% to 92\%. \textbackslash{}
+\item \href{https://github.com/json-c/json-c/issues/527}{\texttt{ Issue \#527}} -\/ Arraylist testcase \textbackslash{}
+\item \href{https://github.com/json-c/json-c/issues/528}{\texttt{ Issue \#528}} -\/ Solve issue \#108. Skip \textbackslash{}u0000 while parsing. \textbackslash{}
+\item \href{https://github.com/json-c/json-c/issues/529}{\texttt{ Issue \#529}} -\/ Increased the test coverage of json\+\_\+c\+\_\+version.\+c 0\% to 100\%. \textbackslash{}
+\item \href{https://github.com/json-c/json-c/issues/530}{\texttt{ Issue \#530}} -\/ validate utf-\/8 string before parse \textbackslash{}
+\item \href{https://github.com/json-c/json-c/issues/531}{\texttt{ Issue \#531}} -\/ validate utf-\/8 string \textbackslash{}
+\item \href{https://github.com/json-c/json-c/issues/532}{\texttt{ Issue \#532}} -\/ json\+\_\+object\+\_\+object\+\_\+get\+\_\+ex returning the original object \textbackslash{}
+\item \href{https://github.com/json-c/json-c/issues/533}{\texttt{ Issue \#533}} -\/ Fix \char`\"{}make check\char`\"{} \textbackslash{}
+\item \href{https://github.com/json-c/json-c/issues/535}{\texttt{ Issue \#535}} -\/ short string optimization\+: excessive array length \textbackslash{}
+\item \href{https://github.com/json-c/json-c/issues/536}{\texttt{ Issue \#536}} -\/ add \mbox{\hyperlink{json__object_8h_a29e23b5be729c679960242b3b81bcde0}{json\+\_\+object\+\_\+new\+\_\+null()}} \textbackslash{}
+\item \href{https://github.com/json-c/json-c/issues/538}{\texttt{ Issue \#538}} -\/ update shortstring and arraylist parameters \textbackslash{}
+\item \href{https://github.com/json-c/json-c/issues/539}{\texttt{ Issue \#539}} -\/ double serializes to the old value after set\+\_\+double \textbackslash{}
+\item \href{https://github.com/json-c/json-c/issues/541}{\texttt{ Issue \#541}} -\/ add coveralls auto tool to json-\/c \textbackslash{}
+\item \href{https://github.com/json-c/json-c/issues/542}{\texttt{ Issue \#542}} -\/ add uint64 data to json-\/c \textbackslash{}
+\item \href{https://github.com/json-c/json-c/issues/543}{\texttt{ Issue \#543}} -\/ Readme \textbackslash{}
+\item \href{https://github.com/json-c/json-c/issues/544}{\texttt{ Issue \#544}} -\/ Increase distcheck target in cmake \textbackslash{}
+\item \href{https://github.com/json-c/json-c/issues/545}{\texttt{ Issue \#545}} -\/ add doc target in cmake \textbackslash{}
+\item \href{https://github.com/json-c/json-c/issues/546}{\texttt{ Issue \#546}} -\/ Add uninstall target in cmake \textbackslash{}
+\item \href{https://github.com/json-c/json-c/issues/547}{\texttt{ Issue \#547}} -\/ modify json-\/c default build type, and fix up the assert() errors in t… \textbackslash{}
+\item \href{https://github.com/json-c/json-c/issues/548}{\texttt{ Issue \#548}} -\/ Solve some problems about cmake build type (debug/release) \textbackslash{}
+\item \href{https://github.com/json-c/json-c/issues/549}{\texttt{ Issue \#549}} -\/ lib installation issues \textbackslash{}
+\item \href{https://github.com/json-c/json-c/issues/550}{\texttt{ Issue \#550}} -\/ Format codes with clang-\/format tool? \textbackslash{}
+\item \href{https://github.com/json-c/json-c/issues/551}{\texttt{ Issue \#551}} -\/ Allow hexadecimal number format convention parsing \textbackslash{}
+\item \href{https://github.com/json-c/json-c/issues/553}{\texttt{ Issue \#553}} -\/ Fix/clang ubsan \textbackslash{}
+\item \href{https://github.com/json-c/json-c/issues/554}{\texttt{ Issue \#554}} -\/ RFC 8259 compatibility mode \textbackslash{}
+\item \href{https://github.com/json-c/json-c/issues/555}{\texttt{ Issue \#555}} -\/ Format json-\/c with clang-\/format tool \textbackslash{}
+\item \href{https://github.com/json-c/json-c/issues/556}{\texttt{ Issue \#556}} -\/ Fixes various Wreturn-\/type and Wimplicit-\/fallthrough errors on Mingw-\/w64 \textbackslash{}
+\item \href{https://github.com/json-c/json-c/issues/557}{\texttt{ Issue \#557}} -\/ Add option in CMAKE to not build documentation \textbackslash{}
+\item \href{https://github.com/json-c/json-c/issues/558}{\texttt{ Issue \#558}} -\/ modify the doc target message \textbackslash{}
+\item \href{https://github.com/json-c/json-c/issues/559}{\texttt{ Issue \#559}} -\/ \mbox{\hyperlink{json__visit_8h_a0f585e56a5d417381cdf6c28538dbb20}{json\+\_\+c\+\_\+visit()}} not exported on Windows \textbackslash{}
+\item \href{https://github.com/json-c/json-c/issues/560}{\texttt{ Issue \#560}} -\/ error\+: implicit declaration of function \textquotesingle{}\+\_\+strtoi64\textquotesingle{} \textbackslash{}
+\item \href{https://github.com/json-c/json-c/issues/561}{\texttt{ Issue \#561}} -\/ add the badge in README.\+md and test the coveralls \textbackslash{}
+\item \href{https://github.com/json-c/json-c/issues/562}{\texttt{ Issue \#562}} -\/ Bugfix and testcases supplements \textbackslash{}
+\item \href{https://github.com/json-c/json-c/issues/563}{\texttt{ Issue \#563}} -\/ Changed order of calloc args to match stdlib \textbackslash{}
+\item \href{https://github.com/json-c/json-c/issues/564}{\texttt{ Issue \#564}} -\/ Remove autogenerated files \textbackslash{}
+\item \href{https://github.com/json-c/json-c/issues/565}{\texttt{ Issue \#565}} -\/ test the CI and ignore this PR \textbackslash{}
+\item \href{https://github.com/json-c/json-c/issues/566}{\texttt{ Issue \#566}} -\/ add the \mbox{\hyperlink{json__types_8h}{json\+\_\+types.\+h}} to Makefile.\+am \textbackslash{}
+\item \href{https://github.com/json-c/json-c/issues/567}{\texttt{ Issue \#567}} -\/ Install \mbox{\hyperlink{json__types_8h}{json\+\_\+types.\+h}} with autotools build as well. \textbackslash{}
+\item \href{https://github.com/json-c/json-c/issues/568}{\texttt{ Issue \#568}} -\/ Adding better support to Min\+GW \textbackslash{}
+\item \href{https://github.com/json-c/json-c/issues/569}{\texttt{ Issue \#569}} -\/ Handling of -\/Bsymbolic-\/function in CMake\+Lists.\+txt is deficient \textbackslash{}
+\item \href{https://github.com/json-c/json-c/issues/571}{\texttt{ Issue \#571}} -\/ CMake\+: Bump SONAME to 5. \textbackslash{}
+\item \href{https://github.com/json-c/json-c/issues/572}{\texttt{ Issue \#572}} -\/ Small fixes to CMake\+Lists \textbackslash{}
+\item \href{https://github.com/json-c/json-c/issues/573}{\texttt{ Issue \#573}} -\/ Fix coveralls submission. \textbackslash{}
+\item \href{https://github.com/json-c/json-c/issues/574}{\texttt{ Issue \#574}} -\/ autogen.\+sh missing from repository \textbackslash{}
+\item \href{https://github.com/json-c/json-c/issues/575}{\texttt{ Issue \#575}} -\/ Small cosmetics. \textbackslash{}
+\item \href{https://github.com/json-c/json-c/issues/576}{\texttt{ Issue \#576}} -\/ Test coverage for json\+\_\+c\+\_\+version. \textbackslash{}
+\item \href{https://github.com/json-c/json-c/issues/577}{\texttt{ Issue \#577}} -\/ Be verbose on failing json\+\_\+c\+\_\+version test. \textbackslash{}
+\item \href{https://github.com/json-c/json-c/issues/578}{\texttt{ Issue \#578}} -\/ CMake\+: Install pkgconfig file in proper location by default \textbackslash{}
+\item \href{https://github.com/json-c/json-c/issues/579}{\texttt{ Issue \#579}} -\/ Enforce strict prototypes. \textbackslash{}
+\item \href{https://github.com/json-c/json-c/issues/580}{\texttt{ Issue \#580}} -\/ Fix CMake tests for enforced strict prototypes. \textbackslash{}
+\item \href{https://github.com/json-c/json-c/issues/581}{\texttt{ Issue \#581}} -\/ CMake\+Lists\+: do not enforce strict prototypes on Windows. \textbackslash{} 
+\end{DoxyItemize}
