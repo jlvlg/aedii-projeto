@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <string.h>
 #include "util.h"
 #include "types.h"
 
@@ -55,7 +56,12 @@ static int cmp(Item item1, Item item2) {
             return -1;
         return 0;
     }
-    return util.lowercmp(tostring(item1).data, tostring(item2).data);
+    int res = strcmp((char*) tostring(item1).data, (char*) tostring(item2).data);
+    if (res > 0)
+        return 1;
+    if (res < 0)
+        return -1;
+    return 0;
 }
 
 static void destroy(Item item) {

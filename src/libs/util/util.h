@@ -25,10 +25,6 @@ struct util_methods {
     /// @return The copied string
     char* (*init_string)(char string[]);
 
-    /// @brief Compares two strings in lowercase
-    /// @return 0 if str1 == str2 @n>0 if str1 > str2 @n<0 if str1 < str2
-    int (*lowercmp)(char str1[], char str2[]);
-
     /// @brief Max between two numbers
     /// @return Greatest number
     int (*max)(int a, int b);

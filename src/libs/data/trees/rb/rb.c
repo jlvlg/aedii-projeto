@@ -235,14 +235,23 @@ static void handle_double_black(RB *root, RB node, int nil) {
 }
 
 static void insert(RB *root, RB leaf) {
+    int cmp;
     Tree tree_leaf = leaf, track = NULL;
     
     for (Tree search = *root; search != NULL;) {
         track = search;
-        if (types.cmp(tree_leaf->item, track->item) > 0)
-            search = search->r;
-        else 
-            search = search->l;
+        cmp = types.cmp(tree_leaf->item, track->item);
+
+        switch (cmp) {
+            case 0:
+                tree.kill(leaf);
+                return;
+            case -1:
+                search = search->l;
+                break;
+            case 1:
+                search = search->r;
+        }
     }
 
     leaf->parent = track;
@@ -250,10 +259,16 @@ static void insert(RB *root, RB leaf) {
     if (track == NULL) {
         *root = leaf;
     } else {
-        if (types.cmp(tree_leaf->item, track->item) > 0)
-            track->r = leaf;
-        else 
-            track->l = leaf;
+        switch (cmp) {
+            case 0:
+                tree.kill(leaf);
+                return;
+            case -1:
+                track->l = leaf;
+                break;
+            case 1:
+                track->r = leaf;
+        }
     }
     
     adjust(root, leaf);
@@ -312,6 +327,7 @@ static RB trim(RB *root, RB branch) {
     for (int i = 0; i < count; i++) {
         remove(root, array[i]->item);
     }
+    free(array);
     return *root;
 }
 

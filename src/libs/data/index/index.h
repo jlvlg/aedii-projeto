@@ -44,23 +44,47 @@ typedef JunkNode* Junk;
 
 /// Encapsulates functions into the idx namespace
 struct index_methods {
+    /// @brief Creates and initializes a BST_Index node
+    /// @param item Item to be used as key
+    /// @param pos Position of registry data in bytes
+    /// @return Initialized node
+    BST_Index (*create_bst)(Item item, int pos);
+
+    /// @brief Creates and initializes an AVL_Index node
+    /// @param item Item to be used as key
+    /// @param pos Position of registry data in bytes
+    /// @return Initialized node
+    AVL_Index (*create_avl)(Item item, int pos);
+
+    /// @brief Creates and initializes a RB_Index node
+    /// @param item Item to be used as key
+    /// @param pos Position of registry data in bytes
+    /// @return Initialized node
+    RB_Index (*create_rb)(Item item, int pos);
+
     /// @brief Saves a BST_Index tree into a JSON file
     /// @param root Tree root
     /// @param filename File name
-    /// @return -1 if failure
+    /// @return -1 on failure
     int (*save_bst)(BST_Index root, char* filename);
 
     /// @brief Saves an AVL_Index tree into a JSON file
     /// @param root Tree root
     /// @param filename File name
-    /// @return -1 if failure
+    /// @return -1 on failure
     int (*save_avl)(AVL_Index root, char* filename);
 
     /// @brief Saves a RB_Index tree into a JSON file
     /// @param root Tree root
     /// @param filename File name
-    /// @return -1 if failure
+    /// @return -1 on failure
     int (*save_rb)(RB_Index root, char* filename);
+
+    /// @brief Saves a Junk list into a JSON file
+    /// @param junk List starting node
+    /// @param filename File name
+    /// @return -1 on failure
+    int (*save_junk)(Junk junk, char* filename);
 
     /// @brief Loads a BST_Index tree from a JSON file
     /// @param filename File name
@@ -76,6 +100,11 @@ struct index_methods {
     /// @param filename File name
     /// @return Loaded tree
     RB_Index (*retrieve_rb)(char* filename);
+
+    /// @brief Loads a Junk list from a JSON file
+    /// @param filename File name
+    /// @return Loaded list
+    Junk (*retrieve_junk)(char* filename);
 
     /// @brief Marks a section of the data file as rewritable junk
     /// @param start Previous junk data list

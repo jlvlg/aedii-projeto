@@ -19,8 +19,6 @@ The Ultimate Hitchhiker's Guide to the Galaxy (Hitchhiker's Guide to the Galaxy 
 str
 The Hitchhiker's Guide to the Galaxy (Hitchhiker's Guide to the Galaxy  #1)
 str
-The Hitchhiker's Guide to the Galaxy (Hitchhiker's Guide to the Galaxy  #1)
-str
 The Ultimate Hitchhiker's Guide (Hitchhiker's Guide to the Galaxy  #1-5)
 str
 A Short History of Nearly Everything
@@ -47,8 +45,6 @@ The Lord of the Rings (The Lord of the Rings  #1-3)
 str
 The Fellowship of the Ring (The Lord of the Rings  #1)
 str
-The Lord of the Rings (The Lord of the Rings  #1-3)
-str
 The Lord of the Rings: Weapons and Warfare
 str
 The Lord of the Rings: Complete Visual Companion
@@ -73,13 +69,7 @@ The Changeling Sea
 str
 The Changeling
 str
-The Changeling
-str
 The Changeling (Daughters of England  #15)
-str
-The Known World
-str
-The Known World
 str
 The Known World
 str
@@ -147,8 +137,6 @@ The Lord of the Rings: The Art of the Fellowship of the Ring
 str
 The Power of One (The Power of One  #1)
 str
-The Power of One (The Power of One  #1)
-str
 The Power of One: One Person  One Rule  One Month
 str
 Power of an Hour: Business and Life Mastery in One Hour a Week
@@ -179,17 +167,7 @@ Rails Cookbook: Recipes for Rapid Web Development with Ruby
 str
 Anna Karenina
 str
-Anna Karenina
-str
-Anna Karenina
-str
 CliffsNotes on Tolstoy's Anna Karenina
-str
-Anna Karenina
-str
-Anna Karenina
-str
-Anna Karenina
 str
 Dinner with Anna Karenina
 str
@@ -257,8 +235,6 @@ The Air-Conditioned Nightmare
 str
 The Portrait of a Lady
 str
-The Portrait of a Lady
-str
 Writing
 str
 The War
@@ -276,14 +252,6 @@ str
 The Broken Wings
 str
 Sand and Foam
-str
-Treasure Island
-str
-Treasure Island
-str
-Treasure Island
-str
-Treasure Island
 str
 Treasure Island
 str
@@ -356,8 +324,6 @@ str
 Mason & Dixon
 str
 Vineland
-str
-Gravity's Rainbow
 str
 Slow Learner: Early Stories
 str
@@ -437,8 +403,6 @@ We Were Not Like Other People
 str
 The Lovely Bones
 str
-The Lovely Bones
-str
 Lovely in Her Bones (Elizabeth MacPherson  #2)
 str
 The Zen of CSS Design: Visual Enlightenment for the Web
@@ -511,8 +475,6 @@ Collected Stories
 str
 Crónica de una muerte anunciada
 str
-Cien años de soledad
-str
 Del amor y otros demonios
 str
 Living to Tell the Tale
@@ -567,8 +529,6 @@ No Price Too High: A Pentecostal Preacher Becomes Catholic - The Inspirational S
 str
 The Alchemist
 str
-The Alchemist
-str
 Fullmetal Alchemist  Vol. 9 (Fullmetal Alchemist  #9)
 str
 Fullmetal Alchemist  Vol. 3 (Fullmetal Alchemist  #3)
@@ -597,13 +557,7 @@ The Egypt Game
 str
 Memoirs of a Geisha
 str
-Memoirs of a Geisha
-str
-Memoirs of a Geisha
-str
 Memoirs of a Geisha: A Portrait of the Film
-str
-Memoirs of a Geisha
 str
 Geisha of Gion
 str
@@ -627,10 +581,6 @@ Da Vinci Code (Robert Langdon  #2)
 str
 Deception Point
 str
-Deception Point
-str
-Deception Point
-str
 A Killing Rain (Louis Kincaid  #6)
 str
 The Millionaire Next Door: The Surprising Secrets of America's Wealthy
@@ -647,11 +597,7 @@ Trump: The Art of the Deal
 str
 The Richest Man in Babylon
 str
-The Richest Man in Babylon
-str
 Shibumi
-str
-1776
 str
 1776
 str
@@ -711,8 +657,6 @@ Freakonomics: A Rogue Economist Explores the Hidden Side of Everything
 str
 Freakonomics: Un economista políticamente incorrecto explora el lado oculto de lo que nos afecta
 str
-Freakonomics: A Rogue Economist Explores the Hidden Side of Everything
-str
 The Last Assassin (John Rain  #5)
 str
 Life of Pi
@@ -739,11 +683,7 @@ Men Are from Mars  Women Are from Venus
 str
 Mars and Venus Book of Days: 365 Inspriations to Enrich Your Relationships
 str
-Men Are from Mars  Women Are from Venus
-str
 How to Succeed with Women
-str
-The Clan of the Cave Bear (Earth's Children  #1)
 str
 The Clan of the Cave Bear (Earth's Children  #1)
 str
@@ -775,8 +715,6 @@ Phaedrus and Letters VII and VIII
 str
 Phaedrus
 str
-Phaedrus
-str
 Lysis/Phaedrus/Symposium: Plato on Homosexuality
 str
 Enthusiasm and Divine Madness
@@ -791,17 +729,7 @@ Gorgias
 str
 The Histories
 str
-The Histories
-str
 The History (Great Minds)
-str
-The Histories
-str
-The Histories
-str
-The Histories
-str
-The Histories
 str
 The History
 str
@@ -809,23 +737,9 @@ The Iliad
 str
 Iliad
 str
-The Iliad
-str
 The Iliad/The Odyssey
 str
-The Iliad
-str
-The Iliad
-str
 The Essential Iliad
-str
-The Odyssey
-str
-The Odyssey
-str
-The Odyssey
-str
-The Odyssey
 str
 The Odyssey
 str
@@ -860,8 +774,6 @@ str
 The Fifth Mountain
 str
 Veronika Decides to Die
-str
-Hamlet
 str
 Cliffs Notes on Shakespeare's Hamlet
 str
@@ -921,8 +833,6 @@ Alcestis
 str
 Suppliant Women / Electra / Heracles
 str
-Medea
-str
 Euripides: Medea
 str
 CliffsNotes on Euripides' Medea and Electra
@@ -946,8 +856,6 @@ str
 Oresteia
 str
 Prometheus Bound and Other Plays
-str
-The Oresteia
 str
 Aeschylus  1: The Oresteia: Agamemnon/The Libation Bearers/The Eumenides
 str
@@ -993,8 +901,6 @@ Four Plays: The Clouds/The Birds/Lysistrata/The Frogs
 str
 Three Plays by Aristophanes: Lysistrata/Women at the Thesmophoria/Assemblywomen
 str
-The Complete Plays
-str
 Aristophanes 1: The Acharnians/Peace/Celebrating Ladies/Wealth
 str
 Clouds/Wasps/Birds (Aristophanes 1)
@@ -1020,8 +926,6 @@ str
 Lysistrata
 str
 Peace
-str
-Lysistrata
 str
 The Knights / Peace / The Birds / The Assembly Women / Wealth
 str
@@ -1081,8 +985,6 @@ The Metamorphoses of Ovid
 str
 Metamorphoses
 str
-Metamorphoses
-str
 Ovid's Metamorphoses: Books 1-5
 str
 Ovid’s Metamorphoses: Books 6-10
@@ -1105,11 +1007,7 @@ Dionysiac Poetics and Euripides' Bacchae
 str
 Antigone
 str
-Antigone
-str
 Object-Oriented Programming in C++
-str
-The Iliad
 str
 Love  Sex & Tragedy: How the Ancient World Shapes Our Lives
 str
@@ -1161,10 +1059,6 @@ Pride and Prejudice
 str
 Pride & Prejudice
 str
-Pride and Prejudice
-str
-Pride and Prejudice
-str
 Under the Banner of Heaven: A Story of Violent Faith
 str
 Iceland: Land of the Sagas
@@ -1185,23 +1079,11 @@ Little Women
 str
 Little Women (Little Women  #1)
 str
-Little Women
-str
-Little Women
-str
 Little Women  Little Men  Jo's Boys
-str
-Little Women
-str
-A Tale of Two Cities
 str
 A Tale of Two Cities
 str
 A Tale of Two Cities: Charles Dickens
-str
-A Tale of Two Cities
-str
-A Tale of Two Cities
 str
 Den of Thieves
 str
@@ -1229,8 +1111,6 @@ Harry Potter Schoolbooks Box Set: Two Classic Books from the Library of Hogwarts
 str
 J.K. Rowling's Harry Potter Novels: A Reader's Guide
 str
-Harry Potter and the Half-Blood Prince (Harry Potter  #6)
-str
 The Santaroga Barrier
 str
 The Dosadi Experiment (ConSentiency Universe  #2)
@@ -1240,8 +1120,6 @@ str
 The Birds (Methuen Drama)
 str
 The Frogs
-str
-Lysistrata
 str
 Myths of the Underworld Journey: Plato  Aristophanes  and the "Orphic" Gold Tablets
 str
@@ -1270,8 +1148,6 @@ str
 The Long Goodbye: Memories of My Father
 str
 Ghost In the Shell 2: Innocence: After the Long Goodbye
-str
-The Long Goodbye (Philip Marlowe  #6)
 str
 Breaking the Spell: Religion as a Natural Phenomenon
 str
@@ -1314,8 +1190,6 @@ str
 The Art of Nonfiction: A Guide for Writers and Readers
 str
 The Journals of Ayn Rand
-str
-The Fountainhead
 str
 The 36-Hour Day: A Family Guide to Caring for Persons with Alzheimer Disease  Related Dementing Illnesses  and Memory Loss in Later Life
 str
@@ -1465,8 +1339,6 @@ Brave Companions: Portraits in History
 str
 Mornings on Horseback: The Story of an Extraordinary Family  a Vanished Way of Life  and the Unique Child Who Became Theodore Roosevelt
 str
-John Adams
-str
 The Johnstown Flood
 str
 The Path Between the Seas: The Creation of the Panama Canal  1870-1914
@@ -1476,10 +1348,6 @@ str
 The Bone Collector's Son
 str
 El Coleccionista De Huesos (Lincoln Rhyme  #1)
-str
-Moby Dick
-str
-Moby-Dick
 str
 Moby Dick
 str
@@ -1515,11 +1383,7 @@ Death and the King's Horseman
 str
 The Time Machine
 str
-The Time Machine
-str
 The Ultimate Time Machine: A Remote Viewer's Perception of Time & Predictions for the New Millennium
-str
-The Time Machine
 str
 The Complete Short Stories
 str
@@ -1567,8 +1431,6 @@ A Tear and a Smile
 str
 On the Road
 str
-On the Road
-str
 De Kooning: An American Master
 str
 Willem de Kooning: Late Paintings
@@ -1597,10 +1459,6 @@ Luther and Erasmus: Free Will and Salvation (Library of Christian Classics)
 str
 To Kill a Mockingbird
 str
-To Kill a Mockingbird
-str
-To Kill a Mockingbird
-str
 The Wealthy Barber: Everyone's Common-Sense Guide to Becoming Financially Independent
 str
 A Modest Proposal and Other Satirical Works
@@ -1616,8 +1474,6 @@ str
 Novels 1901–1902: The Sacred Fount / The Wings of the Dove
 str
 Complete Stories 1892–1898
-str
-The Canterbury Tales
 str
 The Canterbury Tales
 str
@@ -1665,8 +1521,6 @@ The Denial of Death
 str
 A People's History of the United States
 str
-A People's History of the United States
-str
 A People's History of the United States: The Civil War to the Present
 str
 Graphic Design: A Concise History (World of Art)
@@ -1674,8 +1528,6 @@ str
 Immigrant Acts: On Asian American Cultural Politics
 str
 The Old Way of Seeing: How Architecture Lost Its Magic - And How to Get It Back
-str
-The Crying of Lot 49
 str
 E=mc²: A Biography of the World's Most Famous Equation
 str
@@ -1696,8 +1548,6 @@ str
 The Birth of Tragedy and Other Writings
 str
 The Birth of Tragedy/The Genealogy of Morals
-str
-The Birth of Tragedy
 str
 The Birth of Tragedy
 str
@@ -1781,12 +1631,6 @@ Robinson Crusoe (Robinson Crusoe #1)
 str
 Robinson Crusoe
 str
-Robinson Crusoe
-str
-Robinson Crusoe
-str
-Robinson Crusoe
-str
 A General History of the Pyrates
 str
 Huck Finn & Tom Sawyer among the Indians & Other Unfinished Stories (Mark Twain Library)
@@ -1796,8 +1640,6 @@ str
 Huck Finn/Pudd'nhead Wilson/No 44 Mysterious Stranger other Writings
 str
 The Adventures of Huckleberry Finn (Adventures of Tom and Huck  #2)
-str
-Adventures of Huckleberry Finn
 str
 Adventures of Huckleberry Finn
 str
@@ -1821,12 +1663,6 @@ My Secret Garden: Women's Sexual Fantasies
 str
 The Secret Garden
 str
-The Secret Garden
-str
-The Secret Garden
-str
-The Secret Garden
-str
 A Little Princess
 str
 Waiting for the Party: The Life of Frances Hodgson Burnett  1849-1924
@@ -1846,8 +1682,6 @@ str
 A Conflict of Visions: Ideological Origins of Political Struggles
 str
 Sir Gawain and the Green Knight
-str
-Alcoholics Anonymous
 str
 Alcoholics Anonymous
 str
@@ -1884,8 +1718,6 @@ str
 Maurice
 str
 E. M. Forster: A Life
-str
-Howards End
 str
 The Sixteen Pleasures
 str
@@ -2017,8 +1849,6 @@ O'Brien's the Things They Carried
 str
 The Five People You Meet in Heaven
 str
-The Curious Incident of the Dog in the Night-Time
-str
 The Curious Incident of the Dog In the Night-time
 str
 The Curious Incident of the Dog in the Night-time
@@ -2052,8 +1882,6 @@ str
 A Walk to Remember
 str
 Icy Sparks
-str
-Message in a Bottle
 str
 Sugarplums and Scandal  (Love at Stake #2.5; Bed-and-Breakfast Mysteries #22.5)
 str
@@ -2148,8 +1976,6 @@ str
 The Hunters
 str
 When the World Was Steady
-str
-The Sea
 str
 The Sea
 str
@@ -2291,12 +2117,6 @@ Innocent Blood
 str
 Don Quixote
 str
-Don Quixote
-str
-Don Quixote
-str
-Don Quixote
-str
 Lectures on Don Quixote
 str
 Cliffs Notes on Cervantes' Don Quixote
@@ -2320,8 +2140,6 @@ str
 The History of Love
 str
 A Brief History of Time
-str
-A Short History of Nearly Everything
 str
 The Politically Incorrect Guide to American History
 str
@@ -2377,8 +2195,6 @@ The Amazing Adventures of the Escapist: Volume 1
 str
 The Great House of God
 str
-The Valkyries
-str
 The Devil and Miss Prym (On the Seventh Day  #3)
 str
 Nine Stories
@@ -2403,8 +2219,6 @@ Hot Chocolate for the Mystical Lover: 101 True Stories of Soul Mates Brought Tog
 str
 Man's Search for Meaning
 str
-Man's Search for Meaning
-str
 In Search of Memory: The Emergence of a New Science of Mind
 str
 Search Engine Optimization for Dummies
@@ -2412,8 +2226,6 @@ str
 The Pragmatic Programmer: From Journeyman to Master
 str
 Behind Closed Doors: Secrets of Great Management
-str
-Blink: The Power of Thinking Without Thinking
 str
 Blink 182
 str
@@ -2439,33 +2251,17 @@ The Final Season: Fathers  Sons  and One Last Season in a Classic American Ballp
 str
 The Cold Six Thousand (Underworld USA #2)
 str
-White Teeth
-str
-White Teeth
-str
-White Teeth
-str
 Schiffbruch mit Zuschauer. Paradigma einer Daseinsmetapher
 str
 The Guide to Dan Brown's the Solomon Key
-str
-The Da Vinci Code (Robert Langdon  #2)
-str
-Angels & Demons (Robert Langdon  #1)
 str
 The Illuminati
 str
 The Illuminati Papers
 str
-The Da Vinci Code
-str
-The Da Vinci Code (Robert Langdon  #2)
-str
 El código Da Vinci (Robert Langdon  #2)
 str
 Truth and Fiction in The Da Vinci Code: A Historian Reveals What We Really Know about Jesus  Mary Magdalene & Constantine
-str
-Harry Potter and the Prisoner of Azkaban (Harry Potter  #3)
 str
 Housekeeping vs. the Dirt
 str
@@ -2541,8 +2337,6 @@ The Grapes of Wrath
 str
 CliffsNotes on Steinbeck's The Grapes of Wrath
 str
-The Grapes of Wrath
-str
 American Gods
 str
 American Gospel: God  the Founding Fathers  and the Making of a Nation
@@ -2598,8 +2392,6 @@ str
 The Far Side of Evil
 str
 Enchantress from the Stars
-str
-Everything Is Illuminated
 str
 Everything Is Illuminated
 str
@@ -2663,8 +2455,6 @@ Setting Free the Bears
 str
 The 158-Pound Marriage
 str
-The Short Stories
-str
 A Life in Letters
 str
 On Authorship
@@ -2675,13 +2465,7 @@ Tender is the Night
 str
 The Great Gatsby
 str
-The Great Gatsby
-str
-The Great Gatsby
-str
 Cliffs Notes on Fitzgerald's the Great Gatsby
-str
-The Great Gatsby
 str
 Limitations (Kindle County Legal Thriller #7)
 str
@@ -2783,8 +2567,6 @@ The Leader In You: How to Win Friends  Influence People and Succeed in a Changin
 str
 The Drama of the Gifted Child: The Search for the True Self
 str
-The Drama of the Gifted Child: The Search for the True Self
-str
 Who Moved My Cheese?
 str
 Blue Ocean Strategy: How to Create Uncontested Market Space and Make the Competition Irrelevant
@@ -2792,8 +2574,6 @@ str
 Heart of Darkness
 str
 Heart of Darkness and Other Tales
-str
-Heart of Darkness
 str
 Teacher Man (Frank McCourt  #3)
 str
@@ -2803,23 +2583,11 @@ Three Men in a Boat (Three Men  #1)
 str
 Three Men in a Boat: To Say Nothing of the Dog
 str
-Three Men in a Boat: To Say Nothing of the Dog
-str
 Three Men in a Boat
 str
 Three Men in a Boat and Three Men on the Bummel
 str
 Kafka on the Shore
-str
-The Brothers Karamazov
-str
-The Brothers Karamazov
-str
-The Brothers Karamazov
-str
-The Brothers Karamazov
-str
-The Brothers Karamazov
 str
 The Brothers Karamazov
 str
@@ -2903,8 +2671,6 @@ Jackdaws
 str
 Whiteout
 str
-Jackdaws
-str
 Battle Angel Alita - Last Order : Angel's Vision  Vol. 08
 str
 Battle Angel Alita - Last Order : Guilty Angel  Vol. 07
@@ -2918,8 +2684,6 @@ str
 A Short History of Nearly Everything (Illustrated Edition)
 str
 The Drawing of the Three (The Dark Tower  #2)
-str
-The Handmaid's Tale
 str
 The Handmaid's Tale
 str
@@ -3007,8 +2771,6 @@ Daughter of Fortune
 str
 The Meanest Thing To Say
 str
-The Good Earth (House of Earth  #1)
-str
 A Fine Balance
 str
 The Best Way to Play: A Little Bill Book
@@ -3020,8 +2782,6 @@ str
 One Hundred Years of Solitude
 str
 Song of Solomon
-str
-One Hundred Years of Solitude
 str
 The Bluest Eye
 str
@@ -3072,8 +2832,6 @@ str
 My First Story of Christmas
 str
 The Christmas Story
-str
-A Christmas Carol
 str
 A Christmas Carol
 str
@@ -3145,15 +2903,7 @@ The Stand: Das letzte Gefecht
 str
 'Salem's Lot
 str
-'Salem's Lot
-str
-'Salem's Lot
-str
 Carrie / 'Salem's Lot / The Shining
-str
-'Salem's Lot
-str
-'Salem's Lot
 str
 Orientalism
 str
@@ -3173,15 +2923,11 @@ Animal Farm / 1984
 str
 1984
 str
-Nineteen Eighty-Four
-str
 Brave New World / Brave New World Revisited
 str
 Brave New World and Brave New World Revisited
 str
 Brave New World Revisited
-str
-Brave New World
 str
 Andrew Carnegie
 str
@@ -3265,10 +3011,6 @@ The Ethics of Rhetoric
 str
 Manliness
 str
-Anna Karenina
-str
-The Brothers Karamazov
-str
 Selected Stories of Anton Chekhov
 str
 Mother Maria Skobtsova: Essential Writings
@@ -3321,25 +3063,13 @@ El Aleph
 str
 Vanity Fair
 str
-Vanity Fair
-str
-Vanity Fair
-str
 V for Vendetta
-str
-V.
 str
 Girl in the Shadows (Shadows  #2)
 str
-V for Vendetta
-str
 Heaven (Casteel  #1)
 str
-Slow Learner: Early Stories
-str
 A Gravity's Rainbow Companion: Sources and Contexts for Pynchon's Novel
-str
-Casino Royale
 str
 Casino Royale
 str
@@ -3382,14 +3112,6 @@ str
 The Coming Storm (Pirates of the Caribbean: Jack Sparrow  #1)
 str
 The Woman in White
-str
-The Woman in White
-str
-The Woman in White
-str
-The Woman in White
-str
-The Lord of the Rings (The Lord of the Rings  #1-3)
 str
 The 9/11 Commission Report: Final Report of the National Commission on Terrorist Attacks Upon the United States
 str
@@ -3453,8 +3175,6 @@ The Long Road Back: A Survivor's Guide to Anorexia
 str
 The Road Back
 str
-Robinson Crusoe
-str
 Achilles in Vietnam: Combat Trauma and the Undoing of Character
 str
 The Work of Mourning
@@ -3471,21 +3191,11 @@ The Normans in Sicily: The Normans in the South 1016-1130 and the Kingdom in the
 str
 Siddhartha
 str
-Siddhartha
-str
-Siddhartha
-str
-The Moonstone
-str
-The Moonstone
-str
 The Moonstone
 str
 Ride of the Second Horseman: The Birth and Death of War
 str
 Beloved
-str
-Cry  the Beloved Country
 str
 Life of the Beloved: Spiritual Living in a Secular World
 str
@@ -3589,15 +3299,9 @@ Charlie and the Chocolate Factory: A Play
 str
 Charlie and the Chocolate Factory (Abridged)
 str
-Collected Stories
-str
 Roald Dahl Treasury
 str
 Dirty Beasts
-str
-Never Let Me Go
-str
-Never Let Me Go
 str
 Never Let Me Go
 str
@@ -3617,8 +3321,6 @@ My Heart May Be Broken  but My Hair Still Looks Great (Domestic Equalizers #2)
 str
 Since You're Leaving Anyway  Take Out the Trash (Domestic Equalizers #1)
 str
-The Da Vinci Code (Robert Langdon  #2)
-str
 Blessings from the Other Side: Wisdom and Comfort from the Afterlife for This Life
 str
 Mother God: The Feminine Principle to Our Creator
@@ -3636,8 +3338,6 @@ str
 Motor Mouth (Alex Barnaby #2)
 str
 A Supposedly Fun Thing I'll Never Do Again: Essays and Arguments
-str
-Ivanhoe
 str
 Ivanhoe
 str
@@ -3679,13 +3379,9 @@ From Potter's Field (Kay Scarpetta  #6)
 str
 The Body Farm (Kay Scarpetta  #5)
 str
-Trace (Kay Scarpetta  #13)
-str
 Cause of Death (Kay Scarpetta  #7)
 str
 The Patricia Cornwell CD Audio Treasury: All That Remains / Cruel & Unusual (Kay Scarpetta  #3  #4)
-str
-At Risk (Winston Garano  #1)
 str
 The Scarpetta Collection: All That Remains / Cruel & Unusual (Kay Scarpetta  #3  #4)
 str
@@ -3723,8 +3419,6 @@ Four Blondes
 str
 Lipstick Jungle
 str
-Lipstick Jungle
-str
 The Easy Way to Stop Smoking: Join the Millions Who Have Become Nonsmokers Using the Easyway Method
 str
 Teach Your Child to Read in 100 Easy Lessons
@@ -3742,8 +3436,6 @@ str
 Le Divorce
 str
 Divine Conspiracy: Rediscovering Our Hidden Life in God
-str
-The Divine Comedy
 str
 The Divine Comedy
 str
@@ -3865,8 +3557,6 @@ You Can Have What You Want: Proven Strategies for Inner and Outer Success
 str
 Like Water for Chocolate
 str
-Like Water for Chocolate
-str
 Como agua para chocolate
 str
 The Radicalism of the American Revolution
@@ -3897,15 +3587,7 @@ Dumbing Down Our Kids: Why American Children Feel Good About Themselves But Can'
 str
 If I Don't Write It Nobody Else Will: An Autobiography
 str
-Hamlet
-str
 William Shakespeare's A Midsummer Night's Dream (Cliffs Complete)
-str
-A Midsummer Night's Dream
-str
-A Midsummer Night's Dream
-str
-A Midsummer Night's Dream
 str
 A Midsummer Night's Dream
 str
@@ -3917,11 +3599,7 @@ In the Company of Cheerful Ladies (No. 1 Ladies' Detective Agency  #6)
 str
 Morality for Beautiful Girls (No. 1 Ladies' Detective Agency #3)
 str
-In the Company of Cheerful Ladies (No. 1 Ladies' Detective Agency  #6)
-str
 The Full Cupboard of Life (No. 1 Ladies' Detective Agency  #5)
-str
-The Tale of Genji
 str
 The Tale of Genji
 str
@@ -3975,12 +3653,6 @@ The Grand Inquisitor: with related chapters from The Brothers Karamazov
 str
 The Count of Monte Cristo
 str
-The Count of Monte Cristo
-str
-The Count of Monte Cristo
-str
-The Brothers Karamazov
-str
 Crime and Punishment
 str
 Crime and Punishment in American History
@@ -3990,8 +3662,6 @@ str
 Cliffsnotes on Dostoevsky's Crime and Punishment
 str
 On Crimes and Punishments
-str
-Crime and Punishment
 str
 Crime and Punishment (Norton Critical Editions)
 str
@@ -4022,10 +3692,6 @@ str
 The Dance of Life: Weaving Sorrows and Blessings Into One Joyful Step
 str
 The Prodigal Son (Roger the Chapman  #15)
-str
-The Poisonwood Bible
-str
-The Poisonwood Bible
 str
 How to Make Love Like a Porn Star: A Cautionary Tale
 str
@@ -4083,8 +3749,6 @@ The Lord of the Rings: The Making of the Movie Trilogy
 str
 Tolkien: A Look Behind The Lord of the Rings
 str
-The Lord of the Rings (The Lord of the Rings  #1-3)
-str
 Midnight in the Garden of Good and Evil
 str
 Tom's Midnight Garden
@@ -4129,8 +3793,6 @@ Human Traces
 str
 The Girl at the Lion d'Or
 str
-Human Traces
-str
 Founding Brothers: The Revolutionary Generation
 str
 Suzanne's Diary for Nicholas
@@ -4144,8 +3806,6 @@ str
 The Beach House
 str
 The Beach House (Beach House #1)
-str
-The Beach House
 str
 Path of the Assassin (Scot Harvath  #2)
 str
@@ -4203,15 +3863,9 @@ A Portrait of the Artist as a Young Man
 str
 A Portrait of the Artist As a Young Man
 str
-A Portrait of the Artist as a Young Man
-str
-A Portrait of the Artist as a Young Man
-str
 Vincent Van Gogh: Portrait of an Artist
 str
 A Study Guide to Gabriel Garcia Marquez' One Hundred Years of Solitude
-str
-One Hundred Years of Solitude
 str
 One Hundred Years Of Solitude
 str
@@ -4231,13 +3885,9 @@ Animal Farm
 str
 Farm Animals (A Chunky Book)
 str
-Lord of the Flies
-str
 Good Soldier Svejk And His Fortunes In The World
 str
 The Good Soldier
-str
-Fahrenheit 451
 str
 Next
 str
@@ -4289,23 +3939,9 @@ The Metamorphosis
 str
 The Metamorphosis (Graphic Novel Adaptation)
 str
-The Metamorphosis
-str
-The Metamorphosis and Other Stories
-str
 The Metamorphosis and Other Stories
 str
 Antigone's Claim: Kinship Between Life and Death
-str
-Gulliver's Travels
-str
-Gulliver's Travels
-str
-Gulliver's Travels
-str
-Gulliver's Travels
-str
-Gulliver's Travels
 str
 Gulliver's Travels
 str
@@ -4314,8 +3950,6 @@ str
 Fear and Loathing in Las Vegas
 str
 Fear and Loathing on the Campaign Trail '72
-str
-Fear and Loathing in Las Vegas
 str
 Fear and Loathing in America: The Brutal Odyssey of an Outlaw Journalist  1968-1976
 str
@@ -4367,8 +4001,6 @@ Novels 1955–1962: Lolita / Pnin / Pale Fire / Lolita: A Screenplay
 str
 A Friend of the Earth
 str
-The Year of Magical Thinking
-str
 Seduction and Betrayal: Women and Literature
 str
 After Henry
@@ -4378,10 +4010,6 @@ str
 Another Day in Paradise: The Fourth Sherman's Lagoon Collection
 str
 Another Day in Cubicle Paradise
-str
-Moby Dick
-str
-Moby-Dick
 str
 Moby-Dick; or  The Whale
 str
@@ -4531,8 +4159,6 @@ Anne of Green Gables
 str
 The Road to Yesterday (Anne of Green Gables  #9)
 str
-Anne of Avonlea
-str
 The Stories of Vladimir Nabokov
 str
 The Gift
@@ -4644,8 +4270,6 @@ str
 Access the Power of Your Higher Self: Your Source of Inner Guidance and Spiritual Transformation (Pocket Guides to Practical Spirituality)
 str
 Hailstones and Halibut Bones
-str
-The Second Sex
 str
 The Second Sex
 str
@@ -4763,8 +4387,6 @@ The Restaurant at the End of the Universe (The Hitchhiker's Guide to the Galaxy 
 str
 Starship Titanic
 str
-The Hitchhiker's Guide to the Galaxy (Hitchhiker's Guide to the Galaxy  #1)
-str
 The Illustrated Hitchhiker's Guide To The Galaxy
 str
 Margaret Atwood: The Handmaid's Tale
@@ -4833,8 +4455,6 @@ The Wanting Seed
 str
 A Clockwork Orange
 str
-A Clockwork Orange
-str
 Clockwork Orange
 str
 A Clockwork Orange (Stage Play)
@@ -4852,8 +4472,6 @@ str
 Saint-Exupéry
 str
 Le Petit Prince
-str
-Macbeth
 str
 Macbeth
 str
@@ -4904,8 +4522,6 @@ str
 The Hound of the Baskervilles
 str
 The Hound of the Baskervilles (Sherlock Holmes  #5)
-str
-The Hound of the Baskervilles
 str
 Sherlock Holmes and the Case of the Hound of the Baskervilles (Great Illustrated Classics)
 str
@@ -4987,12 +4603,6 @@ Le Portrait de Dorian Gray
 str
 The Portrait of Dorian Gray
 str
-The Picture of Dorian Gray
-str
-The Picture of Dorian Gray
-str
-The Picture of Dorian Gray
-str
 An Arab-Syrian Gentleman and Warrior in the Period of the Crusades: Memoirs of Usamah Ibn-Munqidh
 str
 Technical Manual and Dictionary of Classical Ballet
@@ -5039,8 +4649,6 @@ The Books in My Life
 str
 The Smoke Jumper
 str
-La casa de los espíritus
-str
 Last Chance Saloon
 str
 Anybody Out There? (Walsh Family  #4)
@@ -5061,8 +4669,6 @@ Fullmetal Alchemist  Vol. 5 (Fullmetal Alchemist  #5)
 str
 The House of the Spirits
 str
-The House of the Spirits
-str
 How To Meditate: An Anthology Of Talks On Meditation And "Meditation: The Bridge Is Flowing But The River Is Not"
 str
 Insights: Talks On The Nature Of Existence
@@ -5080,16 +4686,6 @@ str
 Living Faith
 str
 Sharing Good Times
-str
-Until I Find You
-str
-Atlas Shrugged
-str
-Atlas Shrugged
-str
-Atlas Shrugged
-str
-Atlas Shrugged
 str
 Skinny Legs and All
 str
@@ -5128,8 +4724,6 @@ str
 Hegel's Phenomenology of Spirit
 str
 Preface to the Phenomenology of Spirit
-str
-Hegel's Phenomenology of Spirit
 str
 Plato: Complete Works
 str
@@ -5210,8 +4804,6 @@ str
 Still Life with Woodpecker
 str
 Half Asleep in Frog Pajamas
-str
-Fierce Invalids Home from Hot Climates
 str
 PanAroma: Jitterbug Perfume
 str
@@ -5301,8 +4893,6 @@ Obasan
 str
 Ender's Game Boxed Set: Ender's Game  Ender's Shadow  Shadow of the Hegemon
 str
-Speaker for the Dead (Ender's Saga  #2)
-str
 The Audacity of Hope: Thoughts on Reclaiming the American Dream
 str
 Mao: The Unknown Story
@@ -5311,8 +4901,6 @@ The Art of War
 str
 Oracle Bones: A Journey Between China's Past and Present
 str
-Wild Swans: Three Daughters of China
-str
 The Wild Swans
 str
 Women in Love
@@ -5320,8 +4908,6 @@ str
 Women Who Love Too Much
 str
 Men Who Hate Women and the Women Who Love Them: When Loving Hurts and You Don't Know Why
-str
-A Walk in the Woods: Rediscovering America on the Appalachian Trail
 str
 A Walk in the Woods: Rediscovering America on the Appalachian Trail
 str
@@ -5394,8 +4980,6 @@ str
 Less Than Zero
 str
 A Christmas Memory
-str
-In Cold Blood
 str
 The Southern Haunting of Truman Capote
 str
@@ -5539,8 +5123,6 @@ Death in the Andamans
 str
 Death in Berlin
 str
-The Far Pavilions
-str
 Enchanted Evening
 str
 Pathologies of Power: Health  Human Rights and the New War on the Poor
@@ -5661,11 +5243,7 @@ The Role of the Reader: Explorations in the Semiotics of Texts
 str
 Libraries
 str
-The Art of War
-str
 Sun Tzu: The Art of War for Managers; 50 Strategic Rules
-str
-The Art of War
 str
 The Lost Continent:  Travels in Small-town America
 str
@@ -5676,8 +5254,6 @@ str
 The Long-Lost Map (Ulysses Moore #2)
 str
 The Wicked Wit of Charles Dickens
-str
-The Three Musketeers
 str
 The Three Musketeers
 str
@@ -5732,8 +5308,6 @@ str
 Misery
 str
 The Bachman Books
-str
-Misery
 str
 Carrie
 str
@@ -5827,13 +5401,9 @@ The Sword of Straw (The Sangreal Trilogy  #2)
 str
 A Farewell to Arms
 str
-A Farewell to Arms
-str
 The Big Rock Candy Mountain
 str
 Beyond the Hundredth Meridian: John Wesley Powell and the Second Opening of the West
-str
-Collected Stories
 str
 All the Little Live Things
 str
@@ -5844,8 +5414,6 @@ str
 Letters of E.B. White
 str
 Here Is New York
-str
-Charlotte's Web
 str
 Charlotte's Web
 str
@@ -5901,8 +5469,6 @@ Salem Falls
 str
 The Pact
 str
-My Sister's Keeper
-str
 Cold Mountain
 str
 The Collected Songs of Cold Mountain
@@ -5926,8 +5492,6 @@ str
 The Fiery Cross (Outlander  #5)
 str
 Refuge (Outlanders  #36)
-str
-Dragonfly in Amber (Outlander  #2)
 str
 Outlander
 str
@@ -5979,12 +5543,6 @@ Dubliners
 str
 Finnegans Wake
 str
-Jane Eyre
-str
-Jane Eyre
-str
-Jane Eyre
-str
 Purity of Blood (Adventures of Captain Alatriste  #2)
 str
 Barnaby Rudge
@@ -6031,13 +5589,9 @@ Eat Right 4 Your Type
 str
 The Annotated Gulliver's Travels
 str
-Gulliver's Travels
-str
 The Chronicles of Narnia CD Box Set
 str
 The Chronicles of Narnia (The Chronicles of Narnia  #1-7)
-str
-Mere Christianity
 str
 Mere Christianity
 str
@@ -6135,8 +5689,6 @@ The Boggart
 str
 Silver on the Tree (The Dark is Rising  #5)
 str
-The Long Goodbye (Philip Marlowe  #6)
-str
 Trouble Is My Business
 str
 The Captain's Verses
@@ -6145,25 +5697,9 @@ Herbert the Timid Dragon
 str
 Under the Net
 str
-Love
-str
-Beloved
-str
-Song of Solomon
-str
-The Bluest Eye
-str
 100 Love Sonnets
 str
 Jazz
-str
-Jazz
-str
-Sula
-str
-Sula
-str
-Sula
 str
 Sula
 str
@@ -6178,8 +5714,6 @@ str
 It Can't Happen Here
 str
 Babbitt
-str
-Main Street
 str
 Main Street
 str
@@ -6293,8 +5827,6 @@ Boy's Life
 str
 Stinger
 str
-Swan Song
-str
 Danse Macabre
 str
 The Secretary of Dreams  Volume One
@@ -6310,8 +5842,6 @@ str
 Creepshow
 str
 On Writing: A Memoir
-str
-The Shining
 str
 La Torre Oscura VII - Tomo 2 of 2 (La Torre Oscura  #7)
 str
@@ -6385,8 +5915,6 @@ A Simple Habana Melody
 str
 The Fourteen Sisters of Emilio Montez O'Brien
 str
-The Known World
-str
 The Stories of John Cheever
 str
 Istanbul: Memories and the City
@@ -6429,13 +5957,9 @@ Lost in the City
 str
 White Noise
 str
-Americana
-str
 Love-Lies-Bleeding
 str
 The Body Artist
-str
-The Hotel New Hampshire
 str
 The Hotel New Hampshire
 str
@@ -6456,8 +5980,6 @@ str
 After the Wreck  I Picked Myself Up  Spread My Wings  and Flew Away
 str
 Zombie
-str
-Sabbath's Theater
 str
 The Stone Diaries
 str
@@ -6561,8 +6083,6 @@ Iain Banks' 'The Wasp Factory'  'The Crow Road' and 'Whit'
 str
 A Song Of Stone
 str
-Selected Poems
-str
 Herman Melville: A Biography
 str
 The Confidence-Man
@@ -6600,8 +6120,6 @@ str
 Wittgenstein's Poker: The Story of a Ten-Minute Argument Between Two Great Philosophers
 str
 Tractatus Logico-Philosophicus
-str
-Philosophical Investigations
 str
 On Certainty
 str
@@ -6651,8 +6169,6 @@ You Come Too: Favorite Poems for Readers of All Ages
 str
 Watership Down
 str
-Watership Down
-str
 Tales from Watership Down
 str
 The Bake Shop Ghost
@@ -6693,13 +6209,9 @@ Three Plays: Desire Under the Elms / Strange Interlude / Mourning Becomes Electr
 str
 A Streetcar Named Desire
 str
-A Streetcar Named Desire
-str
 A Streetcar Named Desire (SparkNotes Literature Guide)
 str
 CliffNotes on Williams' Glass Menagerie & Streetcar Named Desire (Cliffs Notes)
-str
-Pygmalion
 str
 The Play Soldier
 str
@@ -6709,13 +6221,9 @@ The New Testament
 str
 Greek Lyrics
 str
-The Iliad
-str
 The Iliad  Books 8-9 (Classical Texts Series)
 str
 The Gray-Eyed Goddess (Tales from the Odyssey  #4)
-str
-Collected Stories
 str
 Saint Joan
 str
@@ -6733,17 +6241,7 @@ Education as My Agenda: Gertrude Williams  Race & the Baltimore Public Schools
 str
 The Scarlet Letter
 str
-The Scarlet Letter
-str
-The Scarlet Letter
-str
-The Scarlet Letter
-str
-The Scarlet Letter
-str
 Nathaniel Hawthorne's The Scarlet Letter
-str
-The Birth of Tragedy
 str
 Human  All Too Human (Complete Works 3)
 str
@@ -6831,13 +6329,9 @@ The Big Empty: Dialogues on Politics  Sex  God  Boxing  Morality  Myth  Poker & 
 str
 The Armies of the Night: History as a Novel  the Novel as History
 str
-In Cold Blood
-str
 Cold Blood (Lorraine Page  #2)
 str
 Amazing Disgrace (Gerald Samper #2)
-str
-Cry  the Beloved Country
 str
 You Don't Know Jack (NY Girlfriends  #2)
 str
@@ -6969,19 +6463,9 @@ Centennial
 str
 Carrie (Biblioteca de Stephen King. 102  8)
 str
-Carrie
-str
-The Shining
-str
-The Shining
-str
-The Shining
-str
 Marley & Me: Life and Love with the World's Worst Dog
 str
 Marley and Me: Life and Love With the World's Worst Dog
-str
-Wuthering Heights
 str
 Brodie's notes on Aldous Huxley's brave new world
 str
@@ -6993,15 +6477,11 @@ Drawing Down the Moon: Witches  Druids  Goddess-Worshippers  and Other Pagans in
 str
 Sing Down the Moon
 str
-Light in August
-str
 The Transit of Venus
 str
 Kingsblood Royal
 str
 Swann's Way (In Search of Lost Time  #1)
-str
-Swann's Way (Remembrance of Things Past  #1)
 str
 Swann's Way (Remembrance of Things Past  #1)
 str
@@ -7020,8 +6500,6 @@ str
 Falling Angels (Luc Actar #1)
 str
 The Collaborator: The Trial and Execution of Robert Brasillach
-str
-Ulysses
 str
 The Crazed
 str
@@ -7063,11 +6541,7 @@ The Best Short Stories
 str
 Demons
 str
-The Idiot
-str
 Great Short Works of Fyodor Dostoevsky
-str
-The Idiot
 str
 Celtic Tree Mysteries: Practical Druid Magic & Divination
 str
@@ -7093,15 +6567,9 @@ CliffsNotes on Faulkner's Absalom  Absalom!
 str
 The Aeneid
 str
-The Aeneid
-str
-The Aeneid
-str
 Aeneid
 str
 Virgil  Vol 2: Aeneid Books 7-12  Appendix Vergiliana
-str
-The Castle of Otranto
 str
 The Castle of Otranto
 str
@@ -7119,12 +6587,6 @@ See You Around  Sam! (Sam Krupnik  #3)
 str
 King Lear
 str
-King Lear
-str
-King Lear
-str
-King Lear
-str
 The Turn of the Screw (Norton Critical Edition)
 str
 The Turn of the Screw and The Aspern Papers
@@ -7139,19 +6601,9 @@ Much Ado About Nothing
 str
 Much Ado about Nothing (Oxford School Shakespeare)
 str
-Much Ado about Nothing
-str
-Much Ado about Nothing
-str
 Winter's Tale
 str
 Winter's Tales
-str
-Twelfth Night
-str
-Twelfth Night
-str
-Twelfth Night
 str
 Tempest (Star Wars: Legacy of the Force  #3)
 str
@@ -7164,16 +6616,6 @@ str
 The Hamlet
 str
 Othello
-str
-Othello
-str
-Othello
-str
-Julius Caesar
-str
-Julius Caesar
-str
-Julius Caesar
 str
 Julius Caesar
 str
@@ -7190,8 +6632,6 @@ str
 Justine (The Alexandria Quartet #1)
 str
 Clea (The Alexandria Quartet #4)
-str
-Siddhartha
 str
 Kate Vaiden
 str
@@ -7216,8 +6656,6 @@ str
 Naked Came the Manatee
 str
 Strip Tease
-str
-Basket Case
 str
 A Carl Hiaasen Collection: Stormy Weather  Tourist Season  and  Strip Tease
 str
@@ -7403,19 +6841,13 @@ The Presocratic Philosophers
 str
 Presocratic Philosophy: A Very Short Introduction
 str
-The Presocratic Philosophers
-str
 The First Philosophers: The Presocratics and Sophists
 str
 Skeleton Crew
 str
-Night Shift
-str
 The Talisman
 str
 El retrato de Rose Madder
-str
-The Dark Half
 str
 La Milla Verde
 str
@@ -7637,8 +7069,6 @@ Tales from Earthsea (Earthsea Cycle  #5)
 str
 Jane on Her Own (Catwings  #4)
 str
-Tehanu (Earthsea Cycle  #4)
-str
 The Tombs of Atuan (Earthsea Cycle  #2)
 str
 Catwings (Catwings #1)
@@ -7650,8 +7080,6 @@ str
 The Life and Games of Mikhail Tal
 str
 Tal-Botvinnik 1960
-str
-Don Quixote
 str
 Cromartie High School  Vol. 06
 str
@@ -7747,8 +7175,6 @@ Lioness Rampant (Song of the Lioness  #4)
 str
 The Botany of Desire: A Plant's-Eye View of the World
 str
-The Botany of Desire: A Plant's-Eye View of the World
-str
 More Milly Molly Mandy
 str
 Essence and Alchemy: A Natural History of Perfume
@@ -7760,10 +7186,6 @@ str
 Witches Abroad (Discworld  #12)
 str
 The Wizard's Apprentice (The Keepers  #2)
-str
-Magician: Apprentice (The Riftwar Saga  #1)
-str
-Magician: Apprentice (The Riftwar Saga  #1)
 str
 Geek Love
 str
@@ -7800,8 +7222,6 @@ str
 Son of the Shadows (Sevenwaters  #2)
 str
 Wildwood Dancing (Wildwood  #1)
-str
-Foxmask (Saga of the Light Isles  #2)
 str
 Foxmask (Saga of the Light Isles  #2)
 str
@@ -7909,8 +7329,6 @@ Part-Time Wife (Hometown Heartbreakers  #4)
 str
 The Little Friend
 str
-The Little Friend
-str
 The Littles and Their Amazing New Friend
 str
 Little House Friends (Little House Chapter Books: Laura  #9)
@@ -7963,8 +7381,6 @@ White Noise: Text and Criticism
 str
 The Art of Loving
 str
-The Art of Loving
-str
 Inattentional Blindness
 str
 Touching the Rock: An Experience of Blindness
@@ -8001,11 +7417,7 @@ Colter: The True Story of the Best Dog I Ever Had
 str
 The Hermit's Story
 str
-The Great Gatsby
-str
 Gould's Book of Fish: A Novel in Twelve Fish
-str
-One Hundred Years of Solitude
 str
 The Liars' Club
 str
@@ -8016,8 +7428,6 @@ str
 Small Wonder
 str
 Prodigal Summer
-str
-English Passengers
 str
 English Passengers
 str
@@ -8037,8 +7447,6 @@ Island: Collected Stories
 str
 Carried Away: A Personal Selection of Stories
 str
-Selected Stories
-str
 Runaway
 str
 Something I've Been Meaning to Tell You: 13 Stories
@@ -8057,11 +7465,7 @@ Good Faith
 str
 The Greenlanders
 str
-The Autograph Man
-str
 El cazador de autógrafos
-str
-Anna Karenina
 str
 Chronicles: Volume One
 str
@@ -8076,8 +7480,6 @@ str
 Rain of Gold
 str
 The Pearl/The Red Pony
-str
-A Midsummer Night's Dream
 str
 A Ring of Endless Light (Austin Family  #4)
 str
@@ -8217,10 +7619,6 @@ Black on Red: My 44 Years Inside the Soviet Union: An Autobiography
 str
 Thinking Visually (Basics Illustration  #1)
 str
-Love
-str
-The Charterhouse of Parma
-str
 The Charterhouse of Parma
 str
 The King of Elfland's Daughter
@@ -8283,12 +7681,6 @@ The Sword of Angels (The Bronze Knight  #3)
 str
 A Scanner Darkly
 str
-Midnight's Children
-str
-Last Man Standing
-str
-Last Man Standing
-str
 Last Man Standing
 str
 Rape: A Love Story
@@ -8298,8 +7690,6 @@ str
 Vanishing Acts
 str
 Nineteen Minutes
-str
-The Pact
 str
 Compasión
 str
@@ -8319,23 +7709,9 @@ Wolf Willow
 str
 Mormon Country
 str
-The Complete Novels
-str
-Jane Austen's Letters
-str
-Pride and Prejudice
-str
 The Complete Novels of Jane Austen  Vol 1: Sense & Sensibility/Pride & Prejudice/Mansfield Park
 str
-Pride and Prejudice
-str
 Desire and Duty: A Sequel to Jane Austen's Pride and Prejudice
-str
-Emma
-str
-Emma
-str
-Emma
 str
 Sense and Sensibility
 str
@@ -8378,8 +7754,6 @@ str
 Odd Thomas (Odd Thomas  #1)
 str
 Brother Odd (Odd Thomas  #3)
-str
-Rape: A Love Story
 str
 First Love: A Gothic Tale
 str
@@ -8439,15 +7813,11 @@ Alfred Hitchcock and the Making of Psycho
 str
 Five Quarters of the Orange
 str
-Five Quarters of the Orange
-str
 Sleep  Pale Sister
 str
 Blackberry Wine
 str
 Gentlemen and Players
-str
-Blackberry Wine
 str
 The Lollipop Shoes (Chocolat  #2)
 str
@@ -8456,8 +7826,6 @@ str
 Holy Madness: The Shock Tactics Radical Teachings Crazy Wise Adepts Holy Fools Rascal Gurus
 str
 The Adventuress
-str
-The Time Traveler's Wife
 str
 La mujer del viajero en el tiempo
 str
@@ -8525,8 +7893,6 @@ str
 str
 A Gateway to Sindarin: A Grammar of an Elvish Language from J.R.R. Tolkien's Lord of the Rings
 str
-The Return of the King (The Lord of the Rings  #3)
-str
 The Laughing Corpse (Anita Blake  Vampire Hunter  #2)
 str
 What the Corpse Revealed
@@ -8539,10 +7905,6 @@ str
 str
 Exquisite Corpse
 str
-The Return of the King (The Lord of the Rings  #3)
-str
-The Fellowship of the Ring (The Lord of the Rings  #1)
-str
 The Lord of the Rings / The Hobbit
 str
 Bored of the Rings: A Parody of J.R.R. Tolkien's Lord of the Rings
@@ -8552,8 +7914,6 @@ str
 Les Deux Tours (Le Seigneur des Anneaux  #2)
 str
 The Lord of the Rings
-str
-The Return of the King (The Lord of the Rings  #3)
 str
 The Ice Storm
 str
@@ -8566,8 +7926,6 @@ str
 Garden State
 str
 The Lord of the Rings Millennium Edition Boxed Set (The Lord of the Rings  #1-3)
-str
-The Twenty-Seventh City
 str
 Stork Naked (Xanth  #30)
 str
@@ -8687,15 +8045,11 @@ Billy Budd  Sailor and Other Uncompleted Writings
 str
 Billy Budd  Sailor
 str
-Billy Budd  Sailor
-str
 The Outsider
 str
 Native Son
 str
 Later Works: Black Boy (American Hunger) / The Outsider
-str
-Cyrano de Bergerac
 str
 Cyrano de Bergerac
 str
@@ -8757,8 +8111,6 @@ Galapagos: A Natural History
 str
 Ecuador & the Galapagos Islands
 str
-Galápagos
-str
 Breakfast of Champions
 str
 Seabiscuit: The Saga of a Great Champion
@@ -8789,13 +8141,9 @@ White Man's Grave
 str
 Charms for the Easy Life
 str
-The Lovely Bones
-str
 Hour Game (Sean King & Michelle Maxwell  #2)
 str
 House of Sand and Fog
-str
-While I Was Gone
 str
 My War Gone by  I Miss It So
 str
@@ -8829,13 +8177,9 @@ Ultimate Unofficial Guide to the Mysteries of Harry Potter: Analysis of Books 1-
 str
 Harrius Potter et Philosophi Lapis
 str
-Harry Potter and the Chamber of Secrets (Harry Potter  #2)
-str
 Harrius Potter et Camera Secretorum
 str
 La historia de la familia Roccamatio de Helsinki
-str
-An Instance of the Fingerpost
 str
 An Instance of the Fingerpost
 str
@@ -8854,8 +8198,6 @@ str
 True Believers (Gregor Demarkian  #17)
 str
 At First Sight (Jeremy Marsh & Lexie Darnell  #2)
-str
-The Guardian
 str
 Wokini: A Lakota Journey to Happiness and Self-Understanding
 str
@@ -8890,10 +8232,6 @@ str
 The Museum of Dr. Moses: Tales of Mystery and Suspense
 str
 A Garden of Earthly Delights (Wonderland Quartet  #1)
-str
-Paradise Lost
-str
-Paradise Lost
 str
 Paradise Lost
 str
@@ -8950,8 +8288,6 @@ str
 Ego and Hubris: The Michael Malice Story
 str
 Empire of the Senseless
-str
-Great Expectations
 str
 Desert Queen: The Extraordinary Life of Gertrude Bell: Adventurer  Adviser to Kings  Ally of Lawrence of Arabia
 str
@@ -9089,8 +8425,6 @@ Black Coffee (Hercule Poirot  #45.5)
 str
 Hercule Poirot's Christmas: A BBC Radio 4 Full-Cast Dramatisation
 str
-Murder on the Orient Express (Hercule Poirot  #10)
-str
 Death on the Nile (Hercule Poirot  #17)
 str
 Mrs. McGinty's Dead (Hercule Poirot  #30)
@@ -9128,8 +8462,6 @@ str
 Joy in the Morning
 str
 The Labours of Hercules (Hercule Poirot  #27)
-str
-Dead Man's Folly (Hercule Poirot  #33)
 str
 Hercule Poirot's Casebook (Hercule Poirot  #42)
 str
@@ -9176,8 +8508,6 @@ str
 The Arms of Hercules (Book of the Gods  #3)
 str
 Berserker: Blue Death (Berserker  #8)
-str
-Daughter of Fortune
 str
 My Invented Country: A Nostalgic Journey Through Chile
 str
@@ -9233,13 +8563,7 @@ Coffin: The Art of Vampire Hunter D
 str
 Paradise Lost and Paradise Regained
 str
-Paradise Lost
-str
-Leviathan
-str
 The Book of Leviathan
-str
-Democracy in America
 str
 Democracy in America
 str
@@ -9252,8 +8576,6 @@ str
 The Sorrows of Young Werther
 str
 The Sorrows of Young Werther and Selected Writings
-str
-The Sorrows of Young Werther
 str
 The Dream Master
 str
@@ -9272,8 +8594,6 @@ str
 Turing and the Universal Machine: The Making of the Modern Computer
 str
 Ad Infinitum... The Ghost in Turing's Machine: Taking God Out of Mathematics and Putting the Body Back In. An Essay in Corporeal Semiotics
-str
-Heart of Darkness
 str
 Rocket Ship Galileo (Heinlein's Juveniles  #1)
 str
@@ -9439,8 +8759,6 @@ Lützen 1632 : climax of the Thirty Years war
 str
 Marvels
 str
-Marvels
-str
 Superman: Back in Action
 str
 Spider-Man: Saga of the Sandman
@@ -9478,10 +8796,6 @@ str
 Mumbo Jumbo
 str
 Flatland
-str
-Flatland
-str
-Flatland: A Romance of Many Dimensions
 str
 Flatland: A Romance of Many Dimensions
 str
@@ -9537,11 +8851,7 @@ My Antonia (Great Plains trilogy #3)
 str
 The Bush Agenda: Invading the World  One Economy at a Time
 str
-Marie Antoinette: The Journey
-str
 Don Quixote: The Ormsby Translation  Revised  Backgrounds and Sources  Criticism
-str
-A Tale of Two Cities
 str
 A Yellow Raft in Blue Water
 str
@@ -9549,19 +8859,9 @@ The Sound and the Fury
 str
 The Sound and the Fury: An Authoritative Text  Backgrounds and Contexts  Criticism
 str
-The Sound and the Fury
-str
 CliffsNotes on Faulkner's The Sound and the Fury (Cliffs Notes)
 str
-The Invisible Man
-str
-The Invisible Man
-str
 Invisible Man
-str
-The Invisible Man
-str
-To Sail Beyond the Sunset
 str
 The Friday Night Knitting Club (Friday Night Knitting Club  #1)
 str
@@ -9571,29 +8871,15 @@ Friday
 str
 Starship Troopers
 str
-Starship Troopers
-str
-Starship Troopers
-str
 The Diamond Color Meditation: Color Pathway to the Soul
 str
 Zodiac
 str
 Sirens and Sea Monsters (Tales from the Odyssey #3)
 str
-The Scarlet Letter
-str
-Dracula
-str
-Dracula
-str
 Dracula
 str
 The Bram Stoker Bedside Companion: 10 Stories by the Author of Dracula
-str
-Dracula
-str
-Macbeth
 str
 Macbeth (No Fear Shakespeare)
 str
@@ -9671,8 +8957,6 @@ The Demon-Haunted World: Science as a Candle in the Dark
 str
 Stephen Hawking's a Brief History of Time: A Reader's Companion
 str
-The Illustrated A Brief History of Time
-str
 Brevísima historia del tiempo
 str
 A First Course in String Theory
@@ -9680,8 +8964,6 @@ str
 Black Holes & Time Warps: Einstein's Outrageous Legacy
 str
 Surely You're Joking  Mr. Feynman!
-str
-Surely You're Joking  Mr. Feynman!: Adventures of a Curious Character
 str
 The Meaning of It All: Thoughts of a Citizen-Scientist
 str
@@ -9696,8 +8978,6 @@ str
 Physics: for Scientists and Engineers with Modern Physics
 str
 Misty of Chincoteague (Misty  #1)
-str
-Black Beauty
 str
 Black Beauty (Coloring Book)
 str
@@ -9728,8 +9008,6 @@ str
 Moods
 str
 The Girlhood Diary of Louisa May Alcott  1843-1846: Writings of a Young Author
-str
-These Happy Golden Years (Little House  #8)
 str
 Pioneer Girl: The Story of Laura Ingalls Wilder
 str
@@ -9791,15 +9069,11 @@ Dead Beat (The Dresden Files  #7)
 str
 Diaries  1910-1923
 str
-The Metamorphosis
-str
 The Metamorphosis  In the Penal Colony  and Other Stories: The Great Short Works of Franz Kafka
 str
 The Trial
 str
 Franz Kafka: The Complete Stories
-str
-The Trial
 str
 The Zürau Aphorisms
 str
@@ -9811,8 +9085,6 @@ More Adventures of the Great Brain (Great Brain  #2)
 str
 The Dirt: Confessions of the World's Most Notorious Rock Band
 str
-The Hitchhiker's Guide to the Galaxy (Hitchhiker's Guide to the Galaxy  #1)
-str
 Alice's Adventures in Wonderland & Through the Looking-Glass
 str
 The Awakening
@@ -9821,11 +9093,7 @@ Go Down  Moses
 str
 The Books of Magic
 str
-The House of Mirth
-str
 House of Mirth
-str
-The House of Mirth
 str
 Light (Kefahuchi Tract  #1)
 str
@@ -9873,10 +9141,6 @@ Foucault's Pendulum
 str
 Pendulum: Leon Foucault and the Triumph of Science
 str
-The House of Mirth
-str
-The House of Mirth
-str
 The Family Trade (The Merchant Princes  #1)
 str
 Toast  and Other Stories
@@ -9897,8 +9161,6 @@ The House of the Dead
 str
 The Village of Stepanchikovo
 str
-Crime and Punishment
-str
 The Gambler
 str
 Notes from Underground & The Double
@@ -9906,8 +9168,6 @@ str
 Notes from Underground & A Confession (Everyman's Library)
 str
 The Gambler/Bobok/A Nasty Story
-str
-The Idiot
 str
 Netochka Nezvanova
 str
@@ -10013,8 +9273,6 @@ Piccadilly Jim
 str
 Joy in the Morning (Jeeves  #8)
 str
-The Mating Season (Jeeves  #9)
-str
 Indiscretions of Archie
 str
 The Subtle Knife (His Dark Materials  #2)
@@ -10025,13 +9283,7 @@ The Eyes of the Dragon
 str
 The Voyage of the “Dawn Treader” (The Chronicles of Narnia  #3)
 str
-Lolita
-str
 William Shakespeare’s: Twelfth Night (Shakespeare Retellings  #6)
-str
-Romeo and Juliet
-str
-Romeo and Juliet
 str
 Romeo and Juliet
 str
@@ -10067,25 +9319,9 @@ Theory of Colours
 str
 Maxims and Reflections
 str
-War and Peace
-str
-War and Peace
-str
 A Savage War of Peace: Algeria  1954-1962
 str
-War and Peace
-str
-War and Peace
-str
 War and Peace and War: The Rise and Fall of Empires
-str
-Great Expectations
-str
-Great Expectations
-str
-Oliver Twist
-str
-Oliver Twist
 str
 Oliver Twist
 str
@@ -10093,13 +9329,9 @@ The Nibelungenlied
 str
 Gargantua and Pantagruel
 str
-Gargantua and Pantagruel
-str
 Beyond Good and Evil: Prelude to a Philosophy of the Future
 str
 Phenomenology of Perception
-str
-Introduction to Phenomenology
 str
 Introduction to Phenomenology
 str
@@ -10111,12 +9343,6 @@ Experimental Phenomenology: An Introduction
 str
 Critique of Pure Reason
 str
-Critique of Pure Reason
-str
-Critique of Pure Reason
-str
-Critique of Pure Reason
-str
 Critique of Pure Reason (Studies in the History of Philosophy)
 str
 The Anime Encyclopedia: A Guide to Japanese Animation Since 1917
@@ -10124,10 +9350,6 @@ str
 Unpublished Writings from the Period of Unfashionable Observations (Complete Works 11)
 str
 Thus Spake Zarathustra: A Book for All and None
-str
-The Picture of Dorian Gray
-str
-The Picture of Dorian Gray
 str
 Haussmann  or the Distinction
 str
@@ -10165,11 +9387,7 @@ Henry and June: From the Unexpurgated Diary of Anaïs Nin
 str
 Flowers for Algernon
 str
-Flowers for Algernon
-str
 Algernon  Charlie  and I: A Writer's Journey: Plus the Complete Original Short Novelette Version of Flowers for Algernon
-str
-Jane Eyre
 str
 The Death of Ivan Ilyich and Other Stories
 str
@@ -10191,8 +9409,6 @@ The Wind Done Gone
 str
 Utopia
 str
-Utopia
-str
 The Kissing Hand
 str
 Hands of Light: A Guide to Healing Through the Human Energy Field
@@ -10208,12 +9424,6 @@ str
 The Real Rule of Four: The Unauthorized Guide to the New York Times #1 Bestseller
 str
 Time For Kids: Butterflies!
-str
-Macbeth
-str
-Macbeth
-str
-Macbeth
 str
 Death of a Celebrity (Hamish Macbeth  #17)
 str
@@ -10235,27 +9445,17 @@ The Faerie Queene: Books I to III
 str
 The Faerie Queene
 str
-To the Lighthouse
-str
 The Diary of Virginia Woolf  Volume One: 1915-1919
 str
 The Diary of Virginia Woolf  Volume Five: 1936-1941
 str
 The Diary of Virginia Woolf  Volume Three: 1925-1930
 str
-A Room of One's Own
-str
 Dr. Faustus
-str
-The Complete Plays
 str
 Doctor Faustus and Other Plays
 str
-Cyrano de Bergerac
-str
 Rosencrantz and Guildenstern Are Dead
-str
-King Lear
 str
 King Lear  Macbeth  Indefinition  and Tragedy
 str
@@ -10291,8 +9491,6 @@ Princess Sultana's Daughters
 str
 The State of the Art
 str
-Excession (Culture  #5)
-str
 The Player of Games (Culture  #2)
 str
 Feersum Endjinn
@@ -10310,8 +9508,6 @@ str
 Galileo's Daughter
 str
 Shop in the Name of Love (The Cheetah Girls #2)
-str
-Shopgirl
 str
 The Secret Garden: Talking Beetles and Signaling Trees: The Hidden Ways Gardens Communicate
 str
@@ -10350,8 +9546,6 @@ str
 Last Night: Stories
 str
 The Last Night of Ballyhoo
-str
-Civilization and Its Discontents
 str
 Civilization and Its Discontents
 str
@@ -10395,10 +9589,6 @@ Problems of Dostoevsky's Poetics
 str
 Dostoevsky: The Years of Ordeal  1850-1859
 str
-The Possessed
-str
-The Idiot
-str
 Money
 str
 House of Meetings
@@ -10423,11 +9613,7 @@ Orlando
 str
 The Common Reader
 str
-A Room of One's Own
-str
 Women and Writing
-str
-Flush
 str
 Virginia Woolf
 str
@@ -10511,11 +9697,7 @@ Morgoth's Ring (The History of Middle-Earth  #10)
 str
 The War of the Jewels (The History of Middle-Earth  #11)
 str
-The Silmarillion
-str
 The Sillymarillion: An Unauthorized Parody of J.R.R. Tolkien's Classic the Silmarillion
-str
-The Silmarillion
 str
 Hayao Miyazaki: Master of Japanese Animation
 str
@@ -10549,13 +9731,9 @@ Nicomachean Ethics
 str
 The Nicomachean Ethics
 str
-Nicomachean Ethics
-str
 Madame Bovary
 str
 Madame Bovary (Critical Editions)
-str
-Madame Bovary
 str
 The Complete Works: The Revised Oxford Translation  Vol. 1
 str
@@ -10567,11 +9745,7 @@ The Politics and The Constitution of Athens
 str
 Middlemarch
 str
-Middlemarch
-str
 Silas Marner
-str
-1984
 str
 The Complete Tales of Nikolai Gogol  Volume 1
 str
@@ -10595,11 +9769,7 @@ Silos  Politics and Turf Wars: A Leadership Fable about Destroying the Barriers 
 str
 Moral Politics: How Liberals and Conservatives Think
 str
-'Salem's Lot
-str
 El misterio de Salem's Lot
-str
-'Salem's Lot
 str
 Prodigal Blues
 str
@@ -10635,8 +9805,6 @@ Beowulf: A Dual-Language Edition
 str
 Beowulf: A New Telling
 str
-Beowulf
-str
 Seamus Heaney
 str
 The Spirit Level: Poems
@@ -10652,10 +9820,6 @@ str
 Norden
 str
 Norte
-str
-The Odyssey
-str
-Paradise Lost
 str
 Tolkien: The Illustrated Encyclopaedia
 str
@@ -10691,8 +9855,6 @@ The Tale of Peter Rabbit: A Pop-up Adventure
 str
 Tale of Peter Rabbit
 str
-The Tale of Peter Rabbit
-str
 Beatrix Potter's Journal
 str
 The World of Peter Rabbit (Original Peter Rabbit  Books 1-23)
@@ -10701,12 +9863,6 @@ Beatrix Potter: A Life in Nature
 str
 The Tale of the Flopsy Bunnies
 str
-Treasure Island
-str
-The Epic of Gilgamesh
-str
-The Epic of Gilgamesh
-str
 The Epic of Gilgamesh
 str
 The Evolution of the Gilgamesh Epic
@@ -10714,8 +9870,6 @@ str
 The Gilgamesh Epic and Old Testament Parallels
 str
 The Scarlet Letter and Other Writings
-str
-The Adventures of Huckleberry Finn
 str
 The Adventures of Huckleberry Finn
 str
@@ -10731,27 +9885,17 @@ Candide and Other Stories (World's Classics)
 str
 Cliffs Notes on Voltaire's Candide
 str
-Candide: or  Optimism
-str
 Candide and Related Writings
 str
 Philosophical Dictionary
 str
 What Is Goth?
 str
-The Picture of Dorian Gray
-str
 The Real Trial of Oscar Wilde
 str
 Complete Shorter Fiction
 str
 The Unmasking of Oscar Wilde
-str
-The Decline and Fall of the Roman Empire
-str
-The Decline and Fall of the Roman Empire
-str
-The Decline and Fall of the Roman Empire
 str
 The Decline and Fall of the Roman Empire
 str
@@ -10789,8 +9933,6 @@ All-American Girl (All-American Girl  #1)
 str
 Ready or Not (All-American Girl  #2)
 str
-Ready or Not (All-American Girl  #2)
-str
 The Perfect Score (It's All About Attitude #5)
 str
 The Face on the Milk Carton (Janie Johnson  #1)
@@ -10810,8 +9952,6 @@ str
 City of Glass: The Graphic Novel
 str
 Moonraker
-str
-Moonraker's Bride
 str
 Eat  Pray  Love
 str
@@ -11063,8 +10203,6 @@ Maelstrom
 str
 The Mark of the Crown (Star Wars: Jedi Apprentice  #4)
 str
-The Sea
-str
 Joy Within
 str
 Butch/Femme
@@ -11104,8 +10242,6 @@ str
 Watchers of Time (Inspector Ian Rutledge  #5)
 str
 Search the Dark (Inspector Ian Rutledge  #3)
-str
-Bill Bryson's African Diary
 str
 Hunters of Dune (Dune Chronicles  #7)
 str
@@ -11164,8 +10300,6 @@ str
 The Spiral Stair (Arabel and Mortimer  #6)
 str
 A Near Thing for Captain Najork (Captain Najork #2)
-str
-Cover Her Face (Adam Dalgliesh #1)
 str
 Reptiles and Amphibians (Smithsonian Handbooks)
 str
@@ -11238,8 +10372,6 @@ str
 Conversations with Don DeLillo
 str
 Inventing America: Jefferson's Declaration of Independence
-str
-Lincoln at Gettysburg: The Words That Remade America
 str
 Venice: Lion City: The Religion of Empire
 str
@@ -11373,8 +10505,6 @@ Wanted!
 str
 The Time Travelers: Volume One
 str
-The Stranger
-str
 Every Night Italian: Every Night Italian
 str
 More Classic Italian Cooking
@@ -11451,8 +10581,6 @@ Math Fables
 str
 The Five Dysfunctions of a Team: A Leadership Fable
 str
-Aesop's Fables
-str
 Icebound
 str
 Odd Thomas (Odd Thomas #1)
@@ -11462,8 +10590,6 @@ str
 From the Corner of His Eye
 str
 The Good Guy
-str
-Pompeii
 str
 3rd Degree
 str
@@ -11547,8 +10673,6 @@ The Best American Mystery Stories 2004
 str
 Mystic River
 str
-Mystic River
-str
 Coronado: Stories
 str
 Prayers for Rain (Kenzie & Gennaro  #5)
@@ -11593,27 +10717,11 @@ Killing Floor (Jack Reacher  #1)
 str
 Without Fail (Jack Reacher  #6)
 str
-The Enemy (Jack Reacher  #8)
-str
 One Shot (Jack Reacher  #9)
 str
 Bad Luck and Trouble (Jack Reacher  #11)
 str
-The Enemy (Jack Reacher  #8)
-str
-The Visitor (Jack Reacher  #4)
-str
 Echo Burning (Jack Reacher  #5)
-str
-Tripwire (Jack Reacher  #3)
-str
-The Enemy (Jack Reacher  #8)
-str
-Tripwire (Jack Reacher  #3)
-str
-Tripwire (Jack Reacher  #3)
-str
-The Enemy (Jack Reacher  #8)
 str
 Blood on the Moon: The Assassination of Abraham Lincoln
 str
@@ -11666,10 +10774,6 @@ str
 Double Image
 str
 La Cinquième profession
-str
-The Last Kingdom (The Saxon Stories  #1)
-str
-The Last Kingdom (The Saxon Stories  #1)
 str
 The Last Kingdom (The Saxon Stories  #1)
 str
@@ -11743,8 +10847,6 @@ The Voices of Morebath: Reformation and Rebellion in an English Village
 str
 Imperial Life in the Emerald City: Inside Iraq's Green Zone
 str
-The Coming Economic Collapse: How You Can Thrive When Oil Costs $200 a Barrel
-str
 Betrayal of Trust: The Collapse of Global Public Health
 str
 Crash Proof: How to Profit from the Coming Economic Collapse
@@ -11760,8 +10862,6 @@ str
 Homepage Usability: 50 Websites Deconstructed
 str
 Let My People Go Surfing: The Education of a Reluctant Businessman
-str
-And Then There Were None
 str
 The Wild Trees: A Story of Passion and Daring
 str
@@ -11805,8 +10905,6 @@ Lullaby Town (Elvis Cole  #3)
 str
 The Iliad (SparkNotes Literature Guides)
 str
-The Iliad
-str
 The Princess Bride (Long  Tall Texans  #15)
 str
 The Sultan's Bought Bride  (Princess Brides  #1)
@@ -11835,8 +10933,6 @@ The Soloist
 str
 Kenang-Kenangan Seorang Geisha (Memoirs of a Geisha)
 str
-Memoirs of a Geisha
-str
 Survivor
 str
 Diary
@@ -11845,17 +10941,11 @@ Rant
 str
 Clown Girl
 str
-Choke
-str
 Haunted
 str
 Fugitives and Refugees: A Walk in Portland  Oregon
 str
-Haunted
-str
 Nonfiction
-str
-Haunted
 str
 Survivant
 str
@@ -11971,8 +11061,6 @@ The Fabric of the Cosmos: Space  Time and the Texture of Reality
 str
 The Meaning of Relativity (Science Library)
 str
-The Fabric of the Cosmos: Space  Time and the Texture of Reality
-str
 Underground! The Disinformation Guide to Ancient Civilizations  Astonishing Archaeology and Hidden History
 str
 Under the Influence: The Disinformation Guide to Drugs
@@ -11982,10 +11070,6 @@ str
 The Origin of Species
 str
 Red Herrings and White Elephants: The Origins of the Phrases We Use Every Day
-str
-The Origin of Species
-str
-The Origin of Species
 str
 The Origin of Satan: How Christians Demonized Jews  Pagans and Heretics
 str
@@ -12085,8 +11169,6 @@ Bookends
 str
 Jemima J.: For those who love Faking Friends and My Sweet Revenge by Jane Fallon
 str
-Open House
-str
 Feeling Better  Getting Better  Staying Better: Profound Self-Help Therapy for Your Emotions
 str
 American Sphinx: The Character of Thomas Jefferson
@@ -12098,8 +11180,6 @@ str
 No Other Woman (No Other  #2)
 str
 The Other Woman (Dundee  Idaho  #7)
-str
-The Other Woman
 str
 Sins of a Shaker Summer (Sister Rose Callahan  #3)
 str
@@ -12123,11 +11203,7 @@ Le Club de la dernière chance
 str
 Les vacances de Rachel (Walsh Family  #2)
 str
-Rachel se va de viaje (La familia Walsh  #2)
-str
 Auszeit für Engel Walsh Family  #3)
-str
-Open House
 str
 Slightly Settled (Slightly  #2)
 str
@@ -12181,8 +11257,6 @@ The Gap Into Madness: Chaos and Order (Gap  #4)
 str
 The Gap Into Vision: Forbidden Knowledge (Gap  #2)
 str
-The One Tree (The Second Chronicles of Thomas Covenant  #2)
-str
 The Gap Into Power: A Dark and Hungry God Arises (Gap  #3)
 str
 Pretty Face  Vol. 1
@@ -12201,11 +11275,7 @@ Practical Magic (Practical Magic #1)
 str
 The Probable Future
 str
-The Complete Stories
-str
 Amerika
-str
-Collected Stories
 str
 Kafka: Toward a Minor Literature
 str
@@ -12289,8 +11359,6 @@ The Pleasure of the Text
 str
 How to Travel with a Salmon & Other Essays
 str
-How to Travel with a Salmon and Other Essays
-str
 Le Nom de la rose
 str
 Os libros arden mal
@@ -12369,11 +11437,7 @@ Feminist Measures: Soundings in Poetry and Theory
 str
 Taxation of Mineral Rents
 str
-Dubliners
-str
 Dubliners: Text  Criticism  and Notes
-str
-Dubliners
 str
 CliffsNotes on Joyce's Dubliners (Cliffs Notes)
 str
@@ -12401,8 +11465,6 @@ Letters to J. D. Salinger
 str
 J.D. Salinger's Catcher in the Rye (Modern Critical Interpretations)
 str
-Lord of the Flies
-str
 Where Is Baby's Mommy? (A Lift-the-Flap Book)
 str
 Counting Christmas
@@ -12427,8 +11489,6 @@ How Proust Can Change Your Life
 str
 Kiss & Tell
 str
-The Consolations of Philosophy
-str
 Status Anxiety
 str
 On Love
@@ -12450,10 +11510,6 @@ str
 The Hip Chick's Guide to Macrobiotics: A Philosophy for Achieving a Radiant Mind and a Fabulous Body
 str
 La casa en Mango Street
-str
-Kurt Vonnegut's Cat's Cradle (Modern Critical Interpretations)
-str
-The Dharma Bums
 str
 The Alchemist's Daughter
 str
@@ -12529,8 +11585,6 @@ Tales from the Perilous Realm
 str
 Tolkien: Man and Myth: A Literary Life
 str
-Roverandom
-str
 The History of Middle-Earth Index (The History of Middle-Earth  #13)
 str
 The Lost Road and Other Writings (The History of Middle-earth  #5)
@@ -12605,8 +11659,6 @@ Something Borrowed  Something Blue
 str
 The Major Plays
 str
-The Complete Plays
-str
 Anton Chekhov's Selected Plays
 str
 Short Stories
@@ -12620,8 +11672,6 @@ str
 A Fabulous  Formless Darkness
 str
 The Dark Descent  Vol 1: The Color of Evil
-str
-Bargaining for Advantage: Negotiation Strategies for Reasonable People
 str
 Bargaining for Advantage: Negotiation Strategies for Reasonable People
 str
@@ -12683,10 +11733,6 @@ La increíble y triste historia de la cándida Eréndira y de su abuela desalmad
 str
 The Autumn of the Patriarch
 str
-Cien años de soledad
-str
-El amor en los tiempos del cólera
-str
 Relato de un náufrago
 str
 Relato de Um Náufrago
@@ -12732,8 +11778,6 @@ str
 My Education: A Book of Dreams
 str
 Trainspotting (Mark Renton  #2)
-str
-Trainspotting
 str
 Trainspotting
 str
@@ -12795,8 +11839,6 @@ The Climb (Everest Trilogy)
 str
 The Contest (Everest  #1)
 str
-Casino Royale (James Bond  #1)
-str
 The Eternal Flame (Merlin  #11)
 str
 The Ivy Tree
@@ -12843,12 +11885,6 @@ Amelia's Notebook (Amelia's Notebooks  #1)
 str
 Amelia's 6th-Grade Notebook (Amelia's Notebooks  #15)
 str
-Charlotte's Web
-str
-Charlotte's Web
-str
-Charlotte's Web
-str
 Charlotte's Web: Wilbur Finds a Friend
 str
 Secrets of the Scorpion
@@ -12861,10 +11897,6 @@ The Boys Start the War  the Girls Get Even
 str
 Boys Against Girls (Sweet Valley Twins  #17)
 str
-Boys Against Girls (Sweet Valley Twins  #17)
-str
-Alice's Adventures in Wonderland & Through the Looking-Glass
-str
 Alice's Adventures in Wonderland: A Pop-Up Adaptation
 str
 Alice's Adventures in Wonderland and Through the Looking Glass
@@ -12872,8 +11904,6 @@ str
 Alice's Adventures in Wonderland
 str
 Alice's Adventures in Wonderland and Through the Looking-Glass (Alice's Adventures in Wonderland  #1-2)
-str
-Alice's Adventures in Wonderland
 str
 The Art of Warfare
 str
@@ -12896,10 +11926,6 @@ str
 Skellig (Skellig  #1)
 str
 Skellig: The Play
-str
-Les Misérables
-str
-Les Misérables
 str
 Les Misérables
 str
@@ -12937,8 +11963,6 @@ Ella Enchanted (Ella Enchanted #1)
 str
 Sachs & Violens
 str
-Nicomachean Ethics
-str
 Harper Lee's To Kill a Mockingbird (Bloom's Guides)
 str
 His Dark Materials
@@ -12958,8 +11982,6 @@ str
 The Circle (Dan Lenson  #3)
 str
 The Sorority: Samantha (Sorority Trilogy  #3)
-str
-Trickster's Choice (Daughter of the Lioness  #1)
 str
 Trickster's Choice (Daughter of the Lioness  #1)
 str
@@ -13023,8 +12045,6 @@ The Adventures of Tom Sawyer and Adventures of Huckleberry Finn
 str
 The Adventures of Tom Sawyer (Adventures of Tom and Huck  #1)
 str
-The Adventures of Tom Sawyer (Adventures of Tom and Huck  #1)
-str
 The Moon in Hiding (The Green Lion Trilogy #2)
 str
 The Short Stories  Vol 3
@@ -13049,10 +12069,6 @@ Intimate Journals
 str
 The Painter of Modern Life and Other Essays (Phaidon Arts and Letters)
 str
-Candide
-str
-Candide
-str
 The Handbook (The Encheiridion)
 str
 A Manual for Living
@@ -13062,8 +12078,6 @@ str
 A Stranger Came Ashore
 str
 Rob Roy MacGregor
-str
-Rob Roy
 str
 From Glencoe to Stirling: Rob Roy  the Highlanders & Scotlands Chivalric Age (Tales of a Scottish Grandfather 3)
 str
@@ -13163,8 +12177,6 @@ A Lloyd Alexander Collection
 str
 The Philadelphia Adventure
 str
-Libra
-str
 Zorro
 str
 House of Leaves
@@ -13255,8 +12267,6 @@ The Discomfort Zone: A Personal History
 str
 A Confederacy of Dunces
 str
-A Confederacy of Dunces
-str
 La conjura de los necios
 str
 Lost
@@ -13271,13 +12281,9 @@ A Little Bit Wicked (Last Man Standing  #1)
 str
 My Wicked  Wicked Ways
 str
-The Wonderful Story of Henry Sugar and Six More
-str
 The Wonderful Story Of Henry Sugar and Six More
 str
 Danny The Champion of the World
-str
-Danny the Champion of the World
 str
 Danny The Champion Of The World
 str
@@ -13481,8 +12487,6 @@ The Dragon Prince: A Chinese Beauty & the Beast Tale
 str
 The Legend of Huma (Dragonlance: Heroes  #1)
 str
-The Dark Mirror (The Bridei Chronicles  #1)
-str
 Investing in Real Estate
 str
 No god but God: The Origins  Evolution and Future of Islam
@@ -13523,15 +12527,11 @@ Disparitions
 str
 Die Umarmung des Todes
 str
-Are We There Yet?
-str
 Nick & Norah's Infinite Playlist
 str
 How to Make Money Like a Porn Star
 str
 The Mystery Method: How to Get Beautiful Women Into Bed
-str
-The Dirt: Confessions of the World's Most Notorious Rock Band
 str
 Mémoires de l'Enfer
 str
@@ -13561,10 +12561,6 @@ The Namesake: A Portrait of the Film Based on the Novel by Jhumpa Lahiri
 str
 The Collected Poems of Robert Penn Warren
 str
-The Cave
-str
-The Glass Castle
-str
 The Little Baby Snoogle-Fleejer
 str
 Keeping Faith: Memoirs of a President
@@ -13586,8 +12582,6 @@ str
 Psychoanalysis and Religion
 str
 The Days of Vengeance: An Exposition of the Book of Revelation
-str
-Malinche
 str
 Malinche
 str
@@ -13683,13 +12677,9 @@ The Iron Dragon's Daughter
 str
 The Book of Five Rings
 str
-The Book of Five Rings
-str
 The Lord of the Rings Sketchbook
 str
 Birthday (Ring  #4)
-str
-The Book of Five Rings
 str
 The Deception of the Emerald Ring (Pink Carnation  #3)
 str
@@ -13797,10 +12787,6 @@ Pearl S. Buck: A Cultural Biography
 str
 The Mother
 str
-Glamorama
-str
-Glamorama
-str
 Bright Lights  Big Ass
 str
 Morrigan's Cross (Circle Trilogy  #1)
@@ -13831,8 +12817,6 @@ The Comparative Study of Political Elites
 str
 A Random Walk Down Wall Street
 str
-A Random Walk Down Wall Street
-str
 Identity Crisis
 str
 Superman: Secret Identity
@@ -13857,10 +12841,6 @@ The Children's Homer: The Adventures of Odysseus and the Tale of Troy
 str
 The Coalwood Way: A Memoir  (Coalwood  #2)
 str
-Man's Search for Meaning
-str
-Man's Search for Meaning
-str
 Good Grief: The Story of Charles M. Schulz
 str
 Peanuts: The Art of Charles M. Schulz
@@ -13870,8 +12850,6 @@ str
 To the Last Man: A Novel of the First World War
 str
 African Nights
-str
-Angels & Demons (Robert Langdon  #1)
 str
 Letters of St. Augustine
 str
@@ -13884,8 +12862,6 @@ str
 Spells & Sleeping Bags (Magic in Manhattan  #3)
 str
 Bras & Broomsticks (Magic in Manhattan  #1)
-str
-Monkey Business
 str
 Frogs & French Kisses (Magic in Manhattan  #2)
 str
@@ -13965,8 +12941,6 @@ Java: An Introduction to Problem Solving and Programming
 str
 Absolute C++
 str
-The Odyssey
-str
 The Odyssey (New Translations from Antiquity)
 str
 Bulfinch's Mythology
@@ -14033,8 +13007,6 @@ Earthquake in the Early Morning (Magic Tree House  #24)
 str
 E.E. Cummings: Complete Poems 1904-1962 (Revised  Corrected  and Expanded Edition)
 str
-Selected Poems
-str
 Tulips & Chimneys
 str
 Kokopelli: The Magic  Mirth  and Mischief of an Ancient Symbol
@@ -14058,10 +13030,6 @@ str
 Time for Revolution
 str
 The Philosophy of Antonio Negri  Volume One: Resistance in Practice
-str
-Act of Treason (Mitch Rapp  #9)
-str
-Act of Treason (Mitch Rapp  #9)
 str
 Act of Treason (Mitch Rapp  #9)
 str
@@ -14115,8 +13083,6 @@ For Lust of Knowing: The Orientalists and Their Enemies
 str
 The Arabian Nightmare
 str
-The Plot Against America
-str
 Continental Drift
 str
 The Darling
@@ -14148,8 +13114,6 @@ str
 The Well of Lost Plots (Thursday Next #3)
 str
 First Among Sequels (Thursday Next  #5)
-str
-The Eyre Affair (Thursday Next  #1)
 str
 The Eyre Affair (Thursday Next  #1)
 str
@@ -14237,8 +13201,6 @@ The Twentieth Wife (Taj Mahal Trilogy  #1)
 str
 La Emperatriz tras el velo (Trilogía Taj Mahal  #1)
 str
-A History of God: The 4 000-Year Quest of Judaism  Christianity  and Islam
-str
 Buddha
 str
 Islam: A Short History
@@ -14272,8 +13234,6 @@ str
 Since "Silent Spring"
 str
 A Civil Action
-str
-The Lost Painting
 str
 The Lost Painting
 str
@@ -14311,8 +13271,6 @@ The Eclogues of Virgil
 str
 The Art of the Personal Essay: An Anthology from the Classical Era to the Present
 str
-The Art of the Personal Essay: An Anthology from the Classical Era to the Present
-str
 Waterfront: A Walk Around Manhattan
 str
 The DC Comics Encyclopedia
@@ -14320,8 +13278,6 @@ str
 The Marvel Encyclopedia
 str
 Reinventing Jesus: How Contemporary Skeptics Miss the Real Jesus and Mislead Popular Culture
-str
-The Great Gatsby
 str
 Daniel Deronda
 str
@@ -14334,8 +13290,6 @@ str
 The Mating Mind: How Sexual Choice Shaped the Evolution of Human Nature
 str
 The Evolution Of Desire: Strategies of Human Mating
-str
-Middlesex
 str
 The Liberated Bride
 str
@@ -14411,8 +13365,6 @@ Whites
 str
 Hasta que te encuentre
 str
-Howards End
-str
 Women  Cats: The History of a Love Affair
 str
 EULIS! The History of Love
@@ -14422,8 +13374,6 @@ str
 Accidental Empires
 str
 The Complete ACOA Sourcebook: Adult Children of Alcoholics at Home  at Work and in Love
-str
-Bury the Chains
 str
 Bury the Chains
 str
@@ -14461,8 +13411,6 @@ Cold Sleep (Cold Series #1)
 str
 The Restless Sleep: Inside New York City's Cold Case Squad
 str
-L'Étranger
-str
 La caída
 str
 Le Premier homme
@@ -14479,8 +13427,6 @@ Julie  or the New Heloise
 str
 Anesthesiology Review
 str
-Faust  Part Two
-str
 The Jew of Malta
 str
 The Trumpeter of Krakow
@@ -14493,19 +13439,11 @@ Numerical Recipes: Example Book C
 str
 Eugene Onegin
 str
-Eugene Onegin
-str
-Eugene Onegin
-str
-Eugene Onegin
-str
 Eugene Onegin: A Novel in Verse (Vol. 1)
 str
 Eugene Onegin  Vol. II (Commentary)
 str
 Eugene Onegin: A Novel in Verse
-str
-Eugene Onegin
 str
 Data Structures and Algorithms in Java
 str
@@ -14516,8 +13454,6 @@ str
 Data Structures and Abstractions with Java
 str
 Data Structures and Algorithm Analysis in C
-str
-Data Structures and Algorithms in C++
 str
 Algorithms in C  Parts 1-4: Fundamentals  Data Structures  Sorting  Searching
 str
@@ -14536,8 +13472,6 @@ str
 Lords of the Sky
 str
 On a Dark Night I Left My Silent House
-str
-Selected Writings
 str
 The Essential Augustine
 str
@@ -14591,8 +13525,6 @@ Barrel Fever and Other Stories
 str
 The Birth of Venus
 str
-One Hundred Years of Solitude
-str
 Gabriel García Márquez: One Hundred Years of Solitude
 str
 Far Afield
@@ -14616,8 +13548,6 @@ str
 The Titan's Curse (Percy Jackson and the Olympians  #3)
 str
 The Sea of Monsters (Percy Jackson and the Olympians  #2)
-str
-The Lightning Thief (Percy Jackson and the Olympians  #1)
 str
 The Lightning Thief (Percy Jackson and the Olympians  #1)
 str
@@ -14659,15 +13589,11 @@ A Box of Matches
 str
 Dark Star Safari: Overland from Cairo to Cape Town
 str
-Dark Star Safari: Overland from Cairo to Cape Town
-str
 The Magicians' Guild (Black Magician Trilogy  #1)
 str
 The Novice (Black Magician Trilogy  #2)
 str
 The High Lord (Black Magician Trilogy  #3)
-str
-The Magicians' Guild (Black Magician Trilogy  #1)
 str
 Stone Age Economics
 str
@@ -14705,8 +13631,6 @@ Las Noches Blancas. El Jugador. Un Ladrón Honrado. (Sepan Cuantos  #259)
 str
 Los hermanos Karamazov
 str
-Crime and Punishment
-str
 I Wish That I Had Duck Feet
 str
 And to Think That I Saw It on Mulberry Street
@@ -14727,8 +13651,6 @@ The Flight of Icarus
 str
 Heartsnatcher
 str
-Dead Souls
-str
 Diary of a Madman and Other Stories
 str
 In the Shadow of Young Girls in Flower (In Search of Lost Time  #2)
@@ -14739,11 +13661,7 @@ Marcel Proust: A Life
 str
 Within a Budding Grove  Volume 2 (Remembrance of Things Past  #3)
 str
-In the Shadow of Young Girls in Flower (In Search of Lost Time  #2)
-str
 Remembrance of Things Past: Volume II - The Guermantes Way & Cities of the Plain
-str
-The Illustrated Man
 str
 Combray (Remembrance of Things Past  #1)
 str
@@ -14762,8 +13680,6 @@ str
 The Conquest of Plassans (Les Rougon-Macquart  #4)
 str
 La Bête humaine
-str
-Taxi Driver
 str
 La Débâcle
 str
@@ -14816,8 +13732,6 @@ str
 Elven Star (The Death Gate Cycle  #2)
 str
 Beyond Death: The Gates of Consciousness
-str
-Elven Star (The Death Gate Cycle  #2)
 str
 The Mantle of Kendis-Dai (Starshield  #1)
 str
@@ -14897,8 +13811,6 @@ The Munsters: A Trip Down Mockingbird Lane
 str
 Immortality
 str
-Identity
-str
 The Curtain: An Essay in Seven Parts
 str
 The Art of the Novel
@@ -14934,8 +13846,6 @@ str
 To Green Angel Tower (Memory  Sorrow  and Thorn  #3)
 str
 The War of the Flowers
-str
-Shadowmarch (Shadowmarch  #1)
 str
 City of Golden Shadow (Otherland  #1)
 str
@@ -15023,19 +13933,13 @@ The Principles of Psychology: Vols 1-2 (Works of William James)
 str
 The Story of Philosophy
 str
-The Return of the King (The Lord of the Rings  #3)
-str
 The Book of Lost Tales  Part Two (The History of Middle-earth  #2)
-str
-The Gospel According to Jesus Christ
 str
 El Evangelio Según Jesucristo
 str
 The Prince
 str
 The Raven Prince (Princes Trilogy  #1)
-str
-Le Petit Prince
 str
 Dark Prince (Dark  #1)
 str
@@ -15058,8 +13962,6 @@ str
 The Lost Tomb
 str
 Fundamentals of Heat and Mass Transfer [with IHT/FEHT 3.0 CD with User Guide Set]
-str
-Heat
 str
 Heat and Mass Transfer
 str
@@ -15147,8 +14049,6 @@ Sam And The Firefly (Beginner Books)
 str
 The Berlin Phenomenology
 str
-The Philosophy of History
-str
 Philosophy of Right
 str
 The Mistress Manual: The Good Girl's Guide to Female Dominance
@@ -15156,8 +14056,6 @@ str
 Diary of a Mistress
 str
 Mistress Masham's Repose
-str
-The Last Unicorn
 str
 The Last Unicorn
 str
@@ -15200,8 +14098,6 @@ str
 A Certain Justice (Adam Dalgliesh  #10)
 str
 A Certain Justice (Abe Glitsky  #1)
-str
-The Color of Water: A Black Man's Tribute to His White Mother
 str
 Lost Prophet: The Life and Times of Bayard Rustin
 str
@@ -15305,8 +14201,6 @@ Candy
 str
 Hard Candy
 str
-Candy
-str
 Demon Diary  Volume 01
 str
 Demon Diary  Volume 03
@@ -15346,10 +14240,6 @@ str
 Happy Are the Peace Makers (Blackie Ryan  #5)
 str
 The Truth Will Set You Free: Overcoming Emotional Blindness and Finding Your True Adult Self
-str
-The Stone Raft
-str
-Baltasar and Blimunda
 str
 You: The Owner's Manual: An Insider's Guide to the Body That Will Make You Healthier and Younger
 str
@@ -15395,15 +14285,11 @@ After Glow (Ghost Hunters  #2)
 str
 Orchid (St. Helen's  #3)
 str
-The Origin of Consciousness in the Breakdown of the Bicameral Mind
-str
 The Future of the Universe
 str
 Micro Eco-Farming: Prospering from Backyard to Small Acreage in Partnership with the Earth
 str
 The Quiet American: Text and Criticism
-str
-The Quiet American
 str
 The End of the Affair
 str
@@ -15418,8 +14304,6 @@ str
 The Book of Other People
 str
 The Confusions of Young Törless
-str
-Robinson Crusoe
 str
 Doubling the Point: Essays and Interviews
 str
@@ -15522,8 +14406,6 @@ str
 Winter of Magic's Return
 str
 A Modern Utopia
-str
-The War of the Worlds
 str
 The Shape of Things to Come
 str
@@ -15759,15 +14641,11 @@ Nachtschwärmer (Meredith Gentry  #2)
 str
 Laurell K. Hamilton's Anita Blake  Vampire Hunter: Guilty Pleasures vol 1
 str
-The Republic
-str
 The Republic of Plato
 str
 Five Dialogues: Euthyphro  Apology  Crito  Meno  Phaedo
 str
 Plato  Not Prozac!: Applying Eternal Wisdom to Everyday Problems
-str
-Republic
 str
 Plato's Symposium
 str
@@ -15782,8 +14660,6 @@ str
 Embracing the Love of God: The Path and Promise of Christian Life
 str
 Embracing Love  Vol. 6
-str
-Jane Eyre
 str
 In the Forests of the Night
 str
@@ -15875,8 +14751,6 @@ The Switch
 str
 Play Dirty
 str
-A Secret Splendor
-str
 Texas! Trilogy
 str
 Betrogen
@@ -15901,13 +14775,7 @@ The Communist Manifesto and Other Revolutionary Writings: Marx  Marat  Paine  Ma
 str
 The Communist Manifesto with Related Documents
 str
-The Communist Manifesto
-str
-The Communist Manifesto
-str
 The Communist Manifesto and Other Writings
-str
-The Communist Manifesto
 str
 The Communist Manifesto (Great Ideas)
 str
@@ -15967,8 +14835,6 @@ Pnin
 str
 The Hunchback of Notre-Dame
 str
-The Hunchback of Notre-Dame
-str
 The Art of the Hunchback of Notre Dame
 str
 Art and Culture: Critical Essays
@@ -16003,8 +14869,6 @@ Meditations on First Philosophy
 str
 Meditations
 str
-Gulliver's Travels
-str
 The Sleepwalkers: A History of Man's Changing Vision of the Universe
 str
 Darkness at Noon
@@ -16031,11 +14895,7 @@ Making a Change for Good: A Guide to Compassionate Self-Discipline
 str
 The Total Library: Non-Fiction 1922-1986
 str
-Ficciones
-str
 Montaigne: Essays
-str
-The Complete Works
 str
 The Complete Essays
 str
@@ -16173,8 +15033,6 @@ The Rise and Fall of Anne Boleyn
 str
 The Secret Diary of Anne Boleyn
 str
-The Other Boleyn Girl
-str
 Lila: An Inquiry Into Morals (Phaedrus  #2)
 str
 Lila's Child: An Inquiry into Quality
@@ -16191,11 +15049,7 @@ Straight Talking
 str
 Spellbound
 str
-Babyville
-str
 This Christmas
-str
-Bookends
 str
 Krik? Krak!: Récits
 str
@@ -16263,13 +15117,9 @@ The Ambler Warning
 str
 Historical Romances: The Prince and the Pauper / A Connecticut Yankee in King Arthur’s Court / Personal Recollections of Joan of Arc
 str
-Bleak House
-str
 Our Mutual Friend
 str
 A Christmas Carol and Other Christmas Books
-str
-Little Dorrit
 str
 Baseball: a Literary Anthology
 str
@@ -16298,8 +15148,6 @@ str
 Nemesis (Miss Marple  #12)
 str
 A Pocket Full of Rye: A BBC Radio 4 Full-Cast Dramatisation
-str
-Murder at the Vicarage (Miss Marple  #1)
 str
 Miss Marple Omnibus Vol. 3 (Murder at the Vicarage / Nemesis / Sleeping Murder / At Bertram's Hotel)
 str
@@ -16369,8 +15217,6 @@ A Wife After God's Own Heart Growth and Study Guide
 str
 Lover of Unreason: Assia Wevill  Sylvia Plath's Rival and Ted Hughes' Doomed Love
 str
-The Journals of Sylvia Plath
-str
 Letters Home
 str
 The Poetry of Sylvia Plath
@@ -16386,10 +15232,6 @@ str
 Far from the Madding Crowd
 str
 Far From the Madding Crowd
-str
-Far From the Madding Crowd
-str
-Far from the Madding Crowd
 str
 Middlemarch: An Authoritative Text  Backgrounds  Reviews and Criticism
 str
@@ -16455,8 +15297,6 @@ Blow Fly (Kay Scarpetta  #12)
 str
 The Gift of the Magi and Other Short Stories
 str
-James and the Giant Peach
-str
 Ten Short Stories Book & Cd Pack (Penguin Student Editions)
 str
 The Ultramarines Omnibus (Ultramarines #1-3)
@@ -16464,8 +15304,6 @@ str
 Star Wars Omnibus: X-Wing Rogue Squadron  Vol. 2
 str
 The Soul Drinkers Omnibus (Soul Drinkers #1-3)
-str
-James and the Giant Peach
 str
 James and the Giant Peach: a Play
 str
@@ -16477,8 +15315,6 @@ A Memoir of Jane Austen and Other Family Recollections
 str
 The Jane Austen Cookbook
 str
-The Complete Novels
-str
 The Cambridge Companion to Jane Austen
 str
 The Man Who Loved Jane Austen (The Man Who Loved Jane Austen #1)
@@ -16486,8 +15322,6 @@ str
 Jane Austen: A Life
 str
 The Complete Novels of Jane Austen
-str
-Persuasion
 str
 The History of England
 str
@@ -16498,8 +15332,6 @@ str
 Me Alquilo Para Soñar (Taller de Guión  #62)
 str
 Silent Running
-str
-La increíble y triste historia de la cándida Eréndira y de su abuela desalmada
 str
 The Story of a Shipwrecked Sailor
 str
@@ -16655,8 +15487,6 @@ Complete Short Stories  Vol 2
 str
 D.H. Lawrence and Italy: Twilight in Italy/Sea and Sardinia/Etruscan Places
 str
-The Complete Poems
-str
 Sons and Lovers
 str
 The Woman Who Rode Away and Other Stories
@@ -16747,8 +15577,6 @@ Expectant Father
 str
 Horse Heaven
 str
-White Oleander
-str
 The Night Remembers (Night  #1)
 str
 The Mephisto Club (Rizzoli & Isles  #6)
@@ -16817,8 +15645,6 @@ The New Mutants Classic  Vol. 1
 str
 James Dean: The Mutant King: A Biography
 str
-Dry
-str
 Yes  Your Teen Is Crazy!: Loving Your Kid Without Losing Your Mind
 str
 El Retrato De Dorian Gray
@@ -16851,8 +15677,6 @@ Hideaway
 str
 Lightning
 str
-Icebound
-str
 The Servants of Twilight / Darkfall / Phantoms
 str
 Shadow Fires
@@ -16865,15 +15689,11 @@ The Key to Midnight
 str
 Mr. Murder
 str
-Phantoms
-str
 The Face
 str
 Shattered
 str
 Intensity
-str
-The Good Guy
 str
 The Eyes of Darkness
 str
@@ -16899,19 +15719,11 @@ The Pelican Brief
 str
 The Harry Bosch Novels  Volume 1: The Black Echo / The Black Ice / The Concrete Blonde (Harry Bosch #1-3)
 str
-Echo Park (Harry Bosch  #12; Harry Bosch Universe  #16)
-str
 Angels Flight (Harry Bosch  #6; Harry Bosch Universe  #7)
 str
 The Harry Bosch Novels  Volume 2: The Last Coyote / Trunk Music / Angels Flight (Harry Bosch  #4-6)
 str
-The Closers (Harry Bosch  #11; Harry Bosch Universe  #14)
-str
-The Poet (Jack McEvoy  #1; Harry Bosch Universe  #5)
-str
 Chasing the Dime
-str
-The Black Echo (Harry Bosch  #1; Harry Bosch Universe  #1)
 str
 Tales From Shakespeare
 str
@@ -16924,8 +15736,6 @@ str
 Shakespeare's Trollop (Lily Bard  #4)
 str
 Shakespeare's Kitchen: Renaissance Recipes for the Contemporary Cook
-str
-Sonnets
 str
 The Art of Shakespeare's Sonnets
 str
@@ -16943,31 +15753,19 @@ October Light
 str
 Excellence
 str
-Conversations with Bernard Malamud (Literary Conversations)
-str
 Essential Tales and Poems
 str
 Poetry  Tales and Selected Essays
 str
-The Complete Stories
-str
 The Sons
-str
-The Metamorphosis and Other Stories
 str
 The Metamorphosis And Other Stories
 str
 Metamorphosis (Star Trek: The Next Generation)
 str
-Lolita
-str
 Lolita: The Screenplay
 str
-Lolita
-str
 Mysteries
-str
-Hunger
 str
 Victoria
 str
@@ -17003,10 +15801,6 @@ Notebook of a Return to the Native Land
 str
 The Return of the Native
 str
-The Return of the Native
-str
-The Stephen King Collection: Stories from Night Shift
-str
 Blood and Smoke
 str
 LT's Theory of Pets
@@ -17029,8 +15823,6 @@ Faithful: Two Diehard Boston Red Sox Fans Chronicle the Historic 2004 Season
 str
 El talismán
 str
-El umbral de la noche
-str
 Rabia
 str
 The Diary of Ellen Rimbauer: My Life at Rose Red
@@ -17049,8 +15841,6 @@ Favorite Tales of Sholom Aleichem
 str
 Brown Girl  Brownstones
 str
-V.
-str
 Gimpel the Fool: And Other Stories
 str
 At the Mountains of Madness
@@ -17063,27 +15853,17 @@ Mountain Madness (Wilderness  #24)
 str
 At the Mountains of Madness and Other Novels of Terror
 str
-The Aeneid
-str
 The Aeneid (Verse Translation)
 str
-The Iliad
-str
 War and the Iliad
-str
-The Iliad
 str
 Trojan Odyssey (Dirk Pitt  #17)
 str
 The Divine Comedy II: Purgatory
 str
-The Divine Comedy
-str
 Paradiso (The Divine Comedy  #3)
 str
 Modern Reader's Guide to Dante's the Divine Comedy
-str
-The Canterbury Tales
 str
 The Canterbury Tales: Fifteen Tales and the General Prologue
 str
@@ -17104,8 +15884,6 @@ str
 The World of Jules Verne
 str
 The End of Nana Sahib: The Steam House (Extraordinary Voyages  #20)
-str
-Around the World in Eighty Days
 str
 Around the World in Eighty Days
 str
@@ -17145,8 +15923,6 @@ True Story
 str
 Does Anybody Have a Problem With That? The Best of Politically Incorrect
 str
-The Outsiders
-str
 Outsiders Within: Writing on Transracial Adoption
 str
 Outsiders  Vol. 5: The Good Fight
@@ -17158,8 +15934,6 @@ str
 The House on Mango Street
 str
 Selections from Homer’s Iliad
-str
-The Merchant of Venice
 str
 Nancy Drew: Girl Detective: #1-4
 str
@@ -17184,10 +15958,6 @@ str
 The Week-End Book
 str
 North Carolina Weekends
-str
-Far from the Madding Crowd
-str
-Selected Poems
 str
 Selected Poetry
 str
@@ -17217,10 +15987,6 @@ In the Kitchen with Rosie: Oprah's Favorite Recipes
 str
 King Richard II
 str
-King Richard II
-str
-King Richard II
-str
 Floating in My Mother's Palm
 str
 Tearing the Silence: On Being German in America
@@ -17233,11 +15999,7 @@ The Day of the Tempest (Dragonlance: Dragons of a New Age  #2)
 str
 A Tempest
 str
-A Midsummer Night's Dream
-str
 A Midsummer Night's Dream (SparkNotes Literature Guide)
-str
-A Midsummer Night's Dream
 str
 Minuit dans le jardin du bien et du mal
 str
@@ -17245,37 +16007,21 @@ Les Essais (mis en français moderne par Claude Pinganaud)
 str
 Cliffs Notes on Hugo's Les Miserables
 str
-Les Misérables
-str
 Hamlet in Purgatory
 str
 From Hinton to Hamlet: Building Bridges between Young Adult Literature and the Classics
 str
-Hamlet
-str
 Hamlet  Prince of Denmark
-str
-Romeo & Juliet
-str
-Romeo and Juliet
-str
-Romeo and Juliet
 str
 Shakespeare's Romeo and Juliet
 str
 Romeo and Juliet (SparkNotes Literature Guide)
 str
-Romeo and Juliet
-str
 La Petite Fille du Lac
-str
-South of the Border  West of the Sun
 str
 Clock of the Long Now: Time and Responsibility: The Ideas Behind the World's Slowest Computer
 str
 Jessica's Bad Idea (Sweet Valley Twins and Friends  #31)
-str
-How to Win Friends and Influence People
 str
 How to Win Friends and Influence People
 str
@@ -17288,8 +16034,6 @@ str
 The Naked Ape: A Zoologist's Study of the Human Animal
 str
 There's No Toilet Paper . . . on the Road Less Traveled: The Best of Travel Humor and Misadventure
-str
-Kitchen Confidential: Adventures in the Culinary Underbelly
 str
 More Than You Know: Finding Financial Wisdom in Unconventional Places
 str
@@ -17385,8 +16129,6 @@ Secrets of San Francisco: A 1920s Sourcebook for the City by the Bay (Call of Ct
 str
 Miskatonic University: Dire Secrets & Campus Life (Call of Cthulhu RPG)
 str
-Call of Cthulhu: Horror Roleplaying (Call of Cthulhu RPG)
-str
 Shadows of Yog-Sothoth (Call of Cthulhu RPG)
 str
 Song of Cthulhu: Tales of the Spheres Beyond Sound
@@ -17399,11 +16141,7 @@ The White Man's Burden: Why the West's Efforts to Aid the Rest Have Done So Much
 str
 The Elements of Style
 str
-Dracula
-str
 Happy Hour at Casa Dracula (Casa Dracula  #1)
-str
-Frankenstein
 str
 World War One British Poets: Brooke  Owen  Sassoon  Rosenberg and Others
 str
@@ -17437,8 +16175,6 @@ Under the Red Flag
 str
 Ocean of Words
 str
-The Bridegroom
-str
 In the Pond
 str
 That Was Then  This Is Now
@@ -17449,8 +16185,6 @@ The Collection: The Outsiders / Rumble Fish / That Was Then  This Is Now
 str
 The Work of Work Servitude  Slavery and Labor in Medieval England
 str
-East of Eden
-str
 Katherine
 str
 The Fourth of July Story
@@ -17458,8 +16192,6 @@ str
 Fourth of July Mice!
 str
 Apple Pie 4th of July
-str
-Roses Are Red (Alex Cross  #6)
 str
 4th of July (Women's Murder Club  #4)
 str
@@ -17545,8 +16277,6 @@ Up Country
 str
 Wolfsbrut.
 str
-The Talbot Odyssey
-str
 Night Falls Fast: Understanding Suicide
 str
 Before Night Falls
@@ -17556,8 +16286,6 @@ str
 Nightfall
 str
 When Night Falls
-str
-Before Night Falls
 str
 Where the Broken Heart Still Beats: The Story of Cynthia Ann Parker
 str
@@ -17569,11 +16297,7 @@ Quintessential Tarantino
 str
 The Foundations of Modern Political Thought: Volume One: The Renaissance
 str
-Tara Road
-str
 On the Road to Tara
-str
-Selected Stories
 str
 Broken Vessels
 str
@@ -17621,8 +16345,6 @@ Animal E.R.: Extraordinary Stories Hope Healing from 1 World's Leading Veterinar
 str
 ER Vets: Life in an Animal Emergency Room
 str
-The 9/11 Commission Report: Final Report of the National Commission on Terrorist Attacks Upon the United States
-str
 Citizen Girl
 str
 On the Origin of Species by Means of Natural Selection
@@ -17639,25 +16361,15 @@ Criminal Investigation: The Art and the Science
 str
 A Collection of Rudyard Kipling's Just So Stories
 str
-Collected Stories
-str
 Just So Stories
 str
 If: A Father's Advice to His Son
-str
-Much Ado about Nothing
-str
-Much Ado about Nothing
 str
 The Waste Land
 str
 The Annotated Waste Land with Eliot's Contemporary Prose
 str
 The Waste Land and Other Writings
-str
-The Waste Lands (The Dark Tower  #3)
-str
-Timequake
 str
 Climb the Family Tree  Jesse Bear!
 str
@@ -17679,11 +16391,7 @@ The Visual Arts: A History
 str
 The Visual Arts: A History  Volume 2
 str
-The Visual Arts: A History
-str
 The Brooklyn Bridge (Wonders of the World)
-str
-John Adams
 str
 The I Ching or Book of Changes
 str
@@ -17761,8 +16469,6 @@ La Biblia de los Critales: Guia definitiva de los cristales (Cuerpo-Mente)
 str
 Eva Hesse Drawing
 str
-Inferno
-str
 The Pirates Laffite: The Treacherous World of the Corsairs of the Gulf
 str
 Wither (Wendy Ward  #1)
@@ -17777,15 +16483,9 @@ The Complete Greek Tragedies  Volume 2: Sophocles
 str
 Doctor Faustus
 str
-Doctor Faustus
-str
-Doctor Faustus
-str
 The Makioka Sisters
 str
 Many Lives  Many Masters: The True Story of a Prominent Psychiatrist  His Young Patient  and the Past Life Therapy That Changed Both Their Lives
-str
-Quicksand
 str
 Naomi
 str
@@ -17794,8 +16494,6 @@ str
 A Cat  a Man  and Two Women
 str
 The Reed Cutter & Captain Shigemoto's Mother
-str
-In Praise of Shadows
 str
 Le chat  son maître et ses deux maîtresses
 str
@@ -17877,8 +16575,6 @@ Snow Treasure
 str
 The Damnation Game
 str
-The Damnation Game
-str
 Texas Hold'em for Dummies
 str
 Soldiers of Destruction: The SS Death's Head Division  1933-1945
@@ -17912,8 +16608,6 @@ str
 All I Really Need to Know I Learned in Kindergarten
 str
 Legends  Lies  Cherished Myths of World History
-str
-Trevayne
 str
 Trevayne
 str
@@ -17971,8 +16665,6 @@ The Dragon Doesn't Live Here Anymore: Living Fully  Loving Freely
 str
 Running with the Demon (Word & Void #1)
 str
-The Voyage of the Jerle Shannara Trilogy (Voyage of the Jerle Shannara  #1-3)
-str
 The Black Unicorn (Magic Kingdom of Landover #2)
 str
 Der Sohn von Shannara
@@ -18004,8 +16696,6 @@ str
 Trial By Fire
 str
 Trial by Fire (Newpointe 911 #4)
-str
-Sahara (Dirk Pitt  #11)
 str
 Sahara (Dirk Pitt  #11)
 str
@@ -18091,17 +16781,11 @@ Mary Shelley‘s Frankenstein
 str
 Essential Monster of Frankenstein  Vol. 1
 str
-Frankenstein
-str
-Frankenstein
-str
 The Memoirs of Elizabeth Frankenstein
 str
 The Essential Frankenstein
 str
 Father of Frankenstein
-str
-Frankenstein
 str
 The Walrus Was Paul: The Great Beatle Death Clues
 str
@@ -18283,8 +16967,6 @@ The Beatles Diary  Vol 1: From Liverpool to London (Falk Symposium)
 str
 Two of Us: The Story of a Father  a Son  and the Beatles
 str
-A Hard Day's Write: The Stories Behind Every Beatles Song
-str
 The Beatles
 str
 Complete Idiot's Guide to The Beatles
@@ -18302,8 +16984,6 @@ str
 Lover Eternal (Black Dagger Brotherhood  #2)
 str
 The Silmarillion  Volume 3
-str
-Sodom and Gomorrah (In Search of Lost Time  #4)
 str
 Swanns Way (In Search of Lost Time #1)
 str
@@ -18373,21 +17053,15 @@ Sgt. Rock: The Prophecy
 str
 Sgt. Frog  Vol. 13 (Sgt. Frog  #13)
 str
-The Elements of Style
-str
 On Basilisk Station (Honor Harrington  #1)
 str
 The Lure of the Basilisk (The Lords of Dûs  #1)
 str
 Love Smart: Find the One You Want--Fix the One You Got
 str
-Love Smart: Find the One You Want--Fix the One You Got
-str
 Smart Love
 str
 Sagwa  the Chinese Siamese Cat
-str
-The Bonesetter's Daughter
 str
 The Opposite of Fate
 str
@@ -18410,8 +17084,6 @@ str
 Baumgartner's Bombay
 str
 Tim Burton: Interviews
-str
-Mysteries
 str
 The Occult: A History
 str
@@ -18497,8 +17169,6 @@ Magical Creatures (Easy To Read! Easy To Draw!)
 str
 The Pizza That We Made
 str
-'Salem's Lot
-str
 The Portable Edgar Allan Poe
 str
 Great Short Works
@@ -18574,8 +17244,6 @@ str
 Narrative of the Life of Frederick Douglass: An American Slave  Written by Himself
 str
 Narrative of the Life of Frederick Douglass: An American Slave
-str
-Narrative of the Life of Frederick Douglass: An American Slave  Written by Himself
 str
 Autobiographies: Narrative of the Life of Frederick Douglass / My Bondage and My Freedom / Life and Times of Frederick Douglass
 str
@@ -18685,8 +17353,6 @@ The Pure in Heart (Simon Serrailler  #2)
 str
 The Woman in Black
 str
-The Pure in Heart (Simon Serrailler  #2)
-str
 The Various Haunts of Men (Simon Serrailler #1)
 str
 Septem Quae Supersunt Tragoediae
@@ -18703,11 +17369,7 @@ str
 str
 Love's Executioner  And Other Tales Of Psychotherapy
 str
-The Brothers Karamazov
-str
 Old Filth (Old Filth  #1)
-str
-Filth
 str
 The Gospel of Filth: A Bible of Decadence & Darkness
 str
@@ -18737,8 +17399,6 @@ The Shell Seekers
 str
 Cat's Cradle (Cat  #1)
 str
-Five Patients
-str
 Undertaker of the Mind: John Monro and Mad-Doctoring in Eighteenth-Century England
 str
 Consider the Lilies
@@ -18760,8 +17420,6 @@ str
 Mercy Watson to the Rescue
 str
 Mercy Watson: Princess in Disguise
-str
-The Mill on the Floss
 str
 Culture Shock! Laos (Culture Shock!)
 str
@@ -18839,10 +17497,6 @@ The Night at the Museum
 str
 The Heart Is a Lonely Hunter
 str
-The Heart Is a Lonely Hunter
-str
-The Prime of Miss Jean Brodie / The Girls of Slender Means / The Driver's Seat / The Only Problem
-str
 The Prime of Miss Jean Brodie / The Girls of Slender Means / The Driver's Seat / The Only Problem
 str
 The Pat Hobby Stories
@@ -18852,8 +17506,6 @@ str
 Playing in the Dark: Whiteness and the Literary Imagination
 str
 The Big Box
-str
-Their Eyes Were Watching God
 str
 Grasping God's Word: A Hands-On Approach to Reading  Interpreting  and Applying the Bible
 str
@@ -18865,8 +17517,6 @@ Little Children
 str
 Dale Loves Sophie to Death
 str
-The Secret Life of Bees
-str
 Hokkaido Highway Blues: Hitchhiking Japan
 str
 The Martian Chronicles
@@ -18874,8 +17524,6 @@ str
 You Know You Love Me (Gossip Girl  #2)
 str
 Classroom Interactions as Cross-Cultural Encounters: Native Speakers in EFL Lessons
-str
-Them: Adventures with Extremists
 str
 Why I Hate Canadians
 str
@@ -18903,17 +17551,7 @@ Egyptian Myth: A Very Short Introduction
 str
 A Pinch of Poison (Hemlock Falls Mysteries  #3)
 str
-Persuasion
-str
 Beyond Seduction (Beyond Duet  #2)
-str
-Sense and Sensibility
-str
-Sense and Sensibility
-str
-Sense and Sensibility
-str
-Sense and Sensibility
 str
 One Flew Over the Cuckoo's Nest (SparkNotes Literature Guide)
 str
@@ -18933,11 +17571,7 @@ The Criminal Mastermind Collection  Bks 1-3 (Artemis Fowl  #1-3)
 str
 Encuentro en el Ártico (Artemis Fowl  #2)
 str
-The Eternity Code (Artemis Fowl  #3)
-str
 El cubo B (Artemis Fowl  #3)
-str
-The Eternity Code (Artemis Fowl  #3)
 str
 Forget Me Not: Photography and Remembrance
 str
@@ -18965,17 +17599,9 @@ The Body in the Lighthouse
 str
 American Tragedy: Kennedy  Johnson  and the Origins of the Vietnam War
 str
-The Sun Also Rises
-str
-The Call of the Wild
-str
-The Call of the Wild
-str
 The Call of the Wild and Three Other Klondike Stories
 str
 The Call of the Wild and Selected Stories: 100th Anniversary Ed.
-str
-Fahrenheit 451
 str
 The Lion  the Witch and the Wardrobe (Chronicles of Narnia  #1)
 str
@@ -18988,8 +17614,6 @@ str
 Health: The Basics (Donatelle Series)
 str
 Cliffsnotes on Eliot's Middlemarch
-str
-Alice's Adventures in Wonderland
 str
 Anne of the Island and Tales of Avonlea
 str
@@ -19030,8 +17654,6 @@ str
 Lithium for Medea
 str
 Die Leiden des Jungen Werther
-str
-The Odyssey
 str
 Caesar's Commentaries: On the Gallic War & On the Civil War
 str
@@ -19129,8 +17751,6 @@ Crime Partners
 str
 Jonah's Gourd Vine
 str
-The Complete Stories
-str
 Zora Neale Hurston: A Literary Biography
 str
 Zora Neale Hurston: Critical Perspectives Past And Present (Amistad Literary Series)
@@ -19182,8 +17802,6 @@ str
 Let's Go Australia on a Budget
 str
 National Geographic Traveler: Australia
-str
-Moll Flanders
 str
 Moll Flanders
 str
@@ -19242,8 +17860,6 @@ str
 The Science Book
 str
 Kristy's Great Idea
-str
-The Actor in You: Sixteen Simple Steps to Understanding the Art of Acting
 str
 The Actor in You: Sixteen Simple Steps to Understanding the Art of Acting
 str
@@ -19349,15 +17965,7 @@ Don't Wait for Your Ship to Come In... Swim Out to Meet It!: Bite-Sized Inspirat
 str
 Magic Bites (Kate Daniels  #1)
 str
-The Secret Garden
-str
-The Secret Garden
-str
 The Secret Garden Coloring Book
-str
-A Little Princess
-str
-A Little Princess
 str
 The Little Princesses
 str
@@ -19369,21 +17977,13 @@ Pedro Páramo
 str
 Pedro Páramo / El Llano en llamas
 str
-Pedro Páramo
-str
 Pedro Paramo / El Llano En Llamas
-str
-Pedro Páramo
 str
 Peter Pan in Kensington Gardens / Peter and Wendy
 str
 Walt Disney's Peter Pan (A Little Golden Book)
 str
 Peter Pan And Wendy
-str
-Peter Pan
-str
-Adventures of Huckleberry Finn
 str
 Alice in Wonderland / Hunting of the Snark
 str
@@ -19432,8 +18032,6 @@ str
 Autobiography of Thomas Jefferson
 str
 Juan Rulfo's Mexico
-str
-Pedro Páramo
 str
 The Burning Plain and Other Stories
 str
@@ -19511,8 +18109,6 @@ Deep Storm (Jeremy Logan  #1)
 str
 Death Match
 str
-The Wheel of Darkness (Pendergast  #8)
-str
 Reliquary (Pendergast  #2)
 str
 The Cabinet of Curiosities (Pendergast  #3)
@@ -19522,8 +18118,6 @@ str
 Dancing on My Grave
 str
 Dancing on His Grave: A True Story of Survival and Triumph
-str
-I Don't Know How She Does It (Kate Reddy  #1)
 str
 I Don't Know How She Does It (Kate Reddy  #1)
 str
@@ -19592,8 +18186,6 @@ str
 The Awakening (Vampire Huntress  #2)
 str
 The Forbidden (Vampire Huntress  #5)
-str
-The Damned (Vampire Huntress  #6)
 str
 The Damned (Vampire Huntress  #6)
 str
@@ -19687,8 +18279,6 @@ Feast: Food to Celebrate Life
 str
 How to Be a Domestic Goddess: Baking and the Art of Comfort Cooking
 str
-How to Be a Domestic Goddess: Baking and the Art of Comfort Cooking
-str
 Forever Summer
 str
 programming.java: An Introduction to Programming Using Java: An Introduction to Programming Using Java
@@ -19724,8 +18314,6 @@ str
 The Shawshank Redemption
 str
 The Shawshank Redemption: The Shooting Script
-str
-Different Seasons
 str
 The Real Frank Zappa Book
 str
@@ -19867,8 +18455,6 @@ A Slipping-Down Life
 str
 The Hound of the Baskervilles: Another Adventure of Sherlock Holmes  with "the Adventure of the Speckled Band"
 str
-The Hound of the Baskervilles
-str
 The Alienist (Dr. Laszlo Kreizler  #1)
 str
 My Movie Business
@@ -19900,8 +18486,6 @@ str
 Sacred Games (Sacred Games)
 str
 Riding the Bus with My Sister: A True Life Journey
-str
-Blink: The Power of Thinking Without Thinking
 str
 Beatrice's Goat
 str
@@ -20029,19 +18613,11 @@ To the Nines (Stephanie Plum  #9)
 str
 Full Speed (Full  #3)
 str
-Love Overboard
-str
 The Rocky Road to Romance (Elsie Hawkins  #4)
 str
 Two for the Dough (Stephanie Plum  #2)
 str
 The Full Box (Full  #1-4)
-str
-Hard Eight (Stephanie Plum  #8)
-str
-Hot Six (Stephanie Plum  #6)
-str
-Metro Girl (Alex Barnaby  #1)
 str
 Martian Time-Slip
 str
@@ -20072,8 +18648,6 @@ str
 Tarzan of the Apes: Tarzan of the Apes/The Son of Tarzan/Tarzan at the Earth's Core/Tarzan Triumphant
 str
 Tarzan of the Apes (Tarzan  #1)
-str
-The Five People You Meet in Heaven
 str
 Murder in the Bastille (Aimee Leduc Investigations  #4)
 str
@@ -20273,8 +18847,6 @@ The Right Stuff
 str
 Wild Fire (The Hot Zone  #3)
 str
-The Best American Mystery Stories 2004
-str
 Day and Night
 str
 Romanticism
@@ -20345,8 +18917,6 @@ Pacific Edge (Three Californias Triptych  #3)
 str
 The Memory of Whiteness: A Scientific Romance
 str
-Les Fils des ténèbres
-str
 Secret Identity (Lost  #2)
 str
 Miracleman  Book Three: Olympus
@@ -20387,8 +18957,6 @@ Syrup
 str
 Maple Syrup Cookbook: Over 100 Recipes For Breakfast  Lunch & Dinner
 str
-The Red Tent
-str
 Metaconcert (Intervention  #2)
 str
 Surveillance (Intervention  #1)
@@ -20404,8 +18972,6 @@ str
 Ranma 1/2  Vol. 8 (Ranma ½ (US 2nd)  #8)
 str
 Maison Ikkoku  Volume 8 (Maison Ikkoku  #8)
-str
-The Echo Maker
 str
 Afterglow: A Last Conversation With Pauline Kael
 str
@@ -20434,8 +19000,6 @@ str
 Spindle's End
 str
 Imaginary Lands
-str
-Beauty
 str
 The Hero and the Crown (Damar  #2)
 str
@@ -20477,15 +19041,11 @@ Inside My Heart: Choosing to Live with Passion and Purpose
 str
 Lord John and the Brotherhood of the Blade  (Lord John Grey  #2)
 str
-How to Stop Worrying and Start Living
-str
 Andrew Carnegie and the Rise of Big Business (Library of American Biography Series)
 str
 How to Develop Self-Confidence and Influence People by Public Speaking
 str
 The Autobiography of Andrew Carnegie and the Gospel of Wealth
-str
-Love in the Time of Cholera
 str
 A Fan's Notes
 str
@@ -20506,8 +19066,6 @@ str
 The Summer House
 str
 Peek-a-Boo! (Babyfaces)
-str
-The Handmaid's Tale
 str
 The BFG: A Set of Plays
 str
@@ -20607,15 +19165,9 @@ The Sea Hunters (The Sea Hunters #1)
 str
 La Ciudad Perdida (NUMA Files  #5)
 str
-Sahara (Dirk Pitt  #11)
-str
 Clive Cussler and Dirk Pitt Revealed
 str
 Cliffs Notes on Billy Budd & Typee
-str
-Billy Budd  Sailor
-str
-Billy Budd  Sailor
 str
 Billy Budd  Sailor and Other Uncompleted Writings: The Writings of Herman Melville  Volume 13
 str
@@ -20673,8 +19225,6 @@ American Genesis: Captain John Smith and the Founding of Virginia
 str
 Twilight (Twilight  #1)
 str
-Sense and Sensibility
-str
 Uncle Shelby's ABZ Book
 str
 Who Wants a Cheap Rhinoceros?
@@ -20690,8 +19240,6 @@ str
 Harry Potter und der Gefangene von Askaban (Harry Potter  #3)
 str
 Harry Potter ve Sırlar Odası (Harry Potter  #2)
-str
-Harry Potter und der Gefangene von Askaban (Harry Potter  #3)
 str
 There are No Children Here: The Story of Two Boys Growing Up in the Other America
 str
@@ -20719,8 +19267,6 @@ Solo
 str
 Two's Company
 str
-Open House
-str
 The Dream Kingdom (The Morland Dynasty  #26)
 str
 Falling for You
@@ -20738,8 +19284,6 @@ str
 Seven Sunny Days
 str
 Girl Meets Ape
-str
-Girls' Night In
 str
 Tales from Shakespeare
 str
@@ -20789,8 +19333,6 @@ Baby Proof
 str
 Something Blue (Darcy & Rachel  #2)
 str
-Something Borrowed (Darcy & Rachel  #1)
-str
 P.S. Longer Letter Later (Elizabeth and Tara*Starr  #1)
 str
 P.S. Your Cat Is Dead
@@ -20810,8 +19352,6 @@ str
 Life Is a Dream and Other Spanish Classics (Eric Bentley's Dramatic Repertoire) - Volume II
 str
 Life Is A Dream = La Vida Es Sueño
-str
-Life Is a Dream
 str
 Stylepedia: A Guide to Graphic Design Mannerisms  Quirks  and Conceits
 str
@@ -20929,15 +19469,9 @@ Men Are Like Waffles  Women Are Like Spaghetti
 str
 As You Like It
 str
-As You Like It
-str
-As You Like It
-str
 As You Like It (No Fear Shakespeare)
 str
 War of the Rats
-str
-Nimitz Class (Admiral Arnold Morgan  #1)
 str
 Nimitz Class (Admiral Arnold Morgan  #1)
 str
@@ -20948,8 +19482,6 @@ str
 The Gilded Web (Web  #1)
 str
 Resurrection
-str
-Cold Mountain
 str
 Red Road From Stalingrad: Recollections of a Soviet Infantryman
 str
@@ -21037,8 +19569,6 @@ The Servant Leader
 str
 Down Under
 str
-A Walk in the Woods: Rediscovering America on the Appalachian Trail
-str
 Bizarre World
 str
 The Life and Times of the Thunderbolt Kid: A Memoir
@@ -21095,21 +19625,15 @@ Youngblood Hawke
 str
 Aurora Dawn
 str
-The Curious Incident of the Dog in the Night-Time
-str
 A Long Way Gone: Memoirs of a Boy Soldier
 str
 Yellow Back Radio Broke-Down
-str
-Anthem
 str
 Sorrow's Anthem (Lincoln Perry  #2)
 str
 White Fang
 str
 The Call of the Wild  White Fang and Other Stories
-str
-White Fang
 str
 The Sea-Wolf and Selected Stories
 str
@@ -21151,8 +19675,6 @@ Interesting Times: A Twentieth-Century Life
 str
 Industry and Empire: The Birth of the Industrial Revolution
 str
-The Communist Manifesto
-str
 On the Edge of the New Century
 str
 The Age of Extremes: The Short Twentieth Century  1914-1991
@@ -21176,8 +19698,6 @@ str
 Inventive Paris clothes: 1909-1939 - a photographic essay
 str
 Brown V. Board of Education: A Civil Rights Milestone and Its Troubled Legacy
-str
-Henry V
 str
 Hegemony and Socialist Strategy: Towards a Radical Democratic Politics
 str
@@ -21272,8 +19792,6 @@ str
 A Long Short War: The Postponed Liberation of Iraq
 str
 Blaming the Victims: Spurious Scholarship and the Palestinian Question
-str
-Unacknowledged Legislation: Writers in the Public Sphere
 str
 1968: War and Democracy
 str
@@ -21391,8 +19909,6 @@ Two Brothers: The Lawman / The Gunslinger (Two Brothers  #1-2)
 str
 The Gunslinger (Two Brothers  #2)
 str
-The Gunslinger
-str
 Gunslinger and Nine Other Action-Packed Stories of the Wild West
 str
 Leadership and the One Minute Manager: Increasing Effectiveness Through Situational Leadership
@@ -21505,8 +20021,6 @@ Naked Empire (Sword of Truth  #8)
 str
 Legends 2 (Legends 1  Volume 2of3)
 str
-Naked Empire (Sword of Truth  #8)
-str
 The Wood Boy / The Burning Man
 str
 The King's Buccaneer (Krondor's Sons  #2)
@@ -21570,8 +20084,6 @@ str
 Small Island
 str
 Never Far From Nowhere
-str
-Shield of Thunder (Troy  #2)
 str
 Shield of Thunder (Troy  #2)
 str
@@ -21651,8 +20163,6 @@ The Gospel of the Flying Spaghetti Monster
 str
 The Monster at the End of this Book
 str
-The Sea of Monsters (Percy Jackson and the Olympians  #2)
-str
 Monster: The Autobiography of an L.A. Gang Member
 str
 Monster Island (Monster Island  #1)
@@ -21663,11 +20173,7 @@ I Should Be Extremely Happy in Your Company: A Novel of Lewis and Clark
 str
 D.B.
 str
-Lincoln
-str
 Lincoln (Narratives of a Golden Age)
-str
-The Silver Pigs (Marcus Didius Falco  #1)
 str
 The Silver Pigs (Marcus Didius Falco  #1)
 str
@@ -21763,13 +20269,9 @@ The Roald Dahl Omnibus: Perfect Bedtime Stories for Sleepless Nights
 str
 A Preface to Democratic Theory
 str
-Matilda
-str
 Kiss Kiss
 str
 Roald Dahl: A Biography
-str
-Matilda
 str
 The Adventures of Charlie and Mr. Willy Wonka: A Fully Dramatized Recording
 str
@@ -21801,11 +20303,7 @@ Life is Elsewhere
 str
 Todo está iluminado
 str
-Hart's Hope
-str
 Firefighters in the Dark
-str
-Wide Sargasso Sea
 str
 Wide Sargasso Sea
 str
@@ -21883,8 +20381,6 @@ Code Check Electrical: An Illustrated Guide to Wiring a Safe House
 str
 International Building Code 2003
 str
-The Major Works
-str
 Poetry and Prose of Alexander Pope (Riverside Editions)
 str
 Illustrated Guide to the NEC: Based on the 2005 National Electric Code
@@ -21937,13 +20433,7 @@ Bob Marley - Songs of Freedom
 str
 Such a Good Girl and Other Crime Stories
 str
-Howards End
-str
 Three Complete Novels: Howards End  A Room with a View  Where Angels Fear to Tread
-str
-Kim
-str
-Kim
 str
 The Island at the Center of the World: The Epic Story of Dutch Manhattan and the Forgotten Colony That Shaped America
 str
@@ -21963,19 +20453,11 @@ Mansfield Park
 str
 Walking the Rez Road
 str
-Mansfield Park
-str
-Mansfield Park
-str
-Mansfield Park
-str
 The Mini Zen Gardening Kit
 str
 The Zen Gardening Kit/Book and Japanese Rock Garden
 str
 Stalky & Co.
-str
-The Mill on the Floss
 str
 Zen in Your Garden
 str
@@ -22003,8 +20485,6 @@ The Breaker
 str
 The Echo
 str
-A Painted House
-str
 D is for Dahl: A gloriumptious A-Z guide to the world of Roald Dahl
 str
 The Roald Dahl Audio Collection
@@ -22025,8 +20505,6 @@ A Passage to India: A Reader's Guide to Essential Criticism
 str
 A Passage to India
 str
-A Passage to India
-str
 No Name
 str
 Miss or Mrs?/ The Haunted Hotel/ The Guilty River
@@ -22036,8 +20514,6 @@ str
 The Woman In White
 str
 Armadale
-str
-I Never Promised You a Rose Garden
 str
 I Never Promised You a Rose Garden
 str
@@ -22059,10 +20535,6 @@ Doisneau
 str
 Criptonomicón II: El código Pontifex
 str
-Quicksilver (The Baroque Cycle  #1)
-str
-Todo está iluminado
-str
 The Portable Walt Whitman
 str
 Walt Whitman's America
@@ -22073,19 +20545,11 @@ Walt Whitman: Words for America
 str
 Love  Hate and Everything in Between: Expressing Emotions in Japanese
 str
-Blind Willow  Sleeping Woman
-str
-Haruki Murakami and the Music of Words
-str
 Hard-Boiled Wonderland and the End of the World
 str
 The Wind-Up Bird Chronicle
 str
 After the Quake
-str
-Kafka on the Shore
-str
-Sputnik Sweetheart
 str
 Joseph Cornell: Secrets in a Box (Adventures in Art)
 str
@@ -22123,8 +20587,6 @@ The Brave Women of the Gulf Wars: Operation Desert Storm and Operation Iraqi Fre
 str
 The Classic Ten: The True Story of the Little Black Dress and Nine Other Fashion Favorites
 str
-The Locked Room (The New York Trilogy  #3)
-str
 The Home Front
 str
 Half Moon Investigations
@@ -22145,21 +20607,11 @@ Artemis Fowl (Artemis Fowl  #1)
 str
 La última oportunidad
 str
-Artemis Fowl (Artemis Fowl  #1)
-str
 La venganza de opal (Artemis Fowl  #4)
-str
-Encuentro en el Ártico (Artemis Fowl  #2)
-str
-Artemis Fowl (Artemis Fowl  #1)
 str
 Treasury of American Tall Tales: Volume 1: Davy Crockett  Rip Van Winkle  Johnny Appleseed  Paul Bunyan (Rabbit Ears)
 str
-The Subtle Knife (His Dark Materials  #2)
-str
 The Amber Spyglass (His Dark Materials  #3)
-str
-The Subtle Knife (His Dark Materials  #2)
 str
 His Dark Materials (His Dark Materials  #1-3)
 str
@@ -22190,8 +20642,6 @@ str
 Montaillou  village occitan de 1294 à 1324
 str
 Montaillou: Cathars and Catholics in a French Village  1294-1324
-str
-On the Road
 str
 Undaunted Courage: The Pioneering First Mission to Explore America's Wild Frontier
 str

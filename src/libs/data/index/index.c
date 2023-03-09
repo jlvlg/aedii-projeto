@@ -6,7 +6,8 @@
 #include "util.h"
 #include "types.h"
 #include "index.h"
-#include "json.h"
+#include "json_object.h"
+#include "json_util.h"
 
 static BST_Index create_bst(Item item, int pos) {
     BST_Index leaf = bst.init(util.safe_malloc(sizeof(struct BST_Index)), item);
@@ -55,6 +56,43 @@ static int recycle(Junk* start, int size) {
     *start = pop(*start, &old_size, &pos);
     *start = dump(*start, old_size - size, pos + size);
     return pos;
+}
+
+static void add_junk_to_array(json_object *array, Junk node) {
+    if (node != NULL) {
+        add_junk_to_array(array, node->next);
+        json_object *object = json_object_new_object();
+        json_object_object_add(object, "size", json_object_new_int(node->size));
+        json_object_object_add(object, "pos", json_object_new_int(node->pos));
+        json_object_array_add(array, object);
+    }
+}
+
+static int save_junk(Junk junk, char* filename) {
+    int result;
+    json_object *json = json_object_new_array();
+    add_junk_to_array(json, junk);
+    result = json_object_to_file(filename, json);
+    json_object_put(json);
+    return result;
+}
+
+static Junk retrieve_junk(char* filename) {
+    Junk start = NULL;
+    json_object *json = json_object_from_file(filename);
+    json_object *node, *size, *pos;
+
+    if (json == NULL)
+        return NULL;
+
+    for (int i = 0; i < json_object_array_length(json); i++) {
+        node = json_object_array_get_idx(json, i);
+        json_object_object_get_ex(node, "size", &size);
+        json_object_object_get_ex(node, "pos", &pos);
+        start = dump(start, json_object_get_int(size), json_object_get_int(pos));
+    }
+    json_object_put(json);
+    return start;
 }
 
 static void add_bst_to_array(json_object *array, BST_Index node) {
@@ -233,12 +271,17 @@ static RB_Index retrieve_rb(char* filename) {
 }
 
 const struct index_methods idx = {
+    .create_bst = create_bst,
+    .create_avl = create_avl,
+    .create_rb = create_rb,
     .save_bst = save_bst,
     .save_avl = save_avl,
     .save_rb = save_rb,
+    .save_junk = save_junk,
     .retrieve_bst = retrieve_bst,
     .retrieve_avl = retrieve_avl,
     .retrieve_rb = retrieve_rb,
+    .retrieve_junk = retrieve_junk,
     .dump = dump,
     .recycle = recycle
 };

@@ -77,10 +77,16 @@ static AVL insert(AVL root, AVL leaf, int *changes) {
 
     cmp = types.cmp(tree_leaf->item, tree_root->item);
 
-    if (cmp > 0)
-        tree_root->r = insert(tree_root->r, leaf, changes);
-    else
-        tree_root->l = insert(tree_root->l, leaf, changes);
+    switch (cmp) {
+        case 0:
+            tree.kill(leaf);
+            return root;
+        case -1:
+            tree_root->l = insert(tree_root->l, leaf, changes);
+            break;
+        case 1:
+            tree_root->r = insert(tree_root->r, leaf, changes);
+    }
         
     return balance(root, changes, cmp == 1, 0);
 }
@@ -99,7 +105,7 @@ static AVL remove(AVL root, Item item, int *changes) {
             *changes = 1;
             switch (tree.children(tree_root)) {
                 case 0:
-                    return (AVL) tree.kill(tree_root);
+                    return tree.kill(tree_root);
                 case 1: {
                     AVL child = tree_root->l != NULL ? tree_root->l : tree_root->r;
                     tree.kill(tree_root);
@@ -140,6 +146,7 @@ static AVL trim(AVL root, AVL branch) {
     for (int i = 0; i < count; i++) {
         root = remove(root, array[i]->item, &changes);
     }
+    free(array);
     return root;
 }
 

@@ -18,10 +18,16 @@ static BST insert(BST root, BST leaf) {
     if (root == NULL) 
         return leaf;
 
-    if (types.cmp(leaf->item, root->item) > 0)
-        root->r = insert(root->r, leaf);
-    else
-        root->l = insert(root->l, leaf);
+    switch (types.cmp(leaf->item, root->item)) {
+        case 0:
+            tree.kill(leaf);
+            break;
+        case -1:
+            root->l = insert(root->l, leaf);
+            break;
+        case 1:
+            root->r = insert(root->r, leaf);
+    }
         
     return root;
 }
@@ -70,6 +76,7 @@ static BST trim(BST root, BST branch) {
     for (int i = 0; i < count; i++) {
         root = remove(root, array[i]->item);
     }
+    free(array);
     return root;
 }
 

@@ -16,20 +16,26 @@ int main() {
     AVL avl_root = NULL;
     RB rb_root = NULL;
     Item item;
-    char type[4];
+    char type[5];
     int changes;
     clock_t t;
     printf("BST elapsed time,BST height,AVL elapsed time,AVL height,RB elapsed time,RB height\n");
     while (1) {
-        scanf("%3[^\n]%*c", type);
+        fgets(type, 5, stdin);
+        type[strcspn(type, "\n")] = '\0';
         if (strcmp(type, "out")) {
             if (!strcmp(type, "int")) {
                 char data[100];
-                scanf("%99[^\n]%*c", data);
-                item = types.Int(atoi(data));
+                fgets(data, 100, stdin);
+                data[strcspn(data, "\n")] = '\0';
+                int num = atoi(data);
+                if (!num)
+                    continue;
+                item = types.Int(num);
             } else if (!strcmp(type, "str")) {
                 char data[10000];
-                scanf("%9999[^\n]%*c", data);
+                fgets(data, 10000, stdin);
+                data[strcspn(data, "\n")] = '\0';
                 item = types.String(data);
             }
             t = clock();

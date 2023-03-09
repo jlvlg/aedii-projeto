@@ -1,7 +1,12 @@
+#ifndef DATA_H
+#define DATA_H
+
 typedef struct {
-    int bookID;
-    char* isbn;
+    int isbn;
+    int num_pages;
     char* title;
     char* authors;
     char* publisher;
-} Data;
+} Book;
+
+#endif
