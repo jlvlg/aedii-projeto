@@ -20,22 +20,22 @@ void print_node(AVL node) {
 }
 
 void print(AVL node) {
-    tree.preorder(node, print_node);
+    tree.preorder(node, print_node, 0);
     printf("\n");
 }
 
 int main(int argc, char *argv[]) {
     AVL root = NULL;
-    int changes;
+    int changes, error;
     for (int i = 1; i < argc;) {
         switch (atoi(argv[i])) {
             case 1:
                 if (!strcmp(argv[i+1], "int")) {
-                    root = avl.insert(root, avl.create(types.Int(atoi(argv[i+2]))), &changes);
+                    root = avl.insert(root, avl.create(types.Int(atoi(argv[i+2]))), &changes, &error);
                 } else if (!strcmp(argv[i+1], "str")) {
-                    root = avl.insert(root, avl.create(types.String(argv[i+2])), &changes);
+                    root = avl.insert(root, avl.create(types.String(argv[i+2])), &changes, &error);
                 } else if (!strcmp(argv[i+1], "char")) {
-                    root = avl.insert(root, avl.create(types.Char(argv[i+2][0])), &changes);
+                    root = avl.insert(root, avl.create(types.Char(argv[i+2][0])), &changes, &error);
                 }
                 i += 3;
                 break;
@@ -58,5 +58,5 @@ int main(int argc, char *argv[]) {
                 i++;
         }
     }
-    avl.trim(root, root);
+    tree.clear(root);
 }

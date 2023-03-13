@@ -34,6 +34,11 @@ struct tree_methods {
     /// @return NULL pointer
     Tree (*kill)(Tree leaf);
 
+    /// @brief Completely frees the memory occupied by a tree
+    /// @param root Tree to be cleared
+    /// @return NULL pointer
+    Tree (*clear)(Tree root);
+
     /// @brief Prints all values of a tree
     /// @param root Tree to be printed
     void (*print)(Tree root);
@@ -49,7 +54,8 @@ struct tree_methods {
     /// @brief Transverses the tree and calls a function as it goes
     /// @param root Tree to be transversed
     /// @param function A function that takes a @ref Tree "tree" as a parameter and returns void
-    void (*preorder)(Tree root, void function(Tree));
+    /// @param reversed Reverse the order of execution
+    void (*preorder)(Tree root, void function(Tree), int reversed);
 
     /// Order of execution:
     ///     -# Tries to access left node if possible
@@ -61,7 +67,8 @@ struct tree_methods {
     /// @brief Transverses the tree and calls a function as it goes
     /// @param root Tree to be transversed
     /// @param function A function that takes a @ref Tree "tree" as a parameter and returns void
-    void (*inorder)(Tree root, void function(Tree));
+    /// @param reversed Reverse the order of execution
+    void (*inorder)(Tree root, void function(Tree), int reversed);
 
     /// Order of execution:
     ///     -# Tries to access left node if possible
@@ -73,7 +80,8 @@ struct tree_methods {
     /// @brief Transverses the tree and calls a function as it goes
     /// @param root Tree to be transversed
     /// @param function A function that takes a @ref Tree "tree" as a parameter and returns void
-    void (*postorder)(Tree root, void function(Tree));
+    /// @param reversed Reverse the order of execution
+    void (*postorder)(Tree root, void function(Tree), int reversed);
 
     /// @brief Searchs a tree for a node containing an @ref Item
     /// @param root Tree to be searched in
@@ -89,11 +97,26 @@ struct tree_methods {
     /// @param root Tree to be measured
     int (*count)(Tree root);
 
+    /// @brief Calculates number of elements matching item
+    /// @param root Tree to be measured
+    /// @param item Item to be filtered out
+    int (*count_filtered)(Tree root, Item item);
+
     /// @brief Converts a branch into an ordered array
     /// @param branch Branch to be converted
-    /// @param out_count Output pointer with number of elements in array
+    /// @param out_count Pointer to int to be filled with number of elements in array
+    /// @param reversed Reverses the order of the elements
+    /// @param in_count Used when you already calculated the number of elements in tree, pass NULL to recalculate
     /// @return Array of pointers
-    Tree* (*to_array)(Tree branch, int *out_count);
+    Tree* (*to_array)(Tree branch, int *out_count, int reversed, int *in_count);
+
+    /// @brief Converts a branch into an array filtering by item
+    /// @param branch Branch to be converted
+    /// @param item Item to be filtered out
+    /// @param out_count Pointer to int to be filled with number of elements in array
+    /// @param in_count Used when you already calculated the number of elements in tree, pass NULL to recalculate
+    /// @return Array of pointers
+    Tree* (*to_array_filtered)(Tree branch, Item item, int *out_count, int *in_count);
 
     /// @brief Searches tree for its greatest value node
     /// @param root Tree to be searched

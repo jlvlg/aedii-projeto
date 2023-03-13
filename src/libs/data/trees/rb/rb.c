@@ -234,9 +234,11 @@ static void handle_double_black(RB *root, RB node, int nil) {
         }
 }
 
-static void insert(RB *root, RB leaf) {
+static void insert(RB *root, RB leaf, int *error) {
     int cmp;
     Tree tree_leaf = leaf, track = NULL;
+
+    *error = 0;
     
     for (Tree search = *root; search != NULL;) {
         track = search;
@@ -244,6 +246,7 @@ static void insert(RB *root, RB leaf) {
 
         switch (cmp) {
             case 0:
+                *error = 1;
                 tree.kill(leaf);
                 return;
             case -1:
@@ -252,6 +255,11 @@ static void insert(RB *root, RB leaf) {
             case 1:
                 search = search->r;
         }
+
+        // if (cmp > 0)
+        //     search = search->r;
+        // else
+        //     search = search->l;
     }
 
     leaf->parent = track;
@@ -261,6 +269,7 @@ static void insert(RB *root, RB leaf) {
     } else {
         switch (cmp) {
             case 0:
+                *error = 1;
                 tree.kill(leaf);
                 return;
             case -1:
@@ -269,6 +278,10 @@ static void insert(RB *root, RB leaf) {
             case 1:
                 track->r = leaf;
         }
+        // if (cmp > 0)
+        //     track->r = leaf;
+        // else
+        //     track->l = leaf;
     }
     
     adjust(root, leaf);
@@ -310,31 +323,9 @@ static void remove(RB *root, Item item) {
     }
 }
 
-// static void trim(RB *root, RB branch) {
-//     Tree tree_branch = branch;
-//     if (*root != NULL) {
-//         if (branch != NULL) {
-//             trim(root, tree_branch->l);
-//             trim(root, tree_branch->r);
-//             remove(root, tree_branch->item);
-//         }
-//     }
-// }
-
-static RB trim(RB *root, RB branch) {
-    int count;
-    Tree* array = tree.to_array(branch, &count);
-    for (int i = 0; i < count; i++) {
-        remove(root, array[i]->item);
-    }
-    free(array);
-    return *root;
-}
-
 const struct rb_methods rb = {
     .init = init,
     .create = create,
     .insert = insert,
-    .remove = remove,
-    .trim = trim,
+    .remove = remove
 };

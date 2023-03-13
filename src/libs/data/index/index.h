@@ -118,6 +118,17 @@ struct index_methods {
     /// @param size Size to be inserted into data file
     /// @return Position of the section in bytes
     int (*recycle)(Junk *start, int size);
+
+    /// @brief Removes a node from the junk data list
+    /// @param start Previous junk data list
+    /// @param pos Position held by the node to be removed
+    Junk (*remove_junk)(Junk start, int pos);
+
+    /// @brief Restores a mistakingly recycled section of the junk data list
+    /// @param start Pointer to junk data list
+    /// @param size Size that was passed to recycle()
+    /// @param pos Position returned by recycle()
+    void (*restore_junk)(Junk *start, int size, int pos);
 };
 
 extern const struct index_methods idx;

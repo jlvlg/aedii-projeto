@@ -63,7 +63,7 @@ static AVL balance(AVL root, int *changes, int right, int rem) {
     return root;
 }
 
-static AVL insert(AVL root, AVL leaf, int *changes) {
+static AVL insert(AVL root, AVL leaf, int *changes, int *error) {
     Tree tree_root = root, tree_leaf = leaf;
     int cmp;
 
@@ -79,24 +79,37 @@ static AVL insert(AVL root, AVL leaf, int *changes) {
 
     switch (cmp) {
         case 0:
+            *error = 1;
             tree.kill(leaf);
             return root;
         case -1:
-            tree_root->l = insert(tree_root->l, leaf, changes);
+            tree_root->l = insert(tree_root->l, leaf, changes, error);
             break;
         case 1:
-            tree_root->r = insert(tree_root->r, leaf, changes);
+            tree_root->r = insert(tree_root->r, leaf, changes, error);
     }
-        
+
+    // if (cmp > 0)
+    //     tree_root->r = insert(tree_root->r, leaf, changes);
+    // else
+    //     tree_root->l = insert(tree_root->l, leaf, changes);
+
     return balance(root, changes, cmp == 1, 0);
+}
+
+static AVL insert_wrapper(AVL root, AVL leaf, int *changes, int* error) {
+    *error = 0;
+    return insert(root, leaf, changes, error);
 }
 
 static AVL remove(AVL root, Item item, int *changes) {
     Tree tree_root = root;
     int cmp;
 
-    if (root == NULL)
+    if (root == NULL) {
+        *changes = 0;
         return NULL;
+    }
 
     cmp = types.cmp(item, tree_root->item);
 
@@ -127,33 +140,9 @@ static AVL remove(AVL root, Item item, int *changes) {
     return balance(root, changes, cmp == 1, 1);
 }
 
-// static AVL trim(AVL root, AVL branch) {
-//     Tree tree_branch = branch;
-//     int growth;
-//     if (root != NULL) {
-//         if (branch != NULL) {
-//             trim(root, tree_branch->l);
-//             trim(root, tree_branch->r);
-//             remove(root, tree_branch->item, &growth);
-//         }
-//     }
-//     return NULL;
-// }
-
-static AVL trim(AVL root, AVL branch) {
-    int count, changes;
-    Tree* array = tree.to_array(branch, &count);
-    for (int i = 0; i < count; i++) {
-        root = remove(root, array[i]->item, &changes);
-    }
-    free(array);
-    return root;
-}
-
 const struct avl_methods avl = {
     .init = init,
     .create = create,
-    .insert = insert,
-    .remove = remove,
-    .trim = trim
+    .insert = insert_wrapper,
+    .remove = remove
 };

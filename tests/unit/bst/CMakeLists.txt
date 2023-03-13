@@ -1,5 +1,5 @@
 add_executable(bst bst.c)
-target_link_libraries(bst Tree Types Util BST)
+target_link_libraries(bst BST)
 
 add_test(NAME bst-insert COMMAND bst 1 int 50 3)
 set_tests_properties(bst-insert PROPERTIES PASS_REGULAR_EXPRESSION "50")

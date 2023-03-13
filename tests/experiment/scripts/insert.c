@@ -17,7 +17,7 @@ int main() {
     RB rb_root = NULL;
     Item item;
     char type[5];
-    int changes;
+    int changes, error;
     clock_t t;
     printf("BST elapsed time,BST height,AVL elapsed time,AVL height,RB elapsed time,RB height\n");
     while (1) {
@@ -39,13 +39,13 @@ int main() {
                 item = types.String(data);
             }
             t = clock();
-            bst_root = bst.insert(bst_root, bst.create(types.copy(item)));
+            bst_root = bst.insert(bst_root, bst.create(types.copy(item)), &error);
             measure(t, bst_root, 0);
             t = clock();
-            avl_root = avl.insert(avl_root, avl.create(types.copy(item)), &changes);
+            avl_root = avl.insert(avl_root, avl.create(types.copy(item)), &changes, &error);
             measure(t, avl_root, 0);
             t = clock();
-            rb.insert(&rb_root, rb.create(types.copy(item)));
+            rb.insert(&rb_root, rb.create(types.copy(item)), &error);
             measure(t, rb_root, 1);
             printf("\n");
             types.destroy(item);
@@ -53,7 +53,7 @@ int main() {
             break;
         }
     }
-    bst.trim(bst_root, bst_root);
-    avl.trim(avl_root, avl_root);
-    rb.trim(&rb_root, rb_root);
+    tree.clear(bst_root);
+    tree.clear(avl_root);
+    tree.clear(rb_root);
 }

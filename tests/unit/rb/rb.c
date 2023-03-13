@@ -35,21 +35,22 @@ void print_node(RB node) {
 }
 
 void print(RB root) {
-    tree.preorder(root, print_node);
+    tree.preorder(root, print_node, 0);
     printf("\n\n");
 }
 
 int main(int argc, char *argv[]) {
     RB root = NULL;
+    int error;
     for (int i = 1; i < argc;) {
         switch (atoi(argv[i])) {
             case 1:
                 if (!strcmp(argv[i+1], "int")) {
-                    rb.insert(&root, rb.create(types.Int(atoi(argv[i+2]))));
+                    rb.insert(&root, rb.create(types.Int(atoi(argv[i+2]))), &error);
                 } else if (!strcmp(argv[i+1], "str")) {
-                    rb.insert(&root, rb.create(types.String(argv[i+2])));
+                    rb.insert(&root, rb.create(types.String(argv[i+2])), &error);
                 } else if (!strcmp(argv[i+1], "char")) {
-                    rb.insert(&root, rb.create(types.Char(argv[i+2][0])));
+                    rb.insert(&root, rb.create(types.Char(argv[i+2][0])), &error);
                 }
                 i += 3;
                 break;
@@ -69,5 +70,5 @@ int main(int argc, char *argv[]) {
                 break;
         }
     }
-    rb.trim(&root, root);
+    tree.clear(root);
 }

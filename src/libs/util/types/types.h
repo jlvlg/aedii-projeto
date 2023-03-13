@@ -16,6 +16,7 @@ typedef enum type {
 /// Groups data with its actual type
 typedef struct item {
     void* data; ///< void pointer to stored data
+    int pos;
     Type type; ///< Actual type of stored data
 } Item;
 

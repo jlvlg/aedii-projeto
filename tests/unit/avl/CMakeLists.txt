@@ -1,5 +1,5 @@
 add_executable(avl avl.c)
-target_link_libraries(avl Tree Types AVL)
+target_link_libraries(avl AVL)
 
 add_test(NAME avl-insert COMMAND avl 1 int 50 3)
 set_tests_properties(avl-insert PROPERTIES PASS_REGULAR_EXPRESSION "50:0")

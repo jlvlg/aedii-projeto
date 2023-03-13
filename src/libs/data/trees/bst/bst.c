@@ -12,7 +12,7 @@ static BST create(Item item) {
     return init(util.safe_malloc(sizeof(BST_Node)), item);
 }
 
-static BST insert(BST root, BST leaf) {
+static BST insert(BST root, BST leaf, int *error) {
     if (leaf == NULL)
         return root;
     if (root == NULL) 
@@ -20,16 +20,27 @@ static BST insert(BST root, BST leaf) {
 
     switch (types.cmp(leaf->item, root->item)) {
         case 0:
+            *error = 1;
             tree.kill(leaf);
             break;
         case -1:
-            root->l = insert(root->l, leaf);
+            root->l = insert(root->l, leaf, error);
             break;
         case 1:
-            root->r = insert(root->r, leaf);
+            root->r = insert(root->r, leaf, error);
     }
+
+    // if (types.cmp(leaf->item, root->item) > 0)
+    //     root->r = insert(root->r, leaf);
+    // else
+    //     root->l = insert(root->l, leaf);
         
     return root;
+}
+
+static BST insert_wrapper(BST root, BST leaf, int *error) {
+    *error = 0;
+    return insert(root, leaf, error);
 }
 
 static BST remove(BST root, Item item) {
@@ -59,31 +70,9 @@ static BST remove(BST root, Item item) {
     return root;
 }
 
-// static BST trim(BST root, BST branch) {
-//     if (root != NULL) {
-//         if (branch != NULL) {
-//             trim(root, branch->l);
-//             trim(root, branch->r);
-//             remove(root, branch->item);
-//         }
-//     }
-//     return NULL;
-// }
-
-static BST trim(BST root, BST branch) {
-    int count;
-    Tree* array = tree.to_array(branch, &count);
-    for (int i = 0; i < count; i++) {
-        root = remove(root, array[i]->item);
-    }
-    free(array);
-    return root;
-}
-
 const struct bst_methods bst = {
     .init = init,
     .create = create,
-    .insert = insert,
-    .remove = remove,
-    .trim = trim
+    .insert = insert_wrapper,
+    .remove = remove
 };

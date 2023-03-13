@@ -30,7 +30,7 @@ static RB_Index create_rb(Item item, int pos) {
 static Junk dump(Junk start, int size, int pos) {
     if (size <= 0)
         return start;
-    if (start == NULL || size > start->size) {
+    if (start == NULL || size >= start->size) {
         Junk junk = util.safe_malloc(sizeof(JunkNode));
         junk->size = size;
         junk->pos = pos;
@@ -56,6 +56,16 @@ static int recycle(Junk* start, int size) {
     *start = pop(*start, &old_size, &pos);
     *start = dump(*start, old_size - size, pos + size);
     return pos;
+}
+
+static Junk remove_junk(Junk start, int pos) {
+    if (start != NULL) {
+        int _;
+        if (pos == start->pos)
+            start = pop(start, &_, &_);
+        start->next = remove_junk(start->next, pos);
+    }
+    return start;
 }
 
 static void add_junk_to_array(json_object *array, Junk node) {
@@ -93,6 +103,29 @@ static Junk retrieve_junk(char* filename) {
     }
     json_object_put(json);
     return start;
+}
+
+static Junk destroy_junk(Junk junk) {
+    if (junk != NULL) {
+        junk->next = destroy_junk(junk->next);
+        free(junk);
+    }
+    return NULL;
+}
+
+static void restore_junk(Junk *start, int size, int pos) {
+    Junk seek, track = NULL;
+    for (seek = *start; seek != NULL && seek->pos != pos; track = seek);
+    if (seek != NULL) {
+        int old_size, old_pos;
+        if (track == NULL) {
+            *start = pop(*start, &old_size, &old_pos);
+            *start = dump(*start, size + old_size, pos);
+            return;
+        }
+        track->next = pop(seek, &old_size, &old_pos);
+        track->next = dump(seek, size + old_size, pos);
+    }
 }
 
 static void add_bst_to_array(json_object *array, BST_Index node) {
@@ -187,6 +220,7 @@ static BST_Index retrieve_bst(char* filename) {
     json_object *json = json_object_from_file(filename);
     json_object *node, *key, *pos;
     Item data;
+    int success;
 
     if (json == NULL)
         return NULL;
@@ -203,9 +237,9 @@ static BST_Index retrieve_bst(char* filename) {
                 data = types.String(json_object_get_string(key));
                 break;
             default:
-                return bst.trim(root, root);
+                return tree.clear(root);
         }
-        root = bst.insert(root, create_bst(data, json_object_get_int(pos)));
+        root = bst.insert(root, create_bst(data, json_object_get_int(pos)), &success);
     }
     json_object_put(json);
     return root;
@@ -216,7 +250,7 @@ static AVL_Index retrieve_avl(char* filename) {
     json_object *json = json_object_from_file(filename);
     json_object *node, *key, *pos;
     Item data;
-    int changes;
+    int changes, success;
 
     if (json == NULL)
         return NULL;
@@ -233,9 +267,9 @@ static AVL_Index retrieve_avl(char* filename) {
                 data = types.String(json_object_get_string(key));
                 break;
             default:
-                return avl.trim(root, root);
+                return tree.clear(root);
         }
-        root = avl.insert(root, create_avl(data, json_object_get_int(pos)), &changes);
+        root = avl.insert(root, create_avl(data, json_object_get_int(pos)), &changes, &success);
     }
     json_object_put(json);
     return root;
@@ -246,6 +280,7 @@ static RB_Index retrieve_rb(char* filename) {
     json_object *json = json_object_from_file(filename);
     json_object *node, *key, *pos;
     Item data;
+    int success;
 
     if (json == NULL)
         return NULL;
@@ -262,9 +297,9 @@ static RB_Index retrieve_rb(char* filename) {
                 data = types.String(json_object_get_string(key));
                 break;
             default:
-                return rb.trim(&root, root);
+                return tree.clear(root);
         }
-        rb.insert(&root, create_rb(data, json_object_get_int(pos)));
+        rb.insert(&root, create_rb(data, json_object_get_int(pos)), &success);
     }
     json_object_put(json);
     return root;
@@ -283,5 +318,7 @@ const struct index_methods idx = {
     .retrieve_rb = retrieve_rb,
     .retrieve_junk = retrieve_junk,
     .dump = dump,
-    .recycle = recycle
+    .recycle = recycle,
+    .remove_junk = remove_junk,
+    .restore_junk = restore_junk
 };

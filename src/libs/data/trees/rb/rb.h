@@ -32,20 +32,15 @@ struct rb_methods {
     /// @brief Inserts a node into a tree
     /// @param root Tree to be inserted into
     /// @param leaf Node to be inserted
+    /// @param error Is set to 0 if the operation succeded else 1
     /// @return Updated tree
-    void (*insert)(RB *root, RB leaf);
+    void (*insert)(RB *root, RB leaf, int *error);
 
     /// @brief Searches a tree for a node containing an item and removes it
     /// @param root Tree to be removed from
     /// @param item Item to be removed
     /// @return Updated tree
     void (*remove)(RB *root, Item item);
-
-    /// @brief Removes an entire branch from a tree
-    /// @param root Root of the tree
-    /// @param branch Branch to be removed
-    /// @return NULL pointer
-    RB (*trim)(RB *root, RB branch);
 };
 
 extern const struct rb_methods rb;
