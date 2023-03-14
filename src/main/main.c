@@ -188,6 +188,7 @@ int main() {
     keypad(stdscr, TRUE);
     mousemask(ALL_MOUSE_EVENTS, NULL);
 
+
     /* MAIN WINDOW */
     cur_panel = border_panel(&cur_win, 24, 80, 0, 0);
     panels[n_panels++] = cur_panel;
@@ -195,6 +196,27 @@ int main() {
     mvwaddch(cur_win, 0, 9, ACS_TTEE);
     mvwvline(cur_win, 1, 9, ACS_VLINE, 22);
     mvwaddch(cur_win, 23, 9, ACS_BTEE);
+
+    mvwprintw(cur_win, 2, 19, " /$$   /$$ /$$$$$$$$ /$$   /$$ /$$$$$$$   /$$$$$$ ");
+    mvwprintw(cur_win, 3, 19, "| $$$ | $$| $$_____/| $$  | $$| $$__  $$ /$$__  $$");
+    mvwprintw(cur_win, 4, 19, "| $$$$| $$| $$      | $$  | $$| $$  \\ $$| $$  \\ $$");
+    mvwprintw(cur_win, 5, 19, "| $$ $$ $$| $$$$$   | $$  | $$| $$$$$$$/| $$$$$$$$");
+    mvwprintw(cur_win, 6, 19, "| $$  $$$$| $$__/   | $$  | $$| $$__  $$| $$__  $$");
+    mvwprintw(cur_win, 7, 19, "| $$\\  $$$| $$      | $$  | $$| $$  \\ $$| $$  | $$");
+    mvwprintw(cur_win, 8, 19, "| $$ \\  $$| $$$$$$$$|  $$$$$$/| $$  | $$| $$  | $$");
+    mvwprintw(cur_win, 9, 19, "|__/  \\__/|________/ \\______/ |__/  |__/|__/  |__/");
+    mvwprintw(cur_win, 10, 19, "        /$$$$$$   /$$$$$$  /$$$$$$$  /$$$$$$$     ");
+    mvwprintw(cur_win, 11, 19, "       /$$__  $$ /$$__  $$| $$__  $$| $$__  $$    ");
+    mvwprintw(cur_win, 12, 19, "      | $$  \\__/| $$  \\ $$| $$  \\ $$| $$  \\ $$    ");
+    mvwprintw(cur_win, 13, 19, "      | $$      | $$  | $$| $$$$$$$/| $$$$$$$/    ");
+    mvwprintw(cur_win, 14, 19, "      | $$      | $$  | $$| $$__  $$| $$____/     ");
+    mvwprintw(cur_win, 15, 19, "      | $$    $$| $$  | $$| $$  \\ $$| $$          ");
+    mvwprintw(cur_win, 16, 19, "      |  $$$$$$/|  $$$$$$/| $$  | $$| $$          ");
+    mvwprintw(cur_win, 17, 19, "       \\______/  \\______/ |__/  |__/|__/          ");
+    mvwprintw(cur_win, 19, 40, "EMPLOYEE");
+    mvwprintw(cur_win, 20, 39, "MANAGEMENT");
+    mvwprintw(cur_win, 21, 41, "SYSTEM");
+
 
     /* NAVIGATION MENU */
     cur_menu = menu_panel(&cur_win, &cur_panel, 6, 8, 1, 1,
