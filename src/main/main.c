@@ -1,8 +1,10 @@
 #include <ctype.h>
+#include <eti.h>
 #include <stdlib.h>
 #include <curses.h>
 #include <panel.h>
 #include <form.h>
+#include <regex.h>
 #include <menu.h>
 #include <string.h>
 #include "data.h"
@@ -120,38 +122,55 @@ void list_employees(Table t, MENU *filters, MENU *list, ITEM ***employee_items, 
 
 void clear_form(FORM *form) {
     FIELD **fields = form_fields(form);
-    for (int i = 0; i < 3; i++) {
+    for (int i = 0; fields != NULL && fields[i] != NULL; i++) {
         set_current_field(form, fields[i]);
         form_driver(form, REQ_CLR_FIELD);
     }
-    set_current_field(form, fields[0]);
+    if (fields != NULL)
+        set_current_field(form, fields[0]);
 }
 
-void print_centered(WINDOW *win, int y, char* text) {
-    mvwprintw(win, y, (getmaxx(win) - strlen(text)) / 2, "%s", text);
+void print_centered(WINDOW *win, int y, char* format, char* text) {
+    int length = snprintf(NULL, 0, format, text);
+    mvwprintw(win, y, (getmaxx(win) - length) / 2, format, text);
 }
 
-void show_warning(PANEL *panel, char* message) {
+void show_warning(PANEL **panels, PANEL *panel, char* format, char* message) {
     WINDOW *win = panel_window(panel);
+    curs_set(0);
     top_panel(panel);
-    wmove(win, 2, 2);
+    wmove(win, 2, 1);
     wclrtoeol(win);
-    print_centered(win, 2, message);
+    print_centered(win, 2, format, message);
     mvwaddch(win, 2, 42, ACS_VLINE);
+    update_panels();
+    doupdate();
+    while (getch() == KEY_MOUSE);
+    if (panel_below(panel) == panels[4])
+        curs_set(1);
+    top_panel(panel_below(panel));
+}
+
+char* get_string(FIELD *field) {
+    int i;
+    char *buffer = util.init_string(field_buffer(field, 0));
+    for (i = strlen(buffer); i > 0 && isspace(buffer[i-1]); i--);
+    buffer[i] = '\0';
+    return buffer;
 }
 
 int main() {
     int ch, n_windows, n_panels, n_menus, n_forms, n_employees;
     MEVENT event;
     Table t;
-    /* MAIN, NAV, LIST, EMPLOYEE_INFO, SEARCH, WARNING */
-    WINDOW *windows[6], *cur_win;
-    /* MAIN, NAV, LIST, EMPLOYEE_INFO, SEARCH, WARNING */
-    PANEL *panels[6], *cur_panel;
-    /* NAV, LIST_FILTERS, LIST_ITEMS, EMPLOYEE_INFO*/
-    MENU *menus[4], *cur_menu;
-    /* SEARCH */
-    FORM *forms[1], *cur_form;
+    /* MAIN, NAV, LIST, EMPLOYEE_INFO, SEARCH, WARNING, CREATE_EMPLOYEE */
+    WINDOW *windows[7], *cur_win;
+    /* MAIN, NAV, LIST, EMPLOYEE_INFO, SEARCH, WARNING, CREATE_EMPLOYEE */
+    PANEL *panels[7], *cur_panel;
+    /* NAV, LIST_FILTERS, LIST_ITEMS, EMPLOYEE_INFO, CREATE_EMPLOYEE*/
+    MENU *menus[5], *cur_menu;
+    /* SEARCH, CREATE_EMPLOYEE */
+    FORM *forms[2], *cur_form;
     ITEM **employee_items = NULL;
     Employee *employees = NULL, *selected = NULL, found;
     char **briefs = NULL;
@@ -268,13 +287,14 @@ int main() {
     hide_panel(cur_panel);
 
     /* SEARCH */
-    FIELD *form0fields[] = {
-        new_field(1, 39, 2, 11, 0, 0),
-        new_field(1, 39, 7, 11, 0, 0),
-        new_field(1, 39, 12, 11, 0, 0),
-        NULL
-    };
-    cur_form = form_panel(&cur_win, &cur_panel, 22, 69, 1, 10, form0fields);
+    cur_form = form_panel(&cur_win, &cur_panel, 22, 69, 1, 10, 
+        (FIELD*[]) {
+            new_field(1, 39, 2, 11, 0, 0),
+            new_field(1, 39, 7, 11, 0, 0),
+            new_field(1, 39, 12, 11, 0, 0),
+            NULL
+        }
+    );
     forms[n_forms++] = cur_form;
     panels[n_panels++] = cur_panel;
     windows[n_windows++] = cur_win;
@@ -291,15 +311,16 @@ int main() {
             "Phone:  "
         };
         for (int i = 1; i <= 3; i++) {
-            mvwaddch(cur_win, i*5-1, 18, ACS_ULCORNER);
-            mvwhline(cur_win, i*5-1, 19, ACS_HLINE, 39);
-            mvwaddch(cur_win, i*5-1, 58, ACS_URCORNER);
-            mvwaddch(cur_win, i*5, 18, ACS_VLINE);
-            mvwprintw(cur_win, i*5, 10, "%s", labels[i-1]);
-            mvwaddch(cur_win, i*5, 58, ACS_VLINE);
-            mvwaddch(cur_win, i*5+1, 18, ACS_LLCORNER);
-            mvwhline(cur_win, i*5+1, 19, ACS_HLINE, 39);
-            mvwaddch(cur_win, i*5+1, 58, ACS_LRCORNER);
+            WINDOW *win = form_sub(cur_form);
+            mvwaddch(win, i*5-4, 10, ACS_ULCORNER);
+            mvwhline(win, i*5-4, 11, ACS_HLINE, 39);
+            mvwaddch(win, i*5-4, 50, ACS_URCORNER);
+            mvwaddch(win, i*5-3, 10, ACS_VLINE);
+            mvwprintw(win, i*5-3, 2, "%s", labels[i-1]);
+            mvwaddch(win, i*5-3, 50, ACS_VLINE);
+            mvwaddch(win, i*5-2, 10, ACS_LLCORNER);
+            mvwhline(win, i*5-2, 11, ACS_HLINE, 39);
+            mvwaddch(win, i*5-2, 50, ACS_LRCORNER);
         }
     }
 
@@ -308,8 +329,55 @@ int main() {
     panels[n_panels++] = cur_panel;
     windows[n_windows++] = cur_win;
     box(cur_win, 0, 0);
-    print_centered(cur_win, 6, "Press any key to return");
+    print_centered(cur_win, 6, "%s", "Press any key to return");
     hide_panel(cur_panel);
+
+    /* CREATE EMPLOYEE */
+    FIELD *menu1fields[] = {
+        new_field(1, 55, 2, 11, 0, 0),
+        new_field(1, 55, 5, 11, 0, 0),
+        new_field(1, 55, 8, 11, 0, 0),
+        new_field(1, 55, 11, 11, 0, 0),
+        new_field(1, 55, 14, 11, 0, 0),
+        NULL
+    };
+    cur_form = form_panel(&cur_win, &cur_panel, 22, 69, 1, 10, menu1fields);
+    cur_menu = new_menu((ITEM*[]) {new_item("Save", ""), NULL});
+    forms[n_forms++] = cur_form;
+    panels[n_panels++] = cur_panel;
+    windows[n_windows++] = cur_win;
+    menus[n_menus++] = cur_menu;
+    set_form_sub(cur_form, derwin(cur_win, 16, 69, 0, 0));
+    set_menu_mark(cur_menu, NULL);
+    menu_opts_off(cur_menu, O_SHOWDESC);
+    set_menu_win(cur_menu, cur_win);
+    set_menu_sub(cur_menu, derwin(cur_win, 1, 4, 18, 32));
+    form_opts_off(cur_form, O_BS_OVERLOAD);
+    post_menu(cur_menu);
+    post_form(cur_form);
+    hide_panel(cur_panel);
+    box(cur_win, 0, 0);
+    {
+        char *labels[] = {
+            "ID:     ",
+            "SSN:    ",
+            "Name:   ",
+            "E-mail: ",
+            "Phone:  "
+        };
+        for (int i = 1; i <= 5; i++) {
+            WINDOW *win = form_sub(cur_form);
+            mvwaddch(win, i*3-2, 10, ACS_ULCORNER);
+            mvwhline(win, i*3-2, 11, ACS_HLINE, 55);
+            mvwaddch(win, i*3-2, 66, ACS_URCORNER);
+            mvwaddch(win, i*3-1, 10, ACS_VLINE);
+            mvwprintw(win, i*3-1, 2, "%s", labels[i-1]);
+            mvwaddch(win, i*3-1, 66, ACS_VLINE);
+            mvwaddch(win, i*3, 10, ACS_LLCORNER);
+            mvwhline(win, i*3, 11, ACS_HLINE, 55);
+            mvwaddch(win, i*3, 66, ACS_LRCORNER);
+        }
+    }
 
     /* MAINLOOP */
     update_panels();
@@ -326,7 +394,11 @@ int main() {
                             menu_driver(menus[0], KEY_MOUSE);
                             cur = current_item(menus[0]);
                             if (cur == items[0]) {
-                                
+                                /* CREATE */
+                                curs_set(1);
+                                clear_form(forms[1]);
+                                show_panel(panels[6]);
+                                top_panel(panels[6]);
                             } else if (cur == items[1]) {
                                 /* LIST */
                                 curs_set(0);
@@ -381,6 +453,79 @@ int main() {
                             curs_set(1);
                             ungetmouse(&event);
                             form_driver(forms[0], KEY_MOUSE);
+                        } else if (panel_below(NULL) == panels[6] && event.bstate & BUTTON1_DOUBLE_CLICKED && wenclose(menu_sub(menus[4]), event.y, event.x)) {
+                            int valid = 1;
+                            regex_t regex;
+                            char *buffers[5], *labels[] = {
+                                "ID",
+                                "SSN",
+                                "name",
+                                "e-mail",
+                                "phone"
+                            };
+                            FIELD **fields = form_fields(forms[1]);
+                            ungetmouse(&event);
+                            for (int i = 0; i < 5; i++) {
+                                set_current_field(forms[1], fields[i]);
+                                form_driver(forms[1], REQ_VALIDATION);
+                                buffers[i] = get_string(fields[i]);
+                                if (buffers[i][0] == '\0') {
+                                    valid = 0;
+                                    show_warning(panels, panels[5], "Field %s cannot be empty", labels[i]);
+                                }
+                            }
+                            set_current_field(forms[1], fields[0]);
+                            if (valid) {
+                                regcomp(&regex, "^[0-9]{1,9}$", REG_EXTENDED);
+                                if (regexec(&regex, buffers[0], 0, NULL, 0)) {
+                                    valid = 0;
+                                    show_warning(panels, panels[5], "%s", "ID must be an integer");
+                                }
+                                regfree(&regex);
+                                regcomp(&regex, "^[0-9]{9}$", REG_EXTENDED);
+                                if (regexec(&regex, buffers[1], 0, NULL, 0)) {
+                                    valid = 0;
+                                    show_warning(panels, panels[5], "%s", "SSN must be a 9 digit integer");
+                                }
+                                regfree(&regex);
+                                regcomp(&regex, "^[a-zA-Z ]$", REG_EXTENDED);
+                                if (regexec(&regex, buffers[2], 0, NULL, 0)) {
+                                    valid = 0;
+                                    show_warning(panels, panels[5], "%s", "Name must not contain special characters");
+                                }
+                                regfree(&regex);
+                                regcomp(&regex, "^[0-9]{10}$", REG_EXTENDED);
+                                if (regexec(&regex, buffers[4], 0, NULL, 0)) {
+                                    valid = 0;
+                                    show_warning(panels, panels[5], "%s", "Phone must be a 10 digit integer");
+                                }
+                                regfree(&regex);
+                                if (valid) {
+                                    int res;
+                                    Employee employee = data.create(atoi(buffers[0]), buffers[1], buffers[2], buffers[3], buffers[4]);
+                                    res = table.add_employee(&t, employee);
+                                    data.destroy(&employee);
+                                    switch (res) {
+                                        case 0:
+                                            show_warning(panels, panels[5], "%s", "Employee successfully registered");
+                                            break;
+                                        case -1:
+                                            show_warning(panels, panels[5], "%s", "ID already registered");
+                                            break;
+                                        case -2:
+                                            show_warning(panels, panels[5], "%s", "E-mail already registered");
+                                            break;
+                                        case -3:
+                                            show_warning(panels, panels[5], "%s", "Phone already registered");
+                                            break;
+                                        case -4:
+                                            show_warning(panels, panels[5], "%s", "Unexpected error while writing");
+                                    }
+                                }
+                            }
+                            curs_set(1);
+                            for (int i = 0; i < 5; i++)
+                                free(buffers[i]);
                         }
                     } else if (event.bstate & BUTTON4_PRESSED || event.bstate & BUTTON5_PRESSED) {
                         if (panel_below(NULL) == panels[2] && wenclose(menu_sub(menus[2]), event.y, event.x)) {
@@ -393,17 +538,15 @@ int main() {
                 if (panel_below(NULL) == panels[4]) {
                     /* SEARCH */
                     switch (ch) {
-                        case 10: {
+                        case '\n': {
                             int i, res;
                             char *buffer;
                             FIELD **fields = form_fields(forms[0]), *cur = current_field(forms[0]);
                             form_driver(forms[0], REQ_VALIDATION);
-                            buffer = util.init_string(field_buffer(cur, 0));
-                            for (i = strlen(buffer); i > 0 && isspace(buffer[i-1]); i--);
-                            buffer[i] = '\0';
+                            buffer = get_string(cur);
                             curs_set(0);
                             if (buffer[0] == '\0')
-                                show_warning(panels[5], "Search field cannot be empty");
+                                show_warning(panels, panels[5], "%s", "Search field cannot be empty");
                             else {
                                 selected = &found;
                                 if (cur == fields[0])
@@ -415,7 +558,7 @@ int main() {
                                 if (!res)
                                     show_employee(panels[3], selected);
                                 else
-                                    show_warning(panels[5], "Employee not found");
+                                    show_warning(panels, panels[5], "%s", "Employee not found");
                                 clear_form(forms[0]);
                             }
                             free(buffer);
@@ -442,11 +585,30 @@ int main() {
                         default:
                             form_driver(forms[0], ch);
                     }
-                } else if (panel_below(NULL) == panels[5]) {
-                    /* WARNING */
-                    if (panel_below(panels[5]) == panels[4])
-                        curs_set(1);
-                    top_panel(panel_below(panels[5]));
+                } else if (panel_below(NULL) == panels[6]) {
+                    switch (ch) {
+                        case KEY_UP:
+                            form_driver(forms[1], REQ_PREV_FIELD);
+                            break;
+                        case '\t':
+                        case KEY_DOWN:
+                            form_driver(forms[1], REQ_NEXT_FIELD);
+                            break;
+                        case KEY_LEFT:
+                            form_driver(forms[1], REQ_LEFT_CHAR);
+                            break;
+                        case KEY_RIGHT:
+                            form_driver(forms[1], REQ_RIGHT_CHAR);
+                            break;
+                        case KEY_BACKSPACE:
+                            form_driver(forms[1], REQ_DEL_PREV);
+                            break;
+                        case KEY_DC:
+                            form_driver(forms[1], REQ_DEL_CHAR);
+                            break;
+                        default:
+                            form_driver(forms[1], ch);
+                    }
                 }
         }
         update_panels();

@@ -117,17 +117,17 @@ static void restore_junk(Junk *start, int size, int pos) {
     int old_size, old_pos;
     for (seek = *start; seek != NULL && seek->pos != pos + size; seek = seek->next)
         track = seek;
+    if (seek == NULL) {
+        *start = dump(*start, size, pos);
+        return;
+    }
     if (track == NULL) {
-        if (seek == NULL) {
-            *start = dump(*start, size, pos);
-            return;
-        }
         *start = pop(*start, &old_size, &old_pos);
         *start = dump(*start, size + old_size, pos);
         return;
     }
-    track->next = pop(seek, &old_size, &old_pos);
-    track->next = dump(seek, size + old_size, pos);
+    track->next = pop(track->next, &old_size, &old_pos);
+    track->next = dump(track->next, size + old_size, pos);
 }
 
 static void add_tree_to_array(json_object *array, Tree node) {

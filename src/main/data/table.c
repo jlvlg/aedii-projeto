@@ -44,11 +44,15 @@ static int close_table(Table *t) {
 }
 
 static int error_handler(Table *t, Item *ssn, Item *email, Item *phone, json_object *json, int *size, int *free_section) {
-    int changes;
-    if (ssn != NULL)
+    int changes, error = -1;
+    if (ssn != NULL) {
         t->ssn_index = avl.remove(t->ssn_index, *ssn, &changes, idx.copy);
-    if (email != NULL)
+        error--;
+    }
+    if (email != NULL) {
         t->email_index = bst.remove(t->email_index, *email, idx.copy);
+        error--;
+    }
     if (phone != NULL)
         rb.remove(&t->phone_index, *phone, idx.copy);
     if (free_section != NULL && *free_section >= 0 && size != NULL)
