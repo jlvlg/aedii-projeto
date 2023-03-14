@@ -234,15 +234,32 @@ static void handle_double_black(RB *root, RB node, int nil) {
         }
 }
 
-static void insert(RB *root, RB leaf) {
+static void insert(RB *root, RB leaf, int *error, Item copyfun(Item)) {
+    int cmp;
     Tree tree_leaf = leaf, track = NULL;
+
+    *error = 0;
     
     for (Tree search = *root; search != NULL;) {
         track = search;
-        if (types.cmp(tree_leaf->item, track->item) > 0)
-            search = search->r;
-        else 
-            search = search->l;
+        cmp = types.cmp(tree_leaf->item, track->item);
+
+        switch (cmp) {
+            case 0:
+                *error = 1;
+                tree.kill(leaf);
+                return;
+            case -1:
+                search = search->l;
+                break;
+            case 1:
+                search = search->r;
+        }
+
+        // if (cmp > 0)
+        //     search = search->r;
+        // else
+        //     search = search->l;
     }
 
     leaf->parent = track;
@@ -250,16 +267,27 @@ static void insert(RB *root, RB leaf) {
     if (track == NULL) {
         *root = leaf;
     } else {
-        if (types.cmp(tree_leaf->item, track->item) > 0)
-            track->r = leaf;
-        else 
-            track->l = leaf;
+        switch (cmp) {
+            case 0:
+                *error = 1;
+                tree.kill(leaf);
+                return;
+            case -1:
+                track->l = leaf;
+                break;
+            case 1:
+                track->r = leaf;
+        }
+        // if (cmp > 0)
+        //     track->r = leaf;
+        // else
+        //     track->l = leaf;
     }
     
     adjust(root, leaf);
 }
 
-static void remove(RB *root, Item item) {
+static void remove(RB *root, Item item, Item copyfun(Item)) {
     for (Tree search = *root; search != NULL;) {
         switch (types.cmp(item, search->item)) {
             case 0:
@@ -279,8 +307,9 @@ static void remove(RB *root, Item item) {
                         tree.kill(search);
                     } break;
                     case 2: {
-                        Item child_item = types.copy(tree.max(search->l)->item);
-                        remove(root, child_item);
+                        Item child_item = copyfun(tree.max(search->l)->item);
+                        remove(root, child_item, copyfun);
+                        types.destroy(search->item);
                         search->item = child_item;
                     }
                 } break;
@@ -295,30 +324,9 @@ static void remove(RB *root, Item item) {
     }
 }
 
-// static void trim(RB *root, RB branch) {
-//     Tree tree_branch = branch;
-//     if (*root != NULL) {
-//         if (branch != NULL) {
-//             trim(root, tree_branch->l);
-//             trim(root, tree_branch->r);
-//             remove(root, tree_branch->item);
-//         }
-//     }
-// }
-
-static RB trim(RB *root, RB branch) {
-    int count;
-    Tree* array = tree.to_array(branch, &count);
-    for (int i = 0; i < count; i++) {
-        remove(root, array[i]->item);
-    }
-    return *root;
-}
-
 const struct rb_methods rb = {
     .init = init,
     .create = create,
     .insert = insert,
-    .remove = remove,
-    .trim = trim,
+    .remove = remove
 };

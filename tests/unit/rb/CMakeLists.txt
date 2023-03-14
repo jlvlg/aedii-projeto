@@ -1,5 +1,5 @@
 add_executable(rb rb.c)
-target_link_libraries(rb RB Tree Types)
+target_link_libraries(rb RB)
 
 add_test(NAME rb-insert COMMAND rb 1 int 50 3)
 set_tests_properties(rb-insert PROPERTIES PASS_REGULAR_EXPRESSION "50:b:r:nil")

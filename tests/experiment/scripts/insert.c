@@ -16,30 +16,36 @@ int main() {
     AVL avl_root = NULL;
     RB rb_root = NULL;
     Item item;
-    char type[4];
-    int changes;
+    char type[5];
+    int changes, error;
     clock_t t;
     printf("BST elapsed time,BST height,AVL elapsed time,AVL height,RB elapsed time,RB height\n");
     while (1) {
-        scanf("%3[^\n]%*c", type);
+        fgets(type, 5, stdin);
+        type[strcspn(type, "\n")] = '\0';
         if (strcmp(type, "out")) {
             if (!strcmp(type, "int")) {
                 char data[100];
-                scanf("%99[^\n]%*c", data);
-                item = types.Int(atoi(data));
+                fgets(data, 100, stdin);
+                data[strcspn(data, "\n")] = '\0';
+                int num = atoi(data);
+                if (!num)
+                    continue;
+                item = types.Int(num);
             } else if (!strcmp(type, "str")) {
                 char data[10000];
-                scanf("%9999[^\n]%*c", data);
+                fgets(data, 10000, stdin);
+                data[strcspn(data, "\n")] = '\0';
                 item = types.String(data);
             }
             t = clock();
-            bst_root = bst.insert(bst_root, bst.create(types.copy(item)));
+            bst_root = bst.insert(bst_root, bst.create(types.copy(item)), &error, types.copy);
             measure(t, bst_root, 0);
             t = clock();
-            avl_root = avl.insert(avl_root, avl.create(types.copy(item)), &changes);
+            avl_root = avl.insert(avl_root, avl.create(types.copy(item)), &changes, &error, types.copy);
             measure(t, avl_root, 0);
             t = clock();
-            rb.insert(&rb_root, rb.create(types.copy(item)));
+            rb.insert(&rb_root, rb.create(types.copy(item)), &error, types.copy);
             measure(t, rb_root, 1);
             printf("\n");
             types.destroy(item);
@@ -47,7 +53,7 @@ int main() {
             break;
         }
     }
-    bst.trim(bst_root, bst_root);
-    avl.trim(avl_root, avl_root);
-    rb.trim(&rb_root, rb_root);
+    tree.clear(bst_root);
+    tree.clear(avl_root);
+    tree.clear(rb_root);
 }

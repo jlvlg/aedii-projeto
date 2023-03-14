@@ -32,21 +32,16 @@ struct avl_methods {
     /// @param root Tree to be inserted into
     /// @param leaf Node to be inserted
     /// @param changes Tracks changes in the tree's height
+    /// @param error Is set to 0 if the operation succeded else 1
     /// @return Updated tree
-    AVL (*insert)(AVL root, AVL leaf, int* changes);
+    AVL (*insert)(AVL root, AVL leaf, int* changes, int* error, Item copyfun(Item));
 
     /// @brief Searches a tree for a node containing an item and removes it
     /// @param root Tree to be removed from
     /// @param item Item to be removed
     /// @param changes Tracks changes in the tree's height
     /// @return Updated tree
-    AVL (*remove)(AVL root, Item item, int* changes);
-
-    /// @brief Removes an entire branch from a tree
-    /// @param root Root of the tree
-    /// @param branch Branch to be removed
-    /// @return NULL pointer
-    AVL (*trim)(AVL root, AVL branch);
+    AVL (*remove)(AVL root, Item item, int* changes, Item copyfun(Item));
 };
 
 extern const struct avl_methods avl;
