@@ -1,6 +1,7 @@
 #ifndef INDEX_H
 #define INDEX_H
 
+#include "types.h"
 #include "bst.h"
 #include "avl.h"
 #include "rb.h"
@@ -8,23 +9,12 @@
 /// @file
 /// @brief File indexing methods
 
-/// BST indexing tree
-struct BST_Index {
-    BST_Node node;
+struct Index {
+    struct item item;
     int pos;
 };
 
-/// AVL indexing tree
-struct AVL_Index {
-    AVL_Node node;
-    int pos;
-};
-
-/// RB indexing tree
-struct RB_Index {
-    RB_Node node;
-    int pos;
-};
+typedef struct Index* Index;
 
 /// Used to mark sections of the data file as deleted or writable
 typedef struct Junk {
@@ -33,52 +23,19 @@ typedef struct Junk {
     struct Junk *next;
 } JunkNode;
 
-/// Pointer to struct BST_Index
-typedef struct BST_Index* BST_Index;
-/// Pointer to struct AVL_Index
-typedef struct AVL_Index* AVL_Index;
-/// Pointer to struct RB_Index
-typedef struct RB_Index* RB_Index;
 /// Pointer to JunkNode
 typedef JunkNode* Junk;
 
 /// Encapsulates functions into the idx namespace
 struct index_methods {
-    /// @brief Creates and initializes a BST_Index node
-    /// @param item Item to be used as key
-    /// @param pos Position of registry data in bytes
-    /// @return Initialized node
-    BST_Index (*create_bst)(Item item, int pos);
+    Index (*index)(Item item, int pos);
+    Index (*copy)(Index index);
 
-    /// @brief Creates and initializes an AVL_Index node
-    /// @param item Item to be used as key
-    /// @param pos Position of registry data in bytes
-    /// @return Initialized node
-    AVL_Index (*create_avl)(Item item, int pos);
-
-    /// @brief Creates and initializes a RB_Index node
-    /// @param item Item to be used as key
-    /// @param pos Position of registry data in bytes
-    /// @return Initialized node
-    RB_Index (*create_rb)(Item item, int pos);
-
-    /// @brief Saves a BST_Index tree into a JSON file
+    /// @brief Saves a tree into a JSON file
     /// @param root Tree root
     /// @param filename File name
     /// @return -1 on failure
-    int (*save_bst)(BST_Index root, char* filename);
-
-    /// @brief Saves an AVL_Index tree into a JSON file
-    /// @param root Tree root
-    /// @param filename File name
-    /// @return -1 on failure
-    int (*save_avl)(AVL_Index root, char* filename);
-
-    /// @brief Saves a RB_Index tree into a JSON file
-    /// @param root Tree root
-    /// @param filename File name
-    /// @return -1 on failure
-    int (*save_rb)(RB_Index root, char* filename);
+    int (*save_tree)(Tree root, char* filename);
 
     /// @brief Saves a Junk list into a JSON file
     /// @param junk List starting node
@@ -86,20 +43,20 @@ struct index_methods {
     /// @return -1 on failure
     int (*save_junk)(Junk junk, char* filename);
 
-    /// @brief Loads a BST_Index tree from a JSON file
+    /// @brief Loads a BST tree from a JSON file
     /// @param filename File name
     /// @return Loaded tree
-    BST_Index (*retrieve_bst)(char* filename);
+    BST (*retrieve_bst)(char* filename);
 
-    /// @brief Loads an AVL_Index tree from a JSON file
+    /// @brief Loads an AVL tree from a JSON file
     /// @param filename File name
     /// @return Loaded tree
-    AVL_Index (*retrieve_avl)(char* filename);
+    AVL (*retrieve_avl)(char* filename);
 
-    /// @brief Loads a RB_Index tree from a JSON file
+    /// @brief Loads a RB tree from a JSON file
     /// @param filename File name
     /// @return Loaded tree
-    RB_Index (*retrieve_rb)(char* filename);
+    RB (*retrieve_rb)(char* filename);
 
     /// @brief Loads a Junk list from a JSON file
     /// @param filename File name

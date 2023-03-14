@@ -9,22 +9,21 @@
 #include "json_object.h"
 #include "json_util.h"
 
-static BST_Index create_bst(Item item, int pos) {
-    BST_Index leaf = bst.init(util.safe_malloc(sizeof(struct BST_Index)), item);
-    leaf->pos = pos;
-    return leaf;
+static Index index(Item key, int pos) {
+    Index index = malloc(sizeof(struct Index));
+    index->item = *key;
+    index->pos = pos;
+    free(key);
+    return index;
 }
 
-static AVL_Index create_avl(Item item, int pos) {
-    AVL_Index leaf = avl.init(util.safe_malloc(sizeof(struct AVL_Index)), item);
-    leaf->pos = pos;
-    return leaf;
-}
-
-static RB_Index create_rb(Item item, int pos) {
-    RB_Index leaf = rb.init(util.safe_malloc(sizeof(struct RB_Index)), item);
-    leaf->pos = pos;
-    return leaf;
+static Index copy(Index index) {
+    Index new = malloc(sizeof(struct Index));
+    Item item = types.copy(index);
+    new->item = *item;
+    new->pos = index->pos;
+    free(item);
+    return new;
 }
 
 static Junk dump(Junk start, int size, int pos) {
@@ -115,108 +114,53 @@ static Junk destroy_junk(Junk junk) {
 
 static void restore_junk(Junk *start, int size, int pos) {
     Junk seek, track = NULL;
-    for (seek = *start; seek != NULL && seek->pos != pos; track = seek);
-    if (seek != NULL) {
-        int old_size, old_pos;
-        if (track == NULL) {
-            *start = pop(*start, &old_size, &old_pos);
-            *start = dump(*start, size + old_size, pos);
+    int old_size, old_pos;
+    for (seek = *start; seek != NULL && seek->pos != pos + size; seek = seek->next)
+        track = seek;
+    if (track == NULL) {
+        if (seek == NULL) {
+            *start = dump(*start, size, pos);
             return;
         }
-        track->next = pop(seek, &old_size, &old_pos);
-        track->next = dump(seek, size + old_size, pos);
+        *start = pop(*start, &old_size, &old_pos);
+        *start = dump(*start, size + old_size, pos);
+        return;
     }
+    track->next = pop(seek, &old_size, &old_pos);
+    track->next = dump(seek, size + old_size, pos);
 }
 
-static void add_bst_to_array(json_object *array, BST_Index node) {
+static void add_tree_to_array(json_object *array, Tree node) {
     if (node != NULL) {
         json_object *object = json_object_new_object();
-        Item data = ((Tree) node)->item;
-        switch (data.type) {
+        Item index = node->item;
+        switch (index->type) {
             case INT:
-                json_object_object_add(object, "key", json_object_new_int(*(int*) data.data));
+                json_object_object_add(object, "key", json_object_new_int(*(int*) index->data));
                 break;
             case CHAR:
             case STRING:
-                json_object_object_add(object, "key", json_object_new_string((char*) data.data));
+                json_object_object_add(object, "key", json_object_new_string((char*) index->data));
                 break;
         }
-        json_object_object_add(object, "pos", json_object_new_int(node->pos));
+        json_object_object_add(object, "pos", json_object_new_int(((Index) index)->pos));
         json_object_array_add(array, object);
-        add_bst_to_array(array, ((Tree) node)->l);
-        add_bst_to_array(array, ((Tree) node)->r);
+        add_tree_to_array(array, node->l);
+        add_tree_to_array(array, node->r);
     }
 }
 
-static int save_bst(BST_Index root, char* filename) {
+static int save_tree(Tree root, char* filename) {
     int result;
     json_object *json = json_object_new_array();
-    add_bst_to_array(json, root);
+    add_tree_to_array(json, root);
     result = json_object_to_file(filename, json);
     json_object_put(json);
     return result;
 }
 
-static void add_avl_to_array(json_object *array, AVL_Index node) {
-    if (node != NULL) {
-        json_object *object = json_object_new_object();
-        Item data = ((Tree) node)->item;
-        switch (data.type) {
-            case INT:
-                json_object_object_add(object, "key", json_object_new_int(*(int*) data.data));
-                break;
-            case CHAR:
-            case STRING:
-                json_object_object_add(object, "key", json_object_new_string((char*) data.data));
-                break;
-        }
-        json_object_object_add(object, "pos", json_object_new_int(node->pos));
-        json_object_array_add(array, object);
-        add_avl_to_array(array, ((Tree) node)->l);
-        add_avl_to_array(array, ((Tree) node)->r);
-    }
-}
-
-static int save_avl(AVL_Index root, char* filename) {
-    int result;
-    json_object *json = json_object_new_array();
-    add_avl_to_array(json, root);
-    result = json_object_to_file(filename, json);
-    json_object_put(json);
-    return result;
-}
-
-static void add_rb_to_array(json_object *array, RB_Index node) {
-    if (node != NULL) {
-        json_object *object = json_object_new_object();
-        Item data = ((Tree) node)->item;
-        switch (data.type) {
-            case INT:
-                json_object_object_add(object, "key", json_object_new_int(*(int*) data.data));
-                break;
-            case CHAR:
-            case STRING:
-                json_object_object_add(object, "key", json_object_new_string((char*) data.data));
-                break;
-        }
-        json_object_object_add(object, "pos", json_object_new_int(node->pos));
-        json_object_array_add(array, object);
-        add_rb_to_array(array, ((Tree) node)->l);
-        add_rb_to_array(array, ((Tree) node)->r);
-    }
-}
-
-static int save_rb(RB_Index root, char* filename) {
-    int result;
-    json_object *json = json_object_new_array();
-    add_rb_to_array(json, root);
-    result = json_object_to_file(filename, json);
-    json_object_put(json);
-    return result;
-}
-
-static BST_Index retrieve_bst(char* filename) {
-    BST_Index root = NULL;
+static BST retrieve_bst(char* filename) {
+    BST root = NULL;
     json_object *json = json_object_from_file(filename);
     json_object *node, *key, *pos;
     Item data;
@@ -239,18 +183,18 @@ static BST_Index retrieve_bst(char* filename) {
             default:
                 return tree.clear(root);
         }
-        root = bst.insert(root, create_bst(data, json_object_get_int(pos)), &success);
+        root = bst.insert(root, bst.create(index(data, json_object_get_int(pos))), &success, copy);
     }
     json_object_put(json);
     return root;
 }
 
-static AVL_Index retrieve_avl(char* filename) {
-    AVL_Index root = NULL;
+static AVL retrieve_avl(char* filename) {
+    AVL root = NULL;
     json_object *json = json_object_from_file(filename);
     json_object *node, *key, *pos;
     Item data;
-    int changes, success;
+    int success, changes;
 
     if (json == NULL)
         return NULL;
@@ -269,14 +213,14 @@ static AVL_Index retrieve_avl(char* filename) {
             default:
                 return tree.clear(root);
         }
-        root = avl.insert(root, create_avl(data, json_object_get_int(pos)), &changes, &success);
+        root = avl.insert(root, avl.create(index(data, json_object_get_int(pos))), &changes, &success, copy);
     }
     json_object_put(json);
     return root;
 }
 
-static RB_Index retrieve_rb(char* filename) {
-    RB_Index root = NULL;
+static RB retrieve_rb(char* filename) {
+    RB root = NULL;
     json_object *json = json_object_from_file(filename);
     json_object *node, *key, *pos;
     Item data;
@@ -299,20 +243,19 @@ static RB_Index retrieve_rb(char* filename) {
             default:
                 return tree.clear(root);
         }
-        rb.insert(&root, create_rb(data, json_object_get_int(pos)), &success);
+        rb.insert(&root, rb.create(index(data, json_object_get_int(pos))), &success, copy);
     }
     json_object_put(json);
     return root;
 }
+
+
 
 const struct index_methods idx = {
-    .create_bst = create_bst,
-    .create_avl = create_avl,
-    .create_rb = create_rb,
-    .save_bst = save_bst,
-    .save_avl = save_avl,
-    .save_rb = save_rb,
+    .index = index,
+    .copy = copy,
     .save_junk = save_junk,
+    .save_tree = save_tree,
     .retrieve_bst = retrieve_bst,
     .retrieve_avl = retrieve_avl,
     .retrieve_rb = retrieve_rb,

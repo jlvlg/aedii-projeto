@@ -92,7 +92,8 @@ $(document).ready(function(){initNavTree('index_8h.html',''); initResizable(); }
 
 <p>File indexing methods.  
 <a href="#details">More...</a></p>
-<div class="textblock"><code>#include &quot;<a class="el" href="bst_8h_source.html">bst.h</a>&quot;</code><br />
+<div class="textblock"><code>#include &quot;<a class="el" href="types_8h_source.html">types.h</a>&quot;</code><br />
+<code>#include &quot;bst.h&quot;</code><br />
 <code>#include &quot;<a class="el" href="avl_8h_source.html">avl.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="rb_8h_source.html">rb.h</a>&quot;</code><br />
 </div>
@@ -100,15 +101,6 @@ $(document).ready(function(){initNavTree('index_8h.html',''); initResizable(); }
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Data Structures</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_b_s_t___index.html">BST_Index</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">BST indexing tree.  <a href="struct_b_s_t___index.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_a_v_l___index.html">AVL_Index</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">AVL indexing tree.  <a href="struct_a_v_l___index.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_r_b___index.html">RB_Index</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">RB indexing tree.  <a href="struct_r_b___index.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_junk.html">Junk</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Used to mark sections of the data file as deleted or writable.  <a href="struct_junk.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -122,18 +114,6 @@ Typedefs</h2></td></tr>
 typedef struct <a class="el" href="struct_junk.html">Junk</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="index_8h.html#a361c28c3221438df64256954ed43560f">JunkNode</a></td></tr>
 <tr class="memdesc:a361c28c3221438df64256954ed43560f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Used to mark sections of the data file as deleted or writable. <br /></td></tr>
 <tr class="separator:a361c28c3221438df64256954ed43560f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af57f6b1ab25a4403276328c3d486aeb7"><td class="memItemLeft" align="right" valign="top"><a id="af57f6b1ab25a4403276328c3d486aeb7"></a>
-typedef struct <a class="el" href="struct_b_s_t___index.html">BST_Index</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="index_8h.html#af57f6b1ab25a4403276328c3d486aeb7">BST_Index</a></td></tr>
-<tr class="memdesc:af57f6b1ab25a4403276328c3d486aeb7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pointer to struct <a class="el" href="struct_b_s_t___index.html" title="BST indexing tree.">BST_Index</a>. <br /></td></tr>
-<tr class="separator:af57f6b1ab25a4403276328c3d486aeb7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9bcb83b8b5c23ea89c69b5ce9d94479b"><td class="memItemLeft" align="right" valign="top"><a id="a9bcb83b8b5c23ea89c69b5ce9d94479b"></a>
-typedef struct <a class="el" href="struct_a_v_l___index.html">AVL_Index</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="index_8h.html#a9bcb83b8b5c23ea89c69b5ce9d94479b">AVL_Index</a></td></tr>
-<tr class="memdesc:a9bcb83b8b5c23ea89c69b5ce9d94479b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pointer to struct <a class="el" href="struct_a_v_l___index.html" title="AVL indexing tree.">AVL_Index</a>. <br /></td></tr>
-<tr class="separator:a9bcb83b8b5c23ea89c69b5ce9d94479b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0015a4a63413652e97765bb938854e05"><td class="memItemLeft" align="right" valign="top"><a id="a0015a4a63413652e97765bb938854e05"></a>
-typedef struct <a class="el" href="struct_r_b___index.html">RB_Index</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="index_8h.html#a0015a4a63413652e97765bb938854e05">RB_Index</a></td></tr>
-<tr class="memdesc:a0015a4a63413652e97765bb938854e05"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pointer to struct <a class="el" href="struct_r_b___index.html" title="RB indexing tree.">RB_Index</a>. <br /></td></tr>
-<tr class="separator:a0015a4a63413652e97765bb938854e05"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4b05197800145f28052febda01b51fb7"><td class="memItemLeft" align="right" valign="top"><a id="a4b05197800145f28052febda01b51fb7"></a>
 typedef <a class="el" href="index_8h.html#a361c28c3221438df64256954ed43560f">JunkNode</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="index_8h.html#a4b05197800145f28052febda01b51fb7">Junk</a></td></tr>
 <tr class="memdesc:a4b05197800145f28052febda01b51fb7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pointer to JunkNode. <br /></td></tr>

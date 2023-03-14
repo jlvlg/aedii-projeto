@@ -12,7 +12,7 @@ static BST create(Item item) {
     return init(util.safe_malloc(sizeof(BST_Node)), item);
 }
 
-static BST insert(BST root, BST leaf, int *error) {
+static BST insert(BST root, BST leaf, int *error, Item copyfun(Item)) {
     if (leaf == NULL)
         return root;
     if (root == NULL) 
@@ -24,10 +24,10 @@ static BST insert(BST root, BST leaf, int *error) {
             tree.kill(leaf);
             break;
         case -1:
-            root->l = insert(root->l, leaf, error);
+            root->l = insert(root->l, leaf, error, copyfun);
             break;
         case 1:
-            root->r = insert(root->r, leaf, error);
+            root->r = insert(root->r, leaf, error, copyfun);
     }
 
     // if (types.cmp(leaf->item, root->item) > 0)
@@ -38,12 +38,12 @@ static BST insert(BST root, BST leaf, int *error) {
     return root;
 }
 
-static BST insert_wrapper(BST root, BST leaf, int *error) {
+static BST insert_wrapper(BST root, BST leaf, int *error, Item copyfun(Item)) {
     *error = 0;
-    return insert(root, leaf, error);
+    return insert(root, leaf, error, copyfun);
 }
 
-static BST remove(BST root, Item item) {
+static BST remove(BST root, Item item, Item copyfun(Item)) {
     if (root == NULL)
         return NULL;
     switch (types.cmp(item, root->item)) {
@@ -58,14 +58,14 @@ static BST remove(BST root, Item item) {
                 }
                 case 2:
                     types.destroy(root->item);
-                    root->item = types.copy(tree.max(root->l)->item);
-                    root->l = remove(root->l, root->item);
+                    root->item = copyfun(tree.max(root->l)->item);
+                    root->l = remove(root->l, root->item, copyfun);
             } break;
         case -1:
-            root->l = remove(root->l, item);
+            root->l = remove(root->l, item, copyfun);
             break;
         case 1:
-            root->r = remove(root->r, item);
+            root->r = remove(root->r, item, copyfun);
     }
     return root;
 }

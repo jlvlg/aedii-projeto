@@ -234,7 +234,7 @@ static void handle_double_black(RB *root, RB node, int nil) {
         }
 }
 
-static void insert(RB *root, RB leaf, int *error) {
+static void insert(RB *root, RB leaf, int *error, Item copyfun(Item)) {
     int cmp;
     Tree tree_leaf = leaf, track = NULL;
 
@@ -287,7 +287,7 @@ static void insert(RB *root, RB leaf, int *error) {
     adjust(root, leaf);
 }
 
-static void remove(RB *root, Item item) {
+static void remove(RB *root, Item item, Item copyfun(Item)) {
     for (Tree search = *root; search != NULL;) {
         switch (types.cmp(item, search->item)) {
             case 0:
@@ -307,8 +307,9 @@ static void remove(RB *root, Item item) {
                         tree.kill(search);
                     } break;
                     case 2: {
-                        Item child_item = types.copy(tree.max(search->l)->item);
-                        remove(root, child_item);
+                        Item child_item = copyfun(tree.max(search->l)->item);
+                        remove(root, child_item, copyfun);
+                        types.destroy(search->item);
                         search->item = child_item;
                     }
                 } break;

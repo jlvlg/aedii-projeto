@@ -63,7 +63,7 @@ static AVL balance(AVL root, int *changes, int right, int rem) {
     return root;
 }
 
-static AVL insert(AVL root, AVL leaf, int *changes, int *error) {
+static AVL insert(AVL root, AVL leaf, int *changes, int *error,  Item copyfun(Item)) {
     Tree tree_root = root, tree_leaf = leaf;
     int cmp;
 
@@ -83,10 +83,10 @@ static AVL insert(AVL root, AVL leaf, int *changes, int *error) {
             tree.kill(leaf);
             return root;
         case -1:
-            tree_root->l = insert(tree_root->l, leaf, changes, error);
+            tree_root->l = insert(tree_root->l, leaf, changes, error, copyfun);
             break;
         case 1:
-            tree_root->r = insert(tree_root->r, leaf, changes, error);
+            tree_root->r = insert(tree_root->r, leaf, changes, error, copyfun);
     }
 
     // if (cmp > 0)
@@ -97,12 +97,12 @@ static AVL insert(AVL root, AVL leaf, int *changes, int *error) {
     return balance(root, changes, cmp == 1, 0);
 }
 
-static AVL insert_wrapper(AVL root, AVL leaf, int *changes, int* error) {
+static AVL insert_wrapper(AVL root, AVL leaf, int *changes, int* error, Item copyfun(Item)) {
     *error = 0;
-    return insert(root, leaf, changes, error);
+    return insert(root, leaf, changes, error, copyfun);
 }
 
-static AVL remove(AVL root, Item item, int *changes) {
+static AVL remove(AVL root, Item item, int *changes, Item copyfun(Item)) {
     Tree tree_root = root;
     int cmp;
 
@@ -126,15 +126,15 @@ static AVL remove(AVL root, Item item, int *changes) {
                 }
                 case 2:
                     types.destroy(tree_root->item);
-                    tree_root->item = types.copy(tree.max(tree_root->l)->item);
-                    tree_root->l = remove(tree_root->l, tree_root->item, changes);
+                    tree_root->item = copyfun(tree.max(tree_root->l)->item);
+                    tree_root->l = remove(tree_root->l, tree_root->item, changes, copyfun);
                     return balance(root, changes, 0, 1);
             }
         case -1:
-            tree_root->l = remove(tree_root->l, item, changes);
+            tree_root->l = remove(tree_root->l, item, changes, copyfun);
             break;
         case 1:
-            tree_root->r = remove(tree_root->r, item, changes);
+            tree_root->r = remove(tree_root->r, item, changes, copyfun);
     }
 
     return balance(root, changes, cmp == 1, 1);

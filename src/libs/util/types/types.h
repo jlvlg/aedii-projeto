@@ -14,11 +14,12 @@ typedef enum type {
 } Type;
 
 /// Groups data with its actual type
-typedef struct item {
+struct item {
     void* data; ///< void pointer to stored data
-    int pos;
     Type type; ///< Actual type of stored data
-} Item;
+};
+
+typedef struct item* Item;
 
 /// Encapsulates functions into the types namespace
 struct types_methods {

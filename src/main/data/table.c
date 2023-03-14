@@ -26,9 +26,9 @@ static int close_table(Table *t) {
     int res = 0;
     res = fclose(t->file);
 
-    res = idx.save_avl(t->ssn_index, t->ssn_path);
-    res = idx.save_bst(t->email_index, t->email_path);
-    res = idx.save_rb(t->phone_index, t->phone_path);
+    res = idx.save_tree(t->ssn_index, t->ssn_path);
+    res = idx.save_tree(t->email_index, t->email_path);
+    res = idx.save_tree(t->phone_index, t->phone_path);
     res = idx.save_junk(t->junk_index, t->junk_path);
 
     tree.clear(t->ssn_index);
@@ -46,21 +46,22 @@ static int close_table(Table *t) {
 static int error_handler(Table *t, Item *ssn, Item *email, Item *phone, json_object *json, int *size, int *free_section) {
     int changes;
     if (ssn != NULL)
-        t->ssn_index = avl.remove(t->ssn_index, *ssn, &changes);
+        t->ssn_index = avl.remove(t->ssn_index, *ssn, &changes, idx.copy);
     if (email != NULL)
-        t->email_index = bst.remove(t->email_index, *email);
+        t->email_index = bst.remove(t->email_index, *email, idx.copy);
     if (phone != NULL)
-        rb.remove(&t->phone_index, *phone);
+        rb.remove(&t->phone_index, *phone, idx.copy);
     if (free_section != NULL && *free_section >= 0 && size != NULL)
-        idx.restore_junk(t->junk_index, *size, *free_section);
+        idx.restore_junk(&t->junk_index, *size, *free_section);
     json_object_put(json);
     return -1;
 }
 
 static int add_employee(Table *t, Employee employee) {
+    json_object* json_obj;
     int pos, changes, error = 0;
     if (t->file != NULL) {
-        json_object* json_obj = data.employee_to_json(employee);
+        json_obj = data.employee_to_json(employee);
         char* json = json_object_to_json_string(json_obj);
         int free_section = idx.recycle(&t->junk_index, sizeof(char) * (strlen(json) + 1));
         int size = sizeof(char) * (strlen(json) + 1);
@@ -74,15 +75,15 @@ static int add_employee(Table *t, Employee employee) {
             fseek(t->file, 0L, SEEK_END);
         pos = ftell(t->file);
 
-        t->ssn_index = avl.insert(t->ssn_index, idx.create_avl(ssn, pos), &changes, &error);
+        t->ssn_index = avl.insert(t->ssn_index, avl.create(idx.index(ssn, pos)), &changes, &error, idx.copy);
         if (error)
             return error_handler(t, NULL, NULL, NULL, json_obj, &size, &free_section);
 
-        t->email_index = bst.insert(t->email_index, idx.create_bst(email, pos), &error);
+        t->email_index = bst.insert(t->email_index, bst.create(idx.index(email, pos)), &error, idx.copy);
         if (error) 
             return error_handler(t, &ssn, NULL, NULL, json_obj, &size, &free_section);
 
-        rb.insert(&t->phone_index, idx.create_rb(phone, pos), &error);
+        rb.insert(&t->phone_index, rb.create(idx.index(phone, pos)), &error, idx.copy);
         if (error) 
             return error_handler(t, &ssn, &email, NULL, json_obj, &size, &free_section);
 
@@ -132,14 +133,14 @@ static int retrieve_employee(Table t, Employee *employee, int pos) {
 
 static int find_employee_by_ssn(Table t, Employee *employee, char *ssn) {
     Item key = types.String(ssn);
-    AVL_Index index = tree.search(t.ssn_index, key);
+    Tree index = tree.search(t.ssn_index, key);
 
     if (index == NULL) {
         types.destroy(key);
         return -1;
     }
 
-    retrieve_employee(t, employee, index->pos);
+    retrieve_employee(t, employee, ((Index) index->item)->pos);
 
     types.destroy(key);
 
@@ -148,14 +149,14 @@ static int find_employee_by_ssn(Table t, Employee *employee, char *ssn) {
 
 static int find_employee_by_email(Table t, Employee *employee, char *email) {
     Item key = types.String(email);
-    BST_Index index = tree.search(t.email_index, key);
+    Tree index = tree.search(t.email_index, key);
 
     if (index == NULL) {
         types.destroy(key);
         return -1;
     }
 
-    retrieve_employee(t, employee, index->pos);
+    retrieve_employee(t, employee, ((Index) index->item)->pos);
 
     types.destroy(key);
 
@@ -164,14 +165,14 @@ static int find_employee_by_email(Table t, Employee *employee, char *email) {
 
 static int find_employee_by_phone(Table t, Employee *employee, char *phone) {
     Item key = types.String(phone);
-    RB_Index index = tree.search(t.phone_index, key);
+    Tree index = tree.search(t.phone_index, key);
 
     if (index == NULL) {
         types.destroy(key);
         return -1;
     }
 
-    retrieve_employee(t, employee, index->pos);
+    retrieve_employee(t, employee, ((Index) index->item)->pos);
 
     types.destroy(key);
 
@@ -180,7 +181,7 @@ static int find_employee_by_phone(Table t, Employee *employee, char *phone) {
 
 static Employee* list_employees_by_ssn(Table t, int reversed, int *out_count) {
     Employee* employees = util.safe_malloc(sizeof(Employee) * t.count);
-    AVL_Index* indexes = tree.to_array(t.ssn_index, NULL, reversed, &t.count);
+    Tree* indexes = tree.to_array(t.ssn_index, NULL, reversed, &t.count);
 
     if (indexes == NULL) {
         free(indexes);
@@ -188,7 +189,7 @@ static Employee* list_employees_by_ssn(Table t, int reversed, int *out_count) {
     }
 
     for (int i = 0; i < t.count; i++)
-        retrieve_employee(t, &employees[i], indexes[i]->pos);
+        retrieve_employee(t, &employees[i], ((Index) indexes[i]->item)->pos);
 
     free(indexes);
 
@@ -198,7 +199,7 @@ static Employee* list_employees_by_ssn(Table t, int reversed, int *out_count) {
 
 static Employee* list_employees_by_email(Table t, int reversed, int *out_count) {
     Employee* employees = util.safe_malloc(sizeof(Employee) * t.count);
-    BST_Index* indexes = tree.to_array(t.email_index, NULL, reversed, &t.count);
+    Tree* indexes = tree.to_array(t.email_index, NULL, reversed, &t.count);
 
     if (indexes == NULL) {
         free(indexes);
@@ -206,7 +207,7 @@ static Employee* list_employees_by_email(Table t, int reversed, int *out_count) 
     }
 
     for (int i = 0; i < t.count; i++)
-        retrieve_employee(t, &employees[i], indexes[i]->pos);
+        retrieve_employee(t, &employees[i], ((Index) indexes[i]->item)->pos);
 
     free(indexes);
 
@@ -216,7 +217,7 @@ static Employee* list_employees_by_email(Table t, int reversed, int *out_count) 
 
 static Employee* list_employees_by_phone(Table t, int reversed, int *out_count) {
     Employee* employees = util.safe_malloc(sizeof(Employee) * t.count);
-    RB_Index* indexes = tree.to_array(t.phone_index, NULL, reversed, &t.count);
+    Tree* indexes = tree.to_array(t.phone_index, NULL, reversed, &t.count);
 
     if (indexes == NULL) {
         free(indexes);
@@ -224,7 +225,7 @@ static Employee* list_employees_by_phone(Table t, int reversed, int *out_count) 
     }
 
     for (int i = 0; i < t.count; i++)
-        retrieve_employee(t, &employees[i], indexes[i]->pos);
+        retrieve_employee(t, &employees[i], ((Index) indexes[i]->item)->pos);
 
     free(indexes);
 
@@ -236,7 +237,7 @@ static int delete_employee(Table *t, Employee *employee) {
     json_object *json_obj;
     char* json;
     Item email, phone, ssn = types.String(employee->ssn);
-    AVL_Index index = tree.search(t->ssn_index, ssn);
+    Tree index = tree.search(t->ssn_index, ssn);
     int changes;
     
     if (index == NULL) {
@@ -250,10 +251,10 @@ static int delete_employee(Table *t, Employee *employee) {
     json_obj = data.employee_to_json(*employee);
     json = json_object_to_json_string(json_obj);
 
-    t->junk_index = idx.dump(t->junk_index, sizeof(char) * (strlen(json) + 1), index->pos);
-    t->ssn_index = avl.remove(t->ssn_index, ssn, &changes);
-    t->email_index = bst.remove(t->email_index, email);
-    rb.remove(&t->phone_index, phone);
+    t->junk_index = idx.dump(t->junk_index, sizeof(char) * (strlen(json) + 1), ((Index) index->item)->pos);
+    t->ssn_index = avl.remove(t->ssn_index, ssn, &changes, idx.copy);
+    t->email_index = bst.remove(t->email_index, email, idx.copy);
+    rb.remove(&t->phone_index, phone, idx.copy);
 
     data.destroy(employee);
     types.destroy(ssn);

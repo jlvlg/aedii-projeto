@@ -50,21 +50,21 @@ static void postorder(Tree root, void function(Tree), int reversed) {
 }
 
 static void print_node(Tree root) {
-    switch (root->item.type) {
+    switch (root->item->type) {
         case INT:
-            printf("%d ", *(int*) root->item.data);
+            printf("%d ", *(int*) root->item->data);
             break;
         case FLOAT:
-            printf("%f ", *(float*) root->item.data);
+            printf("%f ", *(float*) root->item->data);
             break;
         case DOUBLE:
-            printf("%lf ", *(double*) root->item.data);
+            printf("%lf ", *(double*) root->item->data);
             break;
         case CHAR:
-            printf("%c ", *(char*) root->item.data);
+            printf("%c ", *(char*) root->item->data);
             break;
         case STRING:
-            printf("%s ", (char*) root->item.data);
+            printf("%s ", (char*) root->item->data);
     }
 }
 

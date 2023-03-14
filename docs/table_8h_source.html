@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Database: src/main/table.h Source File</title>
+<title>Database: src/main/data/table.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -92,35 +92,47 @@ $(document).ready(function(){initNavTree('table_8h_source.html',''); initResizab
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;stdio.h&gt;</span></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="index_8h.html">index.h</a>&quot;</span></div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &quot;data.h&quot;</span></div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &quot;json_object.h&quot;</span></div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160; </div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="keyword">struct </span>Table {</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    FILE* file;</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    <a class="code" href="struct_a_v_l___index.html">AVL_Index</a> isbn_index;</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    <a class="code" href="struct_b_s_t___index.html">BST_Index</a> title_index;</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <a class="code" href="struct_r_b___index.html">RB_Index</a> authors_index;</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct </span>Table {</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    FILE* file;</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    <span class="keywordtype">int</span> count;</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    <a class="code" href="structavl__node.html">AVL</a> ssn_index;</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    <a class="code" href="structnode.html">BST</a> email_index;</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <a class="code" href="structrb__node.html">RB</a> phone_index;</div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <a class="code" href="struct_junk.html">Junk</a> junk_index;</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;};</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct </span>Table *Table;</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="keywordtype">int</span> initialize_table(Table table, <span class="keywordtype">char</span>* data_file, <span class="keywordtype">char</span>* authors_index, <span class="keywordtype">char</span>* isbn_index, <span class="keywordtype">char</span>* title_index, <span class="keywordtype">char</span>* junk_index);</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="keywordtype">void</span> close_table(Table table, <span class="keywordtype">char</span>* authors_index, <span class="keywordtype">char</span>* isbn_index, <span class="keywordtype">char</span>* title_index, <span class="keywordtype">char</span>* junk_index);</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;json_object* book_to_json(Book book);</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="keywordtype">void</span> add_book(Table table, Book book);</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <span class="keywordtype">char</span> *file_path, *ssn_path, *email_path, *phone_path, *junk_path;</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;} Table;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="keyword">struct </span>table_methods {</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    int (*initialize_table)(Table *t, <span class="keywordtype">char</span>* data_file, <span class="keywordtype">char</span>* ssn_index, <span class="keywordtype">char</span>* email_index, <span class="keywordtype">char</span>* phone_index, <span class="keywordtype">char</span>* junk_index);</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    int (*close_table)(Table *t);</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    int (*add_employee)(Table *t, Employee employee);</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    int (*find_employee_by_ssn)(Table t, Employee* employee, <span class="keywordtype">char</span> *ssn);</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    int (*find_employee_by_phone)(Table t, Employee* employee, <span class="keywordtype">char</span> *phone);</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    int (*find_employee_by_email)(Table t, Employee* employee, <span class="keywordtype">char</span> *email);</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    Employee* (*list_employees_by_ssn)(Table t, <span class="keywordtype">int</span> reversed, <span class="keywordtype">int</span> *out_count);</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    Employee* (*list_employees_by_phone)(Table t, <span class="keywordtype">int</span> reversed, <span class="keywordtype">int</span> *out_count);</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    Employee* (*list_employees_by_email)(Table t, <span class="keywordtype">int</span> reversed, <span class="keywordtype">int</span> *out_count);</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    int (*delete_employee)(Table *t, Employee *employee);</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    int (*delete_employee_by_ssn)(Table *t, <span class="keywordtype">char</span> *ssn);</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    int (*delete_employee_by_email)(Table *t, <span class="keywordtype">char</span> *email);</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    int (*delete_employee_by_phone)(Table *t, <span class="keywordtype">char</span> *phone);</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;};</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="keyword">extern</span> <span class="keyword">const</span> <span class="keyword">struct </span>table_methods table;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="ttc" id="aindex_8h_html"><div class="ttname"><a href="index_8h.html">index.h</a></div><div class="ttdoc">File indexing methods.</div></div>
-<div class="ttc" id="astruct_a_v_l___index_html"><div class="ttname"><a href="struct_a_v_l___index.html">AVL_Index</a></div><div class="ttdoc">AVL indexing tree.</div><div class="ttdef"><b>Definition:</b> index.h:18</div></div>
-<div class="ttc" id="astruct_b_s_t___index_html"><div class="ttname"><a href="struct_b_s_t___index.html">BST_Index</a></div><div class="ttdoc">BST indexing tree.</div><div class="ttdef"><b>Definition:</b> index.h:12</div></div>
-<div class="ttc" id="astruct_junk_html"><div class="ttname"><a href="struct_junk.html">Junk</a></div><div class="ttdoc">Used to mark sections of the data file as deleted or writable.</div><div class="ttdef"><b>Definition:</b> index.h:30</div></div>
-<div class="ttc" id="astruct_r_b___index_html"><div class="ttname"><a href="struct_r_b___index.html">RB_Index</a></div><div class="ttdoc">RB indexing tree.</div><div class="ttdef"><b>Definition:</b> index.h:24</div></div>
+<div class="ttc" id="astruct_junk_html"><div class="ttname"><a href="struct_junk.html">Junk</a></div><div class="ttdoc">Used to mark sections of the data file as deleted or writable.</div><div class="ttdef"><b>Definition:</b> index.h:20</div></div>
+<div class="ttc" id="astructavl__node_html"><div class="ttname"><a href="structavl__node.html">avl_node</a></div><div class="ttdoc">AVL implementation of the abstract tree.</div><div class="ttdef"><b>Definition:</b> avl.h:11</div></div>
+<div class="ttc" id="astructnode_html"><div class="ttname"><a href="structnode.html">node</a></div><div class="ttdoc">Abstract tree node, prefer usage of inherited structs.</div><div class="ttdef"><b>Definition:</b> tree.h:11</div></div>
+<div class="ttc" id="astructrb__node_html"><div class="ttname"><a href="structrb__node.html">rb_node</a></div><div class="ttdoc">Red-black implementation of the abstract tree.</div><div class="ttdef"><b>Definition:</b> rb.h:11</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_5eb159725f84c66aafd839904a4acdd0.html">main</a></li><li class="navelem"><b>table.h</b></li>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_5eb159725f84c66aafd839904a4acdd0.html">main</a></li><li class="navelem"><a class="el" href="dir_c5efefe9fb559dd79d97373927d3a1fa.html">data</a></li><li class="navelem"><b>table.h</b></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
   </ul>
 </div>

@@ -8,9 +8,9 @@
 typedef struct Table {
     FILE* file;
     int count;
-    AVL_Index ssn_index;
-    BST_Index email_index;
-    RB_Index phone_index;
+    AVL ssn_index;
+    BST email_index;
+    RB phone_index;
     Junk junk_index;
     char *file_path, *ssn_path, *email_path, *phone_path, *junk_path;
 } Table;

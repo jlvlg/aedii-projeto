@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['junk_169',['Junk',['../index_8h.html#a4b05197800145f28052febda01b51fb7',1,'index.h']]],
-  ['junknode_170',['JunkNode',['../index_8h.html#a361c28c3221438df64256954ed43560f',1,'index.h']]]
+  ['node_159',['Node',['../tree_8h.html#ac09cf950484bd9550d14d602b0e5e7fb',1,'tree.h']]]
 ];

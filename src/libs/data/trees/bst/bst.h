@@ -30,13 +30,13 @@ struct bst_methods {
     /// @param leaf Node to be inserted
     /// @param error Is set to 0 if the operation succeded else 1
     /// @return Updated tree
-    BST (*insert)(BST root, BST leaf, int* error);
+    BST (*insert)(BST root, BST leaf, int* error, Item copyfun(Item));
 
     /// @brief Searches a tree for a node containing an item and removes it
     /// @param root Tree to be removed from
     /// @param item Item to be removed
     /// @return Updated tree
-    BST (*remove)(BST root, Item item);
+    BST (*remove)(BST root, Item item, Item copyfun(Item));
 };
 
 extern const struct bst_methods bst;

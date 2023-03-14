@@ -39,13 +39,13 @@ int main() {
                 item = types.String(data);
             }
             t = clock();
-            bst_root = bst.insert(bst_root, bst.create(types.copy(item)), &error);
+            bst_root = bst.insert(bst_root, bst.create(types.copy(item)), &error, types.copy);
             measure(t, bst_root, 0);
             t = clock();
-            avl_root = avl.insert(avl_root, avl.create(types.copy(item)), &changes, &error);
+            avl_root = avl.insert(avl_root, avl.create(types.copy(item)), &changes, &error, types.copy);
             measure(t, avl_root, 0);
             t = clock();
-            rb.insert(&rb_root, rb.create(types.copy(item)), &error);
+            rb.insert(&rb_root, rb.create(types.copy(item)), &error, types.copy);
             measure(t, rb_root, 1);
             printf("\n");
             types.destroy(item);
