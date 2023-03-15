@@ -114,15 +114,12 @@ Data Fields</h2></td></tr>
 <tr class="memitem:a5a94e89a0d307217e458956ac8724990"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_junk.html">Junk</a>(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structindex__methods.html#a5a94e89a0d307217e458956ac8724990">retrieve_junk</a> )(char *filename)</td></tr>
 <tr class="memdesc:a5a94e89a0d307217e458956ac8724990"><td class="mdescLeft">&#160;</td><td class="mdescRight">Loads a <a class="el" href="struct_junk.html" title="Used to mark sections of the data file as deleted or writable.">Junk</a> list from a JSON file.  <a href="structindex__methods.html#a5a94e89a0d307217e458956ac8724990">More...</a><br /></td></tr>
 <tr class="separator:a5a94e89a0d307217e458956ac8724990"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6e8f36d859f540f217a6af7b7cca4252"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_junk.html">Junk</a>(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structindex__methods.html#a6e8f36d859f540f217a6af7b7cca4252">dump</a> )(<a class="el" href="struct_junk.html">Junk</a> start, int size, int pos)</td></tr>
-<tr class="memdesc:a6e8f36d859f540f217a6af7b7cca4252"><td class="mdescLeft">&#160;</td><td class="mdescRight">Marks a section of the data file as rewritable junk.  <a href="structindex__methods.html#a6e8f36d859f540f217a6af7b7cca4252">More...</a><br /></td></tr>
-<tr class="separator:a6e8f36d859f540f217a6af7b7cca4252"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aed014f169ee427a22a89f087d8167fad"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_junk.html">Junk</a>(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structindex__methods.html#aed014f169ee427a22a89f087d8167fad">dump</a> )(<a class="el" href="struct_junk.html">Junk</a> *start, int size, int pos)</td></tr>
+<tr class="memdesc:aed014f169ee427a22a89f087d8167fad"><td class="mdescLeft">&#160;</td><td class="mdescRight">Marks a section of the data file as rewritable junk.  <a href="structindex__methods.html#aed014f169ee427a22a89f087d8167fad">More...</a><br /></td></tr>
+<tr class="separator:aed014f169ee427a22a89f087d8167fad"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab863c701f1de9b527014cfb8dca60349"><td class="memItemLeft" align="right" valign="top">int(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structindex__methods.html#ab863c701f1de9b527014cfb8dca60349">recycle</a> )(<a class="el" href="struct_junk.html">Junk</a> *start, int size)</td></tr>
 <tr class="memdesc:ab863c701f1de9b527014cfb8dca60349"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves the best fit position from the junk data list, updating it in the proccess.  <a href="structindex__methods.html#ab863c701f1de9b527014cfb8dca60349">More...</a><br /></td></tr>
 <tr class="separator:ab863c701f1de9b527014cfb8dca60349"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad5a371d144ccaa181accda7162af5772"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_junk.html">Junk</a>(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structindex__methods.html#ad5a371d144ccaa181accda7162af5772">remove_junk</a> )(<a class="el" href="struct_junk.html">Junk</a> start, int pos)</td></tr>
-<tr class="memdesc:ad5a371d144ccaa181accda7162af5772"><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes a node from the junk data list.  <a href="structindex__methods.html#ad5a371d144ccaa181accda7162af5772">More...</a><br /></td></tr>
-<tr class="separator:ad5a371d144ccaa181accda7162af5772"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abd23eb2735601e78e45d360b12b1e191"><td class="memItemLeft" align="right" valign="top">void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structindex__methods.html#abd23eb2735601e78e45d360b12b1e191">restore_junk</a> )(<a class="el" href="struct_junk.html">Junk</a> *start, int size, int pos)</td></tr>
 <tr class="memdesc:abd23eb2735601e78e45d360b12b1e191"><td class="mdescLeft">&#160;</td><td class="mdescRight">Restores a mistakingly recycled section of the junk data list.  <a href="structindex__methods.html#abd23eb2735601e78e45d360b12b1e191">More...</a><br /></td></tr>
 <tr class="separator:abd23eb2735601e78e45d360b12b1e191"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -130,14 +127,14 @@ Data Fields</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Encapsulates functions into the idx namespace. </p>
 </div><h2 class="groupheader">Field Documentation</h2>
-<a id="a6e8f36d859f540f217a6af7b7cca4252"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6e8f36d859f540f217a6af7b7cca4252">&#9670;&nbsp;</a></span>dump</h2>
+<a id="aed014f169ee427a22a89f087d8167fad"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aed014f169ee427a22a89f087d8167fad">&#9670;&nbsp;</a></span>dump</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="struct_junk.html">Junk</a>(* dump) (<a class="el" href="struct_junk.html">Junk</a> start, int size, int pos)</td>
+          <td class="memname"><a class="el" href="struct_junk.html">Junk</a>(* dump) (<a class="el" href="struct_junk.html">Junk</a> *start, int size, int pos)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -176,29 +173,6 @@ Data Fields</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Position of the section in bytes </dd></dl>
-
-</div>
-</div>
-<a id="ad5a371d144ccaa181accda7162af5772"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad5a371d144ccaa181accda7162af5772">&#9670;&nbsp;</a></span>remove_junk</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="struct_junk.html">Junk</a>(* remove_junk) (<a class="el" href="struct_junk.html">Junk</a> start, int pos)</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Removes a node from the junk data list. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">start</td><td>Previous junk data list </td></tr>
-    <tr><td class="paramname">pos</td><td>Position held by the node to be removed </td></tr>
-  </table>
-  </dd>
-</dl>
 
 </div>
 </div>

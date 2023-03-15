@@ -18,8 +18,8 @@ typedef struct Index* Index;
 
 /// Used to mark sections of the data file as deleted or writable
 typedef struct Junk {
-    int size;
-    int pos;
+    int spos;
+    int epos;
     struct Junk *next;
 } JunkNode;
 
@@ -68,18 +68,13 @@ struct index_methods {
     /// @param size Section size in bytes
     /// @param pos Section start in bytes
     /// @return Updated junk data list
-    Junk (*dump)(Junk start, int size, int pos);
+    Junk (*dump)(Junk *start, int size, int pos);
 
     /// @brief Retrieves the best fit position from the junk data list, updating it in the proccess
     /// @param start Pointer to junk data list
     /// @param size Size to be inserted into data file
     /// @return Position of the section in bytes
     int (*recycle)(Junk *start, int size);
-
-    /// @brief Removes a node from the junk data list
-    /// @param start Previous junk data list
-    /// @param pos Position held by the node to be removed
-    Junk (*remove_junk)(Junk start, int pos);
 
     /// @brief Restores a mistakingly recycled section of the junk data list
     /// @param start Pointer to junk data list

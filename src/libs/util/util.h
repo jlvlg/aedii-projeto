@@ -28,6 +28,10 @@ struct util_methods {
     /// @brief Max between two numbers
     /// @return Greatest number
     int (*max)(int a, int b);
+
+    /// @brief Min between two numbers
+    /// @return Smallest number
+    int (*min)(int a, int b);
 };
 
 extern const struct util_methods util;

@@ -31,10 +31,15 @@ static int max(int a, int b) {
     return a > b ? a : b;
 }
 
+static int min(int a, int b) {
+    return a > b ? b : a;
+}
+
 const struct util_methods util = {
     .safe_malloc = safe_malloc,
     .safe_realloc = safe_realloc,
     .string_malloc = string_malloc,
     .init_string = init_string,
-    .max = max
+    .max = max,
+    .min = min
 };

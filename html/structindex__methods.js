@@ -1,8 +1,7 @@
 var structindex__methods =
 [
-    [ "dump", "structindex__methods.html#a6e8f36d859f540f217a6af7b7cca4252", null ],
+    [ "dump", "structindex__methods.html#aed014f169ee427a22a89f087d8167fad", null ],
     [ "recycle", "structindex__methods.html#ab863c701f1de9b527014cfb8dca60349", null ],
-    [ "remove_junk", "structindex__methods.html#ad5a371d144ccaa181accda7162af5772", null ],
     [ "restore_junk", "structindex__methods.html#abd23eb2735601e78e45d360b12b1e191", null ],
     [ "retrieve_avl", "structindex__methods.html#adc7c8eef65cdb565c8bb4f3182039327", null ],
     [ "retrieve_bst", "structindex__methods.html#aaa61ab4934cec530dd33bc86d48eb8de", null ],

@@ -26,53 +26,103 @@ static Index copy(Index index) {
     return new;
 }
 
-static Junk dump(Junk start, int size, int pos) {
-    if (size <= 0)
+static int junk_size(Junk node) {
+    return node->epos - node->spos;
+}
+
+static Junk insert(Junk start, int spos, int epos) {
+    if (epos - spos <= 0)
         return start;
-    if (start == NULL || size >= start->size) {
+    if (start == NULL || epos - spos >= junk_size(start)) {
         Junk junk = util.safe_malloc(sizeof(JunkNode));
-        junk->size = size;
-        junk->pos = pos;
-        junk->next = start;
+        junk->spos = spos;
+        junk->epos = epos;
         return junk;
     }
-    start->next = dump(start->next, size, pos);
+    start->next = insert(start->next, spos, epos);
     return start;
 }
 
-static Junk pop(Junk start, int* out_size, int* out_pos) {
+static Junk pop(Junk start, int* out_spos, int* out_epos) {
     Junk new_start = start->next;
-    *out_size = start->size;
-    *out_pos = start->pos;
+    *out_spos = start->spos;
+    *out_epos = start->epos;
     free(start);
     return new_start;
 }
 
-static int recycle(Junk* start, int size) {
-    if (*start == NULL || size > (*start)->size)
-        return -1;
-    int old_size, pos;
-    *start = pop(*start, &old_size, &pos);
-    *start = dump(*start, old_size - size, pos + size);
-    return pos;
+static void find_junk_by_spos(Junk start, Junk *previous, Junk *found, int spos) {
+    *previous = NULL;
+    for (*found = start; *found != NULL && (*found)->spos != spos; *found = (*found)->next)
+        *previous = *found;
 }
 
-static Junk remove_junk(Junk start, int pos) {
-    if (start != NULL) {
-        int _;
-        if (pos == start->pos)
-            start = pop(start, &_, &_);
-        start->next = remove_junk(start->next, pos);
+static void find_junk_by_epos(Junk start, Junk *previous, Junk *found, int epos) {
+    *previous = NULL;
+    for (*found = start; *found != NULL && (*found)->epos != epos; *found = (*found)->next)
+        *previous = *found;
+}
+
+static void merge_helper(Junk *start, Junk track, Junk seek, int *spos, int *epos, int *min_spos, int *max_epos) {
+    if (seek != NULL) {
+        if (track == NULL)
+            *start = pop(seek, spos, epos);
+        else
+            track->next = pop(seek, spos, epos);
+        *min_spos = util.min(*min_spos, *spos);
+        *max_epos = util.max(*max_epos, *epos);
     }
-    return start;
+}
+
+static int merge_junk(Junk *start, int size, int pos) {
+    int _;
+    int max_epos = pos + size; 
+    int min_spos = pos;
+    Junk sseek, strack, eseek, etrack;
+    find_junk_by_epos(*start, &etrack, &eseek, pos);
+    find_junk_by_spos(*start, &strack, &sseek, pos + size);
+
+    merge_helper(start, strack, sseek, &_, &_, &min_spos, &max_epos);
+    merge_helper(start, etrack, eseek, &_, &_, &min_spos, &max_epos);
+
+    if (min_spos != pos || max_epos != pos + size) {
+        *start = insert(*start, min_spos, max_epos);
+        return 0;
+    }
+    return 1;
+}
+
+static void restore_junk(Junk *start, int size, int pos) {
+    int _ = 0, epos = pos + size;
+    Junk seek, track;
+    find_junk_by_spos(*start, &track, &seek, pos);
+    merge_helper(start, track, seek, &_, &epos, &_, &_);
+
+    if (epos != pos + size)
+        *start = insert(*start, pos, pos + size);
+}
+
+static void dump(Junk *start, int size, int pos) {
+    if (merge_junk(start, size, pos)) {
+        *start = insert(*start, pos, pos + size);
+    }
+}
+
+static int recycle(Junk* start, int size) {
+    int spos, epos;
+    if (*start == NULL || size > junk_size(*start))
+        return -1;
+    *start = pop(*start, &spos, &epos);
+    *start = insert(*start, spos + size, epos);
+    return spos;
 }
 
 static void add_junk_to_array(json_object *array, Junk node) {
     if (node != NULL) {
         add_junk_to_array(array, node->next);
         json_object *object = json_object_new_object();
-        json_object_object_add(object, "size", json_object_new_int(node->size));
-        json_object_object_add(object, "pos", json_object_new_int(node->pos));
+        json_object_object_add(object, "spos", json_object_new_int(node->spos));
+        json_object_object_add(object, "epos", json_object_new_int(node->epos));
         json_object_array_add(array, object);
     }
 }
@@ -89,16 +139,16 @@ static int save_junk(Junk junk, char* filename) {
 static Junk retrieve_junk(char* filename) {
     Junk start = NULL;
     json_object *json = json_object_from_file(filename);
-    json_object *node, *size, *pos;
+    json_object *node, *spos, *epos;
 
     if (json == NULL)
         return NULL;
 
     for (int i = 0; i < json_object_array_length(json); i++) {
         node = json_object_array_get_idx(json, i);
-        json_object_object_get_ex(node, "size", &size);
-        json_object_object_get_ex(node, "pos", &pos);
-        start = dump(start, json_object_get_int(size), json_object_get_int(pos));
+        json_object_object_get_ex(node, "spos", &spos);
+        json_object_object_get_ex(node, "epos", &epos);
+        start = insert(start, json_object_get_int(spos), json_object_get_int(epos));
     }
     json_object_put(json);
     return start;
@@ -110,24 +160,6 @@ static Junk destroy_junk(Junk junk) {
         free(junk);
     }
     return NULL;
-}
-
-static void restore_junk(Junk *start, int size, int pos) {
-    Junk seek, track = NULL;
-    int old_size, old_pos;
-    for (seek = *start; seek != NULL && seek->pos != pos + size; seek = seek->next)
-        track = seek;
-    if (seek == NULL) {
-        *start = dump(*start, size, pos);
-        return;
-    }
-    if (track == NULL) {
-        *start = pop(*start, &old_size, &old_pos);
-        *start = dump(*start, size + old_size, pos);
-        return;
-    }
-    track->next = pop(track->next, &old_size, &old_pos);
-    track->next = dump(track->next, size + old_size, pos);
 }
 
 static void add_tree_to_array(json_object *array, Tree node) {
@@ -262,6 +294,5 @@ const struct index_methods idx = {
     .retrieve_junk = retrieve_junk,
     .dump = dump,
     .recycle = recycle,
-    .remove_junk = remove_junk,
     .restore_junk = restore_junk
 };

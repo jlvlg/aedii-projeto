@@ -255,7 +255,7 @@ static int delete_employee(Table *t, Employee *employee) {
     json_obj = data.employee_to_json(*employee);
     json = json_object_to_json_string(json_obj);
 
-    t->junk_index = idx.dump(t->junk_index, sizeof(char) * (strlen(json) + 1), ((Index) index->item)->pos);
+    idx.dump(&t->junk_index, sizeof(char) * (strlen(json) + 1), ((Index) index->item)->pos);
     t->ssn_index = avl.remove(t->ssn_index, ssn, &changes, idx.copy);
     t->email_index = bst.remove(t->email_index, email, idx.copy);
     rb.remove(&t->phone_index, phone, idx.copy);

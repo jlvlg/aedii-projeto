@@ -288,7 +288,7 @@ int main() {
     post_menu(cur_menu);
 
     /* EMPLOYEE INFO */
-    cur_menu = menu_panel(&cur_win, &cur_panel, 17, 64, 3, 12, 
+    cur_menu = menu_panel(&cur_win, &cur_panel, 16, 64, 4, 12, 
         (ITEM*[]) {
             new_item("  Back ", ""),
             new_item(" Delete ", ""),
@@ -302,7 +302,7 @@ int main() {
     menus[n_menus++] = cur_menu;
     panels[n_panels++] = cur_panel;
     windows[n_windows++] = cur_win;
-    set_menu_sub(cur_menu, derwin(cur_win, 1, 17, 15, 24));
+    set_menu_sub(cur_menu, derwin(cur_win, 1, 17, 14, 24));
     box(cur_win, 0, 0);
     set_menu_format(cur_menu, 1, 2);
     post_menu(cur_menu);
@@ -445,37 +445,33 @@ int main() {
                             /*EMPLOYEE LIST*/
                             ungetmouse(&event);
                             menu_driver(menus[2], KEY_MOUSE);
-                            if (event.bstate & BUTTON1_DOUBLE_CLICKED) {
-                                ITEM **items = menu_items(menus[2]), *cur;
-                                cur = current_item(menus[2]);
-                                selected = item_userptr(cur);
-                                show_employee(panels[3], selected);
-                            }
+                            ITEM **items = menu_items(menus[2]), *cur;
+                            cur = current_item(menus[2]);
+                            selected = item_userptr(cur);
+                            show_employee(panels[3], selected);
                         } else if (panel_below(NULL) == panels[3] && wenclose(menu_sub(menus[3]), event.y, event.x)) {
                             /*EMPLOYEE INFO*/
                             ungetmouse(&event);
                             menu_driver(menus[3], KEY_MOUSE);
-                            if (event.bstate & BUTTON1_DOUBLE_CLICKED) {
-                                ITEM **items = menu_items(menus[3]), *cur;
-                                cur = current_item(menus[3]);
-                                if (cur == items[1]) {
-                                    table.delete_employee(&t, selected);
-                                }
-                                /*BACK*/
-                                if (panel_below(panels[3]) == panels[2]) {
-                                    list_employees(t, menus[1], menus[2], &employee_items, &employees, &briefs, &n_employees);
-                                } else if (panel_below(panels[3]) == panels[4]) {
-                                    curs_set(1);
-                                    data.destroy(selected);
-                                }
-                                selected = NULL;
-                                top_panel(panel_below(panels[3]));
+                            ITEM **items = menu_items(menus[3]), *cur;
+                            cur = current_item(menus[3]);
+                            if (cur == items[1]) {
+                                table.delete_employee(&t, selected);
                             }
+                            /*BACK*/
+                            if (panel_below(panels[3]) == panels[2]) {
+                                list_employees(t, menus[1], menus[2], &employee_items, &employees, &briefs, &n_employees);
+                            } else if (panel_below(panels[3]) == panels[4]) {
+                                curs_set(1);
+                                data.destroy(selected);
+                            }
+                            selected = NULL;
+                            top_panel(panel_below(panels[3]));
                         } else if (panel_below(NULL) == panels[4] && wenclose(form_sub(forms[0]), event.y, event.x)) {
                             curs_set(1);
                             ungetmouse(&event);
                             form_driver(forms[0], KEY_MOUSE);
-                        } else if (panel_below(NULL) == panels[6] && event.bstate & BUTTON1_DOUBLE_CLICKED && wenclose(menu_sub(menus[4]), event.y, event.x)) {
+                        } else if (panel_below(NULL) == panels[6] && wenclose(menu_sub(menus[4]), event.y, event.x)) {
                             int valid = 1;
                             regex_t regex;
                             char *buffers[5], *labels[] = {
@@ -498,19 +494,23 @@ int main() {
                             }
                             set_current_field(forms[1], fields[0]);
                             if (valid) {
-                                regcomp(&regex, "^[0-9]{1,9}$", REG_EXTENDED);
+                                regcomp(&regex, "^[0-9]*$", REG_EXTENDED);
                                 if (regexec(&regex, buffers[0], 0, NULL, 0)) {
                                     valid = 0;
                                     show_warning(panels, panels[5], "%s", "ID must be an integer");
                                 }
                                 regfree(&regex);
+                                if (strlen(buffers[0]) > 9) {
+                                    valid = 0;
+                                    show_warning(panels, panels[5], "%s", "Max ID value is 999999999");
+                                }
                                 regcomp(&regex, "^[0-9]{9}$", REG_EXTENDED);
                                 if (regexec(&regex, buffers[1], 0, NULL, 0)) {
                                     valid = 0;
                                     show_warning(panels, panels[5], "%s", "SSN must be a 9 digit integer");
                                 }
                                 regfree(&regex);
-                                regcomp(&regex, "^[a-zA-Z ]$", REG_EXTENDED);
+                                regcomp(&regex, "^[a-zA-Z ]*$", REG_EXTENDED);
                                 if (regexec(&regex, buffers[2], 0, NULL, 0)) {
                                     valid = 0;
                                     show_warning(panels, panels[5], "%s", "Name must not contain special characters");
