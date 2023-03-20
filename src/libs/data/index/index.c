@@ -1,5 +1,3 @@
-#include <stdlib.h>
-#include <stdio.h>
 #include "bst.h"
 #include "avl.h"
 #include "rb.h"
@@ -9,155 +7,147 @@
 #include "json_object.h"
 #include "json_util.h"
 
-static Index index(Item key, int pos) {
-    Index index = malloc(sizeof(struct Index));
-    index->item = *key;
+static Index create_index(Item *key, int pos) {
+    Index index = util.safe_malloc(sizeof(struct Index));
+    index->item = **key;
     index->pos = pos;
-    free(key);
+    free(*key);
+    *key = NULL;
     return index;
 }
 
 static Index copy(Index index) {
-    Index new = malloc(sizeof(struct Index));
-    Item item = types.copy(index);
+    Index new = util.safe_malloc(sizeof(struct Index));
+    Item item = types.copy((Item) index);
     new->item = *item;
     new->pos = index->pos;
     free(item);
     return new;
 }
 
-static int junk_size(Junk node) {
-    return node->epos - node->spos;
+static int garbage_size(Garbage node) {
+    return node->end - node->start;
 }
 
-static Junk insert(Junk start, int spos, int epos) {
-    if (epos - spos <= 0)
-        return start;
-    if (start == NULL || epos - spos >= junk_size(start)) {
-        Junk junk = util.safe_malloc(sizeof(JunkNode));
-        junk->spos = spos;
-        junk->epos = epos;
-        return junk;
+static Garbage insert(Garbage node, int start, int end) {
+    if (end - start <= 0)
+        return node;
+    if (node == NULL || end - start >= garbage_size(node)) {
+        Garbage garbage = util.safe_malloc(sizeof(GarbageNode));
+        garbage->start = start;
+        garbage->end = end;
+        garbage->next = node;
+        return garbage;
     }
-    start->next = insert(start->next, spos, epos);
-    return start;
+    node->next = insert(node->next, start, end);
+    return node;
 }
 
-static Junk pop(Junk start, int* out_spos, int* out_epos) {
-    Junk new_start = start->next;
-    *out_spos = start->spos;
-    *out_epos = start->epos;
-    free(start);
+static Garbage pop(Garbage node, int* out_start, int* out_end) {
+    Garbage new_start = node->next;
+    *out_start = node->start;
+    *out_end = node->end;
+    free(node);
     return new_start;
 }
 
-static void find_junk_by_spos(Junk start, Junk *previous, Junk *found, int spos) {
+static void find_garbage_by_start(Garbage node, Garbage *previous, Garbage *found, int start) {
     *previous = NULL;
-    for (*found = start; *found != NULL && (*found)->spos != spos; *found = (*found)->next)
+    for (*found = node; *found != NULL && (*found)->start != start; *found = (*found)->next)
         *previous = *found;
 }
 
-static void find_junk_by_epos(Junk start, Junk *previous, Junk *found, int epos) {
+static void find_garbage_by_end(Garbage node, Garbage *previous, Garbage *found, int end) {
     *previous = NULL;
-    for (*found = start; *found != NULL && (*found)->epos != epos; *found = (*found)->next)
+    for (*found = node; *found != NULL && (*found)->end != end; *found = (*found)->next)
         *previous = *found;
 }
 
-static void merge_helper(Junk *start, Junk track, Junk seek, int *spos, int *epos, int *min_spos, int *max_epos) {
+static void merge_helper(Garbage *node, Garbage track, Garbage seek, int *start, int *end, int *min_start, int *max_end) {
     if (seek != NULL) {
         if (track == NULL)
-            *start = pop(seek, spos, epos);
+            *node = pop(seek, start, end);
         else
-            track->next = pop(seek, spos, epos);
-        *min_spos = util.min(*min_spos, *spos);
-        *max_epos = util.max(*max_epos, *epos);
+            track->next = pop(seek, start, end);
+        *min_start = util.min(*min_start, *start);
+        *max_end = util.max(*max_end, *end);
     }
 }
 
-static int merge_junk(Junk *start, int size, int pos) {
-    int _;
-    int max_epos = pos + size; 
-    int min_spos = pos;
-    Junk sseek, strack, eseek, etrack;
-    find_junk_by_epos(*start, &etrack, &eseek, pos);
-    find_junk_by_spos(*start, &strack, &sseek, pos + size);
+static int merge_garbage(Garbage *node, int size, int pos) {
+    int start, end;
+    int max_end = pos + size; 
+    int min_start = pos;
+    Garbage sseek, strack, eseek, etrack;
+    find_garbage_by_end(*node, &etrack, &eseek, pos);
+    merge_helper(node, etrack, eseek, &start, &end, &min_start, &max_end);
 
-    merge_helper(start, strack, sseek, &_, &_, &min_spos, &max_epos);
-    merge_helper(start, etrack, eseek, &_, &_, &min_spos, &max_epos);
+    find_garbage_by_start(*node, &strack, &sseek, pos + size);
+    merge_helper(node, strack, sseek, &start, &end, &min_start, &max_end);
 
-    if (min_spos != pos || max_epos != pos + size) {
-        *start = insert(*start, min_spos, max_epos);
+    if (min_start != pos || max_end != pos + size) {
+        *node = insert(*node, min_start, max_end);
         return 0;
     }
     return 1;
 }
 
-static void restore_junk(Junk *start, int size, int pos) {
-    int _ = 0, epos = pos + size;
-    Junk seek, track;
-    find_junk_by_spos(*start, &track, &seek, pos);
-    merge_helper(start, track, seek, &_, &epos, &_, &_);
-
-    if (epos != pos + size)
-        *start = insert(*start, pos, pos + size);
-}
-
-static void dump(Junk *start, int size, int pos) {
-    if (merge_junk(start, size, pos)) {
+static void dump(Garbage *start, int size, int pos) {
+    if (merge_garbage(start, size, pos)) {
         *start = insert(*start, pos, pos + size);
     }
 }
 
-static int recycle(Junk* start, int size) {
-    int spos, epos;
-    if (*start == NULL || size > junk_size(*start))
+static int recycle(Garbage* node, int size) {
+    int start, end;
+    if (*node == NULL || size > garbage_size(*node))
         return -1;
-    *start = pop(*start, &spos, &epos);
-    *start = insert(*start, spos + size, epos);
-    return spos;
+    *node = pop(*node, &start, &end);
+    *node = insert(*node, start + size, end);
+    return start;
 }
 
-static void add_junk_to_array(json_object *array, Junk node) {
+static void add_garbage_to_array(json_object *array, Garbage node) {
     if (node != NULL) {
-        add_junk_to_array(array, node->next);
+        add_garbage_to_array(array, node->next);
         json_object *object = json_object_new_object();
-        json_object_object_add(object, "spos", json_object_new_int(node->spos));
-        json_object_object_add(object, "epos", json_object_new_int(node->epos));
+        json_object_object_add(object, "start", json_object_new_int(node->start));
+        json_object_object_add(object, "end", json_object_new_int(node->end));
         json_object_array_add(array, object);
     }
 }
 
-static int save_junk(Junk junk, char* filename) {
+static int save_garbage(Garbage garbage, char* filename) {
     int result;
     json_object *json = json_object_new_array();
-    add_junk_to_array(json, junk);
+    add_garbage_to_array(json, garbage);
     result = json_object_to_file(filename, json);
     json_object_put(json);
     return result;
 }
 
-static Junk retrieve_junk(char* filename) {
-    Junk start = NULL;
+static Garbage retrieve_garbage(char* filename) {
+    Garbage node = NULL;
     json_object *json = json_object_from_file(filename);
-    json_object *node, *spos, *epos;
+    json_object *json_node, *start, *end;
 
     if (json == NULL)
         return NULL;
 
     for (int i = 0; i < json_object_array_length(json); i++) {
-        node = json_object_array_get_idx(json, i);
-        json_object_object_get_ex(node, "spos", &spos);
-        json_object_object_get_ex(node, "epos", &epos);
-        start = insert(start, json_object_get_int(spos), json_object_get_int(epos));
+        json_node = json_object_array_get_idx(json, i);
+        json_object_object_get_ex(json_node, "start", &start);
+        json_object_object_get_ex(json_node, "end", &end);
+        node = insert(node, json_object_get_int(start), json_object_get_int(end));
     }
     json_object_put(json);
-    return start;
+    return node;
 }
 
-static Junk destroy_junk(Junk junk) {
-    if (junk != NULL) {
-        junk->next = destroy_junk(junk->next);
-        free(junk);
+static Garbage destroy_garbage(Garbage garbage) {
+    if (garbage != NULL) {
+        garbage->next = destroy_garbage(garbage->next);
+        free(garbage);
     }
     return NULL;
 }
@@ -210,12 +200,12 @@ static BST retrieve_bst(char* filename) {
                 data = types.Int(json_object_get_int(key));
                 break;
             case json_type_string:
-                data = types.String(json_object_get_string(key));
+                data = types.String((char*) json_object_get_string(key));
                 break;
             default:
                 return tree.clear(root);
         }
-        root = bst.insert(root, bst.create(index(data, json_object_get_int(pos))), &success, copy);
+        root = bst.insert(root, bst.create((Item) create_index(&data, json_object_get_int(pos))), &success);
     }
     json_object_put(json);
     return root;
@@ -240,12 +230,12 @@ static AVL retrieve_avl(char* filename) {
                 data = types.Int(json_object_get_int(key));
                 break;
             case json_type_string:
-                data = types.String(json_object_get_string(key));
+                data = types.String((char*) json_object_get_string(key));
                 break;
             default:
-                return tree.clear(root);
+                return (AVL) tree.clear((Tree) root);
         }
-        root = avl.insert(root, avl.create(index(data, json_object_get_int(pos))), &changes, &success, copy);
+        root = avl.insert(root, avl.create((Item) create_index(&data, json_object_get_int(pos))), &changes, &success);
     }
     json_object_put(json);
     return root;
@@ -270,12 +260,12 @@ static RB retrieve_rb(char* filename) {
                 data = types.Int(json_object_get_int(key));
                 break;
             case json_type_string:
-                data = types.String(json_object_get_string(key));
+                data = types.String((char*) json_object_get_string(key));
                 break;
             default:
-                return tree.clear(root);
+                return (RB) tree.clear((Tree) root);
         }
-        rb.insert(&root, rb.create(index(data, json_object_get_int(pos))), &success, copy);
+        rb.insert(&root, rb.create((Item) create_index(&data, json_object_get_int(pos))), &success);
     }
     json_object_put(json);
     return root;
@@ -284,15 +274,15 @@ static RB retrieve_rb(char* filename) {
 
 
 const struct index_methods idx = {
-    .index = index,
+    .index = create_index,
     .copy = copy,
-    .save_junk = save_junk,
+    .save_garbage = save_garbage,
     .save_tree = save_tree,
     .retrieve_bst = retrieve_bst,
     .retrieve_avl = retrieve_avl,
     .retrieve_rb = retrieve_rb,
-    .retrieve_junk = retrieve_junk,
+    .retrieve_garbage = retrieve_garbage,
     .dump = dump,
     .recycle = recycle,
-    .restore_junk = restore_junk
+    .destroy_garbage = destroy_garbage
 };

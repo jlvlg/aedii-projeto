@@ -1,6 +1,5 @@
 var structtree__methods =
 [
-    [ "as_tree", "structtree__methods.html#a51630df5dbeae8421c118b8f8cbad928", null ],
     [ "children", "structtree__methods.html#aead5ecfff1ddfcac1bed06bfefed16f0", null ],
     [ "clear", "structtree__methods.html#a3d263cdfeaada06d2ecdb51d831a5659", null ],
     [ "count", "structtree__methods.html#a6764fffc7c37eda590b2c44f2587e676", null ],

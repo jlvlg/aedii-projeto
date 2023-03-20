@@ -1,11 +1,12 @@
 #include <string.h>
 #include <stdlib.h>
+#include <stdio.h>
 #include "tree.h"
 #include "avl.h"
 #include "types.h"
 
 void print_node(AVL node) {
-    Tree tree_node = node;
+    Tree tree_node = (Tree) node;
     switch (tree_node->item->type) {
         case INT:
             printf("%d", *(int*) tree_node->item->data);
@@ -20,7 +21,7 @@ void print_node(AVL node) {
 }
 
 void print(AVL node) {
-    tree.preorder(node, print_node, 0);
+    tree.preorder((Tree) node, (void(*)(Tree)) print_node, 0);
     printf("\n");
 }
 
@@ -31,11 +32,11 @@ int main(int argc, char *argv[]) {
         switch (atoi(argv[i])) {
             case 1:
                 if (!strcmp(argv[i+1], "int")) {
-                    root = avl.insert(root, avl.create(types.Int(atoi(argv[i+2]))), &changes, &error, types.copy);
+                    root = avl.insert(root, avl.create(types.Int(atoi(argv[i+2]))), &changes, &error);
                 } else if (!strcmp(argv[i+1], "str")) {
-                    root = avl.insert(root, avl.create(types.String(argv[i+2])), &changes, &error, types.copy);
+                    root = avl.insert(root, avl.create(types.String(argv[i+2])), &changes, &error);
                 } else if (!strcmp(argv[i+1], "char")) {
-                    root = avl.insert(root, avl.create(types.Char(argv[i+2][0])), &changes, &error, types.copy);
+                    root = avl.insert(root, avl.create(types.Char(argv[i+2][0])), &changes, &error);
                 }
                 i += 3;
                 break;
@@ -54,9 +55,9 @@ int main(int argc, char *argv[]) {
                 i++;
                 break;
             case 4:
-                printf("%d\n", tree.height(root));
+                printf("%d\n", tree.height((Tree) root));
                 i++;
         }
     }
-    tree.clear(root);
+    tree.clear((Tree) root);
 }

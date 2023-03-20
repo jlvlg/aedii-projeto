@@ -4,10 +4,6 @@
 #include "util.h"
 #include "tree.h"
 
-static Tree as_tree(Tree root) {
-    return root;
-}
-
 static Tree init(Tree leaf, Item item) {
     leaf->item = item;
     leaf->l = leaf->r = NULL;
@@ -99,16 +95,17 @@ static Tree clear(Tree root) {
 }
 
 static Tree search(Tree root, Item item) {
-    if (root == NULL)
-        return NULL;
-    switch (types.cmp(item, root->item)) {
-        case -1:
-            return search(root->l, item);
-        case 0:
-            return root;
-        case 1:
-            return search(root->r, item);
+    if (root != NULL) {
+        switch (types.cmp(item, root->item)) {
+            case -1:
+                return search(root->l, item);
+            case 0:
+                return root;
+            case 1:
+                return search(root->r, item);
+        }
     }
+    return NULL;
 }
 
 static Tree max(Tree root) {
@@ -202,7 +199,6 @@ static Tree double_rotation_right(Tree p) {
 }
 
 const struct tree_methods tree = {
-    .as_tree = as_tree,
     .init = init,
     .print = print,
     .preorder = preorder,

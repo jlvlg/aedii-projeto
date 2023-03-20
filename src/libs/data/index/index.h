@@ -9,26 +9,27 @@
 /// @file
 /// @brief File indexing methods
 
+/// Ties a key (item) to a absolute byte position (pos)
 struct Index {
-    struct item item;
+    struct Item item;
     int pos;
 };
 
 typedef struct Index* Index;
 
 /// Used to mark sections of the data file as deleted or writable
-typedef struct Junk {
-    int spos;
-    int epos;
-    struct Junk *next;
-} JunkNode;
+typedef struct Garbage {
+    int start;
+    int end;
+    struct Garbage *next;
+} GarbageNode;
 
 /// Pointer to JunkNode
-typedef JunkNode* Junk;
+typedef GarbageNode* Garbage;
 
 /// Encapsulates functions into the idx namespace
 struct index_methods {
-    Index (*index)(Item item, int pos);
+    Index (*index)(Item *item, int pos);
     Index (*copy)(Index index);
 
     /// @brief Saves a tree into a JSON file
@@ -37,11 +38,11 @@ struct index_methods {
     /// @return -1 on failure
     int (*save_tree)(Tree root, char* filename);
 
-    /// @brief Saves a Junk list into a JSON file
-    /// @param junk List starting node
+    /// @brief Saves a Garbage list into a JSON file
+    /// @param garbage List starting node
     /// @param filename File name
     /// @return -1 on failure
-    int (*save_junk)(Junk junk, char* filename);
+    int (*save_garbage)(Garbage garbage, char* filename);
 
     /// @brief Loads a BST tree from a JSON file
     /// @param filename File name
@@ -58,29 +59,28 @@ struct index_methods {
     /// @return Loaded tree
     RB (*retrieve_rb)(char* filename);
 
-    /// @brief Loads a Junk list from a JSON file
+    /// @brief Loads a Garbage list from a JSON file
     /// @param filename File name
     /// @return Loaded list
-    Junk (*retrieve_junk)(char* filename);
+    Garbage (*retrieve_garbage)(char* filename);
 
-    /// @brief Marks a section of the data file as rewritable junk
-    /// @param start Previous junk data list
+    /// @brief Marks a section of the data file as rewritable garbage
+    /// @param node Previous garbage data list
     /// @param size Section size in bytes
     /// @param pos Section start in bytes
-    /// @return Updated junk data list
-    Junk (*dump)(Junk *start, int size, int pos);
+    /// @return Updated garbage data list
+    void (*dump)(Garbage *node, int size, int pos);
 
-    /// @brief Retrieves the best fit position from the junk data list, updating it in the proccess
-    /// @param start Pointer to junk data list
+    /// @brief Retrieves the worst fit position from the garbage data list, updating it in the proccess
+    /// @param node Pointer to garbage data list
     /// @param size Size to be inserted into data file
     /// @return Position of the section in bytes
-    int (*recycle)(Junk *start, int size);
+    int (*recycle)(Garbage *node, int size);
 
-    /// @brief Restores a mistakingly recycled section of the junk data list
-    /// @param start Pointer to junk data list
-    /// @param size Size that was passed to recycle()
-    /// @param pos Position returned by recycle()
-    void (*restore_junk)(Junk *start, int size, int pos);
+    /// @brief Clears a garbage data list
+    /// @param node Starting node
+    /// @return NULL pointer
+    Garbage (*destroy_garbage)(Garbage node);
 };
 
 extern const struct index_methods idx;

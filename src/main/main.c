@@ -90,11 +90,11 @@ void list_employees(Table t, MENU *filters, MENU *list, ITEM ***employee_items, 
         *employees = data.clear_array(*employees, *n_employees);
     cur = current_item(filters);
     if (cur == items[0]) {
-        *employees = table.list_employees_by_ssn(t, 0, n_employees);
+        *employees = table.list_employees(t, 0, n_employees, (Tree) t.ssn_index);
     } else if (cur == items[1]) {
-        *employees = table.list_employees_by_email(t, 0, n_employees);
+        *employees = table.list_employees(t, 0, n_employees, t.email_index);
     } else if (cur == items[2]) {
-        *employees = table.list_employees_by_phone(t, 0, n_employees);
+        *employees = table.list_employees(t, 0, n_employees, (Tree) t.phone_index);
     }
     *employee_items = menu_items(list);
     for (int i = 0; *briefs != NULL && (*briefs)[i] != NULL; i++)
@@ -532,7 +532,7 @@ int main() {
                                             show_warning(panels, panels[5], "%s", "Employee successfully registered");
                                             break;
                                         case -1:
-                                            show_warning(panels, panels[5], "%s", "ID already registered");
+                                            show_warning(panels, panels[5], "%s", "SSN already registered");
                                             break;
                                         case -2:
                                             show_warning(panels, panels[5], "%s", "E-mail already registered");
@@ -572,11 +572,11 @@ int main() {
                             else {
                                 selected = &found;
                                 if (cur == fields[0])
-                                    res = table.find_employee_by_ssn(t, selected, buffer);
+                                    res = table.find_employee(t, selected, buffer, (Tree) t.ssn_index);
                                 else if (cur == fields[1])
-                                    res = table.find_employee_by_email(t, selected, buffer);
+                                    res = table.find_employee(t, selected, buffer, t.email_index);
                                 else
-                                    res = table.find_employee_by_phone(t, selected, buffer);
+                                    res = table.find_employee(t, selected, buffer, (Tree) t.phone_index);
                                 if (!res)
                                     show_employee(panels[3], selected);
                                 else

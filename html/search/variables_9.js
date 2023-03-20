@@ -1,10 +1,12 @@
 var searchData=
 [
-  ['recycle_131',['recycle',['../structindex__methods.html#ab863c701f1de9b527014cfb8dca60349',1,'index_methods']]],
-  ['remove_132',['remove',['../structavl__methods.html#af96dba65f1e9014fdbed3584ede027ee',1,'avl_methods::remove()'],['../structbst__methods.html#a318ea2d447c0705531832aa9d7bcb1d8',1,'bst_methods::remove()'],['../structrb__methods.html#ab0e87dc8014f9bae3cebdaf236b1260d',1,'rb_methods::remove()']]],
-  ['restore_5fjunk_133',['restore_junk',['../structindex__methods.html#abd23eb2735601e78e45d360b12b1e191',1,'index_methods']]],
-  ['retrieve_5favl_134',['retrieve_avl',['../structindex__methods.html#adc7c8eef65cdb565c8bb4f3182039327',1,'index_methods']]],
-  ['retrieve_5fbst_135',['retrieve_bst',['../structindex__methods.html#aaa61ab4934cec530dd33bc86d48eb8de',1,'index_methods']]],
-  ['retrieve_5fjunk_136',['retrieve_junk',['../structindex__methods.html#a5a94e89a0d307217e458956ac8724990',1,'index_methods']]],
-  ['retrieve_5frb_137',['retrieve_rb',['../structindex__methods.html#a98929213f86b98a3489856974b39142a',1,'index_methods']]]
+  ['safe_5fmalloc_138',['safe_malloc',['../structutil__methods.html#a7605dd953a40a6003738b7a84ade81d6',1,'util_methods']]],
+  ['safe_5frealloc_139',['safe_realloc',['../structutil__methods.html#aa880e67dc2148a512c3e1c119f3c8694',1,'util_methods']]],
+  ['save_5fgarbage_140',['save_garbage',['../structindex__methods.html#a039b7c858b335a973e2b733d34836c28',1,'index_methods']]],
+  ['save_5ftree_141',['save_tree',['../structindex__methods.html#a3c3181a621db54168ed69a8ed93fd3fd',1,'index_methods']]],
+  ['search_142',['search',['../structtree__methods.html#aa330b29b1aeb57b56f153855acc26a1f',1,'tree_methods']]],
+  ['simple_5frotation_5fleft_143',['simple_rotation_left',['../structtree__methods.html#a71d0b345f37caf8b3a4bdb840266c0b0',1,'tree_methods']]],
+  ['simple_5frotation_5fright_144',['simple_rotation_right',['../structtree__methods.html#afa4627619caf335e1516f94f7091021c',1,'tree_methods']]],
+  ['string_145',['String',['../structtypes__methods.html#a6312c12b5a74af8a40804a5420f2e517',1,'types_methods']]],
+  ['string_5fmalloc_146',['string_malloc',['../structutil__methods.html#a34dd95342078d651564799ccbb8aea6d',1,'util_methods']]]
 ];

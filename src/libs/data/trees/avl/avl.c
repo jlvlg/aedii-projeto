@@ -4,12 +4,8 @@
 #include "tree.h"
 #include "avl.h"
 
-static AVL as_avl(Tree root) {
-    return root;
-}
-
 static AVL init(AVL leaf, Item item) {
-    tree.init(leaf, item);
+    tree.init((Tree) leaf, item);
     leaf->bf = 0;
     return leaf;
 }
@@ -19,32 +15,32 @@ static AVL create(Item item) {
 }
 
 static AVL rotate(AVL root) {
-    Tree tree_root = root;
+    Tree tree_root = (Tree) root;
     if (root->bf > 0) {
-        if (as_avl(tree_root->r)->bf < 0) {
-            root = tree.double_rotation_left(tree_root);
+        if (((AVL) tree_root->r)->bf < 0) {
+            root = (AVL) tree.double_rotation_left(tree_root);
         } else {
-            root = tree.simple_rotation_left(tree_root);
+            root = (AVL) tree.simple_rotation_left(tree_root);
 
-            as_avl(tree.as_tree(root)->l)->bf = root->bf == 0 ? 1 : 0;
+            ((AVL) ((Tree) root)->l)->bf = root->bf == 0 ? 1 : 0;
             root->bf = root->bf == 0 ? -1 : 0;
             
             return root;
         }
     } else {
-        if (as_avl(tree_root->l)->bf > 0) {
-            root = tree.double_rotation_right(tree_root);
+        if (((AVL) tree_root->l)->bf > 0) {
+            root = (AVL) tree.double_rotation_right(tree_root);
         } else {
-            root = tree.simple_rotation_right(tree_root);
+            root = (AVL) tree.simple_rotation_right(tree_root);
 
-            as_avl(tree.as_tree(root)->r)->bf = root->bf == 0 ? -1 : 0;
+            ((AVL) ((Tree) root)->r)->bf = root->bf == 0 ? -1 : 0;
             root->bf = root->bf == 0 ? 1 : 0;
 
             return root;
         }
     }
-    as_avl(tree.as_tree(root)->l)->bf = root->bf == 1 ? -1 : 0;
-    as_avl(tree.as_tree(root)->r)->bf = root->bf == -1 ? 1 : 0;
+    ((AVL) ((Tree) root)->l)->bf = root->bf == 1 ? -1 : 0;
+    ((AVL) ((Tree) root)->r)->bf = root->bf == -1 ? 1 : 0;
     root->bf = 0;
     return root;
 }
@@ -55,17 +51,19 @@ static AVL balance(AVL root, int *changes, int right, int rem) {
     }
 
     if (abs(root->bf) > 1) {
-        Tree tree_root = root;
-        if (rem && !as_avl(right ? tree_root->l : tree_root->r)->bf)
+        Tree tree_root = (Tree) root;
+        if (rem && !((AVL) (right ? tree_root->l : tree_root->r))->bf)
             *changes = 0;
         return rotate(root);
     }
     return root;
 }
 
-static AVL insert(AVL root, AVL leaf, int *changes, int *error,  Item copyfun(Item)) {
-    Tree tree_root = root, tree_leaf = leaf;
+static AVL insert(AVL root, AVL leaf, int *changes, int *error) {
+    Tree tree_root = (Tree) root, tree_leaf = (Tree) leaf;
     int cmp;
+
+    *error = 0;
 
     if (leaf == NULL)
         return root;
@@ -80,30 +78,20 @@ static AVL insert(AVL root, AVL leaf, int *changes, int *error,  Item copyfun(It
     switch (cmp) {
         case 0:
             *error = 1;
-            tree.kill(leaf);
+            tree.kill((Tree) leaf);
             return root;
         case -1:
-            tree_root->l = insert(tree_root->l, leaf, changes, error, copyfun);
+            tree_root->l = (Tree) insert((AVL) tree_root->l, leaf, changes, error);
             break;
         case 1:
-            tree_root->r = insert(tree_root->r, leaf, changes, error, copyfun);
+            tree_root->r = (Tree) insert((AVL) tree_root->r, leaf, changes, error);
     }
-
-    // if (cmp > 0)
-    //     tree_root->r = insert(tree_root->r, leaf, changes);
-    // else
-    //     tree_root->l = insert(tree_root->l, leaf, changes);
 
     return balance(root, changes, cmp == 1, 0);
 }
 
-static AVL insert_wrapper(AVL root, AVL leaf, int *changes, int* error, Item copyfun(Item)) {
-    *error = 0;
-    return insert(root, leaf, changes, error, copyfun);
-}
-
 static AVL remove(AVL root, Item item, int *changes, Item copyfun(Item)) {
-    Tree tree_root = root;
+    Tree tree_root = (Tree) root;
     int cmp;
 
     if (root == NULL) {
@@ -118,23 +106,23 @@ static AVL remove(AVL root, Item item, int *changes, Item copyfun(Item)) {
             *changes = 1;
             switch (tree.children(tree_root)) {
                 case 0:
-                    return tree.kill(tree_root);
+                    return (AVL) tree.kill(tree_root);
                 case 1: {
-                    AVL child = tree_root->l != NULL ? tree_root->l : tree_root->r;
+                    AVL child = (AVL) (tree_root->l != NULL ? tree_root->l : tree_root->r);
                     tree.kill(tree_root);
                     return child;
                 }
                 case 2:
                     types.destroy(tree_root->item);
                     tree_root->item = copyfun(tree.max(tree_root->l)->item);
-                    tree_root->l = remove(tree_root->l, tree_root->item, changes, copyfun);
+                    tree_root->l = (Tree) remove((AVL) tree_root->l, tree_root->item, changes, copyfun);
                     return balance(root, changes, 0, 1);
             }
         case -1:
-            tree_root->l = remove(tree_root->l, item, changes, copyfun);
+            tree_root->l = (Tree) remove((AVL) tree_root->l, item, changes, copyfun);
             break;
         case 1:
-            tree_root->r = remove(tree_root->r, item, changes, copyfun);
+            tree_root->r = (Tree) remove((AVL) tree_root->r, item, changes, copyfun);
     }
 
     return balance(root, changes, cmp == 1, 1);
@@ -143,6 +131,6 @@ static AVL remove(AVL root, Item item, int *changes, Item copyfun(Item)) {
 const struct avl_methods avl = {
     .init = init,
     .create = create,
-    .insert = insert_wrapper,
+    .insert = insert,
     .remove = remove
 };

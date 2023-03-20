@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['max_126',['max',['../structtree__methods.html#a3ebda689c714ce7d5572795fc9aef845',1,'tree_methods::max()'],['../structutil__methods.html#a7746033dd472d8e303d7bc56866310e2',1,'util_methods::max()']]],
-  ['min_127',['min',['../structtree__methods.html#acfa1b68337b78a6d4663499d89afeda6',1,'tree_methods::min()'],['../structutil__methods.html#afea20069a0ef6d201f2cd28228e282d7',1,'util_methods::min()']]]
+  ['postorder_129',['postorder',['../structtree__methods.html#aa81b977a9eec7be510df2008d75306dc',1,'tree_methods']]],
+  ['preorder_130',['preorder',['../structtree__methods.html#afa05e077a93fe8b36c49b7452dbfbdb2',1,'tree_methods']]],
+  ['print_131',['print',['../structtree__methods.html#aadb5139c0b3be035122310448e14e728',1,'tree_methods']]]
 ];

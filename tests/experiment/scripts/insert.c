@@ -39,14 +39,14 @@ int main() {
                 item = types.String(data);
             }
             t = clock();
-            bst_root = bst.insert(bst_root, bst.create(types.copy(item)), &error, types.copy);
+            bst_root = bst.insert(bst_root, bst.create(types.copy(item)), &error);
             measure(t, bst_root, 0);
             t = clock();
-            avl_root = avl.insert(avl_root, avl.create(types.copy(item)), &changes, &error, types.copy);
-            measure(t, avl_root, 0);
+            avl_root = avl.insert(avl_root, avl.create(types.copy(item)), &changes, &error);
+            measure(t, (Tree) avl_root, 0);
             t = clock();
-            rb.insert(&rb_root, rb.create(types.copy(item)), &error, types.copy);
-            measure(t, rb_root, 1);
+            rb.insert(&rb_root, rb.create(types.copy(item)), &error);
+            measure(t, (Tree) rb_root, 1);
             printf("\n");
             types.destroy(item);
         } else {
@@ -54,6 +54,6 @@ int main() {
         }
     }
     tree.clear(bst_root);
-    tree.clear(avl_root);
-    tree.clear(rb_root);
+    tree.clear((Tree) avl_root);
+    tree.clear((Tree) rb_root);
 }

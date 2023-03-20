@@ -4,8 +4,8 @@
 #include "types.h"
 
 Item Int(int val) {
-    Item item = malloc(sizeof(struct item));
-    int *pointer = malloc(sizeof *pointer);
+    Item item = util.safe_malloc(sizeof(struct Item));
+    int *pointer = util.safe_malloc(sizeof *pointer);
     *pointer = val;
     item->data = pointer;
     item->type = INT;
@@ -13,34 +13,38 @@ Item Int(int val) {
 }
 
 Item Float(float val) {
-    Item item = malloc(sizeof(struct item));
-    float *pointer = malloc(sizeof *pointer);
+    Item item = util.safe_malloc(sizeof(struct Item));
+    float *pointer = util.safe_malloc(sizeof *pointer);
     *pointer = val;
     item->data = pointer;
     item->type = FLOAT;
+    return item;
 }
 
 Item Double(double val) {
-    Item item = malloc(sizeof(struct item));
-    double *pointer = malloc(sizeof *pointer);
+    Item item = util.safe_malloc(sizeof(struct Item));
+    double *pointer = util.safe_malloc(sizeof *pointer);
     *pointer = val;
     item->data = pointer;
     item->type = DOUBLE;
+    return item;
 }
 
 Item Char(char val) {
-    Item item = malloc(sizeof(struct item));
-    char *pointer = malloc(sizeof *pointer);
+    Item item = util.safe_malloc(sizeof(struct Item));
+    char *pointer = util.safe_malloc(sizeof *pointer);
     *pointer = val;
     item->data = pointer;
     item->type = CHAR;
+    return item;
 }
 
 Item String(char val[]) {
-    Item item = malloc(sizeof(struct item));
+    Item item = util.safe_malloc(sizeof(struct Item));
     char *pointer = util.init_string(val);
     item->data = pointer;
     item->type = STRING;
+    return item;
 }
 
 static Item tostring(Item item) {

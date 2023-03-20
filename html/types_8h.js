@@ -1,6 +1,6 @@
 var types_8h =
 [
-    [ "item", "structitem.html", "structitem" ],
+    [ "Item", "struct_item.html", "struct_item" ],
     [ "types_methods", "structtypes__methods.html", "structtypes__methods" ],
     [ "Type", "types_8h.html#ad8acde1ec6ea7d87e774f6108f3f751e", null ],
     [ "type", "types_8h.html#a7aead736a07eaf25623ad7bfa1f0ee2d", [

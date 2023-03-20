@@ -12,9 +12,12 @@ static BST create(Item item) {
     return init(util.safe_malloc(sizeof(BST_Node)), item);
 }
 
-static BST insert(BST root, BST leaf, int *error, Item copyfun(Item)) {
+static BST insert(BST root, BST leaf, int *error) {
+    *error = 0;
+
     if (leaf == NULL)
         return root;
+
     if (root == NULL) 
         return leaf;
 
@@ -24,23 +27,13 @@ static BST insert(BST root, BST leaf, int *error, Item copyfun(Item)) {
             tree.kill(leaf);
             break;
         case -1:
-            root->l = insert(root->l, leaf, error, copyfun);
+            root->l = insert(root->l, leaf, error);
             break;
         case 1:
-            root->r = insert(root->r, leaf, error, copyfun);
+            root->r = insert(root->r, leaf, error);
     }
 
-    // if (types.cmp(leaf->item, root->item) > 0)
-    //     root->r = insert(root->r, leaf);
-    // else
-    //     root->l = insert(root->l, leaf);
-        
     return root;
-}
-
-static BST insert_wrapper(BST root, BST leaf, int *error, Item copyfun(Item)) {
-    *error = 0;
-    return insert(root, leaf, error, copyfun);
 }
 
 static BST remove(BST root, Item item, Item copyfun(Item)) {
@@ -73,6 +66,6 @@ static BST remove(BST root, Item item, Item copyfun(Item)) {
 const struct bst_methods bst = {
     .init = init,
     .create = create,
-    .insert = insert_wrapper,
+    .insert = insert,
     .remove = remove
 };

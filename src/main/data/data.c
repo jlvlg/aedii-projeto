@@ -51,10 +51,10 @@ static Employee json_to_employee(json_object* json) {
 
     return create(
         json_object_get_int(id),
-        json_object_get_string(ssn), 
-        json_object_get_string(name), 
-        json_object_get_string(email), 
-        json_object_get_string(phone)
+        (char*) json_object_get_string(ssn), 
+        (char*) json_object_get_string(name), 
+        (char*) json_object_get_string(email), 
+        (char*) json_object_get_string(phone)
     );
 }
 
