@@ -105,7 +105,7 @@ static int add_employee(Table *t, Employee employee) {
         }
         
         json_object_put(json_obj);
-        return error;
+        return 0;
     }
     return -1;
 }
@@ -119,7 +119,7 @@ static int retrieve_employee(Table t, Employee *employee, int pos) {
 
         while (!success) {
             fseek(t.file, pos, SEEK_SET);
-            fgets(buffer, 1000, t.file);
+            fgets(buffer, buffsize, t.file);
             
             success = strchr(buffer, '\n') != NULL;
             if (!success) {

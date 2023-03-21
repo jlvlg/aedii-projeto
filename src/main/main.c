@@ -160,7 +160,7 @@ char* get_string(FIELD *field) {
 }
 
 int main() {
-    int ch, n_windows, n_panels, n_menus, n_forms, n_employees;
+    int ch = 0, n_windows, n_panels, n_menus, n_forms, n_employees;
     MEVENT event;
     Table t;
     /* MAIN, NAV, LIST, EMPLOYEE_INFO, SEARCH, WARNING, CREATE_EMPLOYEE */
@@ -404,7 +404,8 @@ int main() {
     /* MAINLOOP */
     update_panels();
     doupdate();
-    while ((ch = getch()) != KEY_F(1)) {
+    while (ch != KEY_F(1)) {
+        ch = getch();
         switch (ch) {
             case KEY_MOUSE:
                 if (!getmouse(&event)) {
@@ -415,6 +416,8 @@ int main() {
                             ungetmouse(&event);
                             menu_driver(menus[0], KEY_MOUSE);
                             cur = current_item(menus[0]);
+                            data.destroy(selected);
+                            selected = NULL;
                             if (cur == items[0]) {
                                 /* CREATE */
                                 curs_set(1);
@@ -435,7 +438,7 @@ int main() {
                                 top_panel(panels[4]);
                             } else if (cur == items[3]) {
                                 /* EXIT */
-                                goto end;
+                                ch = KEY_F(1);
                             }
                         } else if (panel_below(NULL) == panels[2] && wenclose(menu_sub(menus[1]), event.y, event.x)) {
                             /* LIST FILTERS */
@@ -463,8 +466,8 @@ int main() {
                                 list_employees(t, menus[1], menus[2], &employee_items, &employees, &briefs, &n_employees);
                             } else if (panel_below(panels[3]) == panels[4]) {
                                 curs_set(1);
-                                data.destroy(selected);
                             }
+                            data.destroy(selected);
                             selected = NULL;
                             top_panel(panel_below(panels[3]));
                         } else if (panel_below(NULL) == panels[4] && wenclose(form_sub(forms[0]), event.y, event.x)) {
@@ -637,7 +640,6 @@ int main() {
         doupdate();
     }
 
-    end:
     employees = data.clear_array(employees, n_employees);
     for (int i = 0; briefs != NULL && briefs[i] != NULL; i++)
         free(briefs[i]);

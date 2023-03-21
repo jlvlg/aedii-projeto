@@ -14,12 +14,14 @@ static Employee create(int id, char *ssn, char *name, char *email, char *phone) 
 }
 
 static void destroy(Employee *employee) {
-    free(employee->ssn);
-    free(employee->name);
-    free(employee->email);
-    free(employee->phone);
-    employee->ssn = employee->name = employee->email = employee->phone = NULL;
-    employee->id = 0;
+    if (employee != NULL) {
+        free(employee->ssn);
+        free(employee->name);
+        free(employee->email);
+        free(employee->phone);
+        employee->ssn = employee->name = employee->email = employee->phone = NULL;
+        employee->id = 0;
+    }
 }
 
 static void* clear_array(Employee *array, int count) {
