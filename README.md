@@ -1,20 +1,23 @@
 # AED II Projeto 1VA
-## Installation guide
-### Dependencies
+
+CRUD de gerenciamento de funcionários com indexação baseada em árvores binárias (BST, AVL e RB) feita do zero, e exclusão de dados eficiente em armazenamento
+
+## Instalação
+### Dependências
 - gcc
 - make
 - cmake
 - ncurses
 
-### Installing
+### Instalando
 ```
-git clone https://github.com/jlvlg/aedii-projeto-1va
-cd aedii-projeto-1va
+git clone https://github.com/jlvlg/aedii-projeto
+cd aedii-projeto
 chmod a+x build.sh
 ./build.sh
 ```
 
-### Running
+### Executando
 ```
 ./main
 ```
